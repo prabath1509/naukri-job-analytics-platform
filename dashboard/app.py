@@ -27,24 +27,54 @@ st.set_page_config(
 # =========================================================
 
 st.markdown(
-
     """
     <style>
 
     .main {
-
         background-color: #0E1117;
         color: white;
     }
 
-    h1, h2, h3 {
-
+    h1, h2, h3, h4 {
         color: white;
+    }
+
+    .stDataFrame {
+        border-radius: 10px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    table, th, td {
+        border: 1px solid #333;
+    }
+
+    th {
+        background-color: #1f2937;
+        color: white;
+        padding: 10px;
+        text-align: left;
+    }
+
+    td {
+        padding: 8px;
+    }
+
+    a {
+        color: #4da6ff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    a:hover {
+        color: #66ccff;
     }
 
     </style>
     """,
-
     unsafe_allow_html=True
 )
 
@@ -79,58 +109,32 @@ else:
 
 df = df.drop_duplicates()
 
-# -----------------------------------------
-# FILL NULL VALUES
-# -----------------------------------------
+# ---------------------------------------------------------
+# FILL MISSING VALUES
+# ---------------------------------------------------------
 
-fill_columns = [
+fill_cols = [
 
+    "Title",
     "Company",
     "Location",
     "Experience",
     "Skills",
     "Keyword",
-    "Source"
+    "Source",
+    "Salary",
+    "Job_Link"
 ]
 
-for col in fill_columns:
+for col in fill_cols:
 
     if col in df.columns:
 
         df[col] = df[col].fillna("Unknown")
 
-# -----------------------------------------
-# CLEAN EXPERIENCE
-# -----------------------------------------
-
-if "Experience" in df.columns:
-
-    df["Experience"] = df["Experience"].replace(
-
-        ["", "nan"],
-
-        "Unknown"
-    )
-
-    top_exp = (
-
-        df["Experience"]
-
-        .value_counts()
-
-        .head(10)
-
-        .index
-    )
-
-    df["Experience"] = df["Experience"].apply(
-
-        lambda x: x if x in top_exp else "Other"
-    )
-
-# -----------------------------------------
-# CLEAN KEYWORD
-# -----------------------------------------
+# ---------------------------------------------------------
+# CLEAN KEYWORDS
+# ---------------------------------------------------------
 
 if "Keyword" in df.columns:
 
@@ -152,77 +156,82 @@ if "Keyword" in df.columns:
         "Company ATS Jobs"
     )
 
+# ---------------------------------------------------------
+# CLEAN EXPERIENCE
+# ---------------------------------------------------------
+
+if "Experience" in df.columns:
+
+    df["Experience"] = df["Experience"].replace(
+
+        ["", "nan", "Not Available"],
+
+        "Unknown"
+    )
+
+    top_exp = (
+
+        df["Experience"]
+
+        .value_counts()
+
+        .head(10)
+
+        .index
+    )
+
+    df["Experience"] = df["Experience"].apply(
+
+        lambda x: x if x in top_exp else "Other"
+    )
+
 # =========================================================
 # SIDEBAR
 # =========================================================
 
 st.sidebar.title("⚙ Controls")
 
-# -----------------------------------------
+# ---------------------------------------------------------
 # SEARCH
-# -----------------------------------------
+# ---------------------------------------------------------
 
 search = st.sidebar.text_input(
 
     "Search Job Title"
 )
 
-# -----------------------------------------
+# ---------------------------------------------------------
 # SOURCE FILTER
-# -----------------------------------------
+# ---------------------------------------------------------
 
-if "Source" in df.columns:
+source_filter = st.sidebar.multiselect(
 
-    source_filter = st.sidebar.multiselect(
+    "Select Source",
 
-        "Select Source",
+    options=sorted(df["Source"].unique())
+)
 
-        df["Source"].unique(),
-
-        default=df["Source"].unique()
-    )
-
-else:
-
-    source_filter = []
-
-# -----------------------------------------
+# ---------------------------------------------------------
 # LOCATION FILTER
-# -----------------------------------------
+# ---------------------------------------------------------
 
-if "Location" in df.columns:
+location_filter = st.sidebar.multiselect(
 
-    location_filter = st.sidebar.multiselect(
+    "Select Location",
 
-        "Select Location",
+    options=sorted(df["Location"].unique())
+)
 
-        sorted(df["Location"].unique()),
-
-        default=sorted(df["Location"].unique())
-    )
-
-else:
-
-    location_filter = []
-
-# -----------------------------------------
+# ---------------------------------------------------------
 # COMPANY FILTER
-# -----------------------------------------
+# ---------------------------------------------------------
 
-if "Company" in df.columns:
+company_filter = st.sidebar.multiselect(
 
-    company_filter = st.sidebar.multiselect(
+    "Select Company",
 
-        "Select Company",
-
-        sorted(df["Company"].unique()),
-
-        default=sorted(df["Company"].unique())
-    )
-
-else:
-
-    company_filter = []
+    options=sorted(df["Company"].unique())
+)
 
 # =========================================================
 # FILTER DATA
@@ -230,9 +239,9 @@ else:
 
 filtered_df = df.copy()
 
-# -----------------------------------------
+# ---------------------------------------------------------
 # SEARCH FILTER
-# -----------------------------------------
+# ---------------------------------------------------------
 
 if search:
 
@@ -250,11 +259,11 @@ if search:
         )
     ]
 
-# -----------------------------------------
+# ---------------------------------------------------------
 # SOURCE FILTER
-# -----------------------------------------
+# ---------------------------------------------------------
 
-if len(source_filter) > 0:
+if source_filter:
 
     filtered_df = filtered_df[
 
@@ -263,11 +272,11 @@ if len(source_filter) > 0:
         .isin(source_filter)
     ]
 
-# -----------------------------------------
+# ---------------------------------------------------------
 # LOCATION FILTER
-# -----------------------------------------
+# ---------------------------------------------------------
 
-if len(location_filter) > 0:
+if location_filter:
 
     filtered_df = filtered_df[
 
@@ -276,11 +285,11 @@ if len(location_filter) > 0:
         .isin(location_filter)
     ]
 
-# -----------------------------------------
+# ---------------------------------------------------------
 # COMPANY FILTER
-# -----------------------------------------
+# ---------------------------------------------------------
 
-if len(company_filter) > 0:
+if company_filter:
 
     filtered_df = filtered_df[
 
@@ -290,7 +299,7 @@ if len(company_filter) > 0:
     ]
 
 # =========================================================
-# TITLE
+# HEADER
 # =========================================================
 
 st.title("📊 AI Powered Job Analytics Platform")
@@ -337,7 +346,7 @@ with col4:
 
     st.metric(
 
-        "Sources",
+        "Job Sources",
 
         filtered_df["Source"].nunique()
     )
@@ -384,10 +393,10 @@ st.plotly_chart(
 )
 
 # =========================================================
-# JOB CATEGORY
+# JOB CATEGORIES
 # =========================================================
 
-st.subheader("📊 Jobs by Category")
+st.subheader("📊 Top Job Categories")
 
 category_counts = (
 
@@ -398,25 +407,27 @@ category_counts = (
     .head(8)
 )
 
-fig = px.pie(
+fig = px.bar(
 
-    names=category_counts.index,
+    x=category_counts.index,
 
-    values=category_counts.values,
+    y=category_counts.values,
 
-    hole=0.4
-)
+    labels={
 
-fig.update_traces(
+        "x": "Category",
 
-    textposition="inside",
+        "y": "Jobs"
+    },
 
-    textinfo="percent+label"
+    title="Top Job Categories"
 )
 
 fig.update_layout(
 
-    height=550
+    xaxis_tickangle=-25,
+
+    height=500
 )
 
 st.plotly_chart(
@@ -427,7 +438,7 @@ st.plotly_chart(
 )
 
 # =========================================================
-# EXPERIENCE LEVELS
+# EXPERIENCE CHART
 # =========================================================
 
 st.subheader("💼 Experience Levels")
@@ -459,7 +470,7 @@ fig = px.bar(
 
 fig.update_layout(
 
-    xaxis_tickangle=-20,
+    xaxis_tickangle=-25,
 
     height=500
 )
@@ -504,9 +515,9 @@ fig = px.bar(
 
 fig.update_layout(
 
-    xaxis_tickangle=-20,
+    xaxis_tickangle=-45,
 
-    height=500
+    height=550
 )
 
 st.plotly_chart(
@@ -530,6 +541,15 @@ skills_series = (
 
     .astype(str)
 
+    .str.replace(
+
+        r"[^a-zA-Z0-9,+#/ ]",
+
+        " ",
+
+        regex=True
+    )
+
     .str.split(r"[,/|]")
 
     .explode()
@@ -544,15 +564,17 @@ skills_series = (
     .str.title()
 )
 
+skills_series = skills_series[
+
+    skills_series.str.len() > 1
+]
+
 remove_skills = [
 
-    "Not Available",
-
-    "",
-
+    "Unknown",
     "Nan",
-
-    "Unknown"
+    "Not Available",
+    ""
 ]
 
 skills_series = skills_series[
@@ -582,14 +604,14 @@ fig = px.bar(
         "y": "Jobs"
     },
 
-    title="Top Skills Demand"
+    title="Most In-Demand Skills"
 )
 
 fig.update_layout(
 
-    xaxis_tickangle=-35,
+    xaxis_tickangle=-45,
 
-    height=550
+    height=600
 )
 
 st.plotly_chart(
@@ -600,7 +622,7 @@ st.plotly_chart(
 )
 
 # =========================================================
-# LOCATION ANALYTICS
+# TOP LOCATIONS
 # =========================================================
 
 st.subheader("📍 Top Hiring Locations")
@@ -632,9 +654,9 @@ fig = px.bar(
 
 fig.update_layout(
 
-    xaxis_tickangle=-25,
+    xaxis_tickangle=-35,
 
-    height=500
+    height=550
 )
 
 st.plotly_chart(
@@ -671,12 +693,12 @@ if os.path.exists(DB_PATH):
         conn
     )
 
+    conn.close()
+
     st.success(
 
         f"Database Connected | Total Stored Jobs: {db_jobs['total_jobs'][0]}"
     )
-
-    conn.close()
 
 else:
 
@@ -686,7 +708,7 @@ else:
     )
 
 # =========================================================
-# DOWNLOAD CSV
+# DOWNLOAD BUTTON
 # =========================================================
 
 st.markdown("---")
@@ -708,12 +730,29 @@ st.download_button(
 )
 
 # =========================================================
-# JOB TABLE
+# CLICKABLE JOB TABLE
 # =========================================================
 
 st.markdown("---")
 
 st.subheader("📋 Job Listings")
+
+display_df = filtered_df.copy()
+
+# ---------------------------------------------------------
+# CLICKABLE LINKS
+# ---------------------------------------------------------
+
+display_df["Apply"] = display_df["Job_Link"].apply(
+
+    lambda x:
+
+    f'<a href="{x}" target="_blank">Apply Now</a>'
+
+    if x != "Unknown"
+
+    else "N/A"
+)
 
 show_columns = [
 
@@ -723,20 +762,26 @@ show_columns = [
     "Location",
     "Salary",
     "Source",
-    "Job_Link"
+    "Apply"
 ]
 
-available_columns = [
+show_columns = [
 
     col for col in show_columns
 
-    if col in filtered_df.columns
+    if col in display_df.columns
 ]
 
-st.dataframe(
+st.write(
 
-    filtered_df[available_columns],
+    display_df[show_columns]
 
-    width="stretch",
-    height=600
+    .to_html(
+
+        escape=False,
+
+        index=False
+    ),
+
+    unsafe_allow_html=True
 )
