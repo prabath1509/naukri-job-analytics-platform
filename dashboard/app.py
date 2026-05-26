@@ -112,31 +112,30 @@ if st.sidebar.button("Run Live Scraper"):
 # LOAD LATEST CSV
 # -----------------------------------
 
-DATA_PATH = (
-    r"C:\Users\PRABATH\OneDrive\Desktop\naukri_scraper_project\data"
-)
+# -----------------------------------
+# LOAD DATA FROM SQLITE DATABASE
+# -----------------------------------
 
-csv_files = [
+DB_PATH = "database/jobs.db"
 
-    f for f in os.listdir(DATA_PATH)
+if os.path.exists(DB_PATH):
 
-    if f.endswith(".csv")
-]
+    conn = sqlite3.connect(DB_PATH)
 
-if len(csv_files) == 0:
+    df = pd.read_sql(
 
-    st.error("No CSV files found")
+        "SELECT * FROM jobs",
+
+        conn
+    )
+
+    conn.close()
+
+else:
+
+    st.error("Database not found")
 
     st.stop()
-
-latest_file = sorted(csv_files)[-1]
-
-full_path = os.path.join(
-    DATA_PATH,
-    latest_file
-)
-
-df = pd.read_csv(full_path)
 
 # -----------------------------------
 # FILTERS
