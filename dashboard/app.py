@@ -1,120 +1,56 @@
-# -----------------------------------
-# IMPORTS
-# -----------------------------------
+# =========================================================
+# AI POWERED JOB ANALYTICS DASHBOARD
+# FILE: dashboard/app.py
+# =========================================================
 
 import streamlit as st
 import pandas as pd
+import sqlite3
 import plotly.express as px
-from collections import Counter
-import sqlite3
 import os
-import subprocess
-import sys
-import sqlite3
 
-# -----------------------------------
-# PROJECT ROOT IMPORT FIX
-# -----------------------------------
-
-sys.path.append(
-    os.path.abspath(
-        os.path.join(
-            os.path.dirname(__file__),
-            ".."
-        )
-    )
-)
-
-# -----------------------------------
-# RESUME MATCHER IMPORT
-# -----------------------------------
-
-from resume_matcher.matcher import (
-    extract_resume_text,
-    match_jobs
-)
-
-# -----------------------------------
+# =========================================================
 # PAGE CONFIG
-# -----------------------------------
+# =========================================================
 
 st.set_page_config(
-    page_title="Naukri Job Analytics Dashboard",
+
+    page_title="AI Job Analytics Platform",
+
     page_icon="📊",
+
     layout="wide"
 )
 
-# -----------------------------------
+# =========================================================
 # CUSTOM CSS
-# -----------------------------------
+# =========================================================
 
-st.markdown("""
-<style>
+st.markdown(
 
-.main {
-    background-color: #0f172a;
-    color: white;
-}
+    """
+    <style>
 
-h1, h2, h3 {
-    color: white;
-}
+    .main {
 
-[data-testid="metric-container"] {
-    background-color: #111827;
-    border: 1px solid #374151;
-    padding: 15px;
-    border-radius: 10px;
-}
+        background-color: #0E1117;
+        color: white;
+    }
 
-section[data-testid="stSidebar"] {
-    background-color: #1e293b;
-}
+    h1, h2, h3 {
 
-</style>
-""", unsafe_allow_html=True)
+        color: white;
+    }
 
-# -----------------------------------
-# SIDEBAR
-# -----------------------------------
+    </style>
+    """,
 
-st.sidebar.title("⚙ Controls")
+    unsafe_allow_html=True
+)
 
-# -----------------------------------
-# RUN SCRAPER BUTTON
-# -----------------------------------
-
-if st.sidebar.button("Run Live Scraper"):
-
-    with st.spinner("Scraping latest jobs..."):
-
-        try:
-
-            scraper_path = (
-                r"C:\Users\PRABATH\OneDrive\Desktop\naukri_scraper_project\main.py"
-            )
-
-            subprocess.run(
-                ["python", scraper_path]
-            )
-
-            st.sidebar.success(
-                "Scraping Completed"
-            )
-
-        except Exception as e:
-
-            st.sidebar.error(
-                f"Error: {e}"
-            )
-
-# -----------------------------------
-# LOAD LATEST CSV
-# -----------------------------------
-
-# -----------------------------------
-# LOAD DATA FROM SQLITE DATABASE
-# -----------------------------------
+# =========================================================
+# LOAD DATABASE
+# =========================================================
 
 DB_PATH = "database/jobs.db"
 
@@ -137,591 +73,588 @@ else:
 
     st.stop()
 
-# -----------------------------------
-# FILTERS
-# -----------------------------------
+# =========================================================
+# DATA CLEANING
+# =========================================================
 
-st.sidebar.title("🔍 Filters")
+df = df.drop_duplicates()
 
-# SOURCE FILTER
+# -----------------------------------------
+# FILL NULL VALUES
+# -----------------------------------------
 
-selected_sources = st.sidebar.multiselect(
-    "Select Source",
-    sorted(
-        df["Source"]
-        .dropna()
-        .unique()
+fill_columns = [
+
+    "Company",
+    "Location",
+    "Experience",
+    "Skills",
+    "Keyword",
+    "Source"
+]
+
+for col in fill_columns:
+
+    if col in df.columns:
+
+        df[col] = df[col].fillna("Unknown")
+
+# -----------------------------------------
+# CLEAN EXPERIENCE
+# -----------------------------------------
+
+if "Experience" in df.columns:
+
+    df["Experience"] = df["Experience"].replace(
+
+        ["", "nan"],
+
+        "Unknown"
     )
-)
 
-# SEARCH FILTER
+    top_exp = (
 
-search = st.sidebar.text_input(
-    "Search Job Title"
-)
-
-# LOCATION FILTER
-
-selected_locations = st.sidebar.multiselect(
-    "Select Location",
-    sorted(
-        df["Location"]
-        .dropna()
-        .unique()
-    )
-)
-
-# COMPANY FILTER
-
-selected_companies = st.sidebar.multiselect(
-    "Select Company",
-    sorted(
-        df["Company"]
-        .dropna()
-        .unique()
-    )
-)
-
-# EXPERIENCE FILTER
-
-selected_experience = st.sidebar.multiselect(
-    "Select Experience",
-    sorted(
         df["Experience"]
-        .dropna()
-        .unique()
-    )
-)
 
-# KEYWORD FILTER
+        .value_counts()
+
+        .head(10)
+
+        .index
+    )
+
+    df["Experience"] = df["Experience"].apply(
+
+        lambda x: x if x in top_exp else "Other"
+    )
+
+# -----------------------------------------
+# CLEAN KEYWORD
+# -----------------------------------------
 
 if "Keyword" in df.columns:
 
-    selected_keywords = st.sidebar.multiselect(
-        "Select Job Keyword",
-        sorted(
-            df["Keyword"]
-            .dropna()
-            .unique()
-        )
+    df["Keyword"] = (
+
+        df["Keyword"]
+
+        .astype(str)
+
+        .str.replace("-", " ")
+
+        .str.title()
     )
 
-# -----------------------------------
-# APPLY FILTERS
-# -----------------------------------
+    df["Keyword"] = df["Keyword"].replace(
 
-if selected_sources:
+        "Official Company Jobs",
 
-    df = df[
-        df["Source"]
-        .isin(selected_sources)
-    ]
+        "Company ATS Jobs"
+    )
+
+# =========================================================
+# SIDEBAR
+# =========================================================
+
+st.sidebar.title("⚙ Controls")
+
+# -----------------------------------------
+# SEARCH
+# -----------------------------------------
+
+search = st.sidebar.text_input(
+
+    "Search Job Title"
+)
+
+# -----------------------------------------
+# SOURCE FILTER
+# -----------------------------------------
+
+if "Source" in df.columns:
+
+    source_filter = st.sidebar.multiselect(
+
+        "Select Source",
+
+        df["Source"].unique(),
+
+        default=df["Source"].unique()
+    )
+
+else:
+
+    source_filter = []
+
+# -----------------------------------------
+# LOCATION FILTER
+# -----------------------------------------
+
+if "Location" in df.columns:
+
+    location_filter = st.sidebar.multiselect(
+
+        "Select Location",
+
+        sorted(df["Location"].unique()),
+
+        default=sorted(df["Location"].unique())
+    )
+
+else:
+
+    location_filter = []
+
+# -----------------------------------------
+# COMPANY FILTER
+# -----------------------------------------
+
+if "Company" in df.columns:
+
+    company_filter = st.sidebar.multiselect(
+
+        "Select Company",
+
+        sorted(df["Company"].unique()),
+
+        default=sorted(df["Company"].unique())
+    )
+
+else:
+
+    company_filter = []
+
+# =========================================================
+# FILTER DATA
+# =========================================================
+
+filtered_df = df.copy()
+
+# -----------------------------------------
+# SEARCH FILTER
+# -----------------------------------------
 
 if search:
 
-    df = df[
-        df["Title"]
+    filtered_df = filtered_df[
+
+        filtered_df["Title"]
+
         .str.contains(
+
             search,
+
             case=False,
+
             na=False
         )
     ]
 
-if selected_locations:
+# -----------------------------------------
+# SOURCE FILTER
+# -----------------------------------------
 
-    df = df[
-        df["Location"]
-        .isin(selected_locations)
+if len(source_filter) > 0:
+
+    filtered_df = filtered_df[
+
+        filtered_df["Source"]
+
+        .isin(source_filter)
     ]
 
-if selected_companies:
+# -----------------------------------------
+# LOCATION FILTER
+# -----------------------------------------
 
-    df = df[
-        df["Company"]
-        .isin(selected_companies)
+if len(location_filter) > 0:
+
+    filtered_df = filtered_df[
+
+        filtered_df["Location"]
+
+        .isin(location_filter)
     ]
 
-if selected_experience:
+# -----------------------------------------
+# COMPANY FILTER
+# -----------------------------------------
 
-    df = df[
-        df["Experience"]
-        .isin(selected_experience)
+if len(company_filter) > 0:
+
+    filtered_df = filtered_df[
+
+        filtered_df["Company"]
+
+        .isin(company_filter)
     ]
 
-if "Keyword" in df.columns:
-
-    if selected_keywords:
-
-        df = df[
-            df["Keyword"]
-            .isin(selected_keywords)
-        ]
-
-# -----------------------------------
+# =========================================================
 # TITLE
-# -----------------------------------
+# =========================================================
 
-st.title("📊 Multi-Source Job Analytics Dashboard")
+st.title("📊 AI Powered Job Analytics Platform")
 
 st.markdown(
-    "## Real-Time Job Market Insights"
+
+    "### Real-Time Multi-Source Job Market Intelligence"
 )
 
-st.markdown("---")
-
-# -----------------------------------
-# KPI METRICS
-# -----------------------------------
-
-total_jobs = len(df)
-
-total_companies = (
-    df["Company"]
-    .nunique()
-)
-
-total_locations = (
-    df["Location"]
-    .nunique()
-)
-
-avg_jobs_per_company = round(
-    total_jobs / total_companies,
-    2
-)
+# =========================================================
+# METRICS
+# =========================================================
 
 col1, col2, col3, col4 = st.columns(4)
 
-col1.metric(
-    "Total Jobs",
-    total_jobs
-)
+with col1:
 
-col2.metric(
-    "Companies Hiring",
-    total_companies
-)
+    st.metric(
 
-col3.metric(
-    "Locations",
-    total_locations
-)
+        "Total Jobs",
 
-col4.metric(
-    "Avg Jobs / Company",
-    avg_jobs_per_company
-)
+        len(filtered_df)
+    )
+
+with col2:
+
+    st.metric(
+
+        "Companies Hiring",
+
+        filtered_df["Company"].nunique()
+    )
+
+with col3:
+
+    st.metric(
+
+        "Locations",
+
+        filtered_df["Location"].nunique()
+    )
+
+with col4:
+
+    st.metric(
+
+        "Sources",
+
+        filtered_df["Source"].nunique()
+    )
 
 st.markdown("---")
 
-# -----------------------------------
-# JOB TABLE
-# -----------------------------------
+# =========================================================
+# JOB SOURCES
+# =========================================================
 
-st.subheader("📋 Job Listings")
+st.subheader("🌍 Job Sources")
 
-display_df = df.copy()
+source_counts = (
 
-display_df["Skills"] = (
-    display_df["Skills"]
-    .astype(str)
-    .str[:40]
+    filtered_df["Source"]
+
+    .value_counts()
 )
 
-st.data_editor(
+fig = px.pie(
 
-    display_df,
+    names=source_counts.index,
 
-    column_config={
+    values=source_counts.values,
 
-        "Job_Link":
-        st.column_config.LinkColumn(
-            "Apply Link",
-            display_text="Open Job"
-        )
-    },
+    hole=0.5
+)
 
-    hide_index=True,
+fig.update_traces(
 
-    use_container_width=True,
+    textinfo="percent+label"
+)
+
+fig.update_layout(
 
     height=500
 )
 
-# -----------------------------------
-# RESUME MATCHER AI
-# -----------------------------------
+st.plotly_chart(
 
-st.markdown("---")
+    fig,
 
-st.subheader("📄 Resume Matcher AI")
-
-uploaded_resume = st.file_uploader(
-    "Upload Resume PDF",
-    type=["pdf"]
+    width="stretch"
 )
 
-if uploaded_resume is not None:
+# =========================================================
+# JOB CATEGORY
+# =========================================================
 
-    with st.spinner("Analyzing Resume..."):
+st.subheader("📊 Jobs by Category")
 
-        resume_text = extract_resume_text(
-            uploaded_resume
-        )
+category_counts = (
 
-        matched_jobs = match_jobs(
-            resume_text,
-            df
-        )
+    filtered_df["Keyword"]
 
-        st.success(
-            "Resume Analyzed Successfully"
-        )
+    .value_counts()
 
-        st.subheader(
-            "🎯 Top Matching Jobs"
-        )
+    .head(8)
+)
 
-        st.data_editor(
+fig = px.pie(
 
-            matched_jobs[
-                [
-                    "Source",
-                    "Title",
-                    "Company",
-                    "Skills",
-                    "Match_Percentage",
-                    "Job_Link"
-                ]
-            ].head(20),
+    names=category_counts.index,
 
-            column_config={
+    values=category_counts.values,
 
-                "Job_Link":
-                st.column_config.LinkColumn(
-                    "Apply Link"
-                )
-            },
+    hole=0.4
+)
 
-            hide_index=True,
+fig.update_traces(
 
-            use_container_width=True,
+    textposition="inside",
 
-            height=500
-        )
+    textinfo="percent+label"
+)
 
-# -----------------------------------
+fig.update_layout(
+
+    height=550
+)
+
+st.plotly_chart(
+
+    fig,
+
+    width="stretch"
+)
+
+# =========================================================
+# EXPERIENCE LEVELS
+# =========================================================
+
+st.subheader("💼 Experience Levels")
+
+exp_counts = (
+
+    filtered_df["Experience"]
+
+    .value_counts()
+
+    .head(10)
+)
+
+fig = px.bar(
+
+    x=exp_counts.index,
+
+    y=exp_counts.values,
+
+    labels={
+
+        "x": "Experience",
+
+        "y": "Jobs"
+    },
+
+    title="Jobs by Experience"
+)
+
+fig.update_layout(
+
+    xaxis_tickangle=-20,
+
+    height=500
+)
+
+st.plotly_chart(
+
+    fig,
+
+    width="stretch"
+)
+
+# =========================================================
 # TOP COMPANIES
-# -----------------------------------
+# =========================================================
 
 st.subheader("🏢 Top Hiring Companies")
 
 top_companies = (
 
-    df["Company"]
+    filtered_df["Company"]
+
     .value_counts()
+
     .head(10)
-    .reset_index()
 )
 
-top_companies.columns = [
-    "Company",
-    "Jobs"
-]
+fig = px.bar(
 
-fig1 = px.bar(
+    x=top_companies.index,
 
-    top_companies,
+    y=top_companies.values,
 
-    x="Company",
-    y="Jobs",
+    labels={
+
+        "x": "Company",
+
+        "y": "Jobs"
+    },
 
     title="Top Hiring Companies"
 )
 
-st.plotly_chart(
-    fig1,
-    use_container_width=True
+fig.update_layout(
+
+    xaxis_tickangle=-20,
+
+    height=500
 )
 
-# -----------------------------------
-# TOP LOCATIONS
-# -----------------------------------
+st.plotly_chart(
+
+    fig,
+
+    width="stretch"
+)
+
+# =========================================================
+# TOP SKILLS
+# =========================================================
+
+st.subheader("🔥 Top Skills")
+
+skills_series = (
+
+    filtered_df["Skills"]
+
+    .dropna()
+
+    .astype(str)
+
+    .str.split(r"[,/|]")
+
+    .explode()
+)
+
+skills_series = (
+
+    skills_series
+
+    .str.strip()
+
+    .str.title()
+)
+
+remove_skills = [
+
+    "Not Available",
+
+    "",
+
+    "Nan",
+
+    "Unknown"
+]
+
+skills_series = skills_series[
+
+    ~skills_series.isin(remove_skills)
+]
+
+top_skills = (
+
+    skills_series
+
+    .value_counts()
+
+    .head(15)
+)
+
+fig = px.bar(
+
+    x=top_skills.index,
+
+    y=top_skills.values,
+
+    labels={
+
+        "x": "Skill",
+
+        "y": "Jobs"
+    },
+
+    title="Top Skills Demand"
+)
+
+fig.update_layout(
+
+    xaxis_tickangle=-35,
+
+    height=550
+)
+
+st.plotly_chart(
+
+    fig,
+
+    width="stretch"
+)
+
+# =========================================================
+# LOCATION ANALYTICS
+# =========================================================
 
 st.subheader("📍 Top Hiring Locations")
 
 top_locations = (
 
-    df["Location"]
+    filtered_df["Location"]
+
     .value_counts()
+
     .head(10)
-    .reset_index()
 )
 
-top_locations.columns = [
-    "Location",
-    "Jobs"
-]
+fig = px.bar(
 
-fig2 = px.pie(
+    x=top_locations.index,
 
-    top_locations,
+    y=top_locations.values,
 
-    names="Location",
-    values="Jobs",
+    labels={
 
-    title="Location Distribution"
+        "x": "Location",
+
+        "y": "Jobs"
+    },
+
+    title="Top Hiring Locations"
 )
 
-st.plotly_chart(
-    fig2,
-    use_container_width=True
-)
+fig.update_layout(
 
-# -----------------------------------
-# TOP SKILLS ANALYSIS
-# -----------------------------------
+    xaxis_tickangle=-25,
 
-st.subheader("🛠 Most Demanded Skills")
-
-skills_series = (
-
-    df["Skills"]
-    .dropna()
-    .astype(str)
-)
-
-skills_list = []
-
-known_skills = [
-
-    "Python",
-    "SQL",
-    "Excel",
-    "Tableau",
-    "Power BI",
-    "Machine Learning",
-    "Data Analysis",
-    "Statistics",
-    "Pandas",
-    "NumPy",
-    "Deep Learning",
-    "Artificial Intelligence",
-    "Data Visualization",
-    "ETL",
-    "Spark",
-    "Hadoop",
-    "AWS",
-    "Azure",
-    "Git",
-    "TensorFlow",
-    "PyTorch",
-    "Business Analysis",
-    "Data Engineering",
-    "Airflow",
-    "Snowflake",
-    "BigQuery"
-]
-
-for text in skills_series:
-
-    lower_text = text.lower()
-
-    for skill in known_skills:
-
-        if skill.lower() in lower_text:
-
-            skills_list.append(skill)
-
-top_skills = Counter(
-    skills_list
-).most_common(15)
-
-skills_df = pd.DataFrame(
-
-    top_skills,
-
-    columns=[
-        "Skill",
-        "Count"
-    ]
-)
-
-skills_df = skills_df.sort_values(
-    by="Count",
-    ascending=True
-)
-
-fig3 = px.bar(
-
-    skills_df,
-
-    x="Count",
-    y="Skill",
-
-    orientation="h",
-
-    text="Count",
-
-    title="Top Skills Demand"
-)
-
-fig3.update_layout(
-
-    height=600,
-
-    yaxis=dict(
-        title=""
-    ),
-
-    xaxis=dict(
-        title="Job Count"
-    )
+    height=500
 )
 
 st.plotly_chart(
-    fig3,
-    use_container_width=True
+
+    fig,
+
+    width="stretch"
 )
 
-# -----------------------------------
-# EXPERIENCE ANALYSIS
-# -----------------------------------
-
-st.subheader("💼 Experience Requirements")
-
-experience_df = (
-
-    df["Experience"]
-    .value_counts()
-    .head(10)
-    .reset_index()
-)
-
-experience_df.columns = [
-    "Experience",
-    "Jobs"
-]
-
-fig4 = px.bar(
-
-    experience_df,
-
-    x="Experience",
-    y="Jobs",
-
-    title="Experience Distribution"
-)
-
-st.plotly_chart(
-    fig4,
-    use_container_width=True
-)
-
-# -----------------------------------
-# KEYWORD ANALYSIS
-# -----------------------------------
-
-if "Keyword" in df.columns:
-
-    st.subheader("🔑 Job Category Distribution")
-
-    keyword_df = (
-
-        df["Keyword"]
-        .value_counts()
-        .reset_index()
-    )
-
-    keyword_df.columns = [
-        "Keyword",
-        "Jobs"
-    ]
-
-    fig5 = px.pie(
-
-        keyword_df,
-
-        names="Keyword",
-        values="Jobs",
-
-        title="Jobs by Category"
-    )
-
-    st.plotly_chart(
-        fig5,
-        use_container_width=True
-    )
-
-# -----------------------------------
-# SOURCE DISTRIBUTION
-# -----------------------------------
-
-st.subheader("🌐 Job Sources")
-
-source_df = (
-    df["Source"]
-    .value_counts()
-    .reset_index()
-)
-
-source_df.columns = [
-    "Source",
-    "Jobs"
-]
-
-fig6 = px.pie(
-
-    source_df,
-
-    names="Source",
-    values="Jobs",
-
-    title="Jobs by Source"
-)
-
-st.plotly_chart(
-    fig6,
-    use_container_width=True
-)
-
-# -----------------------------------
-# DOWNLOAD BUTTON
-# -----------------------------------
-
-st.markdown("---")
-
-csv = df.to_csv(index=False)
-
-st.download_button(
-
-    label="⬇ Download Filtered Jobs",
-
-    data=csv,
-
-    file_name="filtered_jobs.csv",
-
-    mime="text/csv"
-)
-
-# -----------------------------------
+# =========================================================
 # DATABASE STATUS
-# -----------------------------------
-
-# -----------------------------------
-# DATABASE STATUS
-# -----------------------------------
+# =========================================================
 
 st.markdown("---")
 
 st.subheader("🗄 SQLite Database Status")
 
-db_path = "database/jobs.db"
+if os.path.exists(DB_PATH):
 
-if os.path.exists(db_path):
-
-    conn = sqlite3.connect(db_path)
+    conn = sqlite3.connect(DB_PATH)
 
     query = """
 
@@ -752,19 +685,58 @@ else:
         "Database not found"
     )
 
-st.markdown("""
-### 🚀 Project Features
+# =========================================================
+# DOWNLOAD CSV
+# =========================================================
 
-- Multi-Source Job Scraping
-- Naukri + Official Company Jobs
-- Greenhouse ATS Integration
-- Lever ATS Integration
-- SQLite Database Storage
-- Resume Matcher AI
-- Interactive Dashboard
-- Plotly Visualizations
-- Search & Filtering
-- Downloadable Job Dataset
-- Skills Analytics
-- Job Source Analytics
-""")
+st.markdown("---")
+
+csv = filtered_df.to_csv(
+
+    index=False
+)
+
+st.download_button(
+
+    label="📥 Download Jobs CSV",
+
+    data=csv,
+
+    file_name="jobs.csv",
+
+    mime="text/csv"
+)
+
+# =========================================================
+# JOB TABLE
+# =========================================================
+
+st.markdown("---")
+
+st.subheader("📋 Job Listings")
+
+show_columns = [
+
+    "Title",
+    "Company",
+    "Experience",
+    "Location",
+    "Salary",
+    "Source",
+    "Job_Link"
+]
+
+available_columns = [
+
+    col for col in show_columns
+
+    if col in filtered_df.columns
+]
+
+st.dataframe(
+
+    filtered_df[available_columns],
+
+    width="stretch",
+    height=600
+)
