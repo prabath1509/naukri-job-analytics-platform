@@ -10,6 +10,7 @@ import sqlite3
 import os
 import subprocess
 import sys
+import sqlite3
 
 # -----------------------------------
 # PROJECT ROOT IMPORT FIX
@@ -709,29 +710,37 @@ st.download_button(
 # DATABASE STATUS
 # -----------------------------------
 
+# -----------------------------------
+# DATABASE STATUS
+# -----------------------------------
+
 st.markdown("---")
 
 st.subheader("🗄 SQLite Database Status")
 
-db_path = (
-    r"C:\Users\PRABATH\OneDrive\Desktop\naukri_scraper_project\database\jobs.db"
-)
+db_path = "database/jobs.db"
 
 if os.path.exists(db_path):
 
     conn = sqlite3.connect(db_path)
 
     query = """
+
     SELECT COUNT(*) as total_jobs
+
     FROM jobs
+
     """
 
     db_jobs = pd.read_sql(
+
         query,
+
         conn
     )
 
     st.success(
+
         f"Database Connected | Total Stored Jobs: {db_jobs['total_jobs'][0]}"
     )
 
@@ -740,14 +749,9 @@ if os.path.exists(db_path):
 else:
 
     st.error(
+
         "Database not found"
     )
-
-# -----------------------------------
-# FOOTER
-# -----------------------------------
-
-st.markdown("---")
 
 st.markdown("""
 ### 🚀 Project Features
