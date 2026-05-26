@@ -1,7 +1,6 @@
 venv/
 __pycache__/
 *.pyc
-*.db
 *.csv
 .ipynb_checkpoints/
 .streamlit/
