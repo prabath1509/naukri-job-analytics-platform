@@ -1,0 +1,117 @@
+# 📊 Naukri Job Analytics Platform
+
+A complete end-to-end job market analytics platform built using Python, Selenium, SQLite, Streamlit, and Machine Learning.
+
+---
+
+## 🚀 Features
+
+- Multi-keyword Naukri job scraping
+- Automated multi-page scraping
+- SQLite database storage
+- Interactive Streamlit dashboard
+- Resume Matcher AI
+- Skills analysis
+- Hiring trend analytics
+- Clickable job application links
+- Real-time filtering and search
+
+---
+
+## 🛠 Tech Stack
+
+- Python
+- Selenium
+- Pandas
+- SQLite
+- Streamlit
+- Plotly
+- Scikit-learn
+- PyPDF2
+
+---
+
+## 📂 Project Structure
+
+```bash
+naukri_scraper_project/
+```
+
+---
+
+## ▶ Run Scraper
+
+```bash
+python main.py
+```
+
+---
+
+## ▶ Run Dashboard
+
+```bash
+streamlit run dashboard/app.py
+```
+
+---
+
+## 📈 Dashboard Features
+
+- KPI cards
+- Job trend analytics
+- Skill analysis
+- Resume-job matching
+- Interactive charts
+- Downloadable datasets
+
+---
+
+## 🤖 Resume Matcher AI
+
+Upload your resume PDF and get:
+- Job match percentage
+- Top matching jobs
+- Direct application links
+
+---
+
+## 👨‍💻 Author
+
+Krishna Prabath
+# AI-Powered Job Analytics Platform
+
+## Features
+- Multi-source job scraping
+- Naukri integration
+- Greenhouse ATS integration
+- Lever ATS integration
+- Streamlit dashboard
+- Resume matching
+- SQLite database
+- Automated scheduler
+- Job analytics
+
+## Tech Stack
+- Python
+- Selenium
+- Pandas
+- SQLite
+- Streamlit
+- Plotly
+
+## Architecture
+Scraper → Database → Analytics Dashboard
+
+## How to Run
+
+### Install dependencies
+pip install -r requirements.txt
+
+### Run scraper
+python main.py
+
+### Run dashboard
+streamlit run dashboard/app.py
+
+### Run scheduler
+python scheduler.py
