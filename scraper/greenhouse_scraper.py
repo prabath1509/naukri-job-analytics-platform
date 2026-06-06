@@ -1,63 +1,129 @@
+# =========================================================
+# scraper/greenhouse_scraper.py
+# =========================================================
+
 import requests
-import pandas as pd
 
-from scraper.utils import clean_text
+# =========================================================
+# scraper/greenhouse_scraper.py
+# DATA ANALYTICS FOCUSED GREENHOUSE SCRAPER
+# =========================================================
 
-# -----------------------------------
-# GREENHOUSE SCRAPER
-# -----------------------------------
+import requests
 
-def scrape_greenhouse(company_name):
+DATA_KEYWORDS = [
 
-    url = (
-        f"https://boards-api.greenhouse.io/v1/boards/"
-        f"{company_name}/jobs"
-    )
+    "data analyst",
+    "business analyst",
+    "data scientist",
+    "machine learning",
+    "analytics",
+    "business intelligence",
+    "sql",
+    "python",
+    "power bi",
+    "tableau",
+    "data engineer",
+    "etl",
+    "reporting analyst",
+    "research analyst",
+    "bi analyst",
+    "bi developer",
+    "data architect"
+]
 
-    response = requests.get(url)
 
-    if response.status_code != 200:
+def scrape_greenhouse():
 
-        return pd.DataFrame()
+    companies = [
 
-    data = response.json()
+        "databricks",
+        "airbnb",
+        "stripe",
+        "figma",
+        "reddit",
+        "robinhood",
+        "affirm",
+        "asana"
+    ]
 
     jobs = []
 
-    for job in data.get("jobs", []):
+    for company in companies:
 
-        jobs.append({
+        try:
 
-            "Source": "Greenhouse",
-
-            "Keyword": "Official Company Jobs",
-
-            "Title": clean_text(
-                job.get("title")
-            ),
-
-            "Company": company_name.title(),
-
-            "Experience": "Not Available",
-
-            "Location": clean_text(
-                job.get(
-                    "location",
-                    {}
-                ).get("name")
-            ),
-
-            "Salary": "Not Available",
-
-            "Skills": "Not Available",
-
-            "Posted_Date": clean_text(
-                job.get("updated_at")
-            ),
-
-            "Job_Link": clean_text(
-                job.get("absolute_url")
+            url = (
+                f"https://boards-api.greenhouse.io/v1/boards/"
+                f"{company}/jobs"
             )
-        })
 
-    return pd.DataFrame(jobs)
+            response = requests.get(
+                url,
+                timeout=30
+            )
+
+            data = response.json()
+
+            for job in data.get("jobs", []):
+
+                title = job.get(
+                    "title",
+                    "Unknown"
+                )
+
+                title_lower = title.lower()
+
+                # =====================================
+                # DATA ANALYTICS FILTER
+                # =====================================
+
+                if not any(
+                    keyword in title_lower
+                    for keyword in DATA_KEYWORDS
+                ):
+                    continue
+
+                jobs.append({
+
+                    "Title": title,
+
+                    "Company": company.title(),
+
+                    "Location": job.get(
+                        "location",
+                        {}
+                    ).get(
+                        "name",
+                        "Remote"
+                    ),
+
+                    "Experience": "Not Available",
+
+                    "Salary": "Not Available",
+
+                    "Skills": [],
+
+                    "Keyword": "Data Analytics",
+
+                    "Source": "Greenhouse",
+
+                    "Posted_Date": "Recent",
+
+                    "Job_Link": job.get(
+                        "absolute_url",
+                        ""
+                    )
+                })
+
+        except Exception as e:
+
+            print(
+                f"Greenhouse Error ({company}): {e}"
+            )
+
+    print(
+        f"Greenhouse Jobs Found: {len(jobs)}"
+    )
+
+    return jobs

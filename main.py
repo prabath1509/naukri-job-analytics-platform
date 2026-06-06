@@ -1,45 +1,29 @@
-# -----------------------------------
-# IMPORTS
-# -----------------------------------
-
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.service import Service
-
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-
-from selenium.common.exceptions import (
-    TimeoutException,
-    WebDriverException
-)
-
-from webdriver_manager.chrome import ChromeDriverManager
-
-from scraper.greenhouse_scraper import (
-    scrape_greenhouse
-)
-
-from scraper.lever_scraper import (
-    scrape_lever
-)
-
-from scraper.utils import (
-    clean_text,
-    create_job_key
-)
+# =========================================================
+# main.py
+# LARGE SCALE AI JOB SCRAPER
+# =========================================================
 
 import pandas as pd
 import sqlite3
 import logging
 import time
-import random
+import os
 
-from datetime import datetime
+from scraper.naukri_scraper import scrape_naukri_jobs
+from scraper.greenhouse_scraper import scrape_greenhouse
+from scraper.lever_scraper import scrape_lever
 
-# -----------------------------------
-# LOGGING
-# -----------------------------------
+# =========================================================
+# CREATE FOLDERS
+# =========================================================
+
+os.makedirs("data", exist_ok=True)
+
+os.makedirs("database", exist_ok=True)
+
+# =========================================================
+# LOGGING CONFIG
+# =========================================================
 
 logging.basicConfig(
 
@@ -48,677 +32,357 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
-# -----------------------------------
-# CREATE DRIVER
-# -----------------------------------
+# =========================================================
+# LARGE SCALE KEYWORDS
+# =========================================================
 
-def create_driver():
-
-    options = webdriver.ChromeOptions()
-
-    # -----------------------------------
-    # IMPORTANT
-    # KEEP HEADLESS DISABLED
-    # -----------------------------------
-
-    # options.add_argument("--headless=new")
-
-    options.add_argument("--start-maximized")
-
-    options.add_argument("--disable-gpu")
-
-    options.add_argument("--no-sandbox")
-
-    options.add_argument("--disable-dev-shm-usage")
-
-    options.add_argument(
-        "--disable-blink-features=AutomationControlled"
-    )
-
-    # -----------------------------------
-    # USER AGENT
-    # -----------------------------------
-
-    options.add_argument(
-
-        "user-agent=Mozilla/5.0 "
-        "(Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 "
-        "(KHTML, like Gecko) "
-        "Chrome/137.0.0.0 Safari/537.36"
-    )
-
-    # -----------------------------------
-    # REMOVE AUTOMATION FLAGS
-    # -----------------------------------
-
-    options.add_experimental_option(
-
-        "excludeSwitches",
-
-        ["enable-automation"]
-    )
-
-    options.add_experimental_option(
-
-        "useAutomationExtension",
-
-        False
-    )
-
-    # -----------------------------------
-    # DRIVER
-    # -----------------------------------
-
-    driver = webdriver.Chrome(
-
-        service=Service(
-            ChromeDriverManager().install()
-        ),
-
-        options=options
-    )
-
-    driver.set_page_load_timeout(40)
-
-    return driver
-
-# -----------------------------------
-# DRIVER
-# -----------------------------------
-
-driver = create_driver()
-
-# -----------------------------------
-# KEYWORDS
-# -----------------------------------
-
-keywords = [
+KEYWORDS = [
 
     "data-analyst",
-
     "business-analyst",
-
     "data-scientist",
-
-    "python-developer",
-
     "data-engineer",
-
     "machine-learning-engineer",
-
-    "ai-engineer",
-
-    "sql-developer",
-
-    "power-bi-developer",
-
-    "tableau-developer",
-
-    "etl-developer",
-
+    "analytics-engineer",
     "business-intelligence",
-
-    "financial-analyst",
-
+    "sql-developer",
+    "power-bi-developer",
+    "tableau-developer",
+    "etl-developer",
+    "reporting-analyst",
     "research-analyst",
-
-    "product-analyst",
-
-    "cloud-data-engineer",
-
-    "analytics-manager",
-
-    "deep-learning-engineer",
-
-    "nlp-engineer"
+    "data-analyst-fresher",
+    "data-science-intern"
 ]
 
-# -----------------------------------
-# NUMBER OF PAGES
-# -----------------------------------
-
-pages = 10
-
-# -----------------------------------
-# STORAGE
-# -----------------------------------
-
-all_jobs = []
-
-# -----------------------------------
-# GREENHOUSE COMPANIES
-# -----------------------------------
-
-greenhouse_companies = [
-
-    "stripe",
-    "notion",
-    "databricks",
-    "canva",
-    "airbnb",
-    "discord",
-    "reddit",
-    "figma",
-    "hubspot",
-    "shopify",
-    "affirm",
-    "brex",
-    "doordash",
-    "snowflake",
-    "asana",
-    "instacart",
-    "openai",
-    "robinhood",
-    "flexport",
-    "coinbase"
-]
-
-# -----------------------------------
-# LEVER COMPANIES
-# -----------------------------------
-
-lever_companies = [
-
-    "netflix",
-    "coinbase",
-    "udemy",
-    "postman",
-    "zapier",
-    "rippling",
-    "scale-ai",
-    "miro",
-    "eventbrite",
-    "benchling",
-    "coursera",
-    "verkada",
-    "lucid",
-    "modern-treasury",
-    "clearco"
-]
-
-# -----------------------------------
-# NAUKRI SCRAPING
-# -----------------------------------
-
-for keyword in keywords:
+# =========================================================
+# SCRAPE NAUKRI
+# =========================================================
 
-    logging.info(
-        f"Starting Keyword: {keyword}"
-    )
+logging.info("STARTING NAUKRI SCRAPING")
 
-    for page in range(1, pages + 1):
+naukri_jobs = []
 
-        try:
+for keyword in KEYWORDS:
 
-            # -----------------------------------
-            # RESTART DRIVER
-            # -----------------------------------
+    try:
 
-            if page % 3 == 0:
+        logging.info(
 
-                try:
-                    driver.quit()
-                except:
-                    pass
+            f"SCRAPING KEYWORD: {keyword}"
+        )
 
-                time.sleep(3)
+        jobs = scrape_naukri_jobs(
 
-                driver = create_driver()
+            keyword=keyword,
 
-                logging.info(
-                    "Driver Restarted"
-                )
+            pages=15
+        )
 
-            # -----------------------------------
-            # URL
-            # -----------------------------------
+        logging.info(
 
-            url = (
+            f"{keyword}: {len(jobs)} jobs scraped"
+        )
 
-                f"https://www.naukri.com/"
-                f"{keyword}-jobs-{page}"
-            )
+        naukri_jobs.extend(jobs)
 
-            logging.info(
-                f"Opening {url}"
-            )
+    except Exception as e:
 
-            driver.get(url)
+        logging.error(
 
-            # -----------------------------------
-            # WAIT
-            # -----------------------------------
+            f"Naukri Error ({keyword}): {e}"
+        )
 
-            WebDriverWait(driver, 20).until(
+# =========================================================
+# SCRAPE GREENHOUSE
+# =========================================================
 
-                EC.presence_of_element_located(
-
-                    (
-                        By.CSS_SELECTOR,
-                        "div.cust-job-tuple"
-                    )
-                )
-            )
-
-            # -----------------------------------
-            # SCROLL
-            # -----------------------------------
-
-            driver.execute_script(
-
-                "window.scrollTo(0, document.body.scrollHeight);"
-            )
-
-            time.sleep(
-                random.uniform(2, 4)
-            )
-
-            # -----------------------------------
-            # GET JOBS
-            # -----------------------------------
-
-            jobs = driver.find_elements(
-
-                By.CSS_SELECTOR,
-
-                "div.cust-job-tuple"
-            )
-
-            logging.info(
-                f"Jobs Found: {len(jobs)}"
-            )
-
-            # -----------------------------------
-            # HUMAN DELAY
-            # -----------------------------------
-
-            time.sleep(
-                random.uniform(6, 12)
-            )
-
-            # -----------------------------------
-            # JOB LOOP
-            # -----------------------------------
-
-            for job in jobs:
-
-                try:
-
-                    title = clean_text(
-
-                        job.find_element(
-
-                            By.CSS_SELECTOR,
-
-                            "a.title"
-                        ).text
-                    )
-
-                except:
-
-                    title = "Not Available"
-
-                try:
-
-                    company = clean_text(
-
-                        job.find_element(
-
-                            By.CLASS_NAME,
-
-                            "comp-name"
-                        ).text
-                    )
-
-                except:
-
-                    company = "Not Available"
-
-                try:
-
-                    experience = clean_text(
-
-                        job.find_element(
-
-                            By.CLASS_NAME,
-
-                            "expwdth"
-                        ).text
-                    )
-
-                except:
-
-                    experience = "Not Available"
-
-                try:
-
-                    location = clean_text(
-
-                        job.find_element(
-
-                            By.CLASS_NAME,
-
-                            "locWdth"
-                        ).text
-                    )
-
-                except:
-
-                    location = "Not Available"
-
-                try:
-
-                    salary = clean_text(
-
-                        job.find_element(
-
-                            By.CLASS_NAME,
-
-                            "sal-wrap"
-                        ).text
-                    )
-
-                except:
-
-                    salary = "Not Available"
-
-                try:
-
-                    skills = clean_text(
-
-                        job.find_element(
-
-                            By.CLASS_NAME,
-
-                            "tags-gt"
-                        ).text
-                    )
-
-                except:
-
-                    skills = "Not Available"
-
-                try:
-
-                    posted_date = clean_text(
-
-                        job.find_element(
-
-                            By.CLASS_NAME,
-
-                            "job-post-day"
-                        ).text
-                    )
-
-                except:
-
-                    posted_date = "Not Available"
-
-                try:
-
-                    job_link = (
-
-                        job.find_element(
-
-                            By.CSS_SELECTOR,
-
-                            "a.title"
-                        ).get_attribute("href")
-                    )
-
-                except:
-
-                    job_link = "Not Available"
-
-                # -----------------------------------
-                # STORE
-                # -----------------------------------
-
-                all_jobs.append({
-
-                    "Source": "Naukri",
-
-                    "Keyword": keyword,
-
-                    "Title": title,
-
-                    "Company": company,
-
-                    "Experience": experience,
-
-                    "Location": location,
-
-                    "Salary": salary,
-
-                    "Skills": skills,
-
-                    "Posted_Date": posted_date,
-
-                    "Job_Link": job_link
-                })
-
-            logging.info(
-                f"Page {page} Completed"
-            )
-
-        except (
-
-            TimeoutException,
-
-            WebDriverException,
-
-            Exception
-
-        ) as e:
-
-            logging.error(
-                f"Page {page} Error: {e}"
-            )
-
-            try:
-                driver.quit()
-            except:
-                pass
-
-            time.sleep(5)
-
-            driver = create_driver()
-
-            continue
-
-# -----------------------------------
-# CLOSE DRIVER
-# -----------------------------------
-
-try:
-    driver.quit()
-except:
-    pass
-
-# -----------------------------------
-# CREATE DATAFRAME
-# -----------------------------------
-
-naukri_df = pd.DataFrame(all_jobs)
-
-logging.info(
-    f"Naukri Jobs: {len(naukri_df)}"
-)
-
-# -----------------------------------
-# GREENHOUSE JOBS
-# -----------------------------------
+logging.info("STARTING GREENHOUSE SCRAPING")
 
 greenhouse_jobs = []
 
-for company in greenhouse_companies:
+try:
 
-    try:
+    greenhouse_jobs = scrape_greenhouse()
 
-        temp_df = scrape_greenhouse(company)
+    logging.info(
 
-        greenhouse_jobs.append(temp_df)
+        f"Greenhouse Jobs: {len(greenhouse_jobs)}"
+    )
 
-        logging.info(
-            f"Greenhouse Scraped: {company}"
-        )
+except Exception as e:
 
-    except Exception as e:
+    logging.error(
 
-        logging.error(
-            f"Greenhouse Error: {e}"
-        )
+        f"Greenhouse Error: {e}"
+    )
 
-# -----------------------------------
-# LEVER JOBS
-# -----------------------------------
+# =========================================================
+# SCRAPE LEVER
+# =========================================================
+
+logging.info("STARTING LEVER SCRAPING")
 
 lever_jobs = []
 
-for company in lever_companies:
+try:
+
+    lever_jobs = scrape_lever()
+
+    logging.info(
+
+        f"Lever Jobs: {len(lever_jobs)}"
+    )
+
+except Exception as e:
+
+    logging.error(
+
+        f"Lever Error: {e}"
+    )
+
+# =========================================================
+# COMBINE DATA
+# =========================================================
+
+all_jobs = (
+
+    naukri_jobs +
+
+    greenhouse_jobs +
+
+    lever_jobs
+)
+
+logging.info(
+
+    f"TOTAL RAW JOBS: {len(all_jobs)}"
+)
+
+# =========================================================
+# CLEAN DATA
+# =========================================================
+
+cleaned_jobs = []
+
+for job in all_jobs:
 
     try:
 
-        temp_df = scrape_lever(company)
+        title = str(
 
-        lever_jobs.append(temp_df)
+            job.get("Title", "Unknown")
 
-        logging.info(
-            f"Lever Scraped: {company}"
-        )
+        ).strip()
+
+        company = str(
+
+            job.get("Company", "Unknown")
+
+        ).strip()
+
+        location = str(
+
+            job.get("Location", "Unknown")
+
+        ).strip()
+
+        experience = str(
+
+            job.get("Experience", "Not Available")
+
+        ).strip()
+
+        salary = str(
+
+            job.get("Salary", "Not Available")
+
+        ).strip()
+
+        skills = job.get("Skills", [])
+
+        # =================================================
+        # SKILLS CLEANING
+        # =================================================
+
+        if isinstance(skills, list):
+
+            clean_skills = []
+
+            for skill in skills:
+
+                skill = str(skill).strip()
+
+                if (
+
+                    skill != ""
+
+                    and skill.lower() != "nan"
+
+                    and len(skill) > 1
+                ):
+
+                    clean_skills.append(skill)
+
+            skills = ", ".join(clean_skills)
+
+        else:
+
+            skills = str(skills)
+
+        if skills.strip() == "":
+
+            skills = "Not Available"
+
+        keyword = str(
+
+            job.get("Keyword", "")
+
+        ).replace("-", " ").title()
+
+        source = str(
+
+            job.get("Source", "Naukri")
+
+        ).strip()
+
+        posted_date = str(
+
+            job.get("Posted_Date", "Recent")
+
+        ).strip()
+
+        job_link = str(
+
+            job.get("Job_Link", "")
+
+        ).strip()
+
+        # =================================================
+        # REMOVE INVALID JOBS
+        # =================================================
+
+        if (
+
+            title.lower() == "unknown"
+
+            or company.lower() == "unknown"
+        ):
+
+            continue
+
+        cleaned_jobs.append({
+
+            "Title": title,
+
+            "Company": company,
+
+            "Location": location,
+
+            "Experience": experience,
+
+            "Salary": salary,
+
+            "Skills": skills,
+
+            "Keyword": keyword,
+
+            "Source": source,
+
+            "Posted_Date": posted_date,
+
+            "Job_Link": job_link
+        })
 
     except Exception as e:
 
         logging.error(
-            f"Lever Error: {e}"
+
+            f"Cleaning Error: {e}"
         )
 
-# -----------------------------------
-# COMBINE ALL DATA
-# -----------------------------------
+# =========================================================
+# DATAFRAME
+# =========================================================
 
-all_dfs = [naukri_df]
+df = pd.DataFrame(cleaned_jobs)
 
-if greenhouse_jobs:
-    all_dfs.extend(greenhouse_jobs)
-
-if lever_jobs:
-    all_dfs.extend(lever_jobs)
-
-df = pd.concat(
-
-    all_dfs,
-
-    ignore_index=True
-)
-
-# -----------------------------------
-# REMOVE EMPTY TITLES
-# -----------------------------------
-
-df = df[
-    df["Title"] != "Not Available"
-]
-
-# -----------------------------------
-# CREATE UNIQUE KEY
-# -----------------------------------
-
-df["job_key"] = df.apply(
-
-    create_job_key,
-
-    axis=1
-)
-
-# -----------------------------------
+# =========================================================
 # REMOVE DUPLICATES
-# -----------------------------------
+# =========================================================
 
 df.drop_duplicates(
 
-    subset=["job_key"],
+    subset=[
+
+        "Title",
+
+        "Company",
+
+        "Location"
+    ],
 
     inplace=True
 )
 
-# -----------------------------------
-# DATABASE
-# -----------------------------------
+# =========================================================
+# RESET INDEX
+# =========================================================
 
-db_path = (
+df.reset_index(
 
-    r"C:\Users\PRABATH\OneDrive\Desktop"
-    r"\naukri_scraper_project"
-    r"\database\jobs.db"
+    drop=True,
+
+    inplace=True
 )
 
+# =========================================================
+# CLEAN COLUMN NAMES
+# =========================================================
+
+df.columns = [
+
+    col.replace(" ", "_")
+    .replace("-", "_")
+    .replace("(", "")
+    .replace(")", "")
+
+    for col in df.columns
+]
+
+# =========================================================
+# SAVE CSV
+# =========================================================
+
+timestamp = time.strftime(
+
+    "%Y%m%d_%H%M%S"
+)
+
+csv_path = (
+
+    f"data/jobs_{timestamp}.csv"
+)
+
+df.to_csv(
+
+    csv_path,
+
+    index=False
+)
+
+logging.info(
+
+    f"CSV Saved: {csv_path}"
+)
+
+# =========================================================
+# SAVE SQLITE DATABASE
+# =========================================================
+
+db_path = "database/jobs.db"
+
 conn = sqlite3.connect(db_path)
-
-# -----------------------------------
-# LOAD EXISTING DATA
-# -----------------------------------
-
-try:
-
-    existing_df = pd.read_sql(
-
-        "SELECT * FROM jobs",
-
-        conn
-    )
-
-    combined_df = pd.concat(
-
-        [existing_df, df],
-
-        ignore_index=True
-    )
-
-    combined_df["job_key"] = combined_df.apply(
-
-        create_job_key,
-
-        axis=1
-    )
-
-    combined_df.drop_duplicates(
-
-        subset=["job_key"],
-
-        inplace=True
-    )
-
-    combined_df.drop(
-
-        columns=["job_key"],
-
-        inplace=True
-    )
-
-    df = combined_df
-
-except:
-
-    pass
-
-# -----------------------------------
-# FINAL CLEANUP
-# -----------------------------------
-
-if "job_key" in df.columns:
-
-    df.drop(
-
-        columns=["job_key"],
-
-        inplace=True
-    )
-
-# -----------------------------------
-# SAVE DATABASE
-# -----------------------------------
 
 df.to_sql(
 
@@ -734,41 +398,27 @@ df.to_sql(
 conn.close()
 
 logging.info(
-    "Database Saved"
+
+    f"Database Saved: {db_path}"
 )
 
-# -----------------------------------
-# SAVE CSV
-# -----------------------------------
-
-timestamp = datetime.now().strftime(
-    "%Y%m%d_%H%M%S"
-)
-
-csv_path = (
-
-    rf"C:\Users\PRABATH\OneDrive\Desktop"
-    rf"\naukri_scraper_project\data"
-    rf"\jobs_{timestamp}.csv"
-)
-
-df.to_csv(
-
-    csv_path,
-
-    index=False
-)
-
-logging.info(
-    f"CSV Saved: {csv_path}"
-)
-
-# -----------------------------------
+# =========================================================
 # FINAL OUTPUT
-# -----------------------------------
+# =========================================================
 
-print("\nSCRAPING COMPLETED")
+print("\n=================================================")
 
-print(f"\nTOTAL JOBS IN DATABASE: {len(df)}")
+print("SCRAPING COMPLETED SUCCESSFULLY")
+
+print("=================================================")
+
+print(
+
+    f"\nTOTAL JOBS SCRAPED: {len(df)}"
+)
+
+print("\nTOP 5 JOBS:\n")
 
 print(df.head())
+
+print("\n=================================================")
