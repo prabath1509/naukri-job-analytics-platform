@@ -1,4 +1,5 @@
 # =========================================================
+# AI JOB ANALYTICS DASHBOARD
 # dashboard/app.py
 # =========================================================
 
@@ -13,7 +14,7 @@ import os
 # =========================================================
 
 st.set_page_config(
-    page_title="AI Job Analytics Dashboard",
+    page_title="AI Powered Job Analytics Platform",
     page_icon="📊",
     layout="wide"
 )
@@ -65,6 +66,17 @@ location_filter = st.sidebar.multiselect(
     sorted(df["Location"].astype(str).unique())
 )
 
+experience_filter = st.sidebar.multiselect(
+    "Select Experience",
+    sorted(
+        df["Experience"]
+        .astype(str)
+        .replace("Not Available", pd.NA)
+        .dropna()
+        .unique()
+    )
+)
+
 # =========================================================
 # FILTER DATA
 # =========================================================
@@ -73,7 +85,8 @@ filtered_df = df.copy()
 
 if search:
     filtered_df = filtered_df[
-        filtered_df["Title"].astype(str)
+        filtered_df["Title"]
+        .astype(str)
         .str.contains(
             search,
             case=False,
@@ -83,16 +96,24 @@ if search:
 
 if source_filter:
     filtered_df = filtered_df[
-        filtered_df["Source"].isin(source_filter)
+        filtered_df["Source"]
+        .isin(source_filter)
     ]
 
 if location_filter:
     filtered_df = filtered_df[
-        filtered_df["Location"].isin(location_filter)
+        filtered_df["Location"]
+        .isin(location_filter)
+    ]
+
+if experience_filter:
+    filtered_df = filtered_df[
+        filtered_df["Experience"]
+        .isin(experience_filter)
     ]
 
 # =========================================================
-# TITLE
+# HEADER
 # =========================================================
 
 st.title("📊 AI Powered Job Analytics Platform")
@@ -130,19 +151,17 @@ c4.metric(
 st.markdown("---")
 
 # =========================================================
-# DOWNLOAD BUTTON
+# DOWNLOAD DATASET
 # =========================================================
 
 csv = filtered_df.to_csv(index=False)
 
 st.download_button(
-    "⬇ Download Dataset",
-    csv,
-    "jobs_dataset.csv",
-    "text/csv"
+    label="⬇ Download Dataset",
+    data=csv,
+    file_name="job_dataset.csv",
+    mime="text/csv"
 )
-
-st.markdown("---")
 
 # =========================================================
 # JOB SOURCES
@@ -175,9 +194,9 @@ st.plotly_chart(
 # TOP JOB CATEGORIES
 # =========================================================
 
-st.header("📊 Top Job Categories")
+st.header("📈 Top Job Categories")
 
-top_categories = (
+category_df = (
     filtered_df["Keyword"]
     .astype(str)
     .value_counts()
@@ -185,21 +204,16 @@ top_categories = (
     .reset_index()
 )
 
-top_categories.columns = [
+category_df.columns = [
     "Category",
     "Jobs"
 ]
 
 fig = px.bar(
-    top_categories,
+    category_df,
     x="Category",
     y="Jobs",
     title="Top Job Categories"
-)
-
-fig.update_layout(
-    xaxis_title="Category",
-    yaxis_title="Jobs"
 )
 
 st.plotly_chart(
@@ -208,10 +222,10 @@ st.plotly_chart(
 )
 
 # =========================================================
-# EXPERIENCE DISTRIBUTION
+# EXPERIENCE ANALYSIS
 # =========================================================
 
-st.header("📈 Experience Distribution")
+st.header("📊 Experience Distribution")
 
 exp_df = filtered_df[
     filtered_df["Experience"] != "Not Available"
@@ -219,20 +233,20 @@ exp_df = filtered_df[
 
 if len(exp_df) > 0:
 
-    exp_counts = (
+    experience_counts = (
         exp_df["Experience"]
         .value_counts()
         .head(10)
         .reset_index()
     )
 
-    exp_counts.columns = [
+    experience_counts.columns = [
         "Experience",
         "Jobs"
     ]
 
     fig = px.bar(
-        exp_counts,
+        experience_counts,
         x="Experience",
         y="Jobs",
         title="Jobs by Experience"
@@ -249,20 +263,20 @@ if len(exp_df) > 0:
 
 st.header("🏢 Top Hiring Companies")
 
-top_companies = (
+company_df = (
     filtered_df["Company"]
     .value_counts()
     .head(10)
     .reset_index()
 )
 
-top_companies.columns = [
+company_df.columns = [
     "Company",
     "Jobs"
 ]
 
 fig = px.bar(
-    top_companies,
+    company_df,
     x="Company",
     y="Jobs",
     title="Top Hiring Companies"
@@ -286,7 +300,7 @@ for skill_string in filtered_df["Skills"]:
     if pd.isna(skill_string):
         continue
 
-    if str(skill_string).strip().lower() == "not available":
+    if str(skill_string).lower() == "not available":
         continue
 
     skills = str(skill_string).split(",")
@@ -324,11 +338,6 @@ if len(all_skills) > 0:
         title="Top Skills in Demand"
     )
 
-    fig.update_layout(
-        xaxis_title="Skill",
-        yaxis_title="Jobs"
-    )
-
     st.plotly_chart(
         fig,
         use_container_width=True
@@ -359,9 +368,20 @@ columns = [
 ]
 
 st.write(
-    display_df[columns].to_html(
+    display_df[columns]
+    .to_html(
         escape=False,
         index=False
     ),
     unsafe_allow_html=True
+)
+
+# =========================================================
+# FOOTER
+# =========================================================
+
+st.markdown("---")
+
+st.caption(
+    f"Dashboard Generated from {len(filtered_df):,} Jobs"
 )
