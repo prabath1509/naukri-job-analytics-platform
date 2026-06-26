@@ -47,7 +47,7 @@ jobs:
           echo "===== Database ====="
           ls -lah database || true
 
-      - name: Commit & Push Updated Data
+      - name: Commit Updated Data
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
