@@ -34,34 +34,34 @@ jobs:
         run: |
           python main.py
 
-      - name: Debug Git Status
+      - name: Debug Repository
         run: |
           echo "===== Git Status ====="
           git status
 
-          echo "===== Git Ignore Check ====="
-          git check-ignore -v data/*.csv || true
-
+          echo ""
           echo "===== Data Folder ====="
-          ls -la data || true
+          ls -lah data || true
 
-      - name: Commit and Push Changes
+          echo ""
+          echo "===== Database ====="
+          ls -lah database || true
+
+      - name: Commit & Push Updated Data
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
 
-          # Force add generated files
           git add -f data/*.csv || true
           git add -f database/jobs.db || true
 
-          echo "===== Cached Files ====="
-          git diff --cached --name-only
+          git status
 
           if git diff --cached --quiet; then
             echo "No changes detected."
             exit 0
           fi
 
-          git commit -m "🤖 Automatic job data update"
+          git commit -m "Automatic job data update"
 
           git push origin HEAD:main
