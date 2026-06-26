@@ -1,6 +1,5 @@
-venv/
+vvenv/
 __pycache__/
 *.pyc
-*.csv
 .ipynb_checkpoints/
 .streamlit/
