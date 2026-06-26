@@ -34,7 +34,7 @@ jobs:
         run: |
           python main.py
 
-      - name: Debug Repository
+      - name: Show Repository Status
         run: |
           echo "===== Git Status ====="
           git status
@@ -52,11 +52,14 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
 
-          git add -f data/*.csv || true
-          git add -f database/jobs.db || true
+          # Stage every change in the repository
+          git add -A
 
+          echo ""
+          echo "===== Git Status After Add ====="
           git status
 
+          # Exit successfully if nothing changed
           if git diff --cached --quiet; then
             echo "No changes detected."
             exit 0
@@ -64,4 +67,6 @@ jobs:
 
           git commit -m "Automatic job data update"
 
+      - name: Push Changes
+        run: |
           git push origin HEAD:main
