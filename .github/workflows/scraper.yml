@@ -1,5 +1,8 @@
 name: Job Scraper Automation
 
+permissions:
+  contents: write
+
 on:
   workflow_dispatch:
 
@@ -7,15 +10,14 @@ on:
     - cron: "0 */12 * * *"
 
 jobs:
-
   scrape:
-
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -31,7 +33,7 @@ jobs:
         run: |
           python main.py
 
-      - name: Commit Updated Data
+      - name: Commit and Push Changes
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
@@ -39,9 +41,9 @@ jobs:
           git add data/*.csv
           git add database/jobs.db
 
-          git diff --cached --quiet || git commit -m "Automatic data update"
-
-      - name: Push Changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Automatic job data update"
+            git push
+          fi
