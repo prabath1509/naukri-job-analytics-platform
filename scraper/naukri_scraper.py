@@ -1,192 +1,336 @@
 # =========================================================
 # scraper/naukri_scraper.py
-# ULTRA STABLE NAUKRI SCRAPER
 # =========================================================
 
 import time
+import random
+import logging
 
 from selenium import webdriver
-
 from selenium.webdriver.common.by import By
 
 from selenium.webdriver.chrome.options import Options
-
 from selenium.webdriver.chrome.service import Service
 
 from selenium.webdriver.support.ui import WebDriverWait
-
 from selenium.webdriver.support import expected_conditions as EC
 
 from webdriver_manager.chrome import ChromeDriverManager
 
+# =========================================================
+# CONFIGURATION
+# =========================================================
+
+MAX_RETRIES = 3
 
 # =========================================================
-# CREATE DRIVER
+# CREATE CHROME DRIVER
 # =========================================================
 
 def create_driver():
 
     options = Options()
 
-    options.add_argument("--headless=new")
+    # Headless Chrome
+    #options.add_argument("--headless=new")
 
     options.add_argument("--disable-gpu")
-
-    options.add_argument("--no-sandbox")
-
-    options.add_argument("--disable-dev-shm-usage")
-
     options.add_argument("--window-size=1920,1080")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
 
     options.add_argument(
         "--disable-blink-features=AutomationControlled"
     )
 
-    options.add_argument(
-        "user-agent=Mozilla/5.0"
+    options.add_argument("--log-level=3")
+
+    options.add_experimental_option(
+
+        "excludeSwitches",
+
+        ["enable-automation"]
+
+    )
+
+    options.add_experimental_option(
+
+        "useAutomationExtension",
+
+        False
+
     )
 
     driver = webdriver.Chrome(
 
         service=Service(
+
             ChromeDriverManager().install()
+
         ),
 
         options=options
+
     )
+
+    driver.set_page_load_timeout(60)
+
+    driver.maximize_window()
 
     return driver
 
-
 # =========================================================
-# SCRAPER
+# PAGE SCROLL
+# =========================================================
+
+def scroll_page(driver):
+
+    driver.execute_script(
+
+        "window.scrollTo(0, document.body.scrollHeight);"
+
+    )
+
+    time.sleep(
+
+        random.uniform(1.5,3)
+
+    )
+
+    driver.execute_script(
+
+        "window.scrollTo(0,0);"
+
+    )
+
+    time.sleep(
+
+        random.uniform(1,2)
+
+    )
+# =========================================================
+# SCRAPE NAUKRI JOBS
 # =========================================================
 
 def scrape_naukri_jobs(keyword, pages=10):
 
     jobs = []
 
-    # =====================================================
-    # LOOP PAGES
-    # =====================================================
+    seen_links = set()
 
-    for page in range(1, pages + 1):
+    driver = None
 
-        driver = None
+    try:
 
-        try:
+        logging.info("=" * 60)
+        logging.info(f"Keyword : {keyword}")
+        logging.info("=" * 60)
 
-            # =============================================
-            # NEW DRIVER EVERY PAGE
-            # =============================================
+        driver = create_driver()
 
-            driver = create_driver()
+        wait = WebDriverWait(driver, 20)
 
-            wait = WebDriverWait(driver, 15)
+        # =================================================
+        # LOOP PAGES
+        # =================================================
 
-            url = (
-                f"https://www.naukri.com/"
-                f"{keyword}-jobs-{page}"
-            )
+        for page in range(1, pages + 1):
 
-            print(f"\nOpening: {url}")
-
-            driver.get(url)
-
-            time.sleep(4)
+            success = False
 
             # =============================================
-            # WAIT FOR JOBS
+            # RETRY FAILED PAGE
             # =============================================
 
-            wait.until(
+            for attempt in range(MAX_RETRIES):
 
-                EC.presence_of_element_located(
+                try:
 
-                    (
-                        By.CSS_SELECTOR,
-                        "div.srp-jobtuple-wrapper"
+                    url = (
+                        f"https://www.naukri.com/"
+                        f"{keyword}-jobs-{page}"
                     )
+
+                    logging.info(
+                        f"Opening Page {page}"
+                    )
+
+                    driver.get(url)
+
+                    time.sleep(10)
+
+                    driver.save_screenshot(f"page_{page}.png")
+
+                    with open(f"page_{page}.html","w",encoding="utf-8") as f:
+                        f.write(driver.page_source)
+
+                    scroll_page(driver)
+
+                    wait.until(
+
+                        EC.presence_of_element_located(
+
+                            (
+                                By.CSS_SELECTOR,
+                                "div.srp-jobtuple-wrapper"
+                            )
+
+                        )
+
+                    )
+
+                    cards = driver.find_elements(
+
+                        By.CSS_SELECTOR,
+
+                        "div.srp-jobtuple-wrapper"
+
+                    )
+
+                    if len(cards) == 0:
+
+                        logging.warning(
+
+                            f"No jobs on page {page}"
+
+                        )
+
+                        break
+
+                    logging.info(
+
+                        f"Page {page} : {len(cards)} jobs"
+
+                    )
+
+                    success = True
+
+                    break
+
+                except Exception as e:
+
+                    logging.warning(
+
+                        f"Retry {attempt+1}/{MAX_RETRIES}"
+
+                    )
+
+                    logging.warning(str(e))
+
+                    time.sleep(
+
+                        random.uniform(2,5)
+
+                    )
+
+            if not success:
+
+                logging.warning(
+
+                    f"Skipping page {page}"
+
                 )
-            )
 
-            cards = driver.find_elements(
-
-                By.CSS_SELECTOR,
-                "div.srp-jobtuple-wrapper"
-            )
-
-            print(f"Found {len(cards)} jobs")
+                continue
 
             # =============================================
-            # LOOP CARDS
+            # LOOP JOB CARDS
             # =============================================
 
             for card in cards:
+                                # ==========================================
+                # TITLE
+                # ==========================================
 
                 try:
 
                     title = card.find_element(
 
                         By.CSS_SELECTOR,
+
                         "a.title"
+
                     ).text.strip()
 
                 except:
 
                     title = "Unknown"
 
+                # ==========================================
+                # COMPANY
+                # ==========================================
+
                 try:
 
                     company = card.find_element(
 
                         By.CSS_SELECTOR,
+
                         "a.comp-name"
+
                     ).text.strip()
 
                 except:
 
                     company = "Unknown"
 
+                # ==========================================
+                # LOCATION
+                # ==========================================
+
                 try:
 
                     location = card.find_element(
 
                         By.CSS_SELECTOR,
+
                         "span.locWdth"
+
                     ).text.strip()
 
                 except:
 
                     location = "Unknown"
 
+                # ==========================================
+                # EXPERIENCE
+                # ==========================================
+
                 try:
 
                     experience = card.find_element(
 
                         By.CSS_SELECTOR,
+
                         "span.expwdth"
+
                     ).text.strip()
 
                 except:
 
                     experience = "Not Available"
 
+                # ==========================================
+                # SALARY
+                # ==========================================
+
                 try:
 
                     salary = card.find_element(
 
                         By.CSS_SELECTOR,
+
                         "span.sal"
+
                     ).text.strip()
 
                 except:
 
                     salary = "Not Available"
 
-                # =========================================
+                # ==========================================
                 # SKILLS
-                # =========================================
+                # ==========================================
 
                 skills = []
 
@@ -195,57 +339,84 @@ def scrape_naukri_jobs(keyword, pages=10):
                     skill_elements = card.find_elements(
 
                         By.CSS_SELECTOR,
+
                         "ul.tags-gt li"
+
                     )
 
-                    skills = [
+                    for skill in skill_elements:
 
-                        s.text.strip()
+                        text = skill.text.strip()
 
-                        for s in skill_elements
+                        if text:
 
-                        if s.text.strip() != ""
-                    ]
+                            skills.append(text)
 
                 except:
 
                     pass
 
-                # =========================================
-                # LINK
-                # =========================================
+                # ==========================================
+                # JOB LINK
+                # ==========================================
 
                 try:
 
-                    link = card.find_element(
+                    job_link = card.find_element(
 
                         By.CSS_SELECTOR,
+
                         "a.title"
+
                     ).get_attribute("href")
 
                 except:
 
-                    link = ""
+                    job_link = ""
 
-                # =========================================
+                # ==========================================
+                # REMOVE DUPLICATES
+                # ==========================================
+
+                if job_link in seen_links:
+
+                    continue
+
+                seen_links.add(job_link)
+
+                # ==========================================
                 # POSTED DATE
-                # =========================================
+                # ==========================================
 
                 try:
 
-                    posted = card.find_element(
+                    posted_date = card.find_element(
 
                         By.CSS_SELECTOR,
+
                         "span.job-post-day"
+
                     ).text.strip()
 
                 except:
 
-                    posted = "Recent"
+                    posted_date = "Recent"
 
-                # =========================================
-                # SAVE
-                # =========================================
+                # ==========================================
+                # KEYWORD
+                # ==========================================
+
+                keyword_name = keyword.replace(
+
+                    "-",
+
+                    " "
+
+                ).title()
+
+                # ==========================================
+                # SAVE JOB
+                # ==========================================
 
                 jobs.append({
 
@@ -261,39 +432,98 @@ def scrape_naukri_jobs(keyword, pages=10):
 
                     "Skills": skills,
 
-                    "Keyword": keyword,
+                    "Keyword": keyword_name,
 
                     "Source": "Naukri",
 
-                    "Posted_Date": posted,
+                    "Posted_Date": posted_date,
 
-                    "Job_Link": link
+                    "Job_Link": job_link
+
                 })
 
-        except Exception as e:
+            logging.info(
 
-            print(f"Page {page} Error: {e}")
+                f"Collected {len(jobs)} jobs so far."
 
-        finally:
+            )
+                    # =================================================
+        # END PAGE LOOP
+        # =================================================
 
-            # =============================================
-            # CLOSE DRIVER EVERY PAGE
-            # =============================================
+        logging.info("")
+        logging.info("=" * 60)
+        logging.info(
+            f"{keyword} Completed"
+        )
+        logging.info(
+            f"Total Jobs : {len(jobs)}"
+        )
+        logging.info("=" * 60)
+
+    except Exception as e:
+
+        logging.error(
+            f"Fatal Error ({keyword}) : {e}"
+        )
+
+    finally:
+
+        # =============================================
+        # CLOSE BROWSER
+        # =============================================
+
+        if driver:
 
             try:
 
-                if driver:
+                driver.quit()
 
-                    driver.quit()
+                logging.info(
+                    "Chrome Driver Closed"
+                )
 
-            except:
+            except Exception:
 
                 pass
 
-        # =================================================
-        # SMALL DELAY
-        # =================================================
+    # =====================================================
+    # REMOVE DUPLICATES
+    # =====================================================
 
-        time.sleep(2)
+    unique_jobs = []
 
-    return jobs
+    seen = set()
+
+    for job in jobs:
+
+        key = (
+
+            job["Title"],
+
+            job["Company"],
+
+            job["Location"]
+
+        )
+
+        if key not in seen:
+
+            seen.add(key)
+
+            unique_jobs.append(job)
+
+    logging.info("")
+    logging.info("=" * 60)
+    logging.info(
+        f"Keyword          : {keyword}"
+    )
+    logging.info(
+        f"Jobs Collected   : {len(jobs)}"
+    )
+    logging.info(
+        f"Unique Jobs      : {len(unique_jobs)}"
+    )
+    logging.info("=" * 60)
+
+    return unique_jobs
