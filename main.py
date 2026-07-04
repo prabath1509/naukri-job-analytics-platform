@@ -25,6 +25,10 @@ from scraper.salary_parser import parse_salary
 from scraper.workmode_parser import detect_work_mode
 from analytics.skill_frequency import generate_skill_frequency
 from analytics.company_frequency import generate_company_frequency
+from analytics.location_frequency import (
+    generate_location_frequency,
+    generate_workmode_frequency,
+)
 
 # Optional
 try:
@@ -518,6 +522,36 @@ logging.info(
 
 )
 # =========================================================
+# GENERATE WORK MODE
+# =========================================================
+
+try:
+
+    if "Location" in df.columns:
+
+        df["Work_Mode"] = (
+            df["Location"]
+            .fillna("")
+            .apply(detect_work_mode)
+        )
+
+        logging.info(
+            "Work_Mode column generated successfully"
+        )
+
+    else:
+
+        logging.warning(
+            "Location column not found. "
+            "Work_Mode could not be generated."
+        )
+
+except Exception as e:
+
+    logging.error(
+        f"Work Mode Generation Error: {e}"
+    )
+# =========================================================
 # SKILL FREQUENCY ANALYTICS
 # =========================================================
 
@@ -553,7 +587,48 @@ except Exception as e:
     logging.error(
         f"Company Demand Analytics Error: {e}"
     )
+# =========================================================
+# LOCATION DEMAND ANALYTICS
+# =========================================================
 
+try:
+
+    location_frequency_df = (
+        generate_location_frequency(df)
+    )
+
+    logging.info(
+        f"Location Demand Analytics Generated: "
+        f"{len(location_frequency_df)} locations"
+    )
+
+except Exception as e:
+
+    logging.error(
+        f"Location Demand Analytics Error: {e}"
+    )
+
+
+# =========================================================
+# WORK MODE ANALYTICS
+# =========================================================
+
+try:
+
+    workmode_frequency_df = (
+        generate_workmode_frequency(df)
+    )
+
+    logging.info(
+        f"Work Mode Analytics Generated: "
+        f"{len(workmode_frequency_df)} modes"
+    )
+
+except Exception as e:
+
+    logging.error(
+        f"Work Mode Analytics Error: {e}"
+    )
 # =========================================================
 # STANDARDIZE COLUMN NAMES
 # =========================================================
