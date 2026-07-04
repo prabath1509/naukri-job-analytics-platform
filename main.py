@@ -33,6 +33,10 @@ from analytics.experience_frequency import generate_experience_frequency
 from scraper.job_classifier import classify_job
 from analytics.role_frequency import generate_role_frequency
 from analytics.salary_frequency import generate_salary_frequency
+from analytics.source_quality import (
+    generate_source_quality,
+    generate_field_quality,
+)
 
 # Optional
 try:
@@ -722,6 +726,35 @@ except Exception as e:
 
     logging.error(
         f"Salary Demand Analytics Error: {e}"
+    )
+# =========================================================
+# SOURCE AND FIELD QUALITY ANALYTICS
+# =========================================================
+
+try:
+
+    source_quality_df = (
+        generate_source_quality(df)
+    )
+
+    field_quality_df = (
+        generate_field_quality(df)
+    )
+
+    logging.info(
+        f"Source Quality Analytics Generated: "
+        f"{len(source_quality_df)} sources"
+    )
+
+    logging.info(
+        f"Field Quality Analytics Generated: "
+        f"{len(field_quality_df)} fields"
+    )
+
+except Exception as e:
+
+    logging.error(
+        f"Source and Field Quality Analytics Error: {e}"
     )
 # =========================================================
 # STANDARDIZE COLUMN NAMES
