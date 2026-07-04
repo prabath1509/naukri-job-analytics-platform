@@ -1,100 +1,200 @@
-import requests
 import logging
+import time
+
+import requests
 
 
 WORKDAY_COMPANIES = [
     {
         "company": "NVIDIA",
-        "url": "https://nvidia.wd5.myworkdayjobs.com/wday/cxs/nvidia/ExternalCareerSite/jobs"
+        "url": "https://nvidia.wd5.myworkdayjobs.com/wday/cxs/nvidia/ExternalCareerSite/jobs",
     },
     {
         "company": "Mastercard",
-        "url": "https://mastercard.wd1.myworkdayjobs.com/wday/cxs/mastercard/CorporateCareers/jobs"
+        "url": "https://mastercard.wd1.myworkdayjobs.com/wday/cxs/mastercard/CorporateCareers/jobs",
     },
     {
         "company": "GE Aerospace",
-        "url": "https://geaerospace.wd5.myworkdayjobs.com/wday/cxs/geaerospace/External/jobs"
-    }
+        "url": "https://geaerospace.wd5.myworkdayjobs.com/wday/cxs/geaerospace/External/jobs",
+    },
 ]
+
+
+PAGE_SIZE = 20
+MAX_PAGES = 100
+REQUEST_TIMEOUT = 30
 
 
 def scrape_workday():
 
     jobs = []
 
-    headers = {
-        "User-Agent": "Mozilla/5.0"
-    }
+    session = requests.Session()
+
+    session.headers.update({
+        "User-Agent": "Mozilla/5.0",
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+    })
 
     for company in WORKDAY_COMPANIES:
 
+        company_name = company["company"]
+        url = company["url"]
+
+        logging.info(f"Scraping Workday: {company_name}")
+
+        company_jobs = []
+        seen_paths = set()
+
         try:
 
-            logging.info(f"Scraping Workday: {company['company']}")
-
             offset = 0
+            page = 1
+            total = None
 
-            while True:
+            while page <= MAX_PAGES:
 
                 payload = {
-                    "limit": 20,
+                    "limit": PAGE_SIZE,
                     "offset": offset,
-                    "searchText": ""
+                    "searchText": "",
                 }
 
-                response = requests.post(
-                    company["url"],
+                started = time.time()
+
+                response = session.post(
+                    url,
                     json=payload,
-                    headers=headers,
-                    timeout=60
+                    timeout=REQUEST_TIMEOUT,
+                )
+
+                elapsed = time.time() - started
+
+                logging.info(
+                    f"{company_name} | Page {page} | "
+                    f"Offset {offset} | Status {response.status_code} | "
+                    f"{elapsed:.2f}s"
                 )
 
                 if response.status_code != 200:
+
+                    logging.warning(
+                        f"{company_name}: HTTP {response.status_code}"
+                    )
+
                     break
 
                 data = response.json()
 
                 results = data.get("jobPostings", [])
 
+                if total is None:
+
+                    total = data.get("total")
+
+                    logging.info(
+                        f"{company_name}: Workday total = {total}"
+                    )
+
                 if not results:
+
+                    logging.info(
+                        f"{company_name}: empty page reached"
+                    )
+
                     break
+
+                new_jobs = 0
 
                 for job in results:
 
-                    jobs.append({
+                    external_path = str(
+                        job.get("externalPath", "")
+                    ).strip()
 
+                    if not external_path:
+                        continue
+
+                    if external_path in seen_paths:
+                        continue
+
+                    seen_paths.add(external_path)
+
+                    job_link = (
+                        url.split("/wday/cxs/")[0]
+                        + external_path
+                    )
+
+                    company_jobs.append({
                         "Title": job.get("title", ""),
-
-                        "Company": company["company"],
-
+                        "Company": company_name,
                         "Location": job.get("locationsText", ""),
-
                         "Experience": "Not Available",
-
                         "Salary": "Not Available",
-
                         "Skills": [],
-
                         "Keyword": job.get("title", ""),
-
                         "Source": "Workday",
-
                         "Posted_Date": job.get("postedOn", ""),
-
-                        "Job_Link": (
-                            company["url"]
-                            + "/job/"
-                            + job.get("externalPath", "")
-                        )
-
+                        "Job_Link": job_link,
                     })
 
-                offset += 20
+                    new_jobs += 1
 
-        except Exception as e:
+                logging.info(
+                    f"{company_name} | Page jobs: {len(results)} | "
+                    f"New jobs: {new_jobs} | "
+                    f"Collected: {len(company_jobs)}"
+                )
 
-            logging.error(f"{company['company']} : {e}")
+                if new_jobs == 0:
 
-    logging.info(f"Workday Jobs Found: {len(jobs)}")
+                    logging.warning(
+                        f"{company_name}: no new jobs; "
+                        f"stopping pagination"
+                    )
+
+                    break
+
+                offset += len(results)
+                page += 1
+
+                if total is not None and offset >= int(total):
+
+                    logging.info(
+                        f"{company_name}: reached Workday total {total}"
+                    )
+
+                    break
+
+        except requests.Timeout:
+
+            logging.error(
+                f"{company_name}: request timed out"
+            )
+
+        except requests.RequestException as exc:
+
+            logging.error(
+                f"{company_name}: request failed: {exc}"
+            )
+
+        except Exception as exc:
+
+            logging.exception(
+                f"{company_name}: unexpected error: {exc}"
+            )
+
+        logging.info(
+            f"{company_name}: {len(company_jobs)} unique jobs"
+        )
+
+        jobs.extend(company_jobs)
+
+    session.close()
+
+    logging.info(
+        f"Workday Jobs Found: {len(jobs)}"
+    )
 
     return jobs

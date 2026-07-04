@@ -31,11 +31,11 @@ def scrape_lever():
             url = f"https://api.lever.co/v0/postings/{slug}?mode=json"
 
             response = requests.get(
-                url,
-                driver.set_page_load_timeout(90),
-                headers={
-                    "User-Agent": "Mozilla/5.0"
-                }
+    url,
+    headers={
+        "User-Agent": "Mozilla/5.0"
+    },
+    timeout=30
             )
 
             if response.status_code != 200:

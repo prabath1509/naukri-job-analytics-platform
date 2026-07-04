@@ -86,28 +86,16 @@ def create_driver():
 def scroll_page(driver):
 
     driver.execute_script(
-
         "window.scrollTo(0, document.body.scrollHeight);"
-
     )
 
-    time.sleep(
-
-        random.uniform(1.5,3)
-
-    )
+    time.sleep(1)
 
     driver.execute_script(
-
-        "window.scrollTo(0,0);"
-
+        "window.scrollTo(0, 0);"
     )
 
-    time.sleep(
-
-        random.uniform(1,2)
-
-    )
+    time.sleep(0.5)
 # =========================================================
 # SCRAPE NAUKRI JOBS
 # =========================================================
@@ -157,12 +145,7 @@ def scrape_naukri_jobs(keyword, pages=10):
 
                     driver.get(url)
 
-                    time.sleep(10)
-
-                    driver.save_screenshot(f"page_{page}.png")
-
-                    with open(f"page_{page}.html","w",encoding="utf-8") as f:
-                        f.write(driver.page_source)
+                    time.sleep(3)
 
                     scroll_page(driver)
 
@@ -374,9 +357,17 @@ def scrape_naukri_jobs(keyword, pages=10):
 
                     job_link = ""
 
-                # ==========================================
+                                # ==========================================
                 # REMOVE DUPLICATES
                 # ==========================================
+
+                if not job_link:
+
+                    logging.warning(
+                        "Skipping job with missing Job_Link"
+                    )
+
+                    continue
 
                 if job_link in seen_links:
 
@@ -387,7 +378,6 @@ def scrape_naukri_jobs(keyword, pages=10):
                 # ==========================================
                 # POSTED DATE
                 # ==========================================
-
                 try:
 
                     posted_date = card.find_element(
@@ -487,31 +477,9 @@ def scrape_naukri_jobs(keyword, pages=10):
 
                 pass
 
+      # =====================================================
+    # FINAL SCRAPER SUMMARY
     # =====================================================
-    # REMOVE DUPLICATES
-    # =====================================================
-
-    unique_jobs = []
-
-    seen = set()
-
-    for job in jobs:
-
-        key = (
-
-            job["Title"],
-
-            job["Company"],
-
-            job["Location"]
-
-        )
-
-        if key not in seen:
-
-            seen.add(key)
-
-            unique_jobs.append(job)
 
     logging.info("")
     logging.info("=" * 60)
@@ -522,8 +490,8 @@ def scrape_naukri_jobs(keyword, pages=10):
         f"Jobs Collected   : {len(jobs)}"
     )
     logging.info(
-        f"Unique Jobs      : {len(unique_jobs)}"
+        f"Unique Job Links : {len(seen_links)}"
     )
     logging.info("=" * 60)
 
-    return unique_jobs
+    return jobs
