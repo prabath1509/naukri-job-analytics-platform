@@ -24,6 +24,7 @@ from scraper.experience_parser import parse_experience
 from scraper.salary_parser import parse_salary
 from scraper.workmode_parser import detect_work_mode
 from analytics.skill_frequency import generate_skill_frequency
+from analytics.company_frequency import generate_company_frequency
 
 # Optional
 try:
@@ -533,6 +534,24 @@ except Exception as e:
 
     logging.error(
         f"Skill Frequency Error: {e}"
+    )
+# =========================================================
+# COMPANY DEMAND ANALYTICS
+# =========================================================
+
+try:
+
+    company_frequency_df = generate_company_frequency(df)
+
+    logging.info(
+        f"Company Demand Analytics Generated: "
+        f"{len(company_frequency_df)} companies"
+    )
+
+except Exception as e:
+
+    logging.error(
+        f"Company Demand Analytics Error: {e}"
     )
 
 # =========================================================

@@ -26,6 +26,32 @@ INVALID_SKILLS = {
 }
 
 
+NOISE_SKILLS = {
+    "analytical",
+    "analytics",
+    "development",
+    "data",
+    "computer science",
+    "communication",
+    "communication skills",
+    "problem solving",
+    "problem-solving",
+    "management",
+    "teamwork",
+    "team player",
+    "leadership",
+    "engineering",
+    "technology",
+    "technical",
+    "analysis",
+    "business",
+    "software",
+    "reporting",
+    "research",
+    "operations",
+    "support",
+}
+
 # =========================================================
 # CLEAN AND NORMALIZE SKILL
 # =========================================================
@@ -40,6 +66,9 @@ def clean_skill(skill):
     if skill.lower() in INVALID_SKILLS:
         return None
 
+    if skill.lower() in NOISE_SKILLS:
+        return None
+
     skill = normalize_skill(skill)
 
     if not skill:
@@ -50,8 +79,10 @@ def clean_skill(skill):
     if skill.lower() in INVALID_SKILLS:
         return None
 
-    return skill
+    if skill.lower() in NOISE_SKILLS:
+        return None
 
+    return skill
 
 # =========================================================
 # GENERATE SKILL FREQUENCY
