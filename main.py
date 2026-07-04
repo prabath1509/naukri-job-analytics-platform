@@ -30,6 +30,8 @@ from analytics.location_frequency import (
     generate_workmode_frequency,
 )
 from analytics.experience_frequency import generate_experience_frequency
+from scraper.job_classifier import classify_job
+from analytics.role_frequency import generate_role_frequency
 
 # Optional
 try:
@@ -553,6 +555,36 @@ except Exception as e:
         f"Work Mode Generation Error: {e}"
     )
 # =========================================================
+# GENERATE ROLE CATEGORY
+# =========================================================
+
+try:
+
+    if "Title" in df.columns:
+
+        df["Role_Category"] = (
+            df["Title"]
+            .fillna("")
+            .apply(classify_job)
+        )
+
+        logging.info(
+            "Role_Category column generated successfully"
+        )
+
+    else:
+
+        logging.warning(
+            "Title column not found. "
+            "Role_Category could not be generated."
+        )
+
+except Exception as e:
+
+    logging.error(
+        f"Role Category Generation Error: {e}"
+    )
+# =========================================================
 # SKILL FREQUENCY ANALYTICS
 # =========================================================
 
@@ -649,6 +681,26 @@ except Exception as e:
 
     logging.error(
         f"Experience Demand Analytics Error: {e}"
+    )
+# =========================================================
+# JOB ROLE DEMAND ANALYTICS
+# =========================================================
+
+try:
+
+    role_frequency_df = (
+        generate_role_frequency(df)
+    )
+
+    logging.info(
+        f"Job Role Demand Analytics Generated: "
+        f"{len(role_frequency_df)} categories"
+    )
+
+except Exception as e:
+
+    logging.error(
+        f"Job Role Demand Analytics Error: {e}"
     )
 # =========================================================
 # STANDARDIZE COLUMN NAMES
