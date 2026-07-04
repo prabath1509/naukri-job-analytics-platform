@@ -23,6 +23,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from scraper.experience_parser import parse_experience
 from scraper.salary_parser import parse_salary
 from scraper.workmode_parser import detect_work_mode
+from analytics.skill_frequency import generate_skill_frequency
 
 # Optional
 try:
@@ -515,6 +516,24 @@ logging.info(
     f"Rows After Cleaning : {len(df)}"
 
 )
+# =========================================================
+# SKILL FREQUENCY ANALYTICS
+# =========================================================
+
+try:
+
+    skill_frequency_df = generate_skill_frequency(df)
+
+    logging.info(
+        f"Skill Frequency Generated: "
+        f"{len(skill_frequency_df)} skills"
+    )
+
+except Exception as e:
+
+    logging.error(
+        f"Skill Frequency Error: {e}"
+    )
 
 # =========================================================
 # STANDARDIZE COLUMN NAMES
