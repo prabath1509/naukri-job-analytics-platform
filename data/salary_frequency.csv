@@ -1,0 +1,8 @@
+Salary_Bucket,Job_Count,Parsed_Share_Percentage,Paid_Share_Percentage
+Unpaid,249,36.83,0.0
+0-3 LPA,48,7.1,11.24
+3-5 LPA,53,7.84,12.41
+5-10 LPA,86,12.72,20.14
+10-15 LPA,74,10.95,17.33
+15-25 LPA,121,17.9,28.34
+25+ LPA,45,6.66,10.54

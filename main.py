@@ -32,6 +32,7 @@ from analytics.location_frequency import (
 from analytics.experience_frequency import generate_experience_frequency
 from scraper.job_classifier import classify_job
 from analytics.role_frequency import generate_role_frequency
+from analytics.salary_frequency import generate_salary_frequency
 
 # Optional
 try:
@@ -701,6 +702,26 @@ except Exception as e:
 
     logging.error(
         f"Job Role Demand Analytics Error: {e}"
+    )
+# =========================================================
+# SALARY DEMAND ANALYTICS
+# =========================================================
+
+try:
+
+    salary_frequency_df = (
+        generate_salary_frequency(df)
+    )
+
+    logging.info(
+        f"Salary Demand Analytics Generated: "
+        f"{len(salary_frequency_df)} buckets"
+    )
+
+except Exception as e:
+
+    logging.error(
+        f"Salary Demand Analytics Error: {e}"
     )
 # =========================================================
 # STANDARDIZE COLUMN NAMES
