@@ -1,5 +1,8 @@
-vvenv/
+venv/
+venv_local_backup/
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
 .streamlit/
+page_*.html
+page_*.png
