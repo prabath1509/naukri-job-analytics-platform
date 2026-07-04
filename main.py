@@ -29,6 +29,7 @@ from analytics.location_frequency import (
     generate_location_frequency,
     generate_workmode_frequency,
 )
+from analytics.experience_frequency import generate_experience_frequency
 
 # Optional
 try:
@@ -628,6 +629,26 @@ except Exception as e:
 
     logging.error(
         f"Work Mode Analytics Error: {e}"
+    )
+# =========================================================
+# EXPERIENCE DEMAND ANALYTICS
+# =========================================================
+
+try:
+
+    experience_frequency_df = (
+        generate_experience_frequency(df)
+    )
+
+    logging.info(
+        f"Experience Demand Analytics Generated: "
+        f"{len(experience_frequency_df)} levels"
+    )
+
+except Exception as e:
+
+    logging.error(
+        f"Experience Demand Analytics Error: {e}"
     )
 # =========================================================
 # STANDARDIZE COLUMN NAMES
