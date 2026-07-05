@@ -1,6 +1,5 @@
 Source,Job_Count,Source_Share_Percentage,Title_Coverage_Percentage,Company_Coverage_Percentage,Location_Coverage_Percentage,Experience_Coverage_Percentage,Salary_Coverage_Percentage,Skills_Coverage_Percentage,Job_Link_Coverage_Percentage
-Naukri,2319,65.97,99.96,99.96,99.7,98.92,15.57,98.19,100.0
-Workday,1009,28.71,100.0,100.0,99.8,0.0,0.0,0.0,100.0
-Greenhouse,164,4.67,100.0,100.0,100.0,0.0,0.0,0.0,100.0
-Lever,21,0.6,100.0,100.0,100.0,0.0,0.0,0.0,100.0
-SmartRecruiters,2,0.06,100.0,100.0,100.0,0.0,0.0,0.0,100.0
+Workday,1009,84.36,100.0,100.0,99.8,0.0,0.0,0.0,100.0
+Greenhouse,164,13.71,100.0,100.0,100.0,0.0,0.0,0.0,100.0
+Lever,21,1.76,100.0,100.0,100.0,0.0,0.0,0.0,100.0
+SmartRecruiters,2,0.17,100.0,100.0,100.0,0.0,0.0,0.0,100.0
