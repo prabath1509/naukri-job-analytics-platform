@@ -180,6 +180,12 @@ role_filter = st.sidebar.multiselect(
     sorted(df["Role_Category"].unique()),
 )
 
+role_chart_depth = st.sidebar.selectbox(
+    "Role Chart Depth",
+    ["Top 10", "Top 15", "Top 20", "All Roles"],
+    index=1,
+)
+
 experience_options = [
     "Fresher",
     "0-2 Years",
@@ -365,11 +371,24 @@ with right:
     role_counts = (
         filtered_df["Role_Category"]
         .value_counts()
-        .head(12)
+    )
+
+    role_depth_map = {
+        "Top 10": 10,
+        "Top 15": 15,
+        "Top 20": 20,
+    }
+
+    if role_chart_depth in role_depth_map:
+        role_counts = role_counts.head(
+            role_depth_map[role_chart_depth]
+        )
+
+    role_counts = (
+        role_counts
         .sort_values()
         .reset_index()
     )
-
     role_counts.columns = [
         "Role Category",
         "Jobs",
