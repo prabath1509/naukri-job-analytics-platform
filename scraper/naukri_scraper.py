@@ -2,6 +2,7 @@
 # scraper/naukri_scraper.py
 # =========================================================
 
+import os
 import time
 import random
 import logging
@@ -31,8 +32,12 @@ def create_driver():
 
     options = Options()
 
-    # Headless Chrome
-    #options.add_argument("--headless=new")
+    # Headless Chrome for CI / GitHub Actions
+    is_ci = os.getenv("CI", "").lower() == "true"
+
+    if is_ci:
+        options.add_argument("--headless=new")
+        logging.info("Chrome CI headless mode enabled")
 
     options.add_argument("--disable-gpu")
     options.add_argument("--window-size=1920,1080")
