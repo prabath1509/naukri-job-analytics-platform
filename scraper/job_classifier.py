@@ -2,7 +2,7 @@
 # scraper/job_classifier.py
 # =========================================================
 
-
+import re
 def classify_job(title: str):
 
     if title is None:
@@ -77,6 +77,17 @@ def classify_job(title: str):
         return "Data Engineering"
 
     # =====================================================
+    # ADVANCED ANALYTICS
+    # =====================================================
+
+    if (
+        "advanced analytics" in title
+        or "analytics lead" in title
+        or "analytics manager" in title
+    ):
+        return "Advanced Analytics"
+
+    # =====================================================
     # ETL / DATA INTEGRATION
     # =====================================================
 
@@ -126,6 +137,116 @@ def classify_job(title: str):
         return "Python Development"
 
     # =====================================================
+    # PRODUCT MANAGEMENT
+    # =====================================================
+
+    if (
+        "product manager" in title
+        or "product management" in title
+        or "product development" in title
+    ):
+        return "Product Management"
+
+    # =====================================================
+    # SITE RELIABILITY
+    # =====================================================
+
+    if (
+        "site reliability" in title
+        or title == "sre"
+        or title.startswith("sre ")
+        or " sre " in title
+    ):
+        return "Site Reliability Engineering"
+
+    # =====================================================
+    # SOLUTIONS ARCHITECTURE
+    # =====================================================
+
+    if (
+        "solution architect" in title
+        or "solutions architect" in title
+        or "martech solutions architect" in title
+    ):
+        return "Solutions Architecture"
+
+    # =====================================================
+    # SECURITY
+    # =====================================================
+
+    if (
+        "security engineer" in title
+        or "information security" in title
+        or "cybersecurity" in title
+    ):
+        return "Security"
+
+    # =====================================================
+    # QA / TESTING
+    # =====================================================
+
+    if (
+        "qa automation" in title
+        or "quality assurance" in title
+        or "test engineer" in title
+    ):
+        return "QA / Testing"
+
+    # =====================================================
+    # CONSULTING
+    # =====================================================
+
+    if (
+        "consultant" in title
+        or "consulting" in title
+    ):
+        return "Consulting"
+
+    # =====================================================
+    # PROJECT / PROGRAM MANAGEMENT
+    # =====================================================
+
+    if (
+        "project manager" in title
+        or "program manager" in title
+        or "programme manager" in title
+    ):
+        return "Project / Program Management"
+
+    # =====================================================
+    # BUSINESS DEVELOPMENT
+    # =====================================================
+
+    if "business development" in title:
+        return "Business Development"
+
+    # =====================================================
+    # ACCOUNT MANAGEMENT
+    # =====================================================
+
+    if "account management" in title:
+        return "Account Management"
+
+    # =====================================================
+    # CUSTOMER SUCCESS
+    # =====================================================
+
+    if "customer success" in title:
+        return "Customer Success"
+
+    # =====================================================
+    # FINANCE / ACCOUNTING
+    # =====================================================
+
+    if (
+        "finance" in title
+        or "accountant" in title
+        or "accounting" in title
+        or "treasury" in title
+    ):
+        return "Finance / Accounting"
+
+    # =====================================================
     # GENERAL ANALYST
     # =====================================================
 
@@ -148,10 +269,7 @@ def classify_job(title: str):
     # INTERNSHIP
     # =====================================================
 
-    if (
-        "intern" in title
-        or "internship" in title
-    ):
+    if re.search(r"\bintern(?:ship)?\b", title):
         return "Internship"
 
     return "Other"
