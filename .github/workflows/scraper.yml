@@ -3,6 +3,10 @@ name: Job Scraper Automation
 permissions:
   contents: write
 
+concurrency:
+  group: job-scraper-main
+  cancel-in-progress: false
+
 on:
   workflow_dispatch:
 
@@ -69,4 +73,12 @@ jobs:
 
       - name: Push Changes
         run: |
+          echo "===== Synchronizing With Remote Main ====="
+
+          git fetch origin main
+          git rebase origin/main
+
+          echo ""
+          echo "===== Pushing Automated Data Update ====="
+
           git push origin HEAD:main
