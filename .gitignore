@@ -16,3 +16,5 @@ main_before_phase23.py
 .github/workflows/scraper_before_phase24.yml
 scraper/naukri_scraper_before_phase25.py
 scraper/naukri_scraper_before_phase25.py
+main_before_phase26.py
+.github/workflows/scraper_before_phase26.yml

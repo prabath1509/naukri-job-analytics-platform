@@ -34,6 +34,37 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Diagnose Chrome Runtime
+        run: |
+          echo "===== Operating System ====="
+          uname -a
+
+          echo ""
+          echo "===== Google Chrome ====="
+          google-chrome --version || true
+          which google-chrome || true
+
+          echo ""
+          echo "===== ChromeDriver ====="
+          chromedriver --version || true
+          which chromedriver || true
+
+          echo ""
+          echo "===== Memory ====="
+          free -h || true
+
+          echo ""
+          echo "===== Shared Memory ====="
+          df -h /dev/shm || true
+
+          echo ""
+          echo "===== Disk ====="
+          df -h || true
+
+          echo ""
+          echo "===== Chrome Processes ====="
+          ps aux | grep -i chrome || true
+
       - name: Run Job Scraper
         run: |
           python main.py
