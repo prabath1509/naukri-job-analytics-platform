@@ -7,3 +7,4 @@ __pycache__/
 page_*.html
 page_*.png
 database/jobs_before_phase17.db
+dashboard/app_before_phase19.py
