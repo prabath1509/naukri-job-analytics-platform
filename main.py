@@ -798,6 +798,62 @@ df.reset_index(
 )
 
 logging.info("Cleaning Completed.")
+
+# =========================================================
+# PUBLICATION QUALITY GATE
+# =========================================================
+
+MIN_PUBLISH_JOBS = 2500
+MIN_PUBLISH_SOURCES = 3
+REQUIRED_PUBLISH_SOURCES = {"Naukri"}
+
+publish_sources = set(
+    df["Source"].dropna().astype(str).str.strip()
+)
+
+publication_errors = []
+
+if len(df) < MIN_PUBLISH_JOBS:
+    publication_errors.append(
+        f"job count {len(df)} is below minimum {MIN_PUBLISH_JOBS}"
+    )
+
+if len(publish_sources) < MIN_PUBLISH_SOURCES:
+    publication_errors.append(
+        f"source count {len(publish_sources)} is below minimum {MIN_PUBLISH_SOURCES}"
+    )
+
+missing_publish_sources = (
+    REQUIRED_PUBLISH_SOURCES - publish_sources
+)
+
+if missing_publish_sources:
+    publication_errors.append(
+        "missing required sources: "
+        + ", ".join(sorted(missing_publish_sources))
+    )
+
+if publication_errors:
+    logging.critical("=" * 60)
+    logging.critical("PUBLICATION QUALITY GATE FAILED")
+    logging.critical("=" * 60)
+
+    for error in publication_errors:
+        logging.critical(error)
+
+    logging.critical(
+        "CSV snapshot and SQLite database were NOT replaced."
+    )
+
+    raise RuntimeError(
+        "Publication blocked by dataset quality gate: "
+        + "; ".join(publication_errors)
+    )
+
+logging.info(
+    f"Publication Quality Gate Passed | "
+    f"Jobs: {len(df)} | Sources: {len(publish_sources)}"
+)
 # =========================================================
 # SAVE CSV
 # =========================================================
