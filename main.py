@@ -907,6 +907,66 @@ conn.close()
 logging.info("Database Updated Successfully")
 
 # =========================================================
+# SNAPSHOT RETENTION
+# =========================================================
+
+SNAPSHOT_RETENTION_COUNT = 5
+
+snapshot_files = sorted(
+    Path("data").glob("jobs_*.csv"),
+    key=lambda path: path.name,
+    reverse=True,
+)
+
+valid_snapshots = []
+invalid_snapshots = []
+
+for snapshot_path in snapshot_files:
+    try:
+        snapshot_rows = len(pd.read_csv(snapshot_path))
+
+        if snapshot_rows >= MIN_PUBLISH_JOBS:
+            valid_snapshots.append(snapshot_path)
+        else:
+            invalid_snapshots.append(snapshot_path)
+
+    except Exception as e:
+        logging.warning(
+            f"Snapshot validation failed for "
+            f"{snapshot_path}: {e}"
+        )
+        invalid_snapshots.append(snapshot_path)
+
+snapshots_to_delete = (
+    valid_snapshots[SNAPSHOT_RETENTION_COUNT:]
+    + invalid_snapshots
+)
+
+removed_snapshots = 0
+
+for snapshot_path in snapshots_to_delete:
+    try:
+        snapshot_path.unlink()
+        removed_snapshots += 1
+
+        logging.info(
+            f"Snapshot Removed : {snapshot_path}"
+        )
+
+    except Exception as e:
+        logging.warning(
+            f"Snapshot retention could not remove "
+            f"{snapshot_path}: {e}"
+        )
+
+logging.info(
+    f"Snapshot Retention Completed | "
+    f"Kept: {min(len(valid_snapshots), SNAPSHOT_RETENTION_COUNT)} | "
+    f"Removed: {removed_snapshots}"
+)
+
+
+# =========================================================
 # SUMMARY
 # =========================================================
 
