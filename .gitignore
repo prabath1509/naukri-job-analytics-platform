@@ -6,3 +6,4 @@ __pycache__/
 .streamlit/
 page_*.html
 page_*.png
+database/jobs_before_phase17.db

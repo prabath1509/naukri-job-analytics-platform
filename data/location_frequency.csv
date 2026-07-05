@@ -1,267 +1,353 @@
 Location,Job_Count,Percentage
-Bengaluru,1075,32.81
-Hyderabad,476,14.53
-Pune,431,13.16
-Mumbai,329,10.04
-Chennai,322,9.83
-Gurugram,199,6.07
-Noida,124,3.79
-Delhi,96,2.93
-Kolkata,75,2.29
-Delhi NCR,55,1.68
-United States,54,1.65
-Ahmedabad,47,1.43
-Navi Mumbai,31,0.95
-Coimbatore,30,0.92
-India,30,0.92
-Kochi,26,0.79
-Nagpur,26,0.79
-Jaipur,25,0.76
-Indore,21,0.64
-San Francisco,18,0.55
-Thane,17,0.52
-Chandigarh,16,0.49
-Mysuru,15,0.46
-Bhubaneswar,14,0.43
-Mangaluru,14,0.43
-Belgaum,13,0.4
-Hubli,13,0.4
-Remote US,13,0.4
-Vadodara,13,0.4
-Mohali,12,0.37
-Canada,11,0.34
-Surat,11,0.34
-Visakhapatnam,11,0.34
-California,10,0.31
-Nagercoil,9,0.27
-Ontario,9,0.27
-Remote Canada,9,0.27
-Lucknow,8,0.24
-Thiruvananthapuram,8,0.24
-Nashik,7,0.21
-Bhopal,6,0.18
-CA,6,0.18
-CA • New York,6,0.18
-Greater Noida,6,0.18
-Madurai,6,0.18
-Aurangabad,5,0.15
-Faridabad,5,0.15
-Kozhikode,5,0.15
-Menlo Park,5,0.15
-NY • United States,5,0.15
-Bengaluru(Whitefield),4,0.12
-China,4,0.12
-Ghaziabad,4,0.12
-Mountain View,4,0.12
-Salem,4,0.12
-Seattle,4,0.12
-Tiruchirapalli,4,0.12
-Toronto,4,0.12
-USA,4,0.12
-Udaipur,4,0.12
-Erode,3,0.09
-Gandhinagar,3,0.09
-Haryana,3,0.09
-Ludhiana,3,0.09
-Malad,3,0.09
-Manesar,3,0.09
-New York,3,0.09
-Patna,3,0.09
-Rajkot,3,0.09
+Bengaluru,879,25.01
+Pune,446,12.69
+Hyderabad,389,11.07
+Chennai,279,7.94
+Mumbai,229,6.51
+Gurugram,196,5.58
+India,186,5.29
+Noida,84,2.39
+Canada,75,2.13
+New York,75,2.13
+Missouri,73,2.08
+O'Fallon,73,2.08
+Toronto,72,2.05
+Kolkata,70,1.99
+Delhi NCR,59,1.68
+Purchase,59,1.68
+2 Locations,58,1.65
+Delhi,58,1.65
+United States,57,1.62
+Bogota,47,1.34
+Sao Paulo,44,1.25
+Brazil,42,1.19
+Colombia,42,1.19
+Mexico,42,1.19
+Ahmedabad,41,1.17
+Mexico City,41,1.17
+Dublin,39,1.11
+Singapore,36,1.02
+London,33,0.94
+England (Angel Lane),29,0.83
+Ireland,28,0.8
+Navi Mumbai,23,0.65
+Australia,21,0.6
+Japan,21,0.6
+Kochi,21,0.6
+Tokyo,21,0.6
+Lisbon,20,0.57
+Portugal,20,0.57
+San Francisco,20,0.57
+Jaipur,19,0.54
+Kuala Lumpur,19,0.54
+Malaysia,19,0.54
+St. Leonards,19,0.54
+Nagpur,18,0.51
+Indore,17,0.48
+Argentina,16,0.46
+Buenos Aires,16,0.46
+Coimbatore,16,0.46
+Vancouver,16,0.46
+China,15,0.43
+Vadodara,15,0.43
+Canada (Ethoca),14,0.4
+Manila,14,0.4
+New York City,14,0.4
+Philippines,14,0.4
+Santiago,14,0.4
+Warsaw,14,0.4
+Mysuru,13,0.37
+Poland,13,0.37
+Remote US,13,0.37
+Thane,13,0.37
+3 Locations,12,0.34
+Bhubaneswar,12,0.34
+California,12,0.34
+Chandigarh,12,0.34
+Hubli,12,0.34
+Belgaum,11,0.31
+Mangaluru,11,0.31
+4 Locations,10,0.28
+Ireland (Mountain View),10,0.28
+Vietnam,10,0.28
+Visakhapatnam,10,0.28
+Besiktas,9,0.26
+Chile,9,0.26
+Indonesia (6th Floor),9,0.26
+Istanbul Turkey,9,0.26
+Jakarta,9,0.26
+Nagercoil,9,0.26
+Ontario,9,0.26
+Remote Canada,9,0.26
+Shanghai,9,0.26
+5 Locations,8,0.23
+Arlington,8,0.23
+Greater Noida,8,0.23
+Virginia,8,0.23
+Frankfurt,7,0.2
+Germany,7,0.2
+Hong Kong,7,0.2
+Israel,7,0.2
+Mohali,7,0.2
+Ramat-Gan,7,0.2
+Taipei,7,0.2
+Taiwan,7,0.2
+Thiruvananthapuram,7,0.2
+Wanchai,7,0.2
+CA,6,0.17
+CA • New York,6,0.17
+Ho Chi Minh City,6,0.17
+Lucknow,6,0.17
+Saudi Arabia,6,0.17
+Surat,6,0.17
+Bangkok,5,0.14
+Madrid,5,0.14
+Menlo Park,5,0.14
+NY • United States,5,0.14
+Riyadh,5,0.14
+Spain,5,0.14
+Thailand,5,0.14
+Belgium,4,0.11
+Faridabad,4,0.11
+France,4,0.11
+Georgia,4,0.11
+Ghaziabad,4,0.11
+Hanoi,4,0.11
+India (Finicity),4,0.11
+Johannesburg,4,0.11
+Kozhikode,4,0.11
+Mountain View,4,0.11
+Nashik,4,0.11
+Oslo,4,0.11
+Paris,4,0.11
+Salt Lake City,4,0.11
+Seattle,4,0.11
+South Africa,4,0.11
+USA,4,0.11
+Utah (Holladay),4,0.11
+Waterloo,4,0.11
+Agra,3,0.09
+Brazil (Marble Tower),3,0.09
+Cairo,3,0.09
+Colombia (Bldg 978),3,0.09
+Dubai,3,0.09
+Egypt,3,0.09
+Kanpur,3,0.09
+Latvia (Dynamic Yield),3,0.09
+Manilla,3,0.09
+Philippines (Transfast),3,0.09
 Remote-USA,3,0.09
-Sonipat,3,0.09
+Riga,3,0.09
 The Netherlands,3,0.09
-Tiruppur,3,0.09
 US,3,0.09
+United Arab Emirates,3,0.09
 United Kingdom,3,0.09
-Agra,2,0.06
-Amritsar,2,0.06
+Varanasi,3,0.09
+Washington,3,0.09
+6 Locations,2,0.06
+Ajmer,2,0.06
+Akola,2,0.06
+Atlanta,2,0.06
+Aurangabad,2,0.06
 BC,2,0.06
+Bangalore/ Bengaluru,2,0.06
+Bangladesh,2,0.06
+Beijing,2,0.06
+Bengaluru(Whitefield),2,0.06
+Bhopal,2,0.06
+Budapest,2,0.06
 CA; New York,2,0.06
 California; San Francisco,2,0.06
+Chennai(Navalur),2,0.06
+Chicago,2,0.06
+Colombia (Bancafe),2,0.06
+Copenhagen,2,0.06
 DC,2,0.06
-Hyderabad(Kondapur),2,0.06
+Denmark (Arne Jacobsens),2,0.06
+Dhaka,2,0.06
+District of Columbia,2,0.06
+Dominican Republic,2,0.06
+England,2,0.06
+England (Devonshire Square),2,0.06
+England (Vocalink),2,0.06
+Ernakulam,2,0.06
+Gurgaon/Gurugram,2,0.06
+Harrogate,2,0.06
+Hungary,2,0.06
 Hyderabad(Madhapur),2,0.06
-Jamshedpur,2,0.06
-Jodhpur,2,0.06
+Hyderabad/ Secunderabad,2,0.06
+Illinois,2,0.06
+India (Fulcrum),2,0.06
 Kakinada,2,0.06
-Kanpur,2,0.06
-Mahabubnagar,2,0.06
-Mumbai(Andheri East),2,0.06
-Mumbai(Andheri Kurla Road),2,0.06
-Mumbai(Bandra Kurla Complex),2,0.06
-Mumbai(Lower Parel),2,0.06
+Kanyakumari,2,0.06
+Karur,2,0.06
+Latin America,2,0.06
+Los Angeles,2,0.06
+Madurai,2,0.06
+Malad,2,0.06
+Manesar,2,0.06
+Melbourne,2,0.06
+Mumbai (All Areas)(Malad),2,0.06
+Mumbai(Vikhroli),2,0.06
 NY; Washington,2,0.06
 Nagar,2,0.06
-Nizamabad,2,0.06
-Panaji,2,0.06
-Panipat,2,0.06
-Puducherry,2,0.06
-Pune(Kalyani Nagar),2,0.06
-Ranchi,2,0.06
+Norway,2,0.06
+Norway (haavard martinsens vei),2,0.06
+Prague,2,0.06
+Prayagraj,2,0.06
+Raipur,2,0.06
 Remote UK,2,0.06
-Thrissur,2,0.06
-Vancouver,2,0.06
-Varanasi,2,0.06
-Vijayawada,2,0.06
-Warangal,2,0.06
+Rupnagar,2,0.06
+Santo Domingo,2,0.06
+Seoul,2,0.06
+Shamirpet,2,0.06
+Tbilisi,2,0.06
+Udaipur,2,0.06
+Vendor - Pune,2,0.06
+8 Locations,1,0.03
+Agartala,1,0.03
+Ahmedabad(Ambawadi),1,0.03
+Ahmedabad(Navrangpura),1,0.03
 Ahmedabad(Sanathal),1,0.03
-Ahmedabad(South Bopal),1,0.03
+Ahmedabad(Satellite),1,0.03
 Ahmedabad(Thaltej),1,0.03
-Ajmer,1,0.03
-Akola,1,0.03
 Alagappapuram,1,0.03
+Amritsar,1,0.03
+Amsterdam,1,0.03
+Athens,1,0.03
 Aurangabad(Shendra MIDC),1,0.03
-Ballia,1,0.03
-Bawal,1,0.03
-Belagavi,1,0.03
+Austin,1,0.03
+Bahadurgarh,1,0.03
+Belgrade,1,0.03
 Bellevue,1,0.03
+Bengaluru(Bellandur),1,0.03
 Bengaluru(Bommanahalli),1,0.03
-Bengaluru(Dairy Circle),1,0.03
-Bengaluru(Devanahalli),1,0.03
 Bengaluru(Electronic City +1),1,0.03
 Bengaluru(Kannuru),1,0.03
-Bengaluru(MG Road),1,0.03
-Bengaluru(Manayata Tech Park),1,0.03
-Bengaluru(Marathahalli),1,0.03
-Bengaluru(Old Airport Road),1,0.03
-Bengaluru(Vijay Nagar),1,0.03
+Bengaluru(Kodathi),1,0.03
+Bengaluru(M.G Road),1,0.03
+Bengaluru(Rajaji Nagar),1,0.03
 Bengaluru(Yeshwanthpur Industrial Area),1,0.03
-Bhubaneswar(Infocity),1,0.03
-Brazil,1,0.03
-Bulandshahr,1,0.03
+Bhiwadi,1,0.03
 CHI,1,0.03
-Changanassery,1,0.03
+Chengalpattu,1,0.03
 Chennai(Ambattur Industrial Estate +1),1,0.03
-Chennai(Chennai Central RS),1,0.03
+Chennai(Ekkaduthangal),1,0.03
 Chennai(Gummidipoondi),1,0.03
 Chennai(Kilpauk),1,0.03
 Chennai(Maduravoyal),1,0.03
-Chennai(Navalur),1,0.03
-Chennai(Tamil Nagar),1,0.03
+Colombo,1,0.03
+Costa Rica,1,0.03
+Cyprus,1,0.03
+Czech Rep,1,0.03
+Czech Republic (Namesti Republiky),1,0.03
 Dadra & Nagar Haveli,1,0.03
 Daman & Diu,1,0.03
-Dehradun,1,0.03
-Delhi / NCR(Sector 135),1,0.03
-Dhar(Pithampur),1,0.03
 Dharwad,1,0.03
-Dombivli,1,0.03
-Dubai,1,0.03
-Dublin,1,0.03
-Durgapur,1,0.03
 Eluru,1,0.03
-Ernakulam,1,0.03
 Faridabad(Sector 32),1,0.03
+Gandhinagar,1,0.03
 Goregaon,1,0.03
 Grant Road West,1,0.03
-Gudur,1,0.03
+Greece,1,0.03
 Guntur,1,0.03
-Gurgaon/Gurugram,1,0.03
 Gurugram(Cyber City),1,0.03
 Gurugram(Sector 58),1,0.03
 Guwahati,1,0.03
-Gwalior,1,0.03
+Haryana,1,0.03
 Hazaribagh,1,0.03
-Hisar,1,0.03
-Hosur,1,0.03
 Hughes Road Gamdevi,1,0.03
-Hyderabad(Ameerpet),1,0.03
 Hyderabad(Banjara hills +1),1,0.03
-Hyderabad(Financial District),1,0.03
-Hyderabad(Gachibowli),1,0.03
+Hyderabad(Kondapur),1,0.03
 Hyderabad(Somajiguda),1,0.03
-Hyderabad/Secunderabad(Masab Tank +1),1,0.03
-Jalandhar,1,0.03
+Italy,1,0.03
 Jammu,1,0.03
 Jamnagar,1,0.03
-Jayanagar2nd Block,1,0.03
-Jewar,1,0.03
-Kalol,1,0.03
+Jamshedpur,1,0.03
+Jodhpur,1,0.03
 Kalyani,1,0.03
-Kanchipuram(Sriperumbudur),1,0.03
 Karaikudi,1,0.03
-Karur,1,0.03
-Kharghar,1,0.03
 Kingdom Of Bahrain,1,0.03
-Kolhapur,1,0.03
-Kollam,1,0.03
-Kumbakonam,1,0.03
+Korea,1,0.03
+Korea (Sejong-Daero),1,0.03
+Kyiv,1,0.03
 Lakshadweep,1,0.03
-Lalitpur,1,0.03
 Latur,1,0.03
-Madhubani,1,0.03
-Malappuram,1,0.03
-Malaysia,1,0.03
+Lima,1,0.03
+Ludhiana,1,0.03
 Malerkotla,1,0.03
-Mexico,1,0.03
-Mexico City,1,0.03
-Mumbai (All Areas)(Andheri East),1,0.03
+Montevideo,1,0.03
 Mumbai (All Areas)(Andheri West),1,0.03
 Mumbai (All Areas)(Bhayandar +17),1,0.03
+Mumbai (All Areas)(Chembur),1,0.03
 Mumbai (All Areas)(Gamdevi),1,0.03
-Mumbai (All Areas)(Goregaon East),1,0.03
-Mumbai (All Areas)(Goregaon),1,0.03
-Mumbai(Bhandup),1,0.03
-Mumbai(Colaba),1,0.03
+Mumbai (All Areas)(Goregaon +1),1,0.03
+Mumbai (All Areas)(Oshiwara +1),1,0.03
+Mumbai(Andheri East),1,0.03
+Mumbai(Andheri Kurla Road),1,0.03
+Mumbai(Bandra Kurla Complex),1,0.03
 Mumbai(Fort),1,0.03
 Mumbai(Goregaon East),1,0.03
-Mumbai(Hiranandani Gardens Powai),1,0.03
-Mumbai(Lower Parel West),1,0.03
+Mumbai(Lower Parel),1,0.03
 Mumbai(Sion),1,0.03
-Mumbai(Vikhroli),1,0.03
 Mumbai(Virar +1),1,0.03
+N/A,1,0.03
 NY,1,0.03
 NYC,1,0.03
 Namakkal,1,0.03
 Nellore,1,0.03
-New Delhi(Barakhamba Road),1,0.03
+Netherlands,1,0.03
+New Delhi(Ghitorni),1,0.03
 New Delhi(Pitampura),1,0.03
-New York City,1,0.03
+Nicosia,1,0.03
+Nizamabad,1,0.03
 Noida(Noida Greater Noida Expressway),1,0.03
-Noida(Sector 135),1,0.03
-Noida(Sector 142),1,0.03
-Noida(Sector 96),1,0.03
 North & Middle Andaman,1,0.03
 Pallavaram,1,0.03
-Panvel,1,0.03
+Panaji,1,0.03
+Panchkula,1,0.03
+Panipat,1,0.03
+Patna,1,0.03
+Pauri,1,0.03
+Peru,1,0.03
+Peterborough,1,0.03
 Pimpri-Chinchwad,1,0.03
-Pithampur,1,0.03
 Port Blair,1,0.03
-Prayagraj,1,0.03
-Pune(Bhavaninagar),1,0.03
+Pune(Hinjewadi Phase 1 +3),1,0.03
+Pune(Hinjewadi Phase 2),1,0.03
 Pune(Karve Road),1,0.03
 Pune(Kharadi),1,0.03
-Pune(Kothrud),1,0.03
-Pune(Pune Nagar Road),1,0.03
 Pune(Shivaji Nagar),1,0.03
 Pune(Viman Nagar),1,0.03
-RV Road,1,0.03
-Raipur,1,0.03
+Pune(Yerwada),1,0.03
+Raigad(Nagothane),1,0.03
+Rajkot,1,0.03
 Remote Poland,1,0.03
 Remote Spain,1,0.03
+Rome,1,0.03
 Roorkee,1,0.03
-Rourkela,1,0.03
-Rupnagar,1,0.03
 SEA,1,0.03
 SF,1,0.03
+Sahibzada Ajit Singh Nagar,1,0.03
+Salem,1,0.03
 Samastipur,1,0.03
+San Jose,1,0.03
+Sanand,1,0.03
 Satara,1,0.03
-Saudi Arabia,1,0.03
-Serilingampally,1,0.03
-Shirwal,1,0.03
-Supa,1,0.03
-Supaul,1,0.03
+Serbia,1,0.03
+Sri Lanka,1,0.03
+Stockholm,1,0.03
+Sweden,1,0.03
 Thoothukudi,1,0.03
-Thrissur(Valapad),1,0.03
+Thrissur,1,0.03
 Tiruchirappalli,1,0.03
-Tumkur,1,0.03
 US - Remote,1,0.03
 US Remote,1,0.03
-United Arab Emirates,1,0.03
-Uzbekistan,1,0.03
-Vapi,1,0.03
+Ukraine,1,0.03
+Uruguay,1,0.03
+Utah,1,0.03
+Vadali,1,0.03
 Vellore,1,0.03
+Vijayawada,1,0.03
 WA,1,0.03
-Warsaw,1,0.03
-Washington,1,0.03
-Yamunanagar,1,0.03
+Warangal,1,0.03

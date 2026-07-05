@@ -37,7 +37,7 @@ from analytics.source_quality import (
     generate_source_quality,
     generate_field_quality,
 )
-
+from scraper.job_classifier import classify_job
 # Optional
 try:
     from scraper.smartrecruiters_scraper import scrape_smartrecruiters

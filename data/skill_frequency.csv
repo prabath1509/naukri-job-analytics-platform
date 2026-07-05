@@ -1,3019 +1,2429 @@
 Skill,Frequency,Percentage
-SQL,573,20.22
-Data Analysis,533,18.81
-Python,528,18.63
-Power BI,479,16.9
-Machine Learning,411,14.5
-Business Intelligence,266,9.39
-Data Modeling,249,8.79
-Data Analytics,236,8.33
-Tableau,212,7.48
-Business Analysis,195,6.88
-Artificial Intelligence,177,6.25
-BI,177,6.25
-Automation,172,6.07
-Data Warehousing,166,5.86
-Data Visualization,162,5.72
-Data Quality,135,4.76
-ETL,133,4.69
-Performance Tuning,129,4.55
-Data Management,114,4.02
-Data Science,113,3.99
-Natural Language Processing,113,3.99
-SAP,108,3.81
-Research Analysis,104,3.67
-Business Analytics,103,3.63
-Data Analyst,102,3.6
-Excel,101,3.56
-Data Validation,99,3.49
-Oracle,99,3.49
-SQL Server,96,3.39
-Data Engineering,95,3.35
-Market Research,90,3.18
-Agile,88,3.11
-Sql Queries,87,3.07
-Research Analyst,86,3.03
-Microsoft,83,2.93
-Project Management,83,2.93
-Troubleshooting,83,2.93
-PySpark,82,2.89
-PL/SQL,79,2.79
-Stored Procedures,77,2.72
-Dashboards,73,2.58
-Healthcare,72,2.54
-Sql Development,71,2.51
-Business Analyst,69,2.43
-Database,69,2.43
-Informatica,69,2.43
-AI,68,2.4
-AWS,68,2.4
-SSIS,68,2.4
-Query,66,2.33
-Snowflake,66,2.33
-Consulting,65,2.29
-Machine,64,2.26
-Analytical Skills,61,2.15
-Modeling,60,2.12
-Data Scientist,59,2.08
-T-Sql,59,2.08
-Coding,58,2.05
-Data Mining,57,2.01
-Deep Learning,55,1.94
-Data Collection,54,1.91
-Intelligence,53,1.87
-Google Cloud,52,1.83
-Microsoft Azure,52,1.83
-Workflow,52,1.83
-Finance,51,1.8
-Data Processing,50,1.76
-Dax,50,1.76
-Version Control,50,1.76
-Cloud,48,1.69
-Ssrs,48,1.69
-Azure,47,1.66
-Predictive Modeling,47,1.66
-Supply Chain,47,1.66
-Data Migration,46,1.62
-Monitoring,46,1.62
-Generative Ai,45,1.59
-Programming,45,1.59
-Accounting,44,1.55
-C++,43,1.52
-Design,43,1.52
-JavaScript,43,1.52
-TensorFlow,43,1.52
-Usage,43,1.52
-ML,42,1.48
-Data Engineer,41,1.45
-Financial Analysis,41,1.45
-Compliance,40,1.41
-ERP,40,1.41
-Git,40,1.41
-MySQL,40,1.41
-Architecture,39,1.38
-Dbms,39,1.38
-Backend,38,1.34
-C#,38,1.34
-Forecasting,38,1.34
-Networking,38,1.34
-PostgreSQL,38,1.34
-Reporting Analyst,37,1.31
-Computer Vision,36,1.27
-Deployment,36,1.27
-Etl Development,36,1.27
-Stakeholder Management,36,1.27
-Training,36,1.27
-Data Structures,35,1.24
-Database Design,35,1.24
-Information Technology,35,1.24
-Kubernetes,35,1.24
-Financial Reporting,34,1.2
-Kpi,34,1.2
-Linux,34,1.2
-Bi Tools,33,1.16
-Digital Transformation,33,1.16
-Power Query,33,1.16
-Statistics,33,1.16
-Apache Airflow,32,1.13
-Css,32,1.13
-Java,32,1.13
-Regression,32,1.13
-Scheduling,32,1.13
-Advanced Excel,31,1.09
-Apache Spark,31,1.09
-Continuous Improvement,31,1.09
-Big Data,30,1.06
-Business Research,30,1.06
-Hive,30,1.06
-Manager Technology,30,1.06
-Process Improvement,30,1.06
-Application Development,29,1.02
-Data Architecture,29,1.02
-PyTorch,29,1.02
-Requirement Gathering,29,1.02
-Root Cause Analysis,29,1.02
-Sales,29,1.02
-Algorithms,28,0.99
-Macros,28,0.99
-Record To Report,28,0.99
-Data Bricks,27,0.95
-Risk Management,27,0.95
-Ssas,27,0.95
-Unix,27,0.95
-Bi Development,26,0.92
-Data Pipelines,26,0.92
-Jira,26,0.92
-Llm,26,0.92
-Part,26,0.92
-Power Bi Reports,26,0.92
-Science,26,0.92
-Server,26,0.92
-Industry Research,25,0.88
-NumPy,25,0.88
-Debugging,24,0.85
-Feature Engineering,24,0.85
-Oracle SQL,24,0.85
-Sas,24,0.85
-Data Integrity,23,0.81
-Html,23,0.81
-Pharma,23,0.81
-Query Optimization,23,0.81
-Scrum,23,0.81
-Sql Server Development,23,0.81
-Vlookup,23,0.81
-Data Architect,22,0.78
-Develop,22,0.78
-Languages,22,0.78
-Manager Quality Assurance,22,0.78
-Microsoft Power Bi,22,0.78
-Performance Optimization,22,0.78
-Pivot Table,22,0.78
-Predictive Analytics,22,0.78
-Primary Research,22,0.78
-Process,22,0.78
-User Stories,22,0.78
-Visualization,22,0.78
-Change Management,21,0.74
-Continuous Integration,21,0.74
-Dashboard Development,21,0.74
-Data Governance,21,0.74
-GitHub,21,0.74
-Mlops,21,0.74
-Production,21,0.74
-Production Support,21,0.74
-QA,21,0.74
-QlikView,21,0.74
-Scala,21,0.74
-Schema,21,0.74
-Senior Analyst,21,0.74
-Shell Scripting,21,0.74
-Azure Databricks,20,0.71
-Financial Services,20,0.71
-Gap Analysis,20,0.71
-Product Management,20,0.71
-Publishing,20,0.71
-Reconciliation,20,0.71
-Stakeholder,20,0.71
-Talend,20,0.71
-Tools,20,0.71
-Administration,19,0.67
-Asset Management,19,0.67
-Ci/Cd,19,0.67
-Customer Satisfaction,19,0.67
-Customer Service,19,0.67
-Data Anaysis,19,0.67
-Data Pipeline,19,0.67
-Databricks,19,0.67
-Hadoop,19,0.67
-MLflow,19,0.67
-Ms Office,19,0.67
-Neural Networks,19,0.67
-Product Engineering,19,0.67
-Software Testing,19,0.67
-Team Management,19,0.67
-Technical Support,19,0.67
-Time,19,0.67
-Advanced Analytics,18,0.64
-Azure Data Factory,18,0.64
-Billing,18,0.64
-Brd,18,0.64
-Business Intelligence Reporting,18,0.64
-CRM,18,0.64
-Configuration,18,0.64
-Database Maintenance,18,0.64
-Dax Queries,18,0.64
-Equity Research,18,0.64
-Front End,18,0.64
-It Services,18,0.64
-Json,18,0.64
-Market Analysis,18,0.64
-Power Bi Desktop,18,0.64
-Serv,18,0.64
-Software Development,18,0.64
-Xml,18,0.64
-Aiml,17,0.6
-Datastage,17,0.6
-Documentation,17,0.6
-Etl Tool,17,0.6
-Focus,17,0.6
-Nosql,17,0.6
-Open Source,17,0.6
-Packaging,17,0.6
-Presentation Skills,17,0.6
-Processing,17,0.6
-Secondary Research,17,0.6
-Statistical Analysis,17,0.6
-Bloomberg,16,0.56
-Cd,16,0.56
-Data Cleansing,16,0.56
-Docker,16,0.56
-Hyper-Parameter Tuning,16,0.56
-Infrastructure,16,0.56
-Migration,16,0.56
-Optimization Algorithms,16,0.56
-R2R,16,0.56
-Reporting Tools,16,0.56
-Scikit-Learn,16,0.56
-ServiceNow,16,0.56
-Uat,16,0.56
-Bigquery,15,0.53
-Data Extraction,15,0.53
-Database Management,15,0.53
-Interpersonal Skills,15,0.53
-Metadata,15,0.53
-Social Media,15,0.53
-Unit Testing,15,0.53
-Business Requirements,14,0.49
-Customer Feedback,14,0.49
-Etl Developer,14,0.49
-Frd,14,0.49
-Gen Ai,14,0.49
-Health Insurance,14,0.49
-Informatica Powercenter,14,0.49
-Ledger,14,0.49
-Life Sciences,14,0.49
-Mis Reporting,14,0.49
-Rdbms,14,0.49
-Sdlc,14,0.49
-Senior,14,0.49
-Statistical Modeling,14,0.49
-Time Management,14,0.49
-Use Cases,14,0.49
-Warehouse,14,0.49
-Application Developer,13,0.46
-Business Integration,13,0.46
-Business Reporting,13,0.46
-Confluence,13,0.46
-Data Research,13,0.46
-Data Security,13,0.46
-Google Analytics,13,0.46
-Indexing,13,0.46
-Journal Entries,13,0.46
-Langchain,13,0.46
-Large Language Model,13,0.46
-Part Time,13,0.46
-Procurement,13,0.46
-Retrieval Augmented Generation,13,0.46
-Scripting,13,0.46
-Testing,13,0.46
-Triggers,13,0.46
-Analysts,12,0.42
-Business Process,12,0.42
-Customer Support,12,0.42
-Devops,12,0.42
-Digital Marketing,12,0.42
-Dml,12,0.42
-Etl Informatica,12,0.42
-Etl Pipelines,12,0.42
-Gaming,12,0.42
-Machine Learning Algorithms,12,0.42
-Mis,12,0.42
-Orchestration,12,0.42
-Pandas,12,0.42
-Rest,12,0.42
-Strategic Planning,12,0.42
-Apache,11,0.39
-Bpo,11,0.39
-Business Strategy,11,0.39
-Claims,11,0.39
-Classification,11,0.39
-Clustering,11,0.39
-Data Integration,11,0.39
-Insurance,11,0.39
-Logistic Regression,11,0.39
-Operational Excellence,11,0.39
-Power Bi Dashboards,11,0.39
-Quantitative Research,11,0.39
-Regulatory Compliance,11,0.39
-Report Generation,11,0.39
-Requirements,11,0.39
-Signalling,11,0.39
-Spss,11,0.39
-Strong Analytical Skills,11,0.39
-Unix Shell Scripting,11,0.39
-.Net,10,0.35
-Alteryx,10,0.35
-Azure Cloud,10,0.35
-Banking,10,0.35
-Budgeting,10,0.35
-Business Objects,10,0.35
-Cognos,10,0.35
-Data Mapping,10,0.35
-Data Warehouse,10,0.35
-Database Security,10,0.35
-Design Development,10,0.35
-Distribution System,10,0.35
-Equity,10,0.35
-Financial Planning,10,0.35
-General Accounting,10,0.35
-Issue Resolution,10,0.35
-Jquery,10,0.35
-Market Data,10,0.35
-Market Intelligence,10,0.35
-Microsoft Fabric,10,0.35
-Optimization,10,0.35
-Performance Management,10,0.35
-Quality Review,10,0.35
-Rag,10,0.35
-Report Writing,10,0.35
-Salesforce,10,0.35
-Software Development Life Cycle,10,0.35
-Star Schema,10,0.35
-System Design,10,0.35
-Web Services,10,0.35
-Advance Sql,9,0.32
-Agentic Ai,9,0.32
-Application,9,0.32
-Azure Sql,9,0.32
-Business Intelligence Analyst,9,0.32
-Business Services,9,0.32
-Cloud Services,9,0.32
-Competitive Intelligence,9,0.32
-Economics,9,0.32
-Hr,9,0.32
-Image Processing,9,0.32
-Internship,9,0.32
-Investment Banking,9,0.32
-Kafka,9,0.32
-Management Systems,9,0.32
-Marketing,9,0.32
-Marketing Analytics,9,0.32
-Mathematics,9,0.32
-Medical Insurance,9,0.32
-Msbi,9,0.32
-Nlp,9,0.32
-Operations Research,9,0.32
-Order To Cash,9,0.32
-Payroll,9,0.32
-Pdf,9,0.32
-Pipeline,9,0.32
-Power Automate,9,0.32
-Powerapps,9,0.32
-Powershell,9,0.32
-Retail,9,0.32
-Retail Analytics,9,0.32
-Risk Assessment,9,0.32
-Simulation,9,0.32
-Splunk,9,0.32
-Sql Database,9,0.32
-Subject Matter Expert,9,0.32
-Tableau Development,9,0.32
-Tableau Reporting,9,0.32
-Telecom,9,0.32
-Test Cases,9,0.32
-Verbal Communication,9,0.32
-Adobe,8,0.28
-Adobe Acrobat,8,0.28
-Autocad,8,0.28
-Basic,8,0.28
-Bfsi,8,0.28
-Bi Developer,8,0.28
-Bricks,8,0.28
-Business Development,8,0.28
-Business Transformation,8,0.28
-Cad,8,0.28
-Capital Market,8,0.28
-Cloud Platforms,8,0.28
-Competitive Analysis,8,0.28
-Customer Engagement,8,0.28
-Data Manipulation,8,0.28
-Dns,8,0.28
-Elt,8,0.28
-English,8,0.28
-Financial Research,8,0.28
-Gen,8,0.28
-Genesys,8,0.28
-Genetics,8,0.28
-Glue,8,0.28
-Hlookup,8,0.28
-Informatica Development,8,0.28
-Instrumentation,8,0.28
-Loans,8,0.28
-Matlab,8,0.28
-Mdx,8,0.28
-Mining,8,0.28
-O2C,8,0.28
-Olap,8,0.28
-Oracle Database,8,0.28
-React,8,0.28
-Saas,8,0.28
-Scalability,8,0.28
-Siebel,8,0.28
-Statistical Analyses,8,0.28
-Us Healthcare,8,0.28
-Vba,8,0.28
-Web Technologies,8,0.28
-Windows,8,0.28
-API,7,0.25
-Aerospace,7,0.25
-Agile Methodology,7,0.25
-Api Integration,7,0.25
-Azure Devops,7,0.25
-Balance Sheet,7,0.25
-Clinical Research,7,0.25
-Cloud Computing,7,0.25
-Credit Risk,7,0.25
-Data Entry,7,0.25
-Data Transfer,7,0.25
-Data Transformation,7,0.25
-Data Visa,7,0.25
-Enterprise Applications,7,0.25
-Fintech,7,0.25
-Google Sheets,7,0.25
-Ibm Datastage,7,0.25
-Information Security,7,0.25
-Internet Research,7,0.25
-Interviewing,7,0.25
-Manager Quality Control,7,0.25
-Manual Testing,7,0.25
-Manufacturing,7,0.25
-Manufacturing Analytics,7,0.25
-Market Research Analyst,7,0.25
-Microservices,7,0.25
-Operating Systems,7,0.25
-Performance,7,0.25
-Powerpoint,7,0.25
-Prompt Engineering,7,0.25
-Reinforcement Learning,7,0.25
-Sales Operations,7,0.25
-San,7,0.25
-Solution Development,7,0.25
-Sql Tuning,7,0.25
-System Integration,7,0.25
-Tableau Developer,7,0.25
-Tableau Server,7,0.25
-Talent Acquisition,7,0.25
-Time Series Analysis,7,0.25
-Translation,7,0.25
-Visualization Tools,7,0.25
-Wellness,7,0.25
-Workday,7,0.25
-.Net Core,6,0.21
-Amazon Redshift,6,0.21
-Angular,6,0.21
-Automotive,6,0.21
-Big Data Analytics,6,0.21
-Business Modeling,6,0.21
-Business Solutions,6,0.21
-Client Engagement,6,0.21
-Code,6,0.21
-Cro,6,0.21
-Data Interpretation,6,0.21
-Data Privacy,6,0.21
-Data Services,6,0.21
-Database Administration,6,0.21
-Db2,6,0.21
-Decision Tree,6,0.21
-Dimensional Modeling,6,0.21
-Eda,6,0.21
-Emerging Technologies,6,0.21
-Etl Datastage,6,0.21
-Financial Markets,6,0.21
-Financial Modelling,6,0.21
-Fixed Income,6,0.21
-Genai,6,0.21
-General Ledger,6,0.21
-Hibernate,6,0.21
-Hiring,6,0.21
-Http,6,0.21
-Iics,6,0.21
-Incident Management,6,0.21
-Looker,6,0.21
-Master Data,6,0.21
-Microstrategy,6,0.21
-Ml Pipelines,6,0.21
-Mongodb,6,0.21
-Ms Access,6,0.21
-Ms Sql Development,6,0.21
-Mutual Funds,6,0.21
-Operations Analyst,6,0.21
-Power Bi Development,6,0.21
-Powercenter,6,0.21
-Predictive,6,0.21
-Presales,6,0.21
-Production Engineering,6,0.21
-Programming Languages,6,0.21
-Project Planning,6,0.21
-Release Management,6,0.21
-Senior Management,6,0.21
-Server Side Development,6,0.21
-Solution Design,6,0.21
-Sql Server Integration Services,6,0.21
-Sr,6,0.21
-Stack,6,0.21
-Storytelling,6,0.21
-System Architecture,6,0.21
-Teradata,6,0.21
-Time Series,6,0.21
-Toad,6,0.21
-Valves,6,0.21
-Writing,6,0.21
-Adf,5,0.18
-Adobe Analytics,5,0.18
-Ai/Ml,5,0.18
-Apis,5,0.18
-Application Security,5,0.18
-Application Support,5,0.18
-Aviation,5,0.18
-Aws Glue,5,0.18
-Azure Data Lake,5,0.18
-Bi Stack,5,0.18
-Biotechnology,5,0.18
-Birt,5,0.18
-Bootstrap,5,0.18
-Business Operations,5,0.18
-Business Processes,5,0.18
-Charts,5,0.18
-Ci Cd Pipeline,5,0.18
-Collection,5,0.18
-Company Analysis,5,0.18
-Company Research,5,0.18
-Construction,5,0.18
-Corporate,5,0.18
-Cost,5,0.18
-Customer Experience,5,0.18
-Cyber Security,5,0.18
-Data Modelling,5,0.18
-Desktop,5,0.18
-Development Testing,5,0.18
-Disaster Recovery,5,0.18
-Drives,5,0.18
-E-Commerce,5,0.18
-Elk,5,0.18
-Etl Testing,5,0.18
-Etl Tools,5,0.18
-Fabric,5,0.18
-Factory,5,0.18
-Financial Statement Analysis,5,0.18
-Financial Statements,5,0.18
-Full Stack,5,0.18
-Generation,5,0.18
-Hipaa,5,0.18
-Hoovers,5,0.18
-Hris,5,0.18
-Investment,5,0.18
-Investment Management,5,0.18
-Iso,5,0.18
-It,5,0.18
-Lead Generation,5,0.18
-Legal,5,0.18
-Logistics,5,0.18
-Manager Business Intelligence,5,0.18
-Matplotlib,5,0.18
-Matrix,5,0.18
-Media,5,0.18
-Medical,5,0.18
-Mentor,5,0.18
-Ml Algorithms,5,0.18
-Ml Engineer,5,0.18
-Model Development,5,0.18
-Network Security,5,0.18
-Oracle Forms,5,0.18
-Oracle Pl,5,0.18
-Outbound,5,0.18
-Portfolio Management,5,0.18
-Power Apps,5,0.18
-Power Bi Developer,5,0.18
-Power Platform,5,0.18
-Process Analysis,5,0.18
-Process Automation,5,0.18
-Quality,5,0.18
-Quality Standards,5,0.18
-React.Js,5,0.18
-Redis,5,0.18
-Relationship Management,5,0.18
-Reporting Analysis,5,0.18
-Risk Modeling,5,0.18
-Rpa,5,0.18
-Sap Bi,5,0.18
-Sap Bo,5,0.18
-Semantic,5,0.18
-Service Delivery,5,0.18
-Signal Processing,5,0.18
-Software Architecture,5,0.18
-Software Engineering,5,0.18
-Stock Market,5,0.18
-Supply Chain Management,5,0.18
-System,5,0.18
-Technical Writing,5,0.18
-Ticketing,5,0.18
-Ux,5,0.18
-Vendor,5,0.18
-Vmware,5,0.18
-Wealth Management,5,0.18
-Web Application Development,5,0.18
-Abap,4,0.14
-Access Management,4,0.14
-Active Directory,4,0.14
-Agile Development,4,0.14
-Ai Engineer,4,0.14
-Aml,4,0.14
-Analysis Services,4,0.14
-Anomaly Detection,4,0.14
-Asp.Net,4,0.14
-Aws Sagemaker,4,0.14
-Azure Synapse,4,0.14
-Bi Analyst,4,0.14
-Book Closing,4,0.14
-Business Metrics,4,0.14
-Business Rules,4,0.14
-Campaign Analytics,4,0.14
-Civil Engineering,4,0.14
-Clinical Trials,4,0.14
-Cloud Native,4,0.14
-Cloudera,4,0.14
-Commerce,4,0.14
-Communication And Interpersonal Skills,4,0.14
-Corporate Finance,4,0.14
-Credit Analysis,4,0.14
-Data Reporting,4,0.14
-Data Systems,4,0.14
-Database Management System,4,0.14
-Database Performance Tuning,4,0.14
-Dbt,4,0.14
-Ddl,4,0.14
-Derivatives,4,0.14
-Digital Analytics,4,0.14
-Diversity And Inclusion,4,0.14
-Due Diligence,4,0.14
-E-Learning,4,0.14
-Etl Process,4,0.14
-Fast Api,4,0.14
-Flex,4,0.14
-Formulas,4,0.14
-Functional,4,0.14
-Fund Accounting,4,0.14
-Generative Artificial Intelligence,4,0.14
-Gis,4,0.14
-Google Cloud Platform,4,0.14
-Google Tag Manager,4,0.14
-Governance,4,0.14
-Hrsd,4,0.14
-Industrial Automation,4,0.14
-Information Retrieval,4,0.14
-Integration,4,0.14
-Investment Research,4,0.14
-Itsm,4,0.14
-Jenkins,4,0.14
-Join,4,0.14
-Lod,4,0.14
-Management Reporting,4,0.14
-Mapping,4,0.14
-Market Forecasting,4,0.14
-Maven,4,0.14
-Mechanical Engineering,4,0.14
-Merchandising,4,0.14
-Ms Power Bi,4,0.14
-Msql,4,0.14
-Object Detection,4,0.14
-Office,4,0.14
-Online Research,4,0.14
-Oops,4,0.14
-Oracle Apps,4,0.14
-Perl,4,0.14
-Pharmaceutical,4,0.14
-Plsql Development,4,0.14
-Process Mapping,4,0.14
-Product Analysis,4,0.14
-Program,4,0.14
-Prototype,4,0.14
-Python Data,4,0.14
-Qlik,4,0.14
-Quality Assurance,4,0.14
-Quantitative,4,0.14
-Rca,4,0.14
-Regression Testing,4,0.14
-Regulatory,4,0.14
-Report Development,4,0.14
-Reporting And Analytics,4,0.14
-Reports,4,0.14
-Resource Allocation,4,0.14
-Rtr,4,0.14
-S3,4,0.14
-Sap Hana,4,0.14
-Sap S Hana,4,0.14
-Scipy,4,0.14
-Security,4,0.14
-Security Management,4,0.14
-Seo,4,0.14
-Sla,4,0.14
-Software Design,4,0.14
-Software Qa,4,0.14
-Spotfire,4,0.14
-Sql Azure,4,0.14
-Sql Coding,4,0.14
-Sql Server Reporting Services,4,0.14
-Stakeholder Engagement,4,0.14
-Survey,4,0.14
-Talent Management,4,0.14
-Teaching,4,0.14
-Technical Analysis,4,0.14
-Technical Design,4,0.14
-Technical Documentation,4,0.14
-Tibco,4,0.14
-Trend Analysis,4,0.14
-Vendor Management,4,0.14
-Views,4,0.14
-Visual Studio,4,0.14
-Web Development,4,0.14
-Web Research,4,0.14
-Wireframing,4,0.14
-Access,3,0.11
-Accessories,3,0.11
-Account Management,3,0.11
-Accounting Standards,3,0.11
-Agile Scrum,3,0.11
-Algorithm Development,3,0.11
-Alm,3,0.11
-Analyst,3,0.11
-Anti Money Laundering,3,0.11
-Architectural Design,3,0.11
-Asr,3,0.11
-Associate Research Analyst,3,0.11
-Assurance,3,0.11
-Auditing,3,0.11
-Automation Testing,3,0.11
-Automation Tools,3,0.11
-Azure Data Engineering,3,0.11
-Azure Machine Learning,3,0.11
-Azure Ml,3,0.11
-Ba,3,0.11
-Backend Development,3,0.11
-Balance Sheet Reconciliation,3,0.11
-Big Data Technologies,3,0.11
-Bpmn,3,0.11
-Building,3,0.11
-Business Improvement,3,0.11
-Business Insights,3,0.11
-Business Models,3,0.11
-Business Process Management,3,0.11
-Business Process Modeling,3,0.11
-Business Research Analysis,3,0.11
-Capital Iq,3,0.11
-Catering,3,0.11
-Civil,3,0.11
-Client Interaction,3,0.11
-Client Management,3,0.11
-Clinical,3,0.11
-Code Review,3,0.11
-Collections,3,0.11
-Company,3,0.11
-Configuration Management,3,0.11
-Content Development,3,0.11
-Control-M,3,0.11
-Copilot,3,0.11
-Core,3,0.11
-Credit,3,0.11
-Customer Acquisition,3,0.11
-Cvs,3,0.11
-Data Build Tool,3,0.11
-Data Lineage,3,0.11
-Data Research Analyst,3,0.11
-Database Development,3,0.11
-Databricks Engineer,3,0.11
-Dataiku,3,0.11
-Datastage Etl,3,0.11
-Delta,3,0.11
-Demand Forecasting,3,0.11
-Design Principles,3,0.11
-Developer,3,0.11
-Economic Research,3,0.11
-Editor,3,0.11
-Electricals,3,0.11
-Email Marketing,3,0.11
-Financial Data,3,0.11
-Fmcg,3,0.11
-Fullstack Development,3,0.11
-Fundamental Research,3,0.11
-General Ledger Accounting,3,0.11
-Google,3,0.11
-Google Adwords,3,0.11
-Google Analytics 4,3,0.11
-Google Data Studio,3,0.11
-Grafana,3,0.11
-Guidewire,3,0.11
-Hcm,3,0.11
-Hp Data Protector,3,0.11
-Hypothesis Testing,3,0.11
-Insights,3,0.11
-Installation,3,0.11
-Integration Testing,3,0.11
-International Operations,3,0.11
-Interpretation,3,0.11
-Investment Strategies,3,0.11
-Junior Research Analyst,3,0.11
-Kpo,3,0.11
-Langgraph,3,0.11
-Leasing,3,0.11
-Linkedin,3,0.11
-Llms,3,0.11
-Machine Learning Operations,3,0.11
-Maintenance,3,0.11
-Manual,3,0.11
-Market Assessment,3,0.11
-Market Research And Analysis,3,0.11
-Marketing Research,3,0.11
-Master Data Management,3,0.11
-Mdm,3,0.11
-Metadata Management,3,0.11
-Microsoft Technologies,3,0.11
-Ml Deployment,3,0.11
-Molecular Biology,3,0.11
-Month End Reporting,3,0.11
-Ms Office Suite,3,0.11
-New Product Development,3,0.11
-Nginx,3,0.11
-Observability,3,0.11
-Oil And Gas,3,0.11
-Operational Support,3,0.11
-Pan,3,0.11
-Pentaho,3,0.11
-Performance Monitoring,3,0.11
-Petrochemical,3,0.11
-Php,3,0.11
-Plm,3,0.11
-Policy Center,3,0.11
-Power Apps Development,3,0.11
-Power Bi Service,3,0.11
-Ppc,3,0.11
-Procedures,3,0.11
-Product Design,3,0.11
-Product Development,3,0.11
-Product Life Cycle,3,0.11
-Product Quality,3,0.11
-Product Service,3,0.11
-Professional,3,0.11
-Project,3,0.11
-Project Implementation,3,0.11
-R Programming,3,0.11
-Real Estate,3,0.11
-Recommender Systems,3,0.11
-Recruitment,3,0.11
-Redshift,3,0.11
-Regulatory Reporting,3,0.11
-Requirement Analysis,3,0.11
-Research Reports,3,0.11
-Rest Api,3,0.11
-Rfp,3,0.11
-Risk,3,0.11
-Risk Analytics,3,0.11
-Sales Analytics,3,0.11
-Sap Mm,3,0.11
-Scm,3,0.11
-Secondary,3,0.11
-Segmentation,3,0.11
-Senior Research Analyst,3,0.11
-Sharepoint,3,0.11
-Silicon,3,0.11
-Skill Development,3,0.11
-Soc,3,0.11
-Software Quality,3,0.11
-Software Solutions,3,0.11
-Spring,3,0.11
-Sprint,3,0.11
-Sql Developer,3,0.11
-Sql Programming,3,0.11
-Sql Query Writing,3,0.11
-Sql Server Analysis Services,3,0.11
-Staffing,3,0.11
-Stock,3,0.11
-Support Services,3,0.11
-Tableau Prep,3,0.11
-Tds,3,0.11
-Technical Leadership,3,0.11
-Technical Skills,3,0.11
-Temenos,3,0.11
-Templates,3,0.11
-Test Planning,3,0.11
-Testing Tools,3,0.11
-Time Managements,3,0.11
-Trade,3,0.11
-Trading,3,0.11
-Transformation,3,0.11
-Underwriting,3,0.11
-Vertex,3,0.11
-Vertex Ai,3,0.11
-Web Analytics,3,0.11
-Word,3,0.11
-Workday Reporting,3,0.11
-Xgboost,3,0.11
-3D Modeling,2,0.07
-Ab,2,0.07
-Ab Testing,2,0.07
-Account Reconciliation,2,0.07
-Accounts Receivable,2,0.07
-Accounts Reconciliation,2,0.07
-Accruals,2,0.07
-Actuate,2,0.07
-Adk,2,0.07
-Advanced Sql Queries,2,0.07
-Advertising Data,2,0.07
-Agile Principles,2,0.07
-Ai Solutions,2,0.07
-Aks,2,0.07
-Al,2,0.07
-Analyst 1,2,0.07
-Analytical Research,2,0.07
-Analytical Skill,2,0.07
-Analytics Cloud,2,0.07
-Analytics Reporting,2,0.07
-Analytics Tools,2,0.07
-Ansible,2,0.07
-Antivirus,2,0.07
-Application Programming,2,0.07
-Arcgis,2,0.07
-Architect,2,0.07
-Arima,2,0.07
-Assistance,2,0.07
-Assistant Vice President,2,0.07
-Aws Cloud,2,0.07
-Aws Etl,2,0.07
-Aws Lambda,2,0.07
-Azure Ai,2,0.07
-Azure Cloud Platform,2,0.07
-Azure Kubernetes Service,2,0.07
-Back Office,2,0.07
-Banking Analytics,2,0.07
-Banking And Finance,2,0.07
-Banking Domain,2,0.07
-Bash Scripting,2,0.07
-Benchmarking,2,0.07
-Billing Center,2,0.07
-Biochemistry,2,0.07
-Bo,2,0.07
-Bods,2,0.07
-Business Administration,2,0.07
-Business Applications,2,0.07
-Business Consulting,2,0.07
-Business Development Executive,2,0.07
-Business Executive,2,0.07
-Business Management,2,0.07
-Business Process Analysis,2,0.07
-Business Requirement Analysis,2,0.07
-Capa,2,0.07
-Capital Markets,2,0.07
-Cards,2,0.07
-Career Development,2,0.07
-Casa,2,0.07
-Cash Flow,2,0.07
-Casualty,2,0.07
-Catia,2,0.07
-Catia V5,2,0.07
-Cbap,2,0.07
-Cfa,2,0.07
-Charles River,2,0.07
-Claim Center,2,0.07
-Claims Management,2,0.07
-Client,2,0.07
-Client Handling,2,0.07
-Client Support,2,0.07
-Cloud Solutions,2,0.07
-Cnn,2,0.07
-Coaching,2,0.07
-Commodities,2,0.07
-Company Profiling,2,0.07
-Comparative Analysis,2,0.07
-Competitor Analysis,2,0.07
-Complex Queries,2,0.07
-Complex Sql Query,2,0.07
-Computer,2,0.07
-Concept Development,2,0.07
-Conceptualization,2,0.07
-Conditional Formatting,2,0.07
-Consolidation,2,0.07
-Content Management,2,0.07
-Contract Management,2,0.07
-Control,2,0.07
-Conversions,2,0.07
-Coordination,2,0.07
-Core Java,2,0.07
-Corporate Actions,2,0.07
-Cosmos,2,0.07
-Cost Analysis,2,0.07
-Cost Reduction,2,0.07
-Costing,2,0.07
-Credit Research Analyst,2,0.07
-Crm Analytics,2,0.07
-Crm Management,2,0.07
-Csv,2,0.07
-Customer Experience Management,2,0.07
-Customer Relationship,2,0.07
-Customer Retention,2,0.07
-Cyber,2,0.07
-Dashboard,2,0.07
-Dashboarding,2,0.07
-Data Flow,2,0.07
-Data Ingestion,2,0.07
-Data Platforms,2,0.07
-Data Preprocessing,2,0.07
-Data Scientist Aiml,2,0.07
-Data Warehousing Concepts,2,0.07
-Database Mirroring,2,0.07
-Db,2,0.07
-Dcf,2,0.07
-Deep Learning Frameworks,2,0.07
-Deploying Models,2,0.07
-Design Engineering,2,0.07
-Diagnostics,2,0.07
-Digital Experience,2,0.07
-Digital Media,2,0.07
-Django,2,0.07
-Downstream,2,0.07
-Econometrics,2,0.07
-Economic,2,0.07
-Edi,2,0.07
-Electrical Engineering,2,0.07
-Electronics,2,0.07
-Emea,2,0.07
-Employee Engagement,2,0.07
-Emr,2,0.07
-Endpoint Security,2,0.07
-Engineer Ii,2,0.07
-Entity Framework,2,0.07
-Environment,2,0.07
-Environmental Science,2,0.07
-Epub,2,0.07
-Equipment,2,0.07
-Excellent Communication In English,2,0.07
-Excellent Communication Skills,2,0.07
-Executive Management,2,0.07
-Exploration,2,0.07
-External Audit,2,0.07
-Fashion,2,0.07
-Fastapi,2,0.07
-Fedex,2,0.07
-Financial Analytics,2,0.07
-Financial Concepts,2,0.07
-Financial Operations,2,0.07
-Firebase,2,0.07
-Fixed Assets,2,0.07
-Flexcube,2,0.07
-Foundry,2,0.07
-Fraud Analysis,2,0.07
-Fraud Detection,2,0.07
-Front Office,2,0.07
-Functional Testing,2,0.07
-Functions,2,0.07
-Fundamental Analysis,2,0.07
-Fundamentals,2,0.07
-Funnel Analysis,2,0.07
-Genomics,2,0.07
-Google Apps Script,2,0.07
-Gpt Models,2,0.07
-Graphics,2,0.07
-Gtm,2,0.07
-Handling,2,0.07
-Hardware Design,2,0.07
-Hdfs,2,0.07
-Head Business Development,2,0.07
-Head Hunting,2,0.07
-Health,2,0.07
-Healthcare Analytics,2,0.07
-High Level Design,2,0.07
-Housekeeping,2,0.07
-Hrd,2,0.07
-Html5,2,0.07
-Ibm Db2,2,0.07
-Identity Access Management,2,0.07
-Idmc,2,0.07
-Ifrs,2,0.07
-Industry Reports,2,0.07
-Informatica Mdm,2,0.07
-Information Management,2,0.07
-Inside Sales,2,0.07
-Insurance Sales,2,0.07
-Intercompany Accounting,2,0.07
-Intercompany Reconciliation,2,0.07
-International Bpo,2,0.07
-Investment Analysis,2,0.07
-Investment Products,2,0.07
-It Operations,2,0.07
-It Security,2,0.07
-Jdbc,2,0.07
-Jlpt,2,0.07
-Journalism,2,0.07
-Journals,2,0.07
-Jsp,2,0.07
-Kibana,2,0.07
-Kpi Dashboards,2,0.07
-Kpi Reporting,2,0.07
-Lang Chain,2,0.07
-Large,2,0.07
-Legal Documentation,2,0.07
-Legal Research,2,0.07
-Life Insurance,2,0.07
-Llamaindex,2,0.07
-Llb,2,0.07
-Llmops,2,0.07
-Lms,2,0.07
-Lora,2,0.07
-Lstm,2,0.07
-Machine Learning Engineer,2,0.07
-Mainframe,2,0.07
-Mainframes,2,0.07
-Maintenance Engineering,2,0.07
-Management Consulting,2,0.07
-Manager,2,0.07
-Manpower,2,0.07
-Market Analyst,2,0.07
-Marketing Communication,2,0.07
-Measurement,2,0.07
-Metrics,2,0.07
-Microsoft Dynamics,2,0.07
-Microsoft Office,2,0.07
-Microsoft Power Automate,2,0.07
-Model Building,2,0.07
-Model Validation,2,0.07
-Month End Closing,2,0.07
-Mortgage Advisors,2,0.07
-Ms Office Word,2,0.07
-Ms Sql Database,2,0.07
-Ms Sql Serve,2,0.07
-Ms Word,2,0.07
-Mvc,2,0.07
-Nism,2,0.07
-Non Voice,2,0.07
-Object Oriented Programming,2,0.07
-Odi,2,0.07
-Office Administration,2,0.07
-Oil,2,0.07
-Onboarding,2,0.07
-Openai,2,0.07
-Opencv,2,0.07
-Openshift,2,0.07
-Openstack,2,0.07
-Ops,2,0.07
-Oracle Apps Technical,2,0.07
-Oracle Netsuite,2,0.07
-Oracle Rdbms,2,0.07
-Order Management,2,0.07
-Outsourcing,2,0.07
-P&L Analysis,2,0.07
-Paas,2,0.07
-Palo Alto Firewall,2,0.07
-Payer,2,0.07
-Performance Testing,2,0.07
-Ph,2,0.07
-Pharmacovigilance,2,0.07
-Pharmacy,2,0.07
-Photoshop,2,0.07
-Pmp,2,0.07
-Policies,2,0.07
-Power Pivot,2,0.07
-Ppap,2,0.07
-Private Equity,2,0.07
-Process Engineering,2,0.07
-Process Optimization,2,0.07
-Product Analyst,2,0.07
-Product Owner,2,0.07
-Product Roadmap,2,0.07
-Project Documentation,2,0.07
-Project Execution,2,0.07
-Project Finance,2,0.07
-Prometheus,2,0.07
-Python Data Analytics,2,0.07
-Python Scripting,2,0.07
-Qemu,2,0.07
-Qlik Sense Development,2,0.07
-Qos,2,0.07
-Qualitative,2,0.07
-Quality Check,2,0.07
-Quality Control,2,0.07
-Quality Improvement,2,0.07
-Query Writing,2,0.07
-Random Forest,2,0.07
-Ratio Analysis,2,0.07
-Registration,2,0.07
-Relationship,2,0.07
-Relationship Building,2,0.07
-Renewable Energy,2,0.07
-Reporting And Analysis,2,0.07
-Reports And Dashboards,2,0.07
-Research And Development,2,0.07
-Resource Management,2,0.07
-Rest Api Integration,2,0.07
-Revenue Analysis,2,0.07
-Rework,2,0.07
-Rfi,2,0.07
-Rls,2,0.07
-Robotics,2,0.07
-Rss,2,0.07
-Sales Planning,2,0.07
-Salesforce Crm,2,0.07
-Sam,2,0.07
-Sap Analytics Cloud,2,0.07
-Sap Businessobjects,2,0.07
-Sap Bw,2,0.07
-Sap Crm,2,0.07
-Sap Data Services,2,0.07
-Sap Datasphere,2,0.07
-Sap Ecc,2,0.07
-Sap Fi,2,0.07
-Sap Sd,2,0.07
-Sas Programming,2,0.07
-Sas Sql,2,0.07
-Sat,2,0.07
-Scada,2,0.07
-Scientific Writing,2,0.07
-Security Compliance,2,0.07
-Selection Process,2,0.07
-Selenium,2,0.07
-Semiconductor,2,0.07
-Senior Business Analyst,2,0.07
-Senior Equity Research Analyst,2,0.07
-Server Administration,2,0.07
-Service Industry,2,0.07
-Service Operations,2,0.07
-Shell,2,0.07
-Side,2,0.07
-Site Execution,2,0.07
-Snowflake Db,2,0.07
-Software Services,2,0.07
-Solutioning,2,0.07
-Sql*Plus,2,0.07
-Sre,2,0.07
-Ssa,2,0.07
-Standard Operating Procedures,2,0.07
-Star,2,0.07
-Stata,2,0.07
-Statistical Data Analysis,2,0.07
-Statistical Tools,2,0.07
-Steward,2,0.07
-Stm,2,0.07
-Structured Finance,2,0.07
-Studio,2,0.07
-Sumif,2,0.07
-Sustainability,2,0.07
-System Maintenance,2,0.07
-Systemc,2,0.07
-T24,2,0.07
-Tableau Consultant,2,0.07
-Talend Development,2,0.07
-Team Handling,2,0.07
-Technical Lead,2,0.07
-Terraform,2,0.07
-Test Management,2,0.07
-Test Scripts,2,0.07
-Text Analytics,2,0.07
-Text Mining,2,0.07
-Tibco Spotfire,2,0.07
-Time Tracking,2,0.07
-Tlm,2,0.07
-Tracking,2,0.07
-Transcription,2,0.07
-Transition,2,0.07
-Treasury,2,0.07
-Typesetting,2,0.07
-Uat Support,2,0.07
-Uipath,2,0.07
-Uml,2,0.07
-Unix Scripting,2,0.07
-User Acceptance Testing,2,0.07
-User Experience,2,0.07
-Valuation,2,0.07
-Variance Analysis,2,0.07
-Vector Database,2,0.07
-Verilog,2,0.07
-Video Analytics,2,0.07
-Visio,2,0.07
-Voice,2,0.07
-Vpc,2,0.07
-Warehouse Management,2,0.07
-Web Api,2,0.07
-Web Application,2,0.07
-Workflow Automation,2,0.07
-Yolo,2,0.07
-Zoominfo,2,0.07
-12C,1,0.04
-2D,1,0.04
-3D Design,1,0.04
-3D Printing,1,0.04
+Python,528,23.19
+SQL,517,22.71
+Power BI,414,18.18
+Data Analysis,391,17.17
+Machine Learning,328,14.4
+Business Intelligence,233,10.23
+Tableau,209,9.18
+Data Modeling,183,8.04
+BI,158,6.94
+Data Analytics,154,6.76
+Data Visualization,149,6.54
+Artificial Intelligence,140,6.15
+Business Analysis,138,6.06
+Data Warehousing,136,5.97
+Automation,128,5.62
+ETL,116,5.09
+Data Quality,114,5.01
+Performance Tuning,113,4.96
+Data Science,107,4.7
+Business Analytics,104,4.57
+Oracle,95,4.17
+Natural Language Processing,86,3.78
+Pl/Sql,86,3.78
+AI,85,3.73
+Data Management,79,3.47
+Excel,79,3.47
+Consulting,76,3.34
+Data Validation,75,3.29
+Research Analysis,73,3.21
+Research Analyst,73,3.21
+Market Research,72,3.16
+Agile,71,3.12
+Data Engineering,71,3.12
+AWS,70,3.07
+SAP,70,3.07
+Sql Queries,69,3.03
+Microsoft,67,2.94
+Healthcare,66,2.9
+Project Management,66,2.9
+Dashboards,62,2.72
+PySpark,59,2.59
+Snowflake,59,2.59
+Data Analyst,58,2.55
+Dax,57,2.5
+Analytical Skills,54,2.37
+Intelligence,54,2.37
+SQL Server,54,2.37
+Troubleshooting,53,2.33
+Cloud,52,2.28
+Deep Learning,50,2.2
+Machine,49,2.15
+Informatica,48,2.11
+Modeling,48,2.11
+SSIS,48,2.11
+Sql Development,48,2.11
+Data Processing,47,2.06
+Python Development,47,2.06
+Database,46,2.02
+T-Sql,45,1.98
+Data Scientist,43,1.89
+MySQL,43,1.89
+Query,43,1.89
+Stakeholder Management,43,1.89
+Architecture,42,1.84
+Azure,42,1.84
+Supply Chain,42,1.84
+Administration,41,1.8
+Django,41,1.8
+Google Cloud,41,1.8
+Programming,41,1.8
+Usage,41,1.8
+Forecasting,40,1.76
+Generative Ai,40,1.76
+PostgreSQL,40,1.76
+Business Analyst,39,1.71
+Data Collection,39,1.71
+Predictive Modeling,39,1.71
+Stored Procedures,39,1.71
+Compliance,38,1.67
+Monitoring,38,1.67
+NumPy,38,1.67
+Power Query,38,1.67
+Microsoft Azure,37,1.62
+Version Control,37,1.62
+Data Engineer,36,1.58
+Data Migration,36,1.58
+Data Mining,36,1.58
+JavaScript,36,1.58
+Backend,33,1.45
+ML,33,1.45
+TensorFlow,33,1.45
+Continuous Improvement,32,1.41
+Dbms,32,1.41
+ERP,32,1.41
+Jira,32,1.41
+Bi Tools,30,1.32
+Cd,30,1.32
+Coding,30,1.32
+Digital Transformation,30,1.32
+Finance,30,1.32
+Training,30,1.32
+Workflow,30,1.32
+Deployment,29,1.27
+Design,29,1.27
+Docker,29,1.27
+Kubernetes,29,1.27
+Power Bi Reports,29,1.27
+Software Testing,29,1.27
+Bi Development,28,1.23
+Data Structures,28,1.23
+Git,28,1.23
+Java,28,1.23
+Oracle SQL,28,1.23
+Risk Management,28,1.23
+Sales,28,1.23
+Ssrs,28,1.23
+Apache Airflow,27,1.19
+Llm,27,1.19
+Requirement Gathering,27,1.19
+Sas,27,1.19
+Data Architecture,26,1.14
+Data Governance,26,1.14
+Part,26,1.14
+Software Development,26,1.14
+Statistics,26,1.14
+Database Design,25,1.1
+Hive,25,1.1
+Kpi,25,1.1
+Reporting Analyst,25,1.1
+Senior,25,1.1
+Accounting,24,1.05
+Data Bricks,24,1.05
+Html,24,1.05
+Microsoft Power Bi,24,1.05
+Unix,24,1.05
+Ci,23,1.01
+Financial Analysis,23,1.01
+Linux,23,1.01
+Process Improvement,23,1.01
+PyTorch,23,1.01
+Aiml,22,0.97
+Algorithms,22,0.97
+Etl Testing,22,0.97
+Financial Services,22,0.97
+Networking,22,0.97
+Scrum,22,0.97
+Serv,22,0.97
+Server,22,0.97
+Advanced Excel,21,0.92
+Business Research,21,0.92
+Data Architect,21,0.92
+Develop,21,0.92
+Etl Development,21,0.92
+Nosql,21,0.92
+Production Support,21,0.92
+Rest,21,0.92
+Scheduling,21,0.92
+Schema,21,0.92
+Science,21,0.92
+Visualization,21,0.92
+Big Data,20,0.88
+C,20,0.88
+Data Integrity,20,0.88
+Data Pipelines,20,0.88
+Debugging,20,0.88
+Performance Optimization,20,0.88
+QlikView,20,0.88
+Stakeholder,20,0.88
+Time,20,0.88
+C++,19,0.83
+Data Anaysis,19,0.83
+Fast Api,19,0.83
+GitHub,19,0.83
+Infrastructure,19,0.83
+Pharma,19,0.83
+Predictive Analytics,19,0.83
+Scala,19,0.83
+Shell Scripting,19,0.83
+User Stories,19,0.83
+Application Development,18,0.79
+Azure Databricks,18,0.79
+CRM,18,0.79
+Financial Reporting,18,0.79
+Flask,18,0.79
+Industry Research,18,0.79
+Languages,18,0.79
+Pandas,18,0.79
+Power Bi Dashboards,18,0.79
+Power Bi Desktop,18,0.79
+Query Optimization,18,0.79
+Reconciliation,18,0.79
+Record To Report,18,0.79
+Team Management,18,0.79
+Tools,18,0.79
+API,17,0.75
+Apache Spark,17,0.75
+Dax Queries,17,0.75
+Information Technology,17,0.75
+Primary Research,17,0.75
+R,17,0.75
+Senior Analyst,17,0.75
+Xml,17,0.75
+Brd,16,0.7
+Business Intelligence Reporting,16,0.7
+Business Strategy,16,0.7
+Continuous Integration,16,0.7
+Devops,16,0.7
+Life Sciences,16,0.7
+Manager Technology,16,0.7
+Metadata,16,0.7
+Mis,16,0.7
+Presentation Skills,16,0.7
+Sql Server Development,16,0.7
+Uat,16,0.7
+Advanced Analytics,15,0.66
+Documentation,15,0.66
+Neural Networks,15,0.66
+Rdbms,15,0.66
+Regression,15,0.66
+Statistical Modeling,15,0.66
+Dashboard Development,14,0.61
+Gap Analysis,14,0.61
+Interpersonal Skills,14,0.61
+Langchain,14,0.61
+Large Language Model,14,0.61
+Market Analysis,14,0.61
+Microsoft Fabric,14,0.61
+Ms Office,14,0.61
+Process,14,0.61
+Product Engineering,14,0.61
+Publishing,14,0.61
+Tableau Administration,14,0.61
+Bi Developer,13,0.57
+Business Objects,13,0.57
+Business Transformation,13,0.57
+Confluence,13,0.57
+Customer Service,13,0.57
+Databricks,13,0.57
+Logistic Regression,13,0.57
+Macros,13,0.57
+Manager Quality Assurance,13,0.57
+Marketing,13,0.57
+Migration,13,0.57
+Part Time,13,0.57
+Procurement,13,0.57
+Product Management,13,0.57
+Production,13,0.57
+R2R,13,0.57
+Reporting Tools,13,0.57
+Ssas,13,0.57
+Statistical Analysis,13,0.57
+Technical Support,13,0.57
+Unit Testing,13,0.57
+Use Cases,13,0.57
+Analysts,12,0.53
+Asset Management,12,0.53
+Bigquery,12,0.53
+Business Modeling,12,0.53
+Change Management,12,0.53
+Claims,12,0.53
+Data Cleansing,12,0.53
+Data Extraction,12,0.53
+Data Pipeline,12,0.53
+Datastage,12,0.53
+Interviewing,12,0.53
+Issue Resolution,12,0.53
+Json,12,0.53
+Machine Learning Algorithms,12,0.53
+Oracle Pl,12,0.53
+Performance Management,12,0.53
+Pivot Table,12,0.53
+Quantitative Research,12,0.53
+React.Js,12,0.53
+Root Cause Analysis,12,0.53
+Sdlc,12,0.53
+ServiceNow,12,0.53
+Sql Database,12,0.53
+Advance Sql,11,0.48
+Agentic Ai,11,0.48
+Business Intelligence Analyst,11,0.48
+Clustering,11,0.48
+Computer Vision,11,0.48
+Configuration,11,0.48
+Css,11,0.48
+Data Warehouse,11,0.48
+Etl Informatica,11,0.48
+Front End,11,0.48
+Gen Ai,11,0.48
+Hadoop,11,0.48
+Investment Banking,11,0.48
+It Services,11,0.48
+Kafka,11,0.48
+Oracle Database,11,0.48
+Orchestration,11,0.48
+Regulatory Compliance,11,0.48
+Reinforcement Learning,11,0.48
+Requirements,11,0.48
+Retrieval Augmented Generation,11,0.48
+Social Media,11,0.48
+Tableau Reporting,11,0.48
+Testing,11,0.48
+Vlookup,11,0.48
+Warehouse,11,0.48
+Banking,10,0.44
+Business Requirements,10,0.44
+Cyber Security,10,0.44
+Data Integration,10,0.44
+Data Manipulation,10,0.44
+Frd,10,0.44
+Full Stack,10,0.44
+Microservices,10,0.44
+Mongodb,10,0.44
+Open Source,10,0.44
+Operations Research,10,0.44
+Quality Assurance,10,0.44
+Retail,10,0.44
+Retail Analytics,10,0.44
+Scikit-Learn,10,0.44
+Software Design,10,0.44
+Talent Acquisition,10,0.44
+Alteryx,9,0.4
+Azure Data Factory,9,0.4
+Backend Development,9,0.4
+Billing,9,0.4
+Bpo,9,0.4
+Budgeting,9,0.4
+Classification,9,0.4
+Desktop,9,0.4
+Django Framework,9,0.4
+Etl Pipelines,9,0.4
+Fabric,9,0.4
+Financial Planning,9,0.4
+Google Analytics,9,0.4
+Informatica Powercenter,9,0.4
+Manager Quality Control,9,0.4
+Market Intelligence,9,0.4
+Mining,9,0.4
+Mlops,9,0.4
+Oops,9,0.4
+Optimization,9,0.4
+Oracle Forms,9,0.4
+Order To Cash,9,0.4
+Payroll,9,0.4
+Plsql Development,9,0.4
+Project Delivery,9,0.4
+Python Framework,9,0.4
+Scripting,9,0.4
+Secondary Research,9,0.4
+Senior Management,9,0.4
+Splunk,9,0.4
+Strategic Planning,9,0.4
+System Design,9,0.4
+Unix Shell Scripting,9,0.4
+Us Healthcare,9,0.4
+Windows,9,0.4
+Amazon Redshift,8,0.35
+Api Integration,8,0.35
+Application,8,0.35
+Bau Support,8,0.35
+Bfsi,8,0.35
+Bi Architect,8,0.35
+Birt,8,0.35
+Bloomberg,8,0.35
+Business Reporting,8,0.35
+Cognos,8,0.35
+Data Services,8,0.35
+Data Transfer,8,0.35
+Data Visa,8,0.35
+Database Development,8,0.35
+Equity Research,8,0.35
+Feature Engineering,8,0.35
+Framework,8,0.35
+Genesys,8,0.35
+Health Insurance,8,0.35
+Hiring,8,0.35
+Journal Entries,8,0.35
+Ledger,8,0.35
+O2C,8,0.35
+Power Automate,8,0.35
+Process Management,8,0.35
+Processing,8,0.35
+S3,8,0.35
+Siebel,8,0.35
+Stack,8,0.35
+Statistical Analyses,8,0.35
+Strong Analytical Skills,8,0.35
+Subject Matter Expert,8,0.35
+Tableau Server,8,0.35
+Tableau Server Admin,8,0.35
+Time Management,8,0.35
+Toad,8,0.35
+Access Management,7,0.31
+Active Directory,7,0.31
+Azure Cloud,7,0.31
+Bricks,7,0.31
+Business Consulting,7,0.31
+Cloud Platforms,7,0.31
+Cloud Services,7,0.31
+Competitive Intelligence,7,0.31
+Control-M,7,0.31
+Customer Support,7,0.31
+Data Mapping,7,0.31
+Data Modelling,7,0.31
+Data Security,7,0.31
+Database Management,7,0.31
+Database Testing,7,0.31
+Digital Marketing,7,0.31
+Dml,7,0.31
+Enterprise Applications,7,0.31
+Etl Developer,7,0.31
+Etl Tool,7,0.31
+Financial Research,7,0.31
+Gen,7,0.31
+Generative Artificial Intelligence,7,0.31
+Hr,7,0.31
+Hris,7,0.31
+Image Processing,7,0.31
+Insurance,7,0.31
+Manufacturing Analytics,7,0.31
+Marketing Analytics,7,0.31
+Mathematics,7,0.31
+Msbi,7,0.31
+Operational Excellence,7,0.31
+Packaging,7,0.31
+Pdf,7,0.31
+Powerapps,7,0.31
+Prototype,7,0.31
+Python Developer,7,0.31
+React,7,0.31
+Salesforce,7,0.31
+Server Side Development,7,0.31
+Spss,7,0.31
+Sr,7,0.31
+Tableau Developer,7,0.31
+Tableau Development,7,0.31
+Tableau Infrastructure Admin,7,0.31
+Tableau Platform Admin,7,0.31
+Tableau Support Admin,7,0.31
+Talend,7,0.31
+Time Series Analysis,7,0.31
+Ux,7,0.31
+Verbal Communication,7,0.31
+Visual Studio,7,0.31
+Web Technologies,7,0.31
+Al,6,0.26
+Azure Devops,6,0.26
+Business Development,6,0.26
+Business Process,6,0.26
+Business Services,6,0.26
+C#,6,0.26
+Career Development,6,0.26
+Corporate,6,0.26
+Customer Analytics,6,0.26
+Database Administration,6,0.26
+Decision Tree,6,0.26
+Django Rest Api,6,0.26
+Elt,6,0.26
+Emerging Technologies,6,0.26
+General Accounting,6,0.26
+Google Sheets,6,0.26
+Hibernate,6,0.26
+It,6,0.26
+Loans,6,0.26
+Management Skills,6,0.26
+Market Data,6,0.26
+Olap,6,0.26
+Performance,6,0.26
+Perl,6,0.26
+Powercenter,6,0.26
+Predictive,6,0.26
+Project Planning,6,0.26
+Prompt Engineering,6,0.26
+QA,6,0.26
+Sales Operations,6,0.26
+Scalability,6,0.26
+Simulation,6,0.26
+Software Engineering,6,0.26
+Sql Tuning,6,0.26
+Ssms,6,0.26
+Teradata,6,0.26
+Triggers,6,0.26
+Adf,5,0.22
+Adobe,5,0.22
+Apache,5,0.22
+Aws Sagemaker,5,0.22
+Balance Sheet,5,0.22
+Bi Analyst,5,0.22
+Bootstrap,5,0.22
+Business Operations,5,0.22
+Business Processes,5,0.22
+Capacity Management,5,0.22
+Cloud Computing,5,0.22
+Competitive Analysis,5,0.22
+Cost,5,0.22
+Credit Risk,5,0.22
+Cro,5,0.22
+Customer Satisfaction,5,0.22
+Databricks Engineer,5,0.22
+Distribution System,5,0.22
+Dns,5,0.22
+Due Diligence,5,0.22
+Economics,5,0.22
+Etl Process,5,0.22
+Financial Markets,5,0.22
+Fixed Income,5,0.22
+Focus,5,0.22
+Gaming,5,0.22
+Hrsd,5,0.22
+Ibm Datastage,5,0.22
+Iics,5,0.22
+Information Retrieval,5,0.22
+Information Security,5,0.22
+Instrumentation,5,0.22
+Integration,5,0.22
+Investment,5,0.22
+Jenkins,5,0.22
+Jquery,5,0.22
+Langgraph,5,0.22
+Management Systems,5,0.22
+Manufacturing,5,0.22
+Matplotlib,5,0.22
+Mdx,5,0.22
+Medical Insurance,5,0.22
+Nlp,5,0.22
+Object Oriented Programming,5,0.22
+Operations Analyst,5,0.22
+Power Apps,5,0.22
+Power Bi Development,5,0.22
+Powerpoint,5,0.22
+Powershell,5,0.22
+Program,5,0.22
+Rag,5,0.22
+Regression Testing,5,0.22
+Report Writing,5,0.22
+Rest Api,5,0.22
+Risk Analytics,5,0.22
+Risk Modeling,5,0.22
+Saas,5,0.22
+Selenium,5,0.22
+Server Administration,5,0.22
+Service Delivery,5,0.22
+Software Development Life Cycle,5,0.22
+Solution Architecture,5,0.22
+Spring Boot,5,0.22
+Talent Management,5,0.22
+Team Development,5,0.22
+Vba,5,0.22
+Vendor,5,0.22
+Visualization Tools,5,0.22
+Web Development,5,0.22
+Wireframing,5,0.22
+.Net,4,0.18
+Access Control,4,0.18
+Agile Development,4,0.18
+Ai Engineer,4,0.18
+Ai Solutions,4,0.18
+Angular,4,0.18
+Apis,4,0.18
+Assurance,4,0.18
+Automation Testing,4,0.18
+Aws Bedrock,4,0.18
+Azure Sql,4,0.18
+Big Data Analytics,4,0.18
+Big Data Technologies,4,0.18
+Book Closing,4,0.18
+Capital Market,4,0.18
+Ci Cd Pipeline,4,0.18
+Client Interaction,4,0.18
+Clinical Research,4,0.18
+Cloudera,4,0.18
+Code,4,0.18
+Collections,4,0.18
+Competitor Analysis,4,0.18
+Customer Feedback,4,0.18
+Data Entry,4,0.18
+Data Transformation,4,0.18
+Db2,4,0.18
+Design Development,4,0.18
+Diagnostics,4,0.18
+Digital Media,4,0.18
+Dimensional Modeling,4,0.18
+Diversity And Inclusion,4,0.18
+Eda,4,0.18
+Etl Datastage,4,0.18
+Exp,4,0.18
+Fastapi,4,0.18
+Fintech,4,0.18
+Flex,4,0.18
+Fullstack Development,4,0.18
+Genai,4,0.18
+General Ledger,4,0.18
+Google,4,0.18
+High Level Design,4,0.18
+Hlookup,4,0.18
+Incident Management,4,0.18
+Indexing,4,0.18
+Internship,4,0.18
+Investment Management,4,0.18
+Iso,4,0.18
+Linear Regression,4,0.18
+Logistics,4,0.18
+Looker,4,0.18
+Management Consulting,4,0.18
+Matrix,4,0.18
+Media,4,0.18
+Microstrategy,4,0.18
+Mis Reporting,4,0.18
+Ml Algorithms,4,0.18
+Oracle Apps,4,0.18
+Performance Testing,4,0.18
+Pipeline,4,0.18
+Portfolio Management,4,0.18
+Power Platform,4,0.18
+Presales,4,0.18
+Private Equity,4,0.18
+Process Optimization,4,0.18
+Product Design,4,0.18
+Product Quality,4,0.18
+Programming Languages,4,0.18
+Project Implementation,4,0.18
+Python Programming,4,0.18
+R Programming,4,0.18
+Recommender Systems,4,0.18
+Report Generation,4,0.18
+Reporting Analysis,4,0.18
+Requirement Analysis,4,0.18
+Risk Assessment,4,0.18
+Rtr,4,0.18
+Sas Programming,4,0.18
+Semantic,4,0.18
+Service Level,4,0.18
+Software Qa,4,0.18
+Solution Development,4,0.18
+Sql Coding,4,0.18
+Sql Programming,4,0.18
+Sql Query Writing,4,0.18
+Staffing,4,0.18
+Storytelling,4,0.18
+Supply Chain Management,4,0.18
+System,4,0.18
+System Architecture,4,0.18
+Tableau Prep,4,0.18
+Tcp,4,0.18
+Test Cases,4,0.18
+Ticketing,4,0.18
+Time Series,4,0.18
+Underwriting,4,0.18
+Vertex,4,0.18
+Wealth Management,4,0.18
+Web Services,4,0.18
+Wellness,4,0.18
+Workday,4,0.18
+.Net Core,3,0.13
+Agile Scrum,3,0.13
+Analytical Research,3,0.13
+Anomaly Detection,3,0.13
+Ansible,3,0.13
+Api Development,3,0.13
+Application Support,3,0.13
+Architectural Design,3,0.13
+Automotive,3,0.13
+Aviation,3,0.13
+Azure Data Lake,3,0.13
+Azure Machine Learning,3,0.13
+Back Office,3,0.13
+Balance Sheet Reconciliation,3,0.13
+Basic,3,0.13
+Big Data Testing,3,0.13
+Biotechnology,3,0.13
+Bo,3,0.13
+Business Administration,3,0.13
+Business Integration,3,0.13
+Business Planning,3,0.13
+Capital Iq,3,0.13
+Capital Markets,3,0.13
+Charts,3,0.13
+Client Engagement,3,0.13
+Client Management,3,0.13
+Clinical,3,0.13
+Coaching,3,0.13
+Company,3,0.13
+Company Analysis,3,0.13
+Corporate Finance,3,0.13
+Crm Analytics,3,0.13
+Customer Experience Management,3,0.13
+Data Flow,3,0.13
+Data Platforms,3,0.13
+Data Privacy,3,0.13
+Data Reporting,3,0.13
+Data Testing,3,0.13
+Database Maintenance,3,0.13
+Db,3,0.13
+Design Principles,3,0.13
+Disaster Recovery,3,0.13
+Drives,3,0.13
+Dwh Testing,3,0.13
+E-Commerce,3,0.13
+E-Learning,3,0.13
+Econometrics,3,0.13
+Electrical Engineering,3,0.13
+Email Marketing,3,0.13
+Emr,3,0.13
+Environmental Science,3,0.13
+Equity,3,0.13
+Etl Tools,3,0.13
+Financial Analytics,3,0.13
+Formulas,3,0.13
+Fraud Analytics,3,0.13
+Fraud Detection,3,0.13
+General Ledger Accounting,3,0.13
+Generation,3,0.13
+Google Cloud Platform,3,0.13
+Guidewire,3,0.13
+Hcm,3,0.13
+Healthcare Analytics,3,0.13
+Hoovers,3,0.13
+Informatica Development,3,0.13
+Insights,3,0.13
+Installation,3,0.13
+Internet Research,3,0.13
+Investment Research,3,0.13
+Investment Strategies,3,0.13
+Jlpt,3,0.13
+Large,3,0.13
+Life Insurance,3,0.13
+Lod,3,0.13
+Manager Business Intelligence,3,0.13
+Market Assessment,3,0.13
+Master Data,3,0.13
+Matlab,3,0.13
+Mentor,3,0.13
+Month End Reporting,3,0.13
+Mortgage Advisors,3,0.13
+Ms Access,3,0.13
+Ms Office Suite,3,0.13
+Ms Power Bi,3,0.13
+Ms Sql Development,3,0.13
+Mutual Funds,3,0.13
+Node.Js,3,0.13
+Object Detection,3,0.13
+Odi,3,0.13
+Office,3,0.13
+Online Marketing,3,0.13
+Online Research,3,0.13
+Opencv,3,0.13
+Oracle Apps Technical,3,0.13
+Outbound,3,0.13
+Pan,3,0.13
+Performance Improvement,3,0.13
+Pharmaceutical,3,0.13
+Pharmacy,3,0.13
+Pl,3,0.13
+Plsql Developer,3,0.13
+Policy Center,3,0.13
+Power Bi Developer,3,0.13
+Power Bi Service,3,0.13
+Process Mapping,3,0.13
+Product Analysis,3,0.13
+Professional,3,0.13
+Project,3,0.13
+Pytest,3,0.13
+Qlik,3,0.13
+Query Tuning,3,0.13
+Query Writing,3,0.13
+Ratio Analysis,3,0.13
+Recruitment,3,0.13
+Report Development,3,0.13
+Reporting And Analytics,3,0.13
+Reports,3,0.13
+Resource Allocation,3,0.13
+Rest Apis,3,0.13
+Restful,3,0.13
+Risk,3,0.13
+Rpa,3,0.13
+San,3,0.13
+Sap Bi,3,0.13
+Sap Bo,3,0.13
+Sap Hana,3,0.13
+Scipy,3,0.13
+Senior Business Analyst,3,0.13
+Service Industry,3,0.13
+Sla,3,0.13
+Software Engineer,3,0.13
+Spring,3,0.13
+Sql Azure,3,0.13
+Sql Server Analysis Services,3,0.13
+Sql Server Integration Services,3,0.13
+Sql*Plus,3,0.13
+Ssa,3,0.13
+Sso,3,0.13
+Stakeholder Engagement,3,0.13
+Star Schema,3,0.13
+System Integration,3,0.13
+Tds,3,0.13
+Teaching,3,0.13
+Technical Leadership,3,0.13
+Technical Writing,3,0.13
+Telecom,3,0.13
+Trading,3,0.13
+Transformation,3,0.13
+Translation,3,0.13
+Typescript,3,0.13
+Uml,3,0.13
+User Interface Designing,3,0.13
+Valves,3,0.13
+Web Analytics,3,0.13
+Workflow Orchestration,3,0.13
+Workforce Management,3,0.13
+Workforce Planning,3,0.13
+Writing,3,0.13
+12C,2,0.09
+8D,2,0.09
+Ab Initio,2,0.09
+Abap,2,0.09
+Access,2,0.09
+Accounting Standards,2,0.09
+Accruals,2,0.09
+Actuate,2,0.09
+Adam,2,0.09
+Adk,2,0.09
+Adobe Analytics,2,0.09
+Agile Methodology,2,0.09
+Agile Principles,2,0.09
+Agile Project Management,2,0.09
+Alm,2,0.09
+Aml,2,0.09
+Analyst,2,0.09
+Analyst 1,2,0.09
+Analytical Skill,2,0.09
+Analytics Tool,2,0.09
+Android,2,0.09
+Apqp,2,0.09
+Arima,2,0.09
+Assistant Vice President,2,0.09
+Auditing,2,0.09
+Automation Engineering,2,0.09
+Automation Tools,2,0.09
+Aws Cloud,2,0.09
+Aws Etl,2,0.09
+Aws Glue,2,0.09
+Aws Lambda,2,0.09
+Aws Services,2,0.09
+Azure Ai,2,0.09
+Azure Synapse,2,0.09
+Back Office Support,2,0.09
+Backend Operations,2,0.09
+Banking Analytics,2,0.09
+Bash,2,0.09
+Billing Center,2,0.09
+Bpmn,2,0.09
+Business Insights,2,0.09
+Business Metrics,2,0.09
+Business Models,2,0.09
+Business Requirement Analysis,2,0.09
+Business Research Analysis,2,0.09
+Business Rules,2,0.09
+Business Solutions,2,0.09
+Business Understanding,2,0.09
+Cad,2,0.09
+Campaign Analytics,2,0.09
+Capacity,2,0.09
+Cards,2,0.09
+Cassandra,2,0.09
+Casualty,2,0.09
+Cicd Methodology,2,0.09
+Claim Center,2,0.09
+Claims Management,2,0.09
+Client Handling,2,0.09
+Clinical Trials,2,0.09
+Cloud Infrastructure,2,0.09
+Cloud Platform,2,0.09
+Cnn,2,0.09
+Communication And Interpersonal Skills,2,0.09
+Company Profiling,2,0.09
+Company Research,2,0.09
+Comparative Analysis,2,0.09
+Complex,2,0.09
+Complex Queries,2,0.09
+Compliance Management,2,0.09
+Consolidation,2,0.09
+Content Writing,2,0.09
+Control,2,0.09
+Control Plan,2,0.09
+Corporate Actions,2,0.09
+Credit Risk Modelling,2,0.09
+Customer Acquisition,2,0.09
+Customer Engagement,2,0.09
+Customer Experience,2,0.09
+Customer Retention,2,0.09
+Data Interpretation,2,0.09
+Data Lake,2,0.09
+Data Lineage,2,0.09
+Data Warehousing Concepts,2,0.09
+Database Management System,2,0.09
+Database Security,2,0.09
+Datafactory,2,0.09
+Dataiku,2,0.09
+Datastage Etl,2,0.09
+Dbt,2,0.09
+Decision Making,2,0.09
+Derivatives,2,0.09
+Developer,2,0.09
+Digital,2,0.09
+Digital Experience,2,0.09
+Domo,2,0.09
+Driving,2,0.09
+Embedded Os,2,0.09
+Employee Relations,2,0.09
+Enterprise Architecture,2,0.09
+Environmental Impact Assessment,2,0.09
+Erp Systems,2,0.09
+Etl Automation,2,0.09
+Etl Automation Testing,2,0.09
+Executive Management,2,0.09
+Fashion,2,0.09
+Financial Statement Analysis,2,0.09
+Financial Statements,2,0.09
+Fleet Management,2,0.09
+Fmcg,2,0.09
+Fraud,2,0.09
+Fraud Analysis,2,0.09
+Freight,2,0.09
+Frontend Development,2,0.09
+Full Stack Developer,2,0.09
+Functional,2,0.09
+Functional Testing,2,0.09
+Fund Administration,2,0.09
+Fundamental Research,2,0.09
+Genetics,2,0.09
+Glue,2,0.09
+Google Ads,2,0.09
+Google Apps Script,2,0.09
+Google Cloud Platforms,2,0.09
+Google Data Studio,2,0.09
+Handling,2,0.09
+Hardware Design,2,0.09
+Hdfs,2,0.09
+Head Hunting,2,0.09
+Healthcare Domain,2,0.09
+Helpdesk,2,0.09
+High Availability,2,0.09
+Hipaa,2,0.09
+Hr Operations,2,0.09
+Http,2,0.09
+Human Capital,2,0.09
+Hypothesis Testing,2,0.09
+Iiot,2,0.09
+Individual Contributor,2,0.09
+Industry Reports,2,0.09
+Infrastructure Management,2,0.09
+Inside Sales,2,0.09
+Insurance Sales,2,0.09
+Intellectual Property,2,0.09
+Intercompany Accounting,2,0.09
+Intercompany Reconciliation,2,0.09
+International Bpo,2,0.09
+Interpretation,2,0.09
+Investment Analysis,2,0.09
+It Operations,2,0.09
+Join,2,0.09
+Journalism,2,0.09
+Journals,2,0.09
+Jss,2,0.09
+Kpi Reporting,2,0.09
+Lang Chain,2,0.09
+Lead Generation,2,0.09
+Leasing,2,0.09
+Life Cycle,2,0.09
+Llm Integration,2,0.09
+Lms,2,0.09
+Lstm,2,0.09
+MLflow,2,0.09
+Machine Learning Operations,2,0.09
+Mainframe,2,0.09
+Mainframes,2,0.09
+Manpower,2,0.09
+Mapping,2,0.09
+Market Analyst,2,0.09
+Market Forecasting,2,0.09
+Market Research Analyst,2,0.09
+Medical,2,0.09
+Microsoft Sql Server Database,2,0.09
+Microsoft Technologies,2,0.09
+Mixpanel,2,0.09
+Ml Deployment,2,0.09
+Ml Engineer,2,0.09
+Ml Pipelines,2,0.09
+Model Training,2,0.09
+Month End Closing,2,0.09
+Ms Office Word,2,0.09
+Ms Word,2,0.09
+Network Security,2,0.09
+Nism,2,0.09
+Office Administration,2,0.09
+Onboarding,2,0.09
+Ontology,2,0.09
+Openai,2,0.09
+Operating Systems,2,0.09
+Ops,2,0.09
+Oracle Data Integrator,2,0.09
+Organization Design,2,0.09
+Outsourcing,2,0.09
+Paas,2,0.09
+Paid Social,2,0.09
+Payment Processing,2,0.09
+Payments,2,0.09
+Performance Monitoring,2,0.09
+Pharma Analytics,2,0.09
+Policies,2,0.09
+Positioning,2,0.09
+Pr,2,0.09
+Prep,2,0.09
+Pricing Strategy,2,0.09
+Procedures,2,0.09
+Process Analysis,2,0.09
+Process Associate,2,0.09
+Product Service,2,0.09
+Project Development,2,0.09
+Project Execution,2,0.09
+Property And Casualty,2,0.09
+Provident Fund,2,0.09
+Python Data,2,0.09
+Python Data Analytics,2,0.09
+Python Flask,2,0.09
+Python Scripting,2,0.09
+Qa Process,2,0.09
+Qlik Sense Development,2,0.09
+Quality,2,0.09
+Quality Control,2,0.09
+Quality Engineering,2,0.09
+Quality Standards,2,0.09
+Quantitative,2,0.09
+Redshift,2,0.09
+Registration,2,0.09
+Regulatory,2,0.09
+Relational Databases,2,0.09
+Relationship Building,2,0.09
+Relationship Management,2,0.09
+Release Management,2,0.09
+Reporting And Analysis,2,0.09
+Research Reports,2,0.09
+Research Tools,2,0.09
+Rest Api Development,2,0.09
+Rfp,2,0.09
+Rice Components,2,0.09
+Rls,2,0.09
+Robotics,2,0.09
+Ruby,2,0.09
+Sales Process,2,0.09
+Salesforce Crm,2,0.09
+Sap Bw,2,0.09
+Sap Ecc,2,0.09
+Sap Mm,2,0.09
+Sas Macros,2,0.09
+Sat,2,0.09
+Secondary,2,0.09
+Security,2,0.09
+Security Management,2,0.09
+Segmentation,2,0.09
+Selection Process,2,0.09
+Senior Data Analyst,2,0.09
+Seo,2,0.09
+Service Operations,2,0.09
+Set,2,0.09
+Shell,2,0.09
+Six Sigma,2,0.09
+Smart,2,0.09
+Snowflake Db,2,0.09
+Soc,2,0.09
+Social Research,2,0.09
+Software Quality,2,0.09
+Software Solutions,2,0.09
+Solution Design,2,0.09
+Spotfire,2,0.09
+Sqlite,2,0.09
+Star,2,0.09
+Statistical Data Analysis,2,0.09
+Statistical Software,2,0.09
+Stm,2,0.09
+Stock Management,2,0.09
+Strategy Consulting,2,0.09
+Sumif,2,0.09
+Support Services,2,0.09
+Tableau Consultant,2,0.09
+Taxation,2,0.09
+Technical Design,2,0.09
+Technical Documentation,2,0.09
+Technical Lead,2,0.09
+Technology Solutions,2,0.09
+Test Driven Development,2,0.09
+Test Scenarios,2,0.09
+Text Mining,2,0.09
+Tibco,2,0.09
+Tibco Spotfire,2,0.09
+Time Tracking,2,0.09
+Transportation,2,0.09
+Trend Analysis,2,0.09
+Typesetting,2,0.09
+Uat Support,2,0.09
+Unix Development,2,0.09
+Unsupervised Learning,2,0.09
+Ups,2,0.09
+User Experience,2,0.09
+Variance Analysis,2,0.09
+Vertex Ai,2,0.09
+Views,2,0.09
+Virtualization,2,0.09
+Vlsi,2,0.09
+Vpc,2,0.09
+Waterfall,2,0.09
+Web Framework,2,0.09
+Wireless,2,0.09
+Work Permit,2,0.09
+Workbench,2,0.09
+Workday Reporting,2,0.09
+Workflow Automation,2,0.09
+Xgboost,2,0.09
+Xml Publisher Reports,2,0.09
+Xslt,2,0.09
+19C,1,0.04
 401K,1,0.04
-4Gl,1,0.04
 5 Why,1,0.04
-8D,1,0.04
-A/B Testing,1,0.04
-A2A Integration,1,0.04
-Ab Initio,1,0.04
-Abap Development Tools,1,0.04
-Abap On Hana,1,0.04
-Abs,1,0.04
+Ab Testing,1,0.04
 Academic,1,0.04
 Academic Writing,1,0.04
 Academics,1,0.04
-Acceptance Testing,1,0.04
-Access Controls,1,0.04
+Accessories,1,0.04
+Account Management,1,0.04
+Account Reconciliation,1,0.04
 Account Reconciliations,1,0.04
 Accountancy,1,0.04
 Accountant,1,0.04
 Accounts Payable,1,0.04
+Accounts Receivable,1,0.04
 Accrual Entries,1,0.04
 Acquisition,1,0.04
-Actimize,1,0.04
-Action,1,0.04
-Active Directory Administration,1,0.04
-Adb,1,0.04
-Adfs,1,0.04
+Acquisitions,1,0.04
+Adams,1,0.04
+Admin,1,0.04
 Ado.Net,1,0.04
-Adobe Forms,1,0.04
-Ads,1,0.04
+Adobe Experience Platform,1,0.04
+Adso,1,0.04
 Adv,1,0.04
-Advanced Ms Excel,1,0.04
-Advanced Python,1,0.04
-Advanced Sql,1,0.04
-Advertising,1,0.04
-Advocate,1,0.04
-Adwords,1,0.04
-Aerodynamics,1,0.04
-Aeronautical,1,0.04
+Advance Sas,1,0.04
+Advanced Excel Power Bi,1,0.04
+Advanced Knowledge Of Dax,1,0.04
+Advanced Sql Queries,1,0.04
+Advisory Services,1,0.04
+Aerospace,1,0.04
 Affinity,1,0.04
 Agent Engine,1,0.04
 Agentice Ai,1,0.04
-Agile / Scrum,1,0.04
 Agile Methodologies,1,0.04
 Agri,1,0.04
 Agribusiness,1,0.04
-Ai / Ml,1,0.04
-Ai Agents,1,0.04
-Ai Automation,1,0.04
+Ai Api Integration,1,0.04
 Ai Builder,1,0.04
-Ai Data Engineer,1,0.04
-Ai Data Preprocessing,1,0.04
-Ai Data Scientist,1,0.04
-Ai Evaluation,1,0.04
 Ai Kn,1,0.04
-Ai Ml,1,0.04
-Ai Model Development,1,0.04
-Ai Platform,1,0.04
 Ai Strategy,1,0.04
+Ai Techniques,1,0.04
 Ai Tools,1,0.04
-Ai Workflow,1,0.04
-Ai-Powered Observability,1,0.04
-Ai/Ml In Healthcare,1,0.04
-Aiops,1,0.04
 Airflow Orchestration,1,0.04
-Ais,1,0.04
-Aix,1,0.04
-Ajax,1,0.04
-Al/Ml,1,0.04
-Alchemer,1,0.04
-Alert,1,0.04
+Aks,1,0.04
 Alerting,1,0.04
-Alml,1,0.04
-Alv,1,0.04
-Amazon Cloudwatch,1,0.04
-Amazon Connect,1,0.04
-Amazon Rds,1,0.04
-Anaconda,1,0.04
+Algorithm Development,1,0.04
+Altair,1,0.04
+Altryx,1,0.04
 Analysis Reports,1,0.04
-Analysis Tools,1,0.04
-Analyst Executive,1,0.04
-Analyst Ii,1,0.04
-Analytical Ability,1,0.04
+Analytics Cloud,1,0.04
+Analytics Data,1,0.04
 Analytics Developer,1,0.04
-Analytics Outcomes,1,0.04
-Analytics Qa,1,0.04
-Analytics Tool,1,0.04
-Analyzer,1,0.04
-Anaplan,1,0.04
+Analytics Platforms,1,0.04
+Analytics Reporting,1,0.04
+Analytics Tools,1,0.04
 And .Net,1,0.04
 And Data Visualizations,1,0.04
-And Solid Ml Fundamentals And Time Series Forecasting. The Role Involves Collaborating With Data Engineers And Data Scientists In A Multi-Vendor Setup,1,0.04
-And Tcp/Ip Protocols.,1,0.04
-Anda,1,0.04
+And Python,1,0.04
 Android Application,1,0.04
+Angularjs,1,0.04
 Annuity,1,0.04
-Ansi,1,0.04
-Ansys,1,0.04
 Apache Flink,1,0.04
-Apex,1,0.04
-Api Contract Documentation,1,0.04
 Api Deployment,1,0.04
-Api Development,1,0.04
-Api Gateway,1,0.04
-Api Management,1,0.04
-App Service,1,0.04
-Appeals,1,0.04
-Application Engineering,1,0.04
-Application Software,1,0.04
-Appraisal,1,0.04
-Approvals,1,0.04
-Appsec,1,0.04
-Apqp,1,0.04
-Ar,1,0.04
-Ar Reports,1,0.04
-Arbortext Epic Editor,1,0.04
-Arc Map,1,0.04
-Arcgis Server,1,0.04
-Architecting,1,0.04
+Appium,1,0.04
+Application Analysis,1,0.04
+Application Security,1,0.04
+Arcgis,1,0.04
+Architect,1,0.04
+Archival,1,0.04
 Ariba,1,0.04
-Artif,1,0.04
 Artifactory,1,0.04
-Artificial Intelligence Engineer,1,0.04
 As Well As A Strong Understanding O,1,0.04
 Asic,1,0.04
+Asp.Net,1,0.04
 Asp.Net Mvc,1,0.04
-Aspen,1,0.04
-Assembly Language,1,0.04
-Assembly Process,1,0.04
 Asset,1,0.04
-Asset Accounting,1,0.04
-Asset Servicing,1,0.04
-Associate Business Analyst,1,0.04
+Associate Research Analyst,1,0.04
+Asynchronous Apex,1,0.04
 Attendance Management,1,0.04
-Attention To Detail,1,0.04
 Audit Compliance,1,0.04
-Augmented Reality,1,0.04
-Author,1,0.04
-Auto Level,1,0.04
+Auto Ancillary,1,0.04
 Automation Anywhere,1,0.04
-Automation Engineering,1,0.04
-Automation Skills,1,0.04
-Automation Solutions,1,0.04
-Automotive Engineering,1,0.04
-Autosar,1,0.04
+Automation Framework Development,1,0.04
+Automoa,1,0.04
 Autosys,1,0.04
-Aws Bedrock,1,0.04
-Aws Big Data,1,0.04
-Aws Cloud Ecosystem,1,0.04
 Aws Data Engineer,1,0.04
-Aws Data Migration,1,0.04
-Aws Glue And Dms,1,0.04
-Aws Services,1,0.04
-Aws Services - Redshift,1,0.04
-Aws/ Gcp/ Azure,1,0.04
-Aws/Gcp/Azure,1,0.04
+Aws Iam,1,0.04
 Awsazure,1,0.04
-Azure Ado,1,0.04
-Azure Aws,1,0.04
-Azure Cloud Services,1,0.04
-Azure Cognitive Services,1,0.04
+Azure Cloud Platform,1,0.04
+Azure Data Engineering,1,0.04
 Azure Data Warehouse,1,0.04
-Azure Functions,1,0.04
-Azure Key Vault,1,0.04
+Azure Kubernetes Service,1,0.04
+Azure Ml,1,0.04
 Azure Ml Studio,1,0.04
 Azure Mlflow,1,0.04
-Azure Mlops,1,0.04
-Azure Paas,1,0.04
-Azure Search,1,0.04
-Azure Sql Database,1,0.04
-B2B Consulting,1,0.04
 B2B Fleet Solution,1,0.04
-B2B Integration,1,0.04
-Back Office Support,1,0.04
-Backend Operations,1,0.04
+Ba,1,0.04
 Backend Process,1,0.04
 Backlog Refinement,1,0.04
-Backup,1,0.04
-Balsamiq,1,0.04
-Bangla,1,0.04
 Bank Accounting,1,0.04
-Basel,1,0.04
-Bash,1,0.04
+Banking And Finance,1,0.04
+Bash Scripting,1,0.04
 Batch,1,0.04
 Batch Processing,1,0.04
-Bau Support,1,0.04
-Bbs,1,0.04
-Bfsi Domain,1,0.04
+Bfsi Projects,1,0.04
 Bi Lead,1,0.04
-Bi Manager,1,0.04
 Bi Platform Migration,1,0.04
 Bi Reporting,1,0.04
-Bi Tool,1,0.04
-Big Data Platforms,1,0.04
+Bi Stack,1,0.04
+Big Data Administration,1,0.04
 Big4,1,0.04
 Bigdata Frameworks,1,0.04
-Bigfix,1,0.04
 Bigquery Architecture,1,0.04
-Bigtable,1,0.04
 Bilingual,1,0.04
+Bill Payments And Recharge,1,0.04
 Billing Ceneter,1,0.04
 Bing Ads,1,0.04
-Bioinformatics,1,0.04
-Biomedical,1,0.04
+Biochemistry,1,0.04
 Biopharma,1,0.04
-Biostatistics,1,0.04
-Biu,1,0.04
-Biw,1,0.04
-Blackline,1,0.04
+Bitbucket,1,0.04
 Blob Storage,1,0.04
-Blue Yonder,1,0.04
-Bmr,1,0.04
-Bms,1,0.04
-Bod,1,0.04
-Bom,1,0.04
+Blockchain,1,0.04
+Bluetooth,1,0.04
 Bond Markets,1,0.04
 Book Keeping,1,0.04
-Boomi,1,0.04
-Boq,1,0.04
-Bpm,1,0.04
-Bpm Business Process Management,1,0.04
-Brand Promotion,1,0.04
 Broking,1,0.04
-Btech/Be,1,0.04
-Budgeting And Forecasting,1,0.04
-Bug Reporting,1,0.04
-Build,1,0.04
+Bss,1,0.04
 Build Agents,1,0.04
-Build Ai Models,1,0.04
-Build Automation,1,0.04
-Building Construction,1,0.04
-Bulk,1,0.04
-Bulk Logistics,1,0.04
+Build Tools,1,0.04
+Building,1,0.04
+Business Advisory,1,0.04
+Business Analysis It,1,0.04
+Business Analysis Planning,1,0.04
+Business Applications,1,0.04
+Business Case,1,0.04
 Business Communication,1,0.04
 Business Consultant,1,0.04
 Business Continuity,1,0.04
 Business Data,1,0.04
 Business Data Analysis,1,0.04
-Business Development Management,1,0.04
-Business Economics,1,0.04
-Business Growth,1,0.04
+Business Development Executive,1,0.04
+Business Enablement,1,0.04
 Business Hr,1,0.04
+Business Management,1,0.04
 Business Partnering,1,0.04
-Business Planning,1,0.04
 Business Presentations,1,0.04
-Business Process Improvement,1,0.04
-Business Process Mapping,1,0.04
+Business Process Analysis,1,0.04
+Business Process Management,1,0.04
+Business Process Modeling,1,0.04
 Business Process Re-Engineering,1,0.04
-Business Structures,1,0.04
-Business Understanding,1,0.04
+Business Stakeholder Management,1,0.04
 Business Writing,1,0.04
-Buy Side,1,0.04
-Calculation,1,0.04
+Ca - Inter,1,0.04
 Calculus,1,0.04
-Call Center Technology,1,0.04
-Campaigns,1,0.04
+Can,1,0.04
 Capability Building,1,0.04
-Cards Domain,1,0.04
 Case,1,0.04
-Ccaas,1,0.04
-Ccar,1,0.04
-Ccar Reporting,1,0.04
-Cctv,1,0.04
+Cash Flow,1,0.04
+Catering,1,0.04
+Cbap,1,0.04
+Ccp,1,0.04
 Cdi,1,0.04
-Cdp,1,0.04
-Cds View,1,0.04
+Cfa,1,0.04
 Cfa Level 1,1,0.04
-Change Control,1,0.04
+Cgi,1,0.04
+Change Request,1,0.04
 Channel Marketing,1,0.04
-Charles Proxy,1,0.04
+Channel Partner Performance,1,0.04
+Charles River,1,0.04
 Chartered Accountant,1,0.04
 Chartered Financial Analyst,1,0.04
 Chatbot,1,0.04
-Check Server Health,1,0.04
-Chemical Engineering,1,0.04
 Chip Design,1,0.04
-Ci,1,0.04
 Cicd,1,0.04
 Cisa,1,0.04
-Cisco,1,0.04
-Cism,1,0.04
-Civil Construction,1,0.04
+Cisco Certified,1,0.04
 Claimcenter,1,0.04
 Claims Adjudication,1,0.04
 Claims Processing,1,0.04
+Classroom Management,1,0.04
 Claude,1,0.04
-Claude Api,1,0.04
-Clevertap,1,0.04
-Clickstream Analysis,1,0.04
 Client Acquisition,1,0.04
-Client Administration,1,0.04
-Client Coordination,1,0.04
-Client Relationship Management,1,0.04
+Client Satisfaction,1,0.04
 Client Servicing,1,0.04
+Client Support,1,0.04
 Clinical Reporting,1,0.04
+Clinical Sas,1,0.04
 Closing,1,0.04
-Cloud Architecture,1,0.04
 Cloud Data,1,0.04
-Cloud Data Engineering,1,0.04
-Cloud Data Platforms,1,0.04
+Cloud Deployment,1,0.04
+Cloud Development,1,0.04
+Cloud Environment,1,0.04
+Cloud Erp,1,0.04
 Cloud Integration,1,0.04
 Cloud Migration,1,0.04
-Cloud Monitoring,1,0.04
-Cloud Platform,1,0.04
 Cloud Run,1,0.04
 Cloud Security,1,0.04
-Cmbs,1,0.04
+Cloud Technologies,1,0.04
+Cluster,1,0.04
+Cluster Analysis,1,0.04
 Cmdb,1,0.04
-Cmmi,1,0.04
 Cms,1,0.04
-Cnc,1,0.04
-Cnc Machines,1,0.04
 Coating,1,0.04
-Code Quality,1,0.04
-Cognos Framework Manager,1,0.04
-Cognos Report Studio,1,0.04
+Code Review,1,0.04
 Cognos Reporting,1,0.04
-Cognos Tm1,1,0.04
-Cohort,1,0.04
-Cold Calling,1,0.04
-Collaboration Tools,1,0.04
+Collaboration,1,0.04
+Commerce,1,0.04
 Commercial,1,0.04
 Commercial Operations,1,0.04
-Commissioning,1,0.04
+Commission,1,0.04
 Communication Management,1,0.04
-Communication Skillsbusiness Requirements,1,0.04
 Complaint Handling,1,0.04
-Complex,1,0.04
-Compliance Management,1,0.04
+Complex Sql Query,1,0.04
 Components,1,0.04
-Computational Biology,1,0.04
+Computer Operator,1,0.04
 Computer Savvy,1,0.04
-Computer Skills,1,0.04
-Computer Vision & Deep Learning,1,0.04
-Concentrix,1,0.04
-Concept Design,1,0.04
-Configuring,1,0.04
-Conflict Management,1,0.04
+Computer Vision Engineer,1,0.04
+Conditional Formatting,1,0.04
+Configuration Management,1,0.04
 Conflict Resolution,1,0.04
-Connect,1,0.04
 Construction Finance,1,0.04
-Construction Management,1,0.04
-Consumer Finance,1,0.04
-Consumer Research,1,0.04
-Contact Discovery,1,0.04
-Containerization,1,0.04
+Consumer Marketing,1,0.04
+Container,1,0.04
 Content,1,0.04
-Content Editing,1,0.04
-Content Planning,1,0.04
-Content Writing,1,0.04
-Contracts,1,0.04
-Contributing End-To-End Solutions,1,0.04
-Control Plan,1,0.04
+Continuous Delivery,1,0.04
+Contour,1,0.04
+Contract Management,1,0.04
 Control System,1,0.04
-Control Testing,1,0.04
-Conversational Ai,1,0.04
-Conversion Optimization,1,0.04
-Conversion Tracking,1,0.04
 Convincing Power,1,0.04
+Coordination,1,0.04
 Coordinator,1,0.04
-Core Banking,1,0.04
-Corporate Governance,1,0.04
-Corporate Planning,1,0.04
-Corporate Sales,1,0.04
+Copilot,1,0.04
+Core,1,0.04
+Core Banking Solution,1,0.04
+Core Java,1,0.04
+Corporate Strategy,1,0.04
 Cortex,1,0.04
-Coso,1,0.04
-Cost Estimation,1,0.04
-Cost Optimization,1,0.04
-Cost-Benefit Analysis,1,0.04
-Counselling,1,0.04
+Cosmos,1,0.04
+Cost Analysis,1,0.04
+Cost Benefit Analysis,1,0.04
+Costing And Budgeting,1,0.04
 Countif,1,0.04
 Coversational Ai,1,0.04
-Cpg,1,0.04
+Cpa,1,0.04
 Cpm,1,0.04
+Cpt,1,0.04
+Cpu,1,0.04
+Cqa,1,0.04
 Cre,1,0.04
 Creates,1,0.04
-Credit Card Analytics,1,0.04
-Credit Cards,1,0.04
-Credit Operations,1,0.04
-Credit Risk Analysis,1,0.04
-Credit Risk Modelling,1,0.04
-Creo,1,0.04
+Credit,1,0.04
+Credit Analysis,1,0.04
+Credit Research Analyst,1,0.04
 Crewai,1,0.04
-Crm 2007 Integration Experience,1,0.04
+Crm Management,1,0.04
 Crm Sales,1,0.04
-Crm Software,1,0.04
 Crm Systems,1,0.04
-Cross Functional Collaboration,1,0.04
-Cross Functional Coordination,1,0.04
 Crystal Reports,1,0.04
-Csms,1,0.04
-Cte,1,0.04
+Cs,1,0.04
+Csv,1,0.04
+Ctes,1,0.04
 Ctr,1,0.04
 Ctrm,1,0.04
-Cuda,1,0.04
-Culture Transformation,1,0.04
-Currency,1,0.04
-Current Account,1,0.04
-Curriculum Designer,1,0.04
-Custom Applications,1,0.04
+Curriculum Designing,1,0.04
+Curriculum Development,1,0.04
+Cursor,1,0.04
 Custom Report Development,1,0.04
 Customer Advisor,1,0.04
 Customer Complaints,1,0.04
-Customer Data Platform,1,0.04
-Customer Data Platforms,1,0.04
-Customer Facing,1,0.04
-Customer Insight,1,0.04
-Customer Interaction,1,0.04
 Customer Journey Analytics,1,0.04
-Customer Service Orientation,1,0.04
-Customization,1,0.04
-Cxo,1,0.04
+Customer Life Cycle Management,1,0.04
+Customer Relationship,1,0.04
+Customer Segmentation,1,0.04
+Cyber,1,0.04
+D Tree,1,0.04
 D2C,1,0.04
-D3.Js,1,0.04
-D365 Functional,1,0.04
 Da,1,0.04
 Das,1,0.04
+Dashboard,1,0.04
 Dashboard Creation,1,0.04
 Dashboard Design,1,0.04
 Dashboard Reporting,1,0.04
-Dast,1,0.04
+Dashboarding,1,0.04
 Data Accuracy And Integrity,1,0.04
 Data Acquisition,1,0.04
-Data Aggregation,1,0.04
-Data Analysis Tools,1,0.04
-Data Analysts,1,0.04
-Data Architecture Principles,1,0.04
+Data Build Tool,1,0.04
 Data Catalog,1,0.04
-Data Center Infrastructure,1,0.04
+Data Cloud,1,0.04
 Data Communication,1,0.04
 Data Compliance,1,0.04
-Data Conversion,1,0.04
-Data Dictionary,1,0.04
+Data Connectors,1,0.04
 Data Documentation,1,0.04
+Data Domain,1,0.04
 Data Engineering & Analytics,1,0.04
 Data Enrichment,1,0.04
-Data Executive,1,0.04
-Data Factory,1,0.04
-Data Handling & Visualization,1,0.04
-Data Integration & Etl Processes,1,0.04
-Data Integration & Ingestion,1,0.04
+Data Entry Operation,1,0.04
+Data Ingestion,1,0.04
 Data Integration Tools,1,0.04
-Data Lake,1,0.04
 Data Lakehouse,1,0.04
-Data Loader,1,0.04
-Data Loss Prevention,1,0.04
-Data Manipulation And Processing,1,0.04
-Data Marts Creation,1,0.04
-Data Operations,1,0.04
-Data Protection,1,0.04
-Data Quality Management,1,0.04
+Data Management Systems,1,0.04
+Data Mart,1,0.04
+Data Mart Design,1,0.04
+Data Modeler,1,0.04
+Data Modeling Techniques,1,0.04
+Data Observability,1,0.04
+Data Pipeline Architecture,1,0.04
+Data Platform,1,0.04
 Data Querying,1,0.04
 Data Requirements,1,0.04
+Data Research,1,0.04
 Data Retrieval,1,0.04
+Data Scientist Aiml,1,0.04
 Data Sources,1,0.04
-Data Sourcing,1,0.04
-Data Studio,1,0.04
+Data Strategy,1,0.04
+Data Systems,1,0.04
 Data Transformation And Modelling,1,0.04
+Data Vault,1,0.04
 Data Vis,1,0.04
 Data Visualization Data Analytics,1,0.04
 Data Visualization Specialist,1,0.04
+Data Ware House,1,0.04
+Data Warehouse Etl Testing,1,0.04
+Data Warehouse Testing,1,0.04
 Data Wrangling,1,0.04
 Database & Sql,1,0.04
 Database Architecture,1,0.04
-Database Developer,1,0.04
-Database Fundamentals,1,0.04
 Database Internals,1,0.04
-Database Normalization,1,0.04
-Database Testing,1,0.04
-Database Tuning,1,0.04
+Database Programming,1,0.04
 Databases,1,0.04
-Databricks And Reltio Projects,1,0.04
 Datadog,1,0.04
-Datafactory,1,0.04
 Dataprep,1,0.04
 Dataproc,1,0.04
 Dataset Pipelines,1,0.04
 Datasphere,1,0.04
-Dba Skills,1,0.04
-Dcom,1,0.04
-Decision Making,1,0.04
+Dax Studio,1,0.04
+Db Queries,1,0.04
+Ddl,1,0.04
+Dealer Performance Metrics,1,0.04
+Debit Card Operations,1,0.04
+Dec,1,0.04
+Decision Analytics,1,0.04
 Decorative Painting,1,0.04
-Defence,1,0.04
+Deep Learning Frameworks,1,0.04
+Defect Management,1,0.04
+Defect Trend,1,0.04
 Delivery,1,0.04
-Delivery Analyst,1,0.04
 Delivery Management,1,0.04
-Delta Lake,1,0.04
 Deluge,1,0.04
+Demand Forecasting,1,0.04
 Demand Planning,1,0.04
-Demat Account,1,0.04
-Denial,1,0.04
-Denials,1,0.04
-Deploy,1,0.04
-Deployment Lead,1,0.04
-Deployment/Ml Lifecycle Depth,1,0.04
+Demo,1,0.04
+Deployment Tools,1,0.04
+Derivatives Pricing,1,0.04
 Design Concepts,1,0.04
-Design Layout,1,0.04
+Design Patterns,1,0.04
 Designing,1,0.04
 Designing Etl,1,0.04
-Designware Synthesis,1,0.04
 Desktop Support,1,0.04
-Detail Engineering,1,0.04
-Detailing,1,0.04
-Developer Trainee,1,0.04
-Developing,1,0.04
-Development Lead,1,0.04
+Development Life Cycle,1,0.04
 Development Manager,1,0.04
-Development Methodologies,1,0.04
 Device Management,1,0.04
-Dg,1,0.04
-Diagnostic,1,0.04
-Digital,1,0.04
-Digital Campaigns,1,0.04
-Digital Payment,1,0.04
-Dimensional Modelling,1,0.04
+Digital Analytics,1,0.04
+Digital Services,1,0.04
+Digital Technology,1,0.04
 Direct Marketing,1,0.04
+Direct Sales,1,0.04
 Distributed Computing,1,0.04
 Distributed Systems,1,0.04
-Dm,1,0.04
-Dma,1,0.04
-Dmepos,1,0.04
-Dms,1,0.04
-Dna,1,0.04
-Dna Sequencing,1,0.04
+Distribution Compensation,1,0.04
+Distribution Payouts,1,0.04
+Distribution Planning,1,0.04
+Django Web Framework,1,0.04
+Dl,1,0.04
 Document Management,1,0.04
-Document Management System,1,0.04
-Document Review,1,0.04
-Documentation Tools,1,0.04
 Domain Knowledge,1,0.04
 Domain Trainee,1,0.04
-Domo,1,0.04
 Dp 600,1,0.04
 Dp 700,1,0.04
-Drawing,1,0.04
-Drawing Reading,1,0.04
 Drilling,1,0.04
-Driveworks,1,0.04
-Driving,1,0.04
-Drug,1,0.04
+Drivers,1,0.04
 Dsl,1,0.04
-Dts,1,0.04
-Duck Creek,1,0.04
-Dw,1,0.04
-Dwbi,1,0.04
-Dynamic,1,0.04
+Dvp,1,0.04
 Dynamic Sql Queries,1,0.04
-Dynamics,1,0.04
-Dynatrace,1,0.04
-E-Governance,1,0.04
+E2E,1,0.04
 Ecg Analysis,1,0.04
-Ecommerce Analytics,1,0.04
+Edi,1,0.04
 Editing,1,0.04
-Editorial,1,0.04
-Education,1,0.04
+Editor,1,0.04
 Efficientdet,1,0.04
 Elastic Search,1,0.04
-Elearning,1,0.04
-Electrical Maintenance,1,0.04
-Electricians,1,0.04
+Electricals,1,0.04
 Elicitation,1,0.04
-Elk Search,1,0.04
 Eloqua,1,0.04
+Elt Processes,1,0.04
 Email,1,0.04
 Email Communication,1,0.04
+Embedded C,1,0.04
+Embedded Systems,1,0.04
+Embedded Testing,1,0.04
 Embedding,1,0.04
+Employee Engagement,1,0.04
 Employee Grievances,1,0.04
 Employee Lifecycle Management,1,0.04
-Employee Relations,1,0.04
 Employee Retention,1,0.04
-End To End,1,0.04
 End To End Implementation,1,0.04
-End User Support,1,0.04
-End-To-End Testing,1,0.04
-Endpoint Management,1,0.04
-Endur,1,0.04
-Energy,1,0.04
-Engagement,1,0.04
-Engine Assembly,1,0.04
-Engine Quality,1,0.04
-Engineering Manager,1,0.04
+Engineer Ii,1,0.04
+Engineering Services,1,0.04
+English,1,0.04
 English Communication,1,0.04
 English Communication Skills,1,0.04
 English Language,1,0.04
+Ent,1,0.04
 Enterprise,1,0.04
-Enterprise Architecture,1,0.04
-Enterprise Saas,1,0.04
-Enterprise Structure,1,0.04
-Environment Management,1,0.04
-Environmental Data Tracking,1,0.04
-Environmental Impact Assessment,1,0.04
-Environmental Standards & Parameters,1,0.04
-Equity Market,1,0.04
-Equity Market Research,1,0.04
+Environment,1,0.04
 Equity Research Analyst,1,0.04
-Equity Valuation,1,0.04
-Erection,1,0.04
+Er,1,0.04
 Erp System,1,0.04
-Esg Reporting,1,0.04
-Estate,1,0.04
-Estate Management,1,0.04
+Error Handling,1,0.04
+Erwin,1,0.04
 Estimation,1,0.04
 Ethernet,1,0.04
 Ethics,1,0.04
 Etl Data Engineer,1,0.04
-Etl Databricks Developer,1,0.04
 Etl Lead,1,0.04
 Etl Processes,1,0.04
+Etl Testers,1,0.04
 Etl Tool Migration,1,0.04
-Etl/Elt Processes,1,0.04
-Euc,1,0.04
-Euc Engineer,1,0.04
-Evaluation Analysis,1,0.04
-Evaluation Frameworks,1,0.04
-Evaluator,1,0.04
-Event Tracking,1,0.04
+Ev,1,0.04
+Ex,1,0.04
 Excel Formulas,1,0.04
-Excel Report Preparation,1,0.04
 Excel Sheet,1,0.04
-Exchange Server,1,0.04
+Excellent Communication In English,1,0.04
 Execution,1,0.04
+Executive Dashboards,1,0.04
 Executive Leadership,1,0.04
-Exellent Communication,1,0.04
 Exim,1,0.04
-Exp,1,0.04
-Experience With Cloud Platforms,1,0.04
-Expresjs,1,0.04
+Expense Management,1,0.04
+Experience With Sql And Relational Databases Mysql,1,0.04
 Extraction,1,0.04
-F5,1,0.04
+Extreme Programming,1,0.04
+Fa,1,0.04
+Fabric Component,1,0.04
 Facebook,1,0.04
 Facets,1,0.04
 Facilitation,1,0.04
-Factiva,1,0.04
+Factor Analysis,1,0.04
 Factoring,1,0.04
-Faculty,1,0.04
+Factory,1,0.04
 Faiss,1,0.04
-Family Office,1,0.04
 Fare Research Analystis,1,0.04
+Fedex,1,0.04
+Fhir,1,0.04
 Fi,1,0.04
+Fiber,1,0.04
+Field Marketing,1,0.04
 Field Sales,1,0.04
-Figma,1,0.04
-Filebeat,1,0.04
-Finance And Operations,1,0.04
 Finance Control,1,0.04
-Financial Accounting,1,0.04
+Finance Data,1,0.04
 Financial Advisory,1,0.04
 Financial Control,1,0.04
+Financial Data,1,0.04
+Financial Modelling,1,0.04
+Financial Operations,1,0.04
 Financial Reports,1,0.04
 Financial Statement,1,0.04
-Finetuning,1,0.04
-Finite Element Analysis,1,0.04
 Fintech Product,1,0.04
-Fire,1,0.04
-Fire Design,1,0.04
-Fire Life Safety Engineer,1,0.04
-Fire Protection,1,0.04
 Firmware,1,0.04
 Fisheries Research,1,0.04
-Five9,1,0.04
 Fivetran,1,0.04
-Fixed Income Derivatives,1,0.04
-Flaskapi,1,0.04
-Fleet Management,1,0.04
-Flourish,1,0.04
-Flow Designer,1,0.04
-Flutter,1,0.04
+Flask Web Framework,1,0.04
 Flyway,1,0.04
+Fmcg Sales,1,0.04
 Fmea,1,0.04
-Forescout,1,0.04
-Forescout Administrator,1,0.04
-Forging,1,0.04
+Foundry,1,0.04
 Fp&A,1,0.04
-Framemaker,1,0.04
-Fraud,1,0.04
-Fraud Analytics,1,0.04
+Fpna,1,0.04
+Framework Manager,1,0.04
 Fraud Management,1,0.04
-Freelancing,1,0.04
+Fraud Risk,1,0.04
+Freight Forwarding,1,0.04
 French,1,0.04
-Frontend Development,1,0.04
-Fueleu,1,0.04
-Full Stack Developer,1,0.04
+Fresher Hiring,1,0.04
+Front Office,1,0.04
+Fsd,1,0.04
 Functional Consultancy,1,0.04
 Functional Consultant,1,0.04
-Fund Administration,1,0.04
-Fund Reporting,1,0.04
-Ga,1,0.04
-Ga 360,1,0.04
-Ga 4,1,0.04
+Functional Specifications,1,0.04
+Functions,1,0.04
+Fund Accounting,1,0.04
+Fundamentals,1,0.04
+Funnel Analytics,1,0.04
 Ga4,1,0.04
-Gaap / Ifrs Concepts,1,0.04
+Gaap,1,0.04
 Gap,1,0.04
 Gas,1,0.04
-Gas Turbine,1,0.04
-Gate-Level Netlist Generation,1,0.04
-Gcp Cloud,1,0.04
+Gcp Data Engineer,1,0.04
 Gcp Looker,1,0.04
-Gdpr,1,0.04
 Gemini,1,0.04
-General,1,0.04
-General Insurance,1,0.04
-Generate Actionable,1,0.04
-Generative Ai/Ml,1,0.04
-Genero,1,0.04
-Genetic Engineering,1,0.04
-Geospatial Data Engineer,1,0.04
+Genai Tools,1,0.04
+Generative Ai Tools,1,0.04
+Geospatial Data Handling,1,0.04
 German,1,0.04
-Ghg Emissions,1,0.04
-Gis Software,1,0.04
+Gis,1,0.04
+Gis Tools,1,0.04
+Git&Ci,1,0.04
+Gitlab,1,0.04
 Gl,1,0.04
-Glide,1,0.04
+Global,1,0.04
 Global Operations,1,0.04
-Gmp,1,0.04
-Gnm,1,0.04
-Go,1,0.04
-Golang,1,0.04
+Global Strategy,1,0.04
 Good Communication Skills,1,0.04
-Google Ads,1,0.04
+Google Adwords,1,0.04
+Google Analytics 4,1,0.04
 Google Big Query,1,0.04
 Google Bigquery,1,0.04
-Google Cloud Services,1,0.04
 Google Forms,1,0.04
-Governance Framework,1,0.04
-Government Projects,1,0.04
-Gradient Boosting,1,0.04
-Graduate Engineer,1,0.04
+Google Tag Manager,1,0.04
+Government Coordination,1,0.04
+Gpt Models,1,0.04
 Graph,1,0.04
+Graphics,1,0.04
 Graphql,1,0.04
-Grease,1,0.04
+Gratuity,1,0.04
+Groovy Scripting,1,0.04
+Grpc,1,0.04
 Gsp,1,0.04
 Gst,1,0.04
 Gui,1,0.04
-Gui Testing,1,0.04
 Guidewire Policy Center,1,0.04
+H1B,1,0.04
 Hana,1,0.04
-Hana Modelling,1,0.04
 Hands-On Code Delivery,1,0.04
 Hcm And Finscm,1,0.04
+Head Business Development,1,0.04
 Healthcare Business Analyst,1,0.04
-Healthcare Data,1,0.04
-Healthcare Domain,1,0.04
-Healthcare Industry,1,0.04
-Heat Exchangers,1,0.04
-Help Desk,1,0.04
-Helpdesk,1,0.04
 Hfm,1,0.04
-Hierarchical Synthesis,1,0.04
+Hierarchy Management,1,0.04
 Hindi Business Analyst,1,0.04
 Hindi Translator,1,0.04
 Hipaa Compliance,1,0.04
-History,1,0.04
-Hmi,1,0.04
 Hospitality,1,0.04
-Housekeeping Management,1,0.04
-Hr Analytics,1,0.04
+Housekeeping,1,0.04
+Hp Data Protector,1,0.04
 Hr Compliance,1,0.04
 Hr Documentation,1,0.04
 Hr Executive,1,0.04
-Hr Operations,1,0.04
-Hrm,1,0.04
+Hr Incentives,1,0.04
+Hrd,1,0.04
+Html5,1,0.04
+Htmls,1,0.04
 Hub,1,0.04
-Human Capital,1,0.04
 Human Resource Management,1,0.04
+Hyper-Parameter Tuning,1,0.04
 Hyperion Financial Management,1,0.04
 Iac,1,0.04
-Iam,1,0.04
-Iam Tools,1,0.04
-Iatf,1,0.04
-Ibm Cloud,1,0.04
-Ibm Cognos Tm1,1,0.04
+Ibatis,1,0.04
 Ibm Data Stage,1,0.04
+Ibm Db2,1,0.04
 Ibm Infosphere,1,0.04
 Ic,1,0.04
 Iceberg,1,0.04
+Icf,1,0.04
+Ich-Gcp Guidelines,1,0.04
 Ict,1,0.04
 Icwa Inter,1,0.04
 Identity Fraud,1,0.04
-Ifs,1,0.04
-Iii,1,0.04
-Iiot,1,0.04
-Iiot Analytics,1,0.04
+Ifrs,1,0.04
+Ifrs Concepts,1,0.04
+Ifs Erp,1,0.04
+Iiba,1,0.04
 Iis,1,0.04
-Iit,1,0.04
-Illustrator,1,0.04
+Implementation,1,0.04
 Improvement,1,0.04
-Incident,1,0.04
-Incremental Compile,1,0.04
-Independent Contractor,1,0.04
-Indexing Strategies,1,0.04
-Individual Contributor,1,0.04
-Industrial Engineering,1,0.04
-Industrial Products,1,0.04
+Independent Price Verification,1,0.04
+Indian Accounting,1,0.04
+Industrial Automation,1,0.04
+Industrial Iot,1,0.04
+Industry 4.0,1,0.04
 Informatica Data Quality,1,0.04
 Informatica Idmc,1,0.04
-Information,1,0.04
-Information Research,1,0.04
+Informatica Mdm,1,0.04
+Information Management,1,0.04
 Information Security Analyst,1,0.04
-Information System,1,0.04
-Informix,1,0.04
-Informix 4Gl,1,0.04
 Infosphere,1,0.04
 Infrastructure As Code,1,0.04
-Infrastructure Management,1,0.04
-Injectables,1,0.04
+Injection,1,0.04
 Innovation,1,0.04
-Inprocess,1,0.04
-Inprocess Quality,1,0.04
+Insar Data,1,0.04
+Installation And Configuration,1,0.04
 Instance Segmentation,1,0.04
 Insurance Domain,1,0.04
-Integration Php,1,0.04
-Integration Services,1,0.04
+Integration Testing,1,0.04
 Integration Tools,1,0.04
-Integration-Heavy Systems,1,0.04
-Integrations,1,0.04
-Intellectual Property,1,0.04
-Intelligent,1,0.04
+Integrator,1,0.04
 Inter,1,0.04
+Interaction Design,1,0.04
 Interactive Dashboards,1,0.04
 Interactive Reports,1,0.04
 Intercompany,1,0.04
-Interior Designing,1,0.04
-Interiors,1,0.04
-Intern,1,0.04
 Intern Management,1,0.04
-Internal,1,0.04
 Internal Audit,1,0.04
-International,1,0.04
 International Business Development,1,0.04
 International Business Management,1,0.04
-International Call Center,1,0.04
-International Clients,1,0.04
-International Communication,1,0.04
 International Marketing,1,0.04
-International Projects,1,0.04
+International Operations,1,0.04
 International Sales,1,0.04
 International Trade,1,0.04
 Internet,1,0.04
-Interpersonal,1,0.04
-Interpersonal Skill,1,0.04
-Intranet,1,0.04
-Intune,1,0.04
+Inventory Control,1,0.04
 Inventory Management,1,0.04
-Inventory Optimization,1,0.04
-Investment Advisor,1,0.04
-Investor Accounting Analyst,1,0.04
-Investor Relations,1,0.04
-Investor Reporting,1,0.04
-Investor Reporting Anlyst,1,0.04
-Invoice Processing,1,0.04
+Investigation,1,0.04
+Investment Analytics,1,0.04
+Investment Products,1,0.04
 Iot,1,0.04
-Ip Addressing,1,0.04
-Ip Telephony,1,0.04
+Ip,1,0.04
 Ipo,1,0.04
-Ipqa,1,0.04
-Ips,1,0.04
-Iso 17025 Laboratory Standards,1,0.04
+Ipv,1,0.04
 Iso 27001,1,0.04
 Issue,1,0.04
 Issue Management,1,0.04
 It Analyst,1,0.04
-It Business Analyst,1,0.04
-It Compliance,1,0.04
-It Infrastructure Management,1,0.04
+It Consulting,1,0.04
 It Management,1,0.04
-It Transformation,1,0.04
+It Security,1,0.04
+Iterative,1,0.04
+Ites,1,0.04
+Itsm,1,0.04
 Ivr,1,0.04
-Japanese,1,0.04
-Java+,1,0.04
+J2Ee,1,0.04
+Java And R,1,0.04
+Java Spring Boot,1,0.04
 Jlpt N2,1,0.04
 Jlpt N3,1,0.04
-Job Scheduling Tools,1,0.04
+Job Description,1,0.04
+Junit,1,0.04
 Jupyter Notebook,1,0.04
 Kafka Messaging,1,0.04
 Kaizen,1,0.04
 Kanban,1,0.04
-Kerberos,1,0.04
+Keras,1,0.04
+Kibana,1,0.04
 Knowledge Graphs,1,0.04
 Knowledge Management,1,0.04
-Knowledge Of Sql,1,0.04
 Kol,1,0.04
 Kpi Dashboard Development,1,0.04
+Kpi Dashboards,1,0.04
 Kpi Governance,1,0.04
+Kpo,1,0.04
 Kubeflow,1,0.04
-Kuberflow,1,0.04
+L2,1,0.04
 L2 Production Support,1,0.04
+L2 Support,1,0.04
+L3 Support,1,0.04
 L3 Technical Support,1,0.04
 Labour,1,0.04
-Lambda,1,0.04
 Lambda Functions,1,0.04
 Lang Graph,1,0.04
 Language Editing,1,0.04
-Language Teaching,1,0.04
 Large Databases,1,0.04
-Layout,1,0.04
-Ldap,1,0.04
+Large Learning Model,1,0.04
+Lead Software,1,0.04
 Lead Solution Architect,1,0.04
-Leadership Hiring,1,0.04
+Leadership Development,1,0.04
 Leadsquared,1,0.04
+Lecturer Activities,1,0.04
 Ledger Accounting,1,0.04
+Legal,1,0.04
 Legal Associate,1,0.04
-Legal Compliance,1,0.04
 Legal Process Outsourcing,1,0.04
-Lending,1,0.04
-Licensing,1,0.04
+Legal Research,1,0.04
+Lesson Planning,1,0.04
 Lidar,1,0.04
-Lightning,1,0.04
-Linear Regression,1,0.04
+Life & Annuity Insurance,1,0.04
+Linkedin,1,0.04
 Linkedin Ads,1,0.04
 Linq,1,0.04
+Linux Commands,1,0.04
+Linux Internals,1,0.04
 Listed Equities,1,0.04
-Litigation,1,0.04
 Litigation Management,1,0.04
 Llama,1,0.04
+Llamaindex,1,0.04
 Llm Extension,1,0.04
-Lng,1,0.04
-Lo,1,0.04
-Load Runner,1,0.04
-Loan Servicing,1,0.04
-Logic,1,0.04
-Logic Apps,1,0.04
-Logic Optimization,1,0.04
-Logic Restructuring,1,0.04
+Llmops,1,0.04
+Llms,1,0.04
 Logical Approach,1,0.04
-Logstash,1,0.04
 Lookml,1,0.04
 Lookup,1,0.04
-Loop,1,0.04
-Lt,1,0.04
-Ltm,1,0.04
-Lubricants,1,0.04
-Lubrication Systems,1,0.04
-M&A,1,0.04
+Lora,1,0.04
+Machine Learning Engineer,1,0.04
+Machine Learning Engineering,1,0.04
 Machine Learning Frameworks,1,0.04
+Machine Operator,1,0.04
 Macro,1,0.04
 Maintaining,1,0.04
-Maintenance Management,1,0.04
-Maintenance Plans For Backups,1,0.04
-Make,1,0.04
-Malayalam,1,0.04
+Maintenance,1,0.04
+Maintenance Manager,1,0.04
 Managed Services,1,0.04
-Management Associate,1,0.04
-Management Information System,1,0.04
-Management Skills,1,0.04
-Management Trainee,1,0.04
-Manual Qa,1,0.04
-Manual Test Execution,1,0.04
+Manager,1,0.04
+Manual Testing,1,0.04
 Manufacturing Execution Systems,1,0.04
-Manufacturing Operations,1,0.04
 Manufacturing Process,1,0.04
-Mapinfo,1,0.04
-Mapreduce,1,0.04
-Marathi,1,0.04
-Maritime,1,0.04
-Maritime Research,1,0.04
 Market,1,0.04
-Market Dynamics,1,0.04
 Market Quality,1,0.04
 Market Sizing,1,0.04
-Market Study,1,0.04
 Marketing Analysis,1,0.04
 Marketing Automation Platforms,1,0.04
 Marketing Business Intelligence,1,0.04
-Marketing Executive,1,0.04
-Marketing Initiatives,1,0.04
-Marketing Management,1,0.04
+Marketing Communication,1,0.04
 Marketing Manager,1,0.04
-Marketing Operations,1,0.04
-Marketing Pixels,1,0.04
-Marketing Research Analyst,1,0.04
-Marketing Strategy,1,0.04
-Master Section,1,0.04
+Marketing Research,1,0.04
+Master Data Management,1,0.04
 Matillion,1,0.04
-Maximo,1,0.04
-Mca,1,0.04
 Mcp,1,0.04
+Mdm,1,0.04
 Mdm Informatica,1,0.04
-Mechanical,1,0.04
-Med,1,0.04
-Media Analytics,1,0.04
+Mec,1,0.04
 Media Marketing,1,0.04
-Media Monitoring,1,0.04
-Media Research,1,0.04
-Medical Coding,1,0.04
-Medical Devices,1,0.04
-Medical Records,1,0.04
-Memory Management,1,0.04
-Merchandise Planning,1,0.04
-Merchandising Reporting,1,0.04
-Mercurial,1,0.04
+Merchandising,1,0.04
+Mes,1,0.04
+Metadata Management,1,0.04
+Metering,1,0.04
 Metric Tracking,1,0.04
-Microbiology,1,0.04
-Microsoft Azure Analytics Services,1,0.04
+Metrics,1,0.04
+Microservice Based Architecture,1,0.04
 Microsoft Business Intelligence,1,0.04
-Microsoft Office Applications,1,0.04
+Microsoft Flow,1,0.04
 Microsoft Office Suite,1,0.04
-Microsoft Power Platform,1,0.04
-Microsoft Powerapps,1,0.04
-Microsoft Project,1,0.04
+Microsoft Power Automate,1,0.04
+Microsoft Power Bi Development,1,0.04
+Microsoft Windows,1,0.04
 Middle Office,1,0.04
-Mifid,1,0.04
+Middleware,1,0.04
+Migration Management,1,0.04
 Migration Services,1,0.04
-Min,1,0.04
+Mis Analysis,1,0.04
 Mis Preparation,1,0.04
 Mistral,1,0.04
-Mixpanel,1,0.04
-Ml Architect,1,0.04
-Ml Ecosystems,1,0.04
-Ml Flow,1,0.04
-Ml Frameworks,1,0.04
+Ml In Healthcare,1,0.04
 Ml Ops,1,0.04
 Ml-Ops,1,0.04
-Mlops Engineer,1,0.04
+Mlops Pipeline,1,0.04
 Mlops Statistical Modeling,1,0.04
-Mobile Applications,1,0.04
+Mobility,1,0.04
+Mockito,1,0.04
 Mockups,1,0.04
-Model Deployment,1,0.04
-Model Training,1,0.04
+Model Building,1,0.04
+Model Development,1,0.04
+Model Risk,1,0.04
+Model Validation,1,0.04
+Modeling Tools,1,0.04
+Modern Javascript,1,0.04
 Modernization,1,0.04
-Money Market,1,0.04
-Monitoring Tools,1,0.04
-Moogsoft,1,0.04
-Mortgage,1,0.04
 Mpeda Documentation,1,0.04
-Mpharm,1,0.04
 Mql,1,0.04
-Ms Bi Ssis,1,0.04
-Ms Dynamics Crm,1,0.04
 Ms Fabric,1,0.04
+Ms Flow,1,0.04
 Ms Office Applications,1,0.04
 Ms Office Powerpoint,1,0.04
 Ms Office Tools,1,0.04
+Ms Sql Database,1,0.04
+Ms Sql Programming,1,0.04
 Ms Sql Server,1,0.04
 Ms Visio,1,0.04
 Msbi Developer,1,0.04
-Mssql,1,0.04
+Msql,1,0.04
 Mssql Dba,1,0.04
-Mssql Queries,1,0.04
 Multitasking,1,0.04
+Multithreading,1,0.04
 Multivariate Analysis,1,0.04
-My Sql,1,0.04
-My Sql Developer,1,0.04
+Mvc,1,0.04
+Mysql Database,1,0.04
 Mysql Database Administration,1,0.04
-N8N,1,0.04
 Naic Statutory,1,0.04
 Nat,1,0.04
-Nbfc,1,0.04
-Ncqa,1,0.04
 Netezza,1,0.04
-Netflow Traffic Analyzer,1,0.04
 Netsuite Erp,1,0.04
-Network Access Control,1,0.04
-Network Devices,1,0.04
-Network Operations,1,0.04
-Nice Actimize,1,0.04
-Nit,1,0.04
+New Product Development,1,0.04
 Nlp Data Scientist,1,0.04
-Node.Js,1,0.04
+Nms,1,0.04
 Non Function,1,0.04
 Non Functional Testing,1,0.04
 Non It,1,0.04
-Nosql Databases,1,0.04
-Nostro Reconciliation,1,0.04
-Notifications,1,0.04
-Nse,1,0.04
-Ntlm,1,0.04
-Nursing,1,0.04
-Nx,1,0.04
-Observability Engineer,1,0.04
-Ocr,1,0.04
-Odata,1,0.04
-Odbc,1,0.04
-Odia,1,0.04
+Nutrition,1,0.04
+Object,1,0.04
+Object Oriented Design,1,0.04
+Observability,1,0.04
+Oci,1,0.04
 Odiya,1,0.04
-Oee,1,0.04
 Oems,1,0.04
 Offshore,1,0.04
-Olap Cubes,1,0.04
-Ollama,1,0.04
-Oltp,1,0.04
+Oil,1,0.04
+Oil And Gas,1,0.04
+Omni,1,0.04
+Omni Channel,1,0.04
+On Prem,1,0.04
 Oncology,1,0.04
-Ontology,1,0.04
-Oo Abap,1,0.04
 Ooad,1,0.04
-Open,1,0.04
-Open Search,1,0.04
-Open Telemetry,1,0.04
+Open Ai,1,0.04
+Open Systems,1,0.04
 Opensearch,1,0.04
-Operating Systems Installation And Basic Administration,1,0.04
-Operational Risk,1,0.04
+Openstack,1,0.04
+Openstack Cloud,1,0.04
+Operating System,1,0.04
+Operational Support,1,0.04
 Operational Technology,1,0.04
+Operations Excellence,1,0.04
 Operations Management,1,0.04
-Oracle Adf,1,0.04
-Oracle Data Integrator,1,0.04
+Optical Fiber,1,0.04
+Optical Networking,1,0.04
+Optimization Algorithms,1,0.04
+Or Sql Server,1,0.04
+Oracle Development,1,0.04
 Oracle E-Business Suite,1,0.04
 Oracle Ebs,1,0.04
-Oracle Pl/Sql,1,0.04
+Oracle Fusion,1,0.04
+Oracle Netsuite,1,0.04
 Oracle R12 Order Management,1,0.04
+Oracle Rdbms,1,0.04
 Oracle Reports,1,0.04
-Oral Communication,1,0.04
-Order Processing,1,0.04
+Oracle Workflows,1,0.04
 Organic Chemistry,1,0.04
-Organisation Structuring,1,0.04
-Organization Design,1,0.04
-Organization Development,1,0.04
-Organization Skills,1,0.04
 Organizational Development,1,0.04
 Orientation,1,0.04
 Oriya,1,0.04
 Oriya Speaker,1,0.04
 Ot,1,0.04
-Otc,1,0.04
-Outbound Process,1,0.04
+Otc Derivatives,1,0.04
+Otm,1,0.04
 Overseas Marketing,1,0.04
 P&C,1,0.04
-P&C Domain,1,0.04
+P&L Analysis,1,0.04
 Pa,1,0.04
-Page,1,0.04
-Pagerduty,1,0.04
 Paid Media,1,0.04
-Paid Social,1,0.04
 Palantir,1,0.04
+Palantir Foundry,1,0.04
 Pandas Scala,1,0.04
-Panels,1,0.04
-Panorama,1,0.04
 Paralegal,1,0.04
 Parameters,1,0.04
-Parking,1,0.04
-Patient Care,1,0.04
+Partitioning,1,0.04
+Patient Analytics,1,0.04
 Pattern Recognition,1,0.04
+Payer,1,0.04
+Payer Analytics,1,0.04
+Payer Contracting,1,0.04
+Payment,1,0.04
+Payment Domain,1,0.04
 Payment Systems,1,0.04
-Payments,1,0.04
 Payroll Coordination,1,0.04
-Pbx,1,0.04
-Ped,1,0.04
-Peft,1,0.04
-Peoplecode,1,0.04
-Peoplesoft,1,0.04
+Pentaho,1,0.04
+People Analytics,1,0.04
 Performance And Scalability,1,0.04
 Performance Appraisal Process,1,0.04
-Performance Engineering,1,0.04
-Performance Improvement,1,0.04
 Personal,1,0.04
+Personal Loans,1,0.04
 Personalization,1,0.04
 Personlisation,1,0.04
-Petroleum,1,0.04
-Pharma Analytics,1,0.04
-Pharmaceutical Research,1,0.04
-Pharmaceutics,1,0.04
-Pharmacist,1,0.04
-Pharmacology,1,0.04
-Photogrammetry,1,0.04
+Petrochemical,1,0.04
+Pfmea,1,0.04
+Photoshop,1,0.04
+Php,1,0.04
 Physical Verification,1,0.04
+Physician,1,0.04
+Pl Sql Procedures,1,0.04
 Planning,1,0.04
-Plant Engineering,1,0.04
-Plant Maintenance,1,0.04
-Plc,1,0.04
+Plm,1,0.04
 Plx,1,0.04
 Plx Dashboard,1,0.04
-Pm,1,0.04
-Pmbok,1,0.04
-Po,1,0.04
-Po Creation,1,0.04
-Poc,1,0.04
-Policy Administration System,1,0.04
-Policy Servicing,1,0.04
 Political Science,1,0.04
-Pollution Control,1,0.04
-Port Operations,1,0.04
-Portfolio,1,0.04
 Portfolio Analysis,1,0.04
-Positive Train Control,1,0.04
-Post,1,0.04
-Postgres Sql Developer,1,0.04
 Posting,1,0.04
+Postman,1,0.04
 Powe Bi,1,0.04
 Powebi,1,0.04
+Power Apps Development,1,0.04
+Power Bi Capacity Management,1,0.04
+Power Bi Desktop & Power Bi Service,1,0.04
 Power Bi Tableau,1,0.04
-Power Bicommunication,1,0.04
-Power Domain,1,0.04
-Power Engineering,1,0.04
-Power Exchange,1,0.04
-Power Pages,1,0.04
+Power Pivot,1,0.04
 Power Point Presentation,1,0.04
-Power Supply,1,0.04
+Power Query & Dashboards,1,0.04
+Power Query And M Language,1,0.04
 Powerpoint Presentation,1,0.04
 Powershell Scripting,1,0.04
-Ppnr,1,0.04
-Pr,1,0.04
+Ppc,1,0.04
+Ppm,1,0.04
 Pre Sales,1,0.04
-Predictive Maintenance,1,0.04
 Prepaid Expenses,1,0.04
-Preventive Maintenance,1,0.04
+Presales Support,1,0.04
 Price Forecasting,1,0.04
-Pricing Analysis,1,0.04
-Primary Market Research,1,0.04
-Privacy Compliance,1,0.04
-Process Associate,1,0.04
+Principal,1,0.04
+Pro*C,1,0.04
+Process Automation,1,0.04
 Process Control,1,0.04
-Process Development,1,0.04
 Process Executive,1,0.04
-Process Management,1,0.04
 Process Mining,1,0.04
 Process Modeling,1,0.04
-Process Quality,1,0.04
+Process Re-Engineering,1,0.04
 Procurement Analytics,1,0.04
 Procurement Capabilities,1,0.04
-Product Delivery,1,0.04
-Product Innovation,1,0.04
-Product Life Cycle Management,1,0.04
+Product Analytics,1,0.04
+Product Control,1,0.04
+Product Development,1,0.04
 Product Manager,1,0.04
+Product Owner,1,0.04
+Product Roadmap,1,0.04
+Product Specification,1,0.04
+Product Strategy,1,0.04
 Product Support,1,0.04
 Production Management,1,0.04
-Production Operations,1,0.04
-Production Planning,1,0.04
+Professional Services,1,0.04
+Professor Activities,1,0.04
 Profitability Analysis,1,0.04
 Program Associate,1,0.04
-Programmer,1,0.04
 Programming Language,1,0.04
-Programming Principles,1,0.04
-Project Coordinator,1,0.04
-Project Delivery,1,0.04
-Project Development,1,0.04
-Project Engineer,1,0.04
-Project Governance,1,0.04
-Project Portfolio Management,1,0.04
+Project Documentation,1,0.04
+Project Finance,1,0.04
 Project Staff,1,0.04
-Project Team,1,0.04
+Project Support,1,0.04
 Project Tools,1,0.04
-Project Tracking,1,0.04
 Projects,1,0.04
-Proof Reading,1,0.04
+Prometheus,1,0.04
+Prompt,1,0.04
 Property,1,0.04
-Property & Casualty,1,0.04
-Property And Casualty,1,0.04
+Property And Casualty Insurance,1,0.04
 Proposal Development,1,0.04
-Protection System,1,0.04
-Protocols,1,0.04
-Provident Fund,1,0.04
-Providing,1,0.04
-Psi,1,0.04
+Proposal Writing,1,0.04
+Prototyping,1,0.04
+Public,1,0.04
+Public Relations,1,0.04
 Publication Research,1,0.04
-Pubsub,1,0.04
-Pumps,1,0.04
-Punctual,1,0.04
-Punjabi,1,0.04
-Purchase Order,1,0.04
-Purchase Requisition,1,0.04
-Purview,1,0.04
-Pydantic Ai,1,0.04
 Python Data Engineer,1,0.04
-Python Development,1,0.04
-Python Programmimg,1,0.04
-Python Programming,1,0.04
-Python.,1,0.04
-Qa Manual Testing,1,0.04
+Python Framework Development,1,0.04
+Python Microservices,1,0.04
+Python Ml,1,0.04
+Python Programmer,1,0.04
+Python Testing,1,0.04
+Pyunit,1,0.04
 Qa Testing,1,0.04
 Qa Validation,1,0.04
-Qc Tools,1,0.04
-Qgis,1,0.04
-Qlik Sense,1,0.04
 Qliksense,1,0.04
 Qlikview Development,1,0.04
-Qms,1,0.04
-Qualitative Research,1,0.04
+Qos,1,0.04
 Quality Analysis,1,0.04
-Quality Audit,1,0.04
-Quality Engineering,1,0.04
-Quality Tools,1,0.04
-Qualtrics,1,0.04
+Quality Check,1,0.04
+Quality Improvement,1,0.04
+Quality Validation,1,0.04
 Quantitative Analysis,1,0.04
 Quantitative Techniques,1,0.04
 Quantum,1,0.04
-Query Performance Tuning,1,0.04
 Quicksight,1,0.04
 R Language,1,0.04
 R Program,1,0.04
 R Script,1,0.04
 R Shiny,1,0.04
-R2R Operations,1,0.04
 Ra,1,0.04
-Rabbitmq,1,0.04
 Radio,1,0.04
-Rag Pipelines,1,0.04
-Rail Logistics,1,0.04
-Railway Electrification,1,0.04
-Railway Projects,1,0.04
+Rag Pipeline,1,0.04
 Ran Optimization,1,0.04
+Random Forest,1,0.04
 Ranking,1,0.04
 Ranking System,1,0.04
-Rcm,1,0.04
-Rds,1,0.04
+Reactive Programming,1,0.04
 Reacts Js,1,0.04
-Real Time Operating Systems,1,0.04
-Rebuilding Indexes,1,0.04
-Receivable,1,0.04
+Real Estate,1,0.04
+Receivables Management,1,0.04
 Recommendation,1,0.04
-Reconciliation Analyst,1,0.04
+Recruiter,1,0.04
+Redis,1,0.04
 Redshift Aws,1,0.04
-Regulatory Awareness,1,0.04
-Remediation,1,0.04
-Remote Sensing,1,0.04
-Report Automation,1,0.04
-Report Writing And Analysis,1,0.04
+Regression Analysis,1,0.04
+Regression Modeling,1,0.04
+Regular Expressions,1,0.04
+Regulatory Reporting,1,0.04
+Renewable Energy,1,0.04
 Reporting & Analytics,1,0.04
-Reporting & Analytics Delivery,1,0.04
 Reporting Configuration,1,0.04
 Reporting Modernization,1,0.04
-Reporting Services,1,0.04
-Requirements Analysis,1,0.04
-Requirements Management,1,0.04
-Requisition,1,0.04
+Reports And Dashboards,1,0.04
+Researc,1,0.04
+Research Analyst - Public Transport (Sustainable Mobility),1,0.04
 Research Analysts,1,0.04
 Research And Analysis,1,0.04
 Research Associate,1,0.04
-Research Methodology,1,0.04
 Research Projects,1,0.04
-Research Tools,1,0.04
-Residential,1,0.04
-Resource Utilization,1,0.04
-Restful,1,0.04
-Restful Web,1,0.04
-Retail Banking,1,0.04
-Retail Operations,1,0.04
-Retrieval,1,0.04
-Revenue Expansion,1,0.04
-Review,1,0.04
+Resource Management,1,0.04
+Revenue Analysis,1,0.04
+Revenue Generation,1,0.04
+Rewards,1,0.04
 Rf,1,0.04
-Rfps,1,0.04
-Rfq,1,0.04
-Rice Components,1,0.04
-Risk Control,1,0.04
-Rmbs,1,0.04
 Roadmap,1,0.04
-Robohelp,1,0.04
-Robotic Automation,1,0.04
-Robotics & Actuators,1,0.04
+Robot Framework,1,0.04
 Robust,1,0.04
 Robust Tableau,1,0.04
 Roc,1,0.04
 Root Cause,1,0.04
 Route Planning,1,0.04
-Row,1,0.04
-Row Level Security,1,0.04
+Routing,1,0.04
 Rpa Tool,1,0.04
 Rpd,1,0.04
 Rstudio,1,0.04
-Ruby,1,0.04
 Rust,1,0.04
-Rwa,1,0.04
-S4 Developer With Bods Experience,1,0.04
-S4Hana Implementation,1,0.04
+S,1,0.04
 Saas Environment,1,0.04
-Sabre,1,0.04
 Sac,1,0.04
-Safety,1,0.04
+Sage,1,0.04
+Sales Administration,1,0.04
+Sales Analytics,1,0.04
 Sales Executive,1,0.04
 Sales Executive Activities,1,0.04
 Sales Force Automation,1,0.04
-Sales Forecasting,1,0.04
 Sales Head,1,0.04
 Sales Hr,1,0.04
-Sales Navigator,1,0.04
-Sales Order Processing,1,0.04
-Sales Process,1,0.04
-Sales Support / Presales,1,0.04
+Sales Incentive & Scheme Tracking,1,0.04
+Sales Mis,1,0.04
+Sales Planning,1,0.04
+Sales Report,1,0.04
 Sales Training,1,0.04
-Sap Abap Development On S/4Hana,1,0.04
-Sap Abap Hana,1,0.04
+Salesforce Einstein Analytics,1,0.04
+Saml,1,0.04
+Sampling,1,0.04
 Sap Analytics,1,0.04
 Sap Ariba,1,0.04
 Sap Bi Objects,1,0.04
-Sap Bods,1,0.04
-Sap Business Intelligence,1,0.04
+Sap Bo Power Bi,1,0.04
+Sap Businessobjects,1,0.04
 Sap Connect And Integration,1,0.04
+Sap Data Services,1,0.04
+Sap Datasphere,1,0.04
+Sap Erp,1,0.04
+Sap Fi,1,0.04
 Sap Fico,1,0.04
-Sap Fiori,1,0.04
-Sap Modules,1,0.04
 Sap Reporting Analyst,1,0.04
+Sap S Hana,1,0.04
 Sap Transformation,1,0.04
+Sar,1,0.04
 Sas Analyst,1,0.04
-Sast,1,0.04
-Saving Account,1,0.04
-Saviynt,1,0.04
+Sas Di Studio,1,0.04
+Sas Enterprise Guide,1,0.04
+Sas Sql,1,0.04
+Scada,1,0.04
 Scala Spark,1,0.04
+Scalable Systems,1,0.04
 Scale,1,0.04
-Sccm,1,0.04
+Schemes,1,0.04
+Scientist Ii,1,0.04
 Scifinder,1,0.04
-Scope 1,1,0.04
-Scope 2,1,0.04
-Scope Management,1,0.04
+Scim,1,0.04
+Scm,1,0.04
 Screening,1,0.04
 Script Writing,1,0.04
+Scripting Languages,1,0.04
 Scrum Master,1,0.04
 Sdk,1,0.04
+Sdlc Life Cycle,1,0.04
 Seafood Export,1,0.04
 Sec,1,0.04
-Secure Code Review,1,0.04
-Securitization,1,0.04
-Security & Controls,1,0.04
-Security Engineer,1,0.04
+Security Compliance,1,0.04
 Security Implementation,1,0.04
+Security Operations,1,0.04
 Seed Coating,1,0.04
-Selenium Automation,1,0.04
-Selenium Testing,1,0.04
-Sell Side,1,0.04
+Semantic Models,1,0.04
 Semantic Segmentation,1,0.04
-Semrush,1,0.04
-Senior Analytics Engineer,1,0.04
-Senior Data Analyst,1,0.04
+Semiconductor,1,0.04
+Senior Backend Engineer,1,0.04
 Senior Executive,1,0.04
+Senior Executive Crm,1,0.04
+Senior Software Developer,1,0.04
 Senior Sql Developer,1,0.04
-Senior Vice President,1,0.04
-Seo Writing,1,0.04
-Server Automation,1,0.04
-Server Hardware Components,1,0.04
-Server Management,1,0.04
+Server Installation,1,0.04
 Server Security,1,0.04
-Servers,1,0.04
 Service Executive,1,0.04
-Service Level,1,0.04
-Service Management,1,0.04
 Service Now,1,0.04
 Service Quality,1,0.04
-Servicenow Development,1,0.04
-Servicenow Tools Administration,1,0.04
-Servicing,1,0.04
-Set,1,0.04
 Setup,1,0.04
-Sfdc,1,0.04
 Sfdc Integration,1,0.04
-Shaping,1,0.04
-Share Market,1,0.04
-Share Trading,1,0.04
-Shared Services,1,0.04
-Sheet,1,0.04
+Sftp,1,0.04
 Shell Script,1,0.04
 Shiny,1,0.04
-Ship Data Analyst,1,0.04
-Shop Floor,1,0.04
-Siem,1,0.04
+Side,1,0.04
 Sigma Computing,1,0.04
 Sigma Js,1,0.04
-Simulation Tools,1,0.04
+Signal Processing,1,0.04
+Signalling,1,0.04
+Signavio,1,0.04
+Silicon,1,0.04
+Simple Models Like Linear Regression,1,0.04
 Sisense,1,0.04
-Site,1,0.04
 Site Management,1,0.04
-Site Reliability Engineer,1,0.04
-Site Supervision,1,0.04
+Skill Development,1,0.04
 Slas,1,0.04
-Slms,1,0.04
-Slo/Sla Frameworks,1,0.04
-Smart,1,0.04
 Smart Manufacturing,1,0.04
-Sme,1,0.04
-Smoke Modelling,1,0.04
-Snmp,1,0.04
+Smart Metering,1,0.04
+Sms,1,0.04
 Snowflake Cortex Ai,1,0.04
 Snowflake Data Warehousing,1,0.04
 Snowflake Developer,1,0.04
-Snowflake Modeling,1,0.04
+Snowflake Schema,1,0.04
 Snowflake Sql,1,0.04
-Snowpipe,1,0.04
-Snowsql,1,0.04
-Soap,1,0.04
 Social Media Analytics,1,0.04
-Social Research,1,0.04
-Social Science,1,0.04
-Software Asset Management,1,0.04
-Software Change Management,1,0.04
+Software Architecture,1,0.04
 Software Delivery,1,0.04
 Software Design And Development,1,0.04
+Software Design Patterns,1,0.04
+Software Design Principles,1,0.04
 Software Developer,1,0.04
-Software Development Methodologies,1,0.04
-Software Engineer,1,0.04
+Software Installation,1,0.04
 Software Integration,1,0.04
+Software Product Development,1,0.04
 Software Quality Assurance,1,0.04
 Software Requirement Specification,1,0.04
 Software Verification,1,0.04
-Solaris,1,0.04
-Solarwinds Ncm,1,0.04
-Solarwinds Npm,1,0.04
-Solarwinds Sam,1,0.04
-Solid Works,1,0.04
-Solution Architecture,1,0.04
+Solid Principles,1,0.04
+Solution Architect,1,0.04
+Solution Delivery,1,0.04
+Solutioning,1,0.04
 Solve Complex Data-Related Problems,1,0.04
 Son,1,0.04
-Sop,1,0.04
-Spanish,1,0.04
 Spark Streaming,1,0.04
-Spatial Data Formats,1,0.04
+Spc,1,0.04
 Specifications,1,0.04
-Speech,1,0.04
-Speech Recognition,1,0.04
-Spend Analysis,1,0.04
-Spi,1,0.04
-Spring Boot,1,0.04
 Sprint Planning,1,0.04
-Sql And Python For Data Manipulation And Analysis,1,0.04
-Sql Db,1,0.04
+Sql And Database Concepts,1,0.04
 Sql Dba,1,0.04
+Sql Developer,1,0.04
+Sql Injection,1,0.04
 Sql Joins,1,0.04
-Sql Scripts,1,0.04
-Sql Server 2008,1,0.04
-Sql Server Dba,1,0.04
-Sql Server Performance,1,0.04
-Sql Stored Procedures,1,0.04
-Sqlpython,1,0.04
-Sqlsql Development,1,0.04
-Sqltableau,1,0.04
+Sql Loader,1,0.04
+Sql Querying,1,0.04
+Sql Scripting,1,0.04
+Sql Server Administration,1,0.04
+Sql Server Reporting Services,1,0.04
 Sqoop,1,0.04
 Srs,1,0.04
-Ssis / Ssrs / Ssms,1,0.04
-Ssms,1,0.04
-Stackstorm,1,0.04
-Stackup,1,0.04
-Stakeholder Communication,1,0.04
+Ssis Etl,1,0.04
 Stakeholders,1,0.04
+Standard Operating Procedures,1,0.04
+Stata,1,0.04
 Statistical Programming,1,0.04
-Statistical Software,1,0.04
-Statistical Techniques,1,0.04
-Statsmodels,1,0.04
+Statistical Tools,1,0.04
+Statistics Understanding,1,0.04
 Statutory,1,0.04
 Statutory Compliance,1,0.04
 Steelindustry,1,0.04
-Stock Management,1,0.04
-Storage Solutions,1,0.04
-Stored,1,0.04
+Steward,1,0.04
+Stock Market,1,0.04
+Storage,1,0.04
+Stored Procedure,1,0.04
 Story Reporting,1,0.04
 Storyboarding,1,0.04
-Strategic Sourcing,1,0.04
-Strategy Consulting,1,0.04
+Strategic Analysis,1,0.04
+Strategy Development,1,0.04
 Streaming,1,0.04
-Streaming Data,1,0.04
-Streaming Platform,1,0.04
-Strong Communication Skills,1,0.04
-Structured Finance Products,1,0.04
+Stress Testing,1,0.04
+Strong Proficiency In C++,1,0.04
 Sub,1,0.04
 Subqueries,1,0.04
-Substation,1,0.04
 Successfactors Data Model,1,0.04
 Successfactors Reporting,1,0.04
-Succession Planning,1,0.04
-Supervision,1,0.04
 Supervisor,1,0.04
-Supplier Quality,1,0.04
-Supply,1,0.04
 Supply Chain Analytics,1,0.04
-Supply Chain-Specific Architectures,1,0.04
-Support Hiring,1,0.04
-Survey Design,1,0.04
+Survey,1,0.04
+Sustainability,1,0.04
+Sv,1,0.04
 Svm,1,0.04
+Swift,1,0.04
 Sybase,1,0.04
 Syntax,1,0.04
 Synthetic Organic Chemistry,1,0.04
 System Analysis,1,0.04
+System Development,1,0.04
+System Engineering,1,0.04
+System Maintenance,1,0.04
+System Testing,1,0.04
 T-Sql Development,1,0.04
-T-Sql Queries,1,0.04
+T24,1,0.04
 Tableau & Bi,1,0.04
-Tableau Administration,1,0.04
+Tableau Admin,1,0.04
+Tableau Architecture,1,0.04
+Tableau Cloud,1,0.04
+Tableau Cloud Admin,1,0.04
 Tableau Dashboard Developer,1,0.04
 Tableau Desktop And Tableau Server,1,0.04
 Tableau Features,1,0.04
+Tableau Governance,1,0.04
+Tableau Performance Tuning,1,0.04
 Tableau Platform Modernization,1,0.04
+Tableau Scheduling,1,0.04
+Tableau Server Administration,1,0.04
+Tableau Server Installation,1,0.04
 Tableau To Power Bi,1,0.04
-Tabular Model,1,0.04
+Tables,1,0.04
+Tabular Editor,1,0.04
 Tagging,1,0.04
-Talend Etl,1,0.04
-Talend Open Studio,1,0.04
 Talent Development,1,0.04
 Tally,1,0.04
+Targeting,1,0.04
 Tax Analysis,1,0.04
-Taxation,1,0.04
-Tealium,1,0.04
+Tdd,1,0.04
 Team Building,1,0.04
 Team Collaboration,1,0.04
+Team Handling,1,0.04
 Technical Architecture,1,0.04
-Technical Product Configuration,1,0.04
+Technical Skills,1,0.04
+Technical Staff,1,0.04
+Techno Functional,1,0.04
 Technology Consulting,1,0.04
-Technology Transfer,1,0.04
-Telecalling Executive,1,0.04
+Telcom,1,0.04
 Telecom Billing,1,0.04
+Telecom Oss,1,0.04
 Telecommunication,1,0.04
 Telematics,1,0.04
 Telemetry,1,0.04
-Telephony Support,1,0.04
+Temenos,1,0.04
 Temenos T24,1,0.04
-Test Case Execution,1,0.04
-Test Driven Development,1,0.04
-Test Scenarios,1,0.04
-Testing Databases,1,0.04
+Templates,1,0.04
+Tenant Setting Management,1,0.04
+Tensorflow Serving,1,0.04
+Teraform,1,0.04
+Terraform,1,0.04
+Test Data,1,0.04
+Test Data Management,1,0.04
+Test Management,1,0.04
+Test Methodology,1,0.04
+Test Planning,1,0.04
+Testing Frameworks,1,0.04
+Testing Life Cycle,1,0.04
+Testing Methodologies,1,0.04
+Testing Tools,1,0.04
+Testrail,1,0.04
+Text Analytics,1,0.04
 Therapy,1,0.04
 Thermal,1,0.04
-Thermodynamics,1,0.04
-Third Party Products,1,0.04
-Threat Analysis,1,0.04
-Threat Modeling,1,0.04
-Time Series Forecasting,1,0.04
-Timeseries Forecasting,1,0.04
-Tm,1,0.04
+Time Managements,1,0.04
 Top,1,0.04
 Top Management,1,0.04
-Trade Life Cycle,1,0.04
-Trade Operations,1,0.04
-Training Management,1,0.04
-Transaction Level Modeling,1,0.04
+Tracking,1,0.04
+Trade,1,0.04
+Training And Development,1,0.04
 Transaction Processing,1,0.04
-Transportation,1,0.04
-Travel Management,1,0.04
-Treasure Data,1,0.04
-Trend,1,0.04
-Triage,1,0.04
-Tribology,1,0.04
+Transaction Services,1,0.04
+Transition,1,0.04
+Treasury,1,0.04
+Tricentis Tosca,1,0.04
+Triton,1,0.04
+Tsql Development,1,0.04
 Tsql Queries,1,0.04
-Ucce,1,0.04
+Uan,1,0.04
+Ubuntu,1,0.04
 Uds,1,0.04
+Ui Automation Testing,1,0.04
 Ui Policy,1,0.04
 Ui Ux,1,0.04
+Uipath,1,0.04
 Uk Offshore,1,0.04
-Unified Communications,1,0.04
-Unity Catalog,1,0.04
+Unit,1,0.04
+Unix Commands,1,0.04
+Unix Scripting,1,0.04
 Unlisted,1,0.04
-Ups,1,0.04
-Urban Planning,1,0.04
 Us Insurance,1,0.04
-Us Mortgage,1,0.04
-Us Process,1,0.04
 Us Statistical Reporting,1,0.04
 User Acceptance,1,0.04
+User Acceptance Testing,1,0.04
 User Administration,1,0.04
-User Documentation,1,0.04
 User Interface,1,0.04
-User Interface Designing,1,0.04
-User Support,1,0.04
-Utility Maintenance,1,0.04
-Vector Db,1,0.04
-Vendor/Government Coordination,1,0.04
-Vice President,1,0.04
-Virtual Agent,1,0.04
-Virtual Network Function,1,0.04
-Virtualization Tools,1,0.04
-Vision,1,0.04
+Usfda,1,0.04
+Utility Management,1,0.04
+Valuation,1,0.04
+Valuation Control,1,0.04
+Variance,1,0.04
+Vault,1,0.04
+Vb,1,0.04
+Vb Script,1,0.04
+Vendor Manager,1,0.04
+Visio,1,0.04
+Vista,1,0.04
 Visual,1,0.04
-Visual Analytics,1,0.04
 Visual Analytics Solutions.,1,0.04
 Visualization Technologies,1,0.04
 Vms,1,0.04
-Voice Gateways,1,0.04
-Voice Of Customer,1,0.04
-Voice Process,1,0.04
-Voip,1,0.04
-Vulnerability,1,0.04
 Vulnerability Assessment,1,0.04
-Vulnerability Management,1,0.04
+Warehouse Design,1,0.04
 Warehouse Management System,1,0.04
 Water,1,0.04
 Water Based Treatment,1,0.04
 Water Treatment,1,0.04
-Waterfall,1,0.04
-Waterfall Methodology,1,0.04
-Wcf,1,0.04
+Web Api,1,0.04
+Web Application,1,0.04
+Web Designing,1,0.04
 Web Integration,1,0.04
+Web Scraping,1,0.04
 Web Servers,1,0.04
-Webtrends,1,0.04
-Wfo,1,0.04
+Webi,1,0.04
 Wfs Integrations,1,0.04
 Wholesale,1,0.04
-Wholesale Banking,1,0.04
-Windows Active Directory,1,0.04
-Windows Xp,1,0.04
+Windows Administration,1,0.04
+Windows Server,1,0.04
 Wireframe,1,0.04
-Wireless,1,0.04
-Wireline,1,0.04
-Wmi Configuration,1,0.04
+Word,1,0.04
 Work Ethics,1,0.04
 Work Management,1,0.04
-Workato,1,0.04
-Workato Integration,1,0.04
 Workday Hubs,1,0.04
 Workday Time Tracking,1,0.04
 Workflow Analysis,1,0.04
 Workflow Management,1,0.04
-Workflow Orchestration,1,0.04
-Workflow System,1,0.04
-Workforce Management,1,0.04
-Writing Content,1,0.04
-Written Communication,1,0.04
-Xml Publisher Reports,1,0.04
-Xslt,1,0.04
-Zabbix,1,0.04
-Zapier,1,0.04
+Working Capital Analytics,1,0.04
+Xlookup,1,0.04
+Yolo,1,0.04
 Zoho Analytics,1,0.04
-Zscaler,1,0.04
