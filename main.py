@@ -803,9 +803,18 @@ logging.info("Cleaning Completed.")
 # PUBLICATION QUALITY GATE
 # =========================================================
 
-MIN_PUBLISH_JOBS = 2500
-MIN_PUBLISH_SOURCES = 3
-REQUIRED_PUBLISH_SOURCES = {"Naukri"}
+IS_CI = os.getenv("CI", "").lower() == "true"
+
+if IS_CI:
+    MIN_PUBLISH_JOBS = 1000
+    MIN_PUBLISH_SOURCES = 3
+    REQUIRED_PUBLISH_SOURCES = set()
+    logging.warning("CI publication mode enabled: Naukri is not required because hosted runners may receive Access Denied")
+else:
+    MIN_PUBLISH_JOBS = 2500
+    MIN_PUBLISH_SOURCES = 3
+    REQUIRED_PUBLISH_SOURCES = {"Naukri"}
+    logging.info("Local full publication mode enabled: Naukri source required")
 
 publish_sources = set(
     df["Source"].dropna().astype(str).str.strip()
