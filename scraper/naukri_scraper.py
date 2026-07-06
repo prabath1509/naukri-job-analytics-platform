@@ -154,6 +154,16 @@ def scrape_naukri_jobs(keyword, pages=10):
 
                     scroll_page(driver)
 
+                    if os.getenv("CI", "").lower() == "true":
+                        logging.info(f"CI PAGE URL: {driver.current_url}")
+                        logging.info(f"CI PAGE TITLE: {driver.title}")
+                        logging.info(f"CI HTML LENGTH: {len(driver.page_source)}")
+                        logging.info(f"CI srp-jobtuple-wrapper COUNT: {len(driver.find_elements(By.CSS_SELECTOR, chr(34)+"div.srp-jobtuple-wrapper"+chr(34)))}")
+                        logging.info(f"CI jobTuple COUNT: {len(driver.find_elements(By.CSS_SELECTOR, chr(34)+"div.jobTuple"+chr(34)))}")
+                        logging.info(f"CI article COUNT: {len(driver.find_elements(By.CSS_SELECTOR, chr(34)+"article"+chr(34)))}")
+                        logging.info(f"CI TITLE LINK COUNT: {len(driver.find_elements(By.CSS_SELECTOR, chr(34)+"a.title"+chr(34)))}")
+                        logging.info(f"CI BODY PREVIEW: {driver.find_element(By.TAG_NAME, chr(34)+"body"+chr(34)).text[:1000]!r}")
+
                     wait.until(
 
                         EC.presence_of_element_located(
