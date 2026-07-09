@@ -36,16 +36,32 @@ DATA_KEYWORDS = [
 def scrape_greenhouse():
 
     companies = [
-
-        "databricks",
-        "airbnb",
-        "stripe",
-        "figma",
-        "reddit",
-        "robinhood",
-        "affirm",
-        "asana"
-    ]
+    "databricks",
+    "airbnb",
+    "stripe",
+    "figma",
+    "reddit",
+    "robinhood",
+    "affirm",
+    "asana",
+    "pinterest",
+    "lyft",
+    "scaleai",
+    "instacart",
+    "anthropic",
+    "samsara",
+    "twilio",
+    "brex",
+    "coinbase",
+    "okta",
+    "toast",
+    "cloudflare",
+    "gusto",
+    "discord",
+    "dropbox",
+    "webflow",
+    "squarespace",
+]
 
     jobs = []
 
