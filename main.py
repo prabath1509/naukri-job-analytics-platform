@@ -32,6 +32,7 @@ from analytics.location_frequency import (
 )
 from analytics.experience_frequency import generate_experience_frequency
 from scraper.job_classifier import classify_job
+from scraper.analytics_relevance import is_analytics_relevant
 from analytics.role_frequency import generate_role_frequency
 from analytics.salary_frequency import generate_salary_frequency
 from analytics.source_quality import (
@@ -530,6 +531,51 @@ logging.info(
     f"Rows After Cleaning : {len(df)}"
 
 )
+
+# =========================================================
+# ANALYTICS RELEVANCE GATE
+# =========================================================
+
+rows_before_relevance = len(df)
+
+relevance_mask = (
+    df["Title"]
+    .fillna("")
+    .apply(is_analytics_relevant)
+)
+
+df = df.loc[relevance_mask].copy()
+
+df.reset_index(
+    drop=True,
+    inplace=True
+)
+
+rows_after_relevance = len(df)
+rows_rejected_relevance = (
+    rows_before_relevance - rows_after_relevance
+)
+
+logging.info("")
+logging.info("=" * 60)
+logging.info("ANALYTICS RELEVANCE GATE")
+logging.info("=" * 60)
+logging.info(
+    f"Rows Before Relevance Gate : "
+    f"{rows_before_relevance}"
+)
+logging.info(
+    f"Rows After Relevance Gate  : "
+    f"{rows_after_relevance}"
+)
+logging.info(
+    f"Rows Rejected              : "
+    f"{rows_rejected_relevance}"
+)
+logging.info(
+    f"Relevance Retention Rate   : "
+    f"{(rows_after_relevance / rows_before_relevance * 100) if rows_before_relevance else 0:.2f}%"
+)
 # =========================================================
 # GENERATE WORK MODE
 # =========================================================
@@ -806,16 +852,21 @@ logging.info("Cleaning Completed.")
 
 IS_CI = os.getenv("CI", "").lower() == "true"
 
+MIN_PUBLISH_JOBS = 2000
+MIN_PUBLISH_SOURCES = 3
+
 if IS_CI:
-    MIN_PUBLISH_JOBS = 1000
-    MIN_PUBLISH_SOURCES = 3
     REQUIRED_PUBLISH_SOURCES = set()
-    logging.warning("CI publication mode enabled: Naukri is not required because hosted runners may receive Access Denied")
+    logging.warning(
+        "CI publication mode enabled: Naukri is not required "
+        "because hosted runners may receive Access Denied"
+    )
 else:
-    MIN_PUBLISH_JOBS = 2500
-    MIN_PUBLISH_SOURCES = 3
     REQUIRED_PUBLISH_SOURCES = {"Naukri"}
-    logging.info("Local full publication mode enabled: Naukri source required")
+    logging.info(
+        "Local full publication mode enabled: "
+        "Naukri source required"
+    )
 
 publish_sources = set(
     df["Source"].dropna().astype(str).str.strip()
@@ -921,6 +972,7 @@ logging.info("Database Updated Successfully")
 # =========================================================
 
 SNAPSHOT_RETENTION_COUNT = 5
+MIN_VALID_SNAPSHOT_JOBS = 2500
 
 snapshot_files = sorted(
     Path("data").glob("jobs_*.csv"),
@@ -935,7 +987,7 @@ for snapshot_path in snapshot_files:
     try:
         snapshot_rows = len(pd.read_csv(snapshot_path))
 
-        if snapshot_rows >= MIN_PUBLISH_JOBS:
+        if snapshot_rows >= MIN_VALID_SNAPSHOT_JOBS:
             valid_snapshots.append(snapshot_path)
         else:
             invalid_snapshots.append(snapshot_path)
