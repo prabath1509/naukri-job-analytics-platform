@@ -9,7 +9,7 @@ import requests
 # DATA ANALYTICS FOCUSED GREENHOUSE SCRAPER
 # =========================================================
 
-import requests
+from scraper.ats_source_registry import GREENHOUSE_BOARDS
 
 DATA_KEYWORDS = [
 
@@ -35,33 +35,7 @@ DATA_KEYWORDS = [
 
 def scrape_greenhouse():
 
-    companies = [
-    "databricks",
-    "airbnb",
-    "stripe",
-    "figma",
-    "reddit",
-    "robinhood",
-    "affirm",
-    "asana",
-    "pinterest",
-    "lyft",
-    "scaleai",
-    "instacart",
-    "anthropic",
-    "samsara",
-    "twilio",
-    "brex",
-    "coinbase",
-    "okta",
-    "toast",
-    "cloudflare",
-    "gusto",
-    "discord",
-    "dropbox",
-    "webflow",
-    "squarespace",
-]
+    companies = GREENHOUSE_BOARDS
 
     jobs = []
 

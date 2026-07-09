@@ -4,27 +4,7 @@
 
 import requests
 import logging
-
-COMPANIES = [
-
-    "bosch",
-
-    "visa",
-
-    "logitech",
-
-    "ubisoft",
-
-    "dhl",
-
-    "pandora",
-
-    "volvogroup",
-
-    "tesla"
-
-]
-
+from scraper.ats_source_registry import (SMARTRECRUITERS_COMPANIES,)
 
 def scrape_smartrecruiters():
 
@@ -36,7 +16,7 @@ def scrape_smartrecruiters():
 
     }
 
-    for company in COMPANIES:
+    for company in SMARTRECRUITERS_COMPANIES:
 
         try:
 

@@ -4,7 +4,7 @@
 
 import logging
 import requests
-
+from scraper.ats_source_registry import LEVER_COMPANIES
 # Companies that still commonly expose Lever JSON endpoints
 COMPANIES = {
     "figma": "Figma",
@@ -22,7 +22,7 @@ def scrape_lever():
 
     jobs = []
 
-    for slug, company in COMPANIES.items():
+    for slug, company in LEVER_COMPANIES.items():
 
         logging.info(f"Scraping Lever: {company}")
 

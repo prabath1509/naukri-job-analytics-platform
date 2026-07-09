@@ -3,33 +3,7 @@ import time
 
 import requests
 
-
-WORKDAY_COMPANIES = [
-    {
-        "company": "Mastercard",
-        "url": "https://mastercard.wd1.myworkdayjobs.com/wday/cxs/mastercard/CorporateCareers/jobs",
-    },
-    {
-        "company": "Salesforce",
-        "url": "https://salesforce.wd12.myworkdayjobs.com/wday/cxs/salesforce/External_Career_Site/jobs",
-    },
-    {
-        "company": "Adobe",
-        "url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/jobs",
-    },
-    {
-        "company": "Intel",
-        "url": "https://intel.wd1.myworkdayjobs.com/wday/cxs/intel/External/jobs",
-    },
-    {
-        "company": "PayPal",
-        "url": "https://paypal.wd1.myworkdayjobs.com/wday/cxs/paypal/jobs/jobs",
-    },
-    {
-        "company": "Autodesk",
-        "url": "https://autodesk.wd1.myworkdayjobs.com/wday/cxs/autodesk/Ext/jobs",
-    },
-]
+from scraper.ats_source_registry import WORKDAY_COMPANIES
 
 
 PAGE_SIZE = 20
