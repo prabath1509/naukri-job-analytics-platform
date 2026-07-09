@@ -77,7 +77,7 @@ logging.basicConfig(
 # CONFIGURATION
 # =========================================================
 
-NAUKRI_PAGES = 10
+NAUKRI_PAGES = 20
 
 KEYWORDS = [
 
