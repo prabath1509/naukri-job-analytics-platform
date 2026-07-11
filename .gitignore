@@ -31,3 +31,4 @@ scraper/greenhouse_scraper_before_phase41.py
 main_before_phase42.py
 scraper/ats_source_registry_before_phase43.py
 main_before_phase45.py
+.github/workflows/scraper_before_phase49.yml

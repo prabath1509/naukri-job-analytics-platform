@@ -66,9 +66,40 @@ jobs:
           ps aux | grep -i chrome || true
 
       - name: Run Job Scraper
+        id: scraper
+        shell: bash
         run: |
-          python main.py
+          set +e
 
+          python main.py 2>&1 | tee scraper_run.log
+          scraper_exit=${PIPESTATUS[0]}
+
+          set -e
+
+          if [ "$scraper_exit" -eq 0 ]; then
+            echo "Scraper completed successfully."
+            echo "publication_status=published" >> "$GITHUB_OUTPUT"
+            rm -f scraper_run.log
+            exit 0
+          fi
+
+          if grep -q "Publication blocked by dataset quality gate" scraper_run.log; then
+            echo "============================================================"
+            echo "PUBLICATION SKIPPED BY DATASET QUALITY GATE"
+            echo "Existing published dataset will be preserved."
+            echo "============================================================"
+
+            git reset --hard HEAD
+            git clean -fd -- data database
+            rm -f scraper_run.log
+
+            echo "publication_status=skipped" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          echo "Scraper failed because of an unexpected runtime error."
+          cat scraper_run.log
+          exit "$scraper_exit"
       - name: Show Repository Status
         run: |
           echo "===== Git Status ====="
