@@ -106,6 +106,8 @@ KEYWORDS = [
     "research-analyst",
 
     "business-intelligence",
+    
+    "analytics-engineer",
 
     "etl",
 

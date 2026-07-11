@@ -1,20 +1,20 @@
 Role_Category,Job_Count,Percentage
-Business Intelligence,1026,21.86
-Machine Learning / AI,545,11.61
-Data Scientist,542,11.55
-Data Analyst,450,9.59
-Data Engineering,432,9.21
-Business Analyst,359,7.65
-ETL / Data Integration,356,7.59
-Research Analyst,343,7.31
-SQL / Database,250,5.33
-Python Development,124,2.64
-Advanced Analytics,66,1.41
-Other,63,1.34
-Other Analyst,52,1.11
-Consulting,50,1.07
-Software Development,23,0.49
+Business Intelligence,1037,22.17
+Data Scientist,568,12.14
+Machine Learning / AI,544,11.63
+Data Engineering,464,9.92
+Data Analyst,424,9.06
+Business Analyst,372,7.95
+ETL / Data Integration,347,7.42
+Research Analyst,338,7.23
+SQL / Database,242,5.17
+Python Development,106,2.27
+Other,67,1.43
+Advanced Analytics,54,1.15
+Other Analyst,47,1.0
+Consulting,36,0.77
+Software Development,22,0.47
 Internship,5,0.11
-Product Management,4,0.09
-Finance / Accounting,2,0.04
-Project / Program Management,1,0.02
+Product Management,3,0.06
+Customer Success,1,0.02
+Finance / Accounting,1,0.02

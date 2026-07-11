@@ -1,8 +1,8 @@
 Field,Valid_Count,Missing_Invalid_Count,Coverage_Percentage
-Company,4693,0,100.0
-Job_Link,4693,0,100.0
-Title,4693,0,100.0
-Location,4674,19,99.6
-Experience,3961,732,84.4
-Skills,3943,750,84.02
-Salary,595,4098,12.68
+Company,4678,0,100.0
+Job_Link,4678,0,100.0
+Title,4678,0,100.0
+Location,4659,19,99.59
+Experience,4070,608,87.0
+Skills,4069,609,86.98
+Salary,603,4075,12.89
