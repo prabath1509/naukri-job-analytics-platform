@@ -1,117 +1,451 @@
-# 📊 Naukri Job Analytics Platform
+#  AI-Powered Job Analytics Platform
 
-A complete end-to-end job market analytics platform built using Python, Selenium, SQLite, Streamlit, and Machine Learning.
+A production-style job market analytics platform that automatically collects, cleans, validates, analyzes, and visualizes job opportunities from multiple recruitment sources.
 
----
-
-## 🚀 Features
-
-- Multi-keyword Naukri job scraping
-- Automated multi-page scraping
-- SQLite database storage
-- Interactive Streamlit dashboard
-- Resume Matcher AI
-- Skills analysis
-- Hiring trend analytics
-- Clickable job application links
-- Real-time filtering and search
+The platform provides real-time insights into hiring trends, skills demand, company hiring activity, locations, work modes, salary availability, and role distributions through an interactive Streamlit dashboard.
 
 ---
 
-## 🛠 Tech Stack
+## 🌐 Live Dashboard
 
-- Python
-- Selenium
-- Pandas
-- SQLite
-- Streamlit
-- Plotly
-- Scikit-learn
-- PyPDF2
+🔗 https://naukri-job-analytics-platform-fyyympr7t2vqc2sg4snwzf.streamlit.app/
 
 ---
 
-## 📂 Project Structure
+# 📌 Project Overview
 
-```bash
-naukri_scraper_project/
+Finding quality job market insights requires collecting data from multiple recruitment platforms, cleaning inconsistent information, removing duplicates, validating data quality, and presenting meaningful analytics.
+
+This project automates the complete workflow through an end-to-end ETL pipeline.
+
+The system:
+
+- Scrapes jobs from multiple sources
+- Cleans and standardizes records
+- Removes duplicate listings
+- Generates analytical datasets
+- Stores data in SQLite
+- Produces interactive dashboards
+- Tracks field quality and source quality
+- Publishes only validated datasets
+
+---
+
+# ✨ Key Features
+
+### Multi-Source Job Aggregation
+
+- Naukri
+- Greenhouse
+- Workday
+
+---
+
+### Automated ETL Pipeline
+
+- Job scraping
+- Data cleaning
+- Duplicate removal
+- Standardization
+- SQLite storage
+- Analytics generation
+
+---
+
+### Interactive Analytics Dashboard
+
+Explore:
+
+- Hiring companies
+- Job locations
+- Experience requirements
+- Skills demand
+- Salary availability
+- Work mode trends
+- Role distribution
+- Source comparison
+- Job listings
+
+---
+
+### Data Quality Intelligence
+
+Automatically measures:
+
+- Field completeness
+- Source quality
+- Missing values
+- Coverage percentage
+- Dataset validation
+
+---
+
+### Publication Quality Gate
+
+The project prevents publishing poor-quality datasets.
+
+Validation includes:
+
+- Minimum job count
+- Minimum source count
+- Required data sources
+- Dataset integrity checks
+
+---
+
+### Snapshot Management
+
+- Automatic snapshot creation
+- Snapshot validation
+- Snapshot retention
+- Historical dataset preservation
+
+---
+
+### Resume Matcher
+
+Includes an AI-assisted resume matching module to compare resumes with job descriptions.
+
+---
+
+### GitHub Automation
+
+GitHub Actions automatically:
+
+- Run scraper
+- Validate dataset
+- Update SQLite
+- Publish analytics
+- Preserve previous production dataset when quality checks fail
+
+---
+
+# 🏗 System Architecture
+
+```
+                Job Sources
+                     │
+                     ▼
+            Web Scrapers
+                     │
+                     ▼
+        Cleaning & Standardization
+                     │
+                     ▼
+          Duplicate Removal
+                     │
+                     ▼
+       Publication Quality Gate
+                     │
+                     ▼
+            SQLite Database
+                     │
+        ┌────────────┴────────────┐
+        ▼                         ▼
+ Analytics CSV Files      Streamlit Dashboard
 ```
 
 ---
 
-## ▶ Run Scraper
+# ⚙ Tech Stack
 
-```bash
-python main.py
+| Category | Technologies |
+|-----------|--------------|
+| Language | Python |
+| Dashboard | Streamlit |
+| Database | SQLite |
+| Visualization | Plotly |
+| Data Analysis | Pandas, NumPy |
+| Web Scraping | Selenium, Requests, BeautifulSoup |
+| HTML Parsing | lxml |
+| Automation | GitHub Actions |
+| Version Control | Git |
+| Deployment | Streamlit Community Cloud |
+
+---
+
+# 📊 Current Dataset Statistics
+
+Latest Production Dataset
+
+| Metric | Value |
+|--------|------:|
+| Total Jobs | 4,832 |
+| Companies | 1,969 |
+| Sources | 3 |
+| Duplicate Links | 0 |
+| Job Link Coverage | 100% |
+| Company Coverage | 100% |
+| Title Coverage | 100% |
+| Location Coverage | 99.63% |
+| Experience Coverage | 84.93% |
+| Skills Coverage | 84.91% |
+| Salary Coverage | 12.42% |
+
+---
+
+# 📈 Dashboard Features
+
+The dashboard provides:
+
+## Executive KPIs
+
+- Total Jobs
+- Companies Hiring
+- Locations
+- Data Sources
+
+---
+
+## Interactive Filters
+
+- Job Title
+- Company
+- Source
+- Work Mode
+- Experience
+- Role Category
+
+---
+
+## Visual Analytics
+
+- Hiring by Company
+- Hiring by Location
+- Work Mode Distribution
+- Experience Distribution
+- Role Categories
+- Salary Availability
+- Source Distribution
+- Skill Demand
+
+---
+
+## Data Quality Dashboard
+
+Includes:
+
+- Field Quality
+- Source Quality
+- Coverage Analytics
+- Missing Value Analysis
+
+---
+
+## Job Explorer
+
+Searchable table with:
+
+- Job Title
+- Company
+- Location
+- Experience
+- Salary
+- Skills
+- Source
+- Direct Job Link
+
+---
+
+# 📂 Repository Structure
+
+```
+naukri-job-analytics-platform/
+
+│
+├── dashboard/
+│   └── app.py
+│
+├── scraper/
+│   ├── naukri_scraper.py
+│   ├── greenhouse_scraper.py
+│   ├── workday_scraper.py
+│   ├── lever_scraper.py
+│   ├── smartrecruiters_scraper.py
+│   └── ats_source_registry.py
+│
+├── data/
+│
+├── database/
+│
+├── resume_matcher/
+│
+├── analytics/
+│
+├── .github/
+│   └── workflows/
+│
+├── scheduler.py
+├── main.py
+├── requirements.txt
+└── README.md
 ```
 
 ---
 
-## ▶ Run Dashboard
+# 🚀 Installation
+
+Clone the repository
 
 ```bash
-streamlit run dashboard/app.py
+git clone https://github.com/prabath1509/naukri-job-analytics-platform.git
+
+cd naukri-job-analytics-platform
 ```
 
----
+Create virtual environment
 
-## 📈 Dashboard Features
+```bash
+python -m venv venv
+```
 
-- KPI cards
-- Job trend analytics
-- Skill analysis
-- Resume-job matching
-- Interactive charts
-- Downloadable datasets
+Activate environment
 
----
+Windows
 
-## 🤖 Resume Matcher AI
+```bash
+venv\Scripts\activate
+```
 
-Upload your resume PDF and get:
-- Job match percentage
-- Top matching jobs
-- Direct application links
+Install dependencies
 
----
-
-## 👨‍💻 Author
-
-Krishna Prabath
-# AI-Powered Job Analytics Platform
-
-## Features
-- Multi-source job scraping
-- Naukri integration
-- Greenhouse ATS integration
-- Lever ATS integration
-- Streamlit dashboard
-- Resume matching
-- SQLite database
-- Automated scheduler
-- Job analytics
-
-## Tech Stack
-- Python
-- Selenium
-- Pandas
-- SQLite
-- Streamlit
-- Plotly
-
-## Architecture
-Scraper → Database → Analytics Dashboard
-
-## How to Run
-
-### Install dependencies
+```bash
 pip install -r requirements.txt
+```
 
-### Run scraper
+---
+
+# ▶ Running the Project
+
+Run the scraper
+
+```bash
 python main.py
+```
 
-### Run dashboard
+Launch dashboard
+
+```bash
 streamlit run dashboard/app.py
+```
 
-### Run scheduler
-python scheduler.py
+---
+
+# 🔄 ETL Workflow
+
+```
+Collect Jobs
+      │
+      ▼
+Clean Records
+      │
+      ▼
+Remove Duplicates
+      │
+      ▼
+Validate Dataset
+      │
+      ▼
+Update SQLite
+      │
+      ▼
+Generate Analytics
+      │
+      ▼
+Launch Dashboard
+```
+
+---
+
+# 📋 Data Quality Framework
+
+Every production run includes:
+
+- Source Quality Analytics
+- Field Quality Analytics
+- Publication Quality Gate
+- Duplicate Detection
+- Snapshot Validation
+- Dataset Integrity Checks
+
+Only validated datasets are published.
+
+---
+
+# 🤖 Automation
+
+GitHub Actions automatically:
+
+- Execute scheduled scraping
+- Validate dataset quality
+- Preserve production datasets
+- Update SQLite database
+- Publish analytics
+- Prevent bad deployments
+
+---
+
+# 📌 Key Highlights
+
+✔ Production-style ETL pipeline
+
+✔ Multi-source scraping
+
+✔ Automated quality validation
+
+✔ SQLite data warehouse
+
+✔ Interactive dashboard
+
+✔ Automated deployment workflow
+
+✔ Resume matching module
+
+✔ Snapshot retention
+
+✔ Zero duplicate job links
+
+---
+
+# 🔮 Future Enhancements
+
+Planned improvements:
+
+- Additional ATS integrations
+- AI-powered skill recommendations
+- Resume semantic matching
+- Salary normalization
+- Historical trend analysis
+- Job recommendation engine
+- REST API
+- Power BI integration
+- Predictive hiring analytics
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+# 👨‍💻 Author
+
+**Krishna Prabath**
+
+Aspiring Data Analyst | Python | SQL | Power BI | Data Visualization | Web Scraping
+
+### Connect with me
+
+GitHub:
+https://github.com/prabath1509
+
+LinkedIn:
+https://www.linkedin.com/in/srinadhukrishnaprabath
+
+Portfolio:
+https://prabath1509.github.io/portfolio/
+
+---
+
+⭐ If you found this project useful, consider giving it a star on GitHub.
