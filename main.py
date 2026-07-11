@@ -26,6 +26,8 @@ from scraper.salary_parser import parse_salary
 from scraper.workmode_parser import detect_work_mode
 from analytics.skill_frequency import generate_skill_frequency
 from analytics.company_frequency import generate_company_frequency
+from scraper.lever_scraper import scrape_lever
+from scraper.smartrecruiters_scraper import scrape_smartrecruiters
 from analytics.location_frequency import (
     generate_location_frequency,
     generate_workmode_frequency,
@@ -275,6 +277,44 @@ all_jobs.extend(
 
 )
 
+logging.info("")
+logging.info("=" * 60)
+logging.info("SCRAPING LEVER")
+logging.info("=" * 60)
+
+try:
+    lever_jobs = scrape_lever_jobs()
+
+    logging.info(
+        f"Lever Jobs Scraped : {len(lever_jobs)}"
+    )
+
+    all_jobs.extend(lever_jobs)
+
+except Exception as e:
+    logging.exception(
+        f"Lever Scraper Error: {e}"
+    )
+logging.info("")
+logging.info("=" * 60)
+logging.info("SCRAPING SMARTRECRUITERS")
+logging.info("=" * 60)
+
+try:
+
+    smart_jobs = scrape_smartrecruiters_jobs()
+
+    logging.info(
+        f"SmartRecruiters Jobs Scraped : {len(smart_jobs)}"
+    )
+
+    all_jobs.extend(smart_jobs)
+
+except Exception as e:
+
+    logging.exception(
+        f"SmartRecruiters Error: {e}"
+    )
 # =========================================================
 # SMARTRECRUITERS
 # =========================================================

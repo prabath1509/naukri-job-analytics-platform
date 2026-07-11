@@ -1,300 +1,306 @@
 Company,Job_Count,Percentage,Sources
-Salesforce,135,3.0,"Naukri, Workday"
-Tata Consultancy Services,127,2.82,Naukri
-Infosys,88,1.95,Naukri
-Adobe,70,1.55,"Naukri, Workday"
-Crisil,67,1.49,Naukri
-Diverse Lynx,58,1.29,Naukri
-Platinus Technologies Pvt Ltd,57,1.27,Naukri
-Reddit,42,0.93,Greenhouse
-Lyft,37,0.82,Greenhouse
-Pinterest,37,0.82,Greenhouse
-Airbnb,35,0.78,Greenhouse
-CGI,30,0.67,Naukri
-Align Techne,29,0.64,Naukri
-EY,27,0.6,Naukri
-Clifyx Technology,25,0.55,Naukri
-Capgemini,24,0.53,Naukri
-Squircle IT,24,0.53,Naukri
-Logic Planet,23,0.51,Naukri
-Wipro,23,0.51,Naukri
-Affirm,21,0.47,Greenhouse
-Benovymed Healthcare Private Limited,21,0.47,Naukri
-Cognizant,21,0.47,Naukri
-ti Steps,21,0.47,Naukri
-Amgen Inc,19,0.42,Naukri
-Instacart,19,0.42,Greenhouse
-PwC Service Delivery Center,19,0.42,Naukri
-ABB,18,0.4,Naukri
-Hexaware Technologies,18,0.4,Naukri
-PayPal,18,0.4,Workday
-Stripe,18,0.4,Greenhouse
-Accenture,17,0.38,Naukri
-Fractal Analytics,17,0.38,Naukri
-Han Digital Solution,17,0.38,Naukri
-TP,17,0.38,Naukri
-Vrinda International Noida,16,0.36,Naukri
-Anthropic,15,0.33,Greenhouse
-Sparix Global,15,0.33,Naukri
-AMERICAN EXPRESS,14,0.31,Naukri
-Acme Services,14,0.31,Naukri
-Databricks,14,0.31,"Greenhouse, Naukri"
-Emperen Technologies,14,0.31,Naukri
-Tech Mahindra,14,0.31,Naukri
-The Glove,14,0.31,Naukri
-Coforge,13,0.29,Naukri
-LTM,13,0.29,Naukri
-Rarr Technologies,13,0.29,Naukri
-Scaleai,13,0.29,Greenhouse
-Mastercard,12,0.27,"Naukri, Workday"
-Triangle Global,12,0.27,Naukri
-US MNC (analytics),12,0.27,Naukri
-Barclays,11,0.24,Naukri
+Salesforce,135,2.89,"Naukri, Workday"
+Tata Consultancy Services,129,2.76,Naukri
+Mastercard,97,2.08,"Naukri, Workday"
+Infosys,96,2.06,Naukri
+Crisil,69,1.48,Naukri
+Adobe,67,1.43,"Naukri, Workday"
+Platinus Technologies Pvt Ltd,57,1.22,Naukri
+Diverse Lynx,55,1.18,Naukri
+Reddit,42,0.9,Greenhouse
+Lyft,37,0.79,Greenhouse
+Pinterest,37,0.79,Greenhouse
+Airbnb,35,0.75,Greenhouse
+Autodesk,32,0.69,Workday
+CGI,29,0.62,Naukri
+Wipro,28,0.6,Naukri
+Align Techne,26,0.56,Naukri
+Capgemini,26,0.56,Naukri
+Clifyx Technology,26,0.56,Naukri
+EY,26,0.56,Naukri
+Squircle IT,24,0.51,Naukri
+Logic Planet,22,0.47,Naukri
+Affirm,21,0.45,Greenhouse
+Benovymed Healthcare,21,0.45,Naukri
+Benovymed Healthcare Private Limited,21,0.45,Naukri
+Cognizant,21,0.45,Naukri
+Fractal Analytics,21,0.45,Naukri
+ti Steps,21,0.45,Naukri
+Hexaware Technologies,20,0.43,Naukri
+Amgen Inc,19,0.41,Naukri
+Instacart,19,0.41,Greenhouse
+ABB,18,0.39,Naukri
+Accenture,18,0.39,Naukri
+Han Digital Solution,18,0.39,Naukri
+PayPal,18,0.39,Workday
+Stripe,18,0.39,Greenhouse
+PwC Service Delivery Center,17,0.36,Naukri
+TP,17,0.36,Naukri
+Vrinda International Noida,17,0.36,Naukri
+Anthropic,15,0.32,Greenhouse
+Sparix Global,15,0.32,Naukri
+AMERICAN EXPRESS,14,0.3,Naukri
+Databricks,14,0.3,"Greenhouse, Naukri"
+Emperen Technologies,14,0.3,Naukri
+The Glove,14,0.3,Naukri
+Acme Services,13,0.28,Naukri
+LTM,13,0.28,Naukri
+Photon,13,0.28,Naukri
+Rarr Technologies,13,0.28,Naukri
+Scaleai,13,0.28,Greenhouse
+Barclays,12,0.26,Naukri
+Coforge,12,0.26,Naukri
+Tech Mahindra,12,0.26,Naukri
+US MNC (analytics),12,0.26,Naukri
 Cloudxtreme,11,0.24,Naukri
 Samsara,11,0.24,Greenhouse
 Synechron,11,0.24,Naukri
+Triangle Global,11,0.24,Naukri
 Wells Fargo,11,0.24,Naukri
-Apple,10,0.22,Naukri
-Capco,10,0.22,Naukri
-Google,10,0.22,Naukri
-Jero Technologies,10,0.22,Naukri
-Photon,10,0.22,Naukri
-Twilio,10,0.22,"Greenhouse, Naukri"
-Ascendion Engineering,9,0.2,Naukri
-E4 Softwares,9,0.2,Naukri
-Epam Systems,9,0.2,Naukri
-IDESLABS,9,0.2,Naukri
-Kiya.ai,9,0.2,Naukri
-Mspring Infotech,9,0.2,Naukri
-Sisl Infotech,9,0.2,Naukri
-Coinbase,8,0.18,Greenhouse
-Financial Service,8,0.18,Naukri
-Godigi Infotech,8,0.18,Naukri
-Grid Dynamics,8,0.18,Naukri
-Happiest Minds Technologies,8,0.18,Naukri
-Virtusa,8,0.18,Naukri
-Warner Bros. Discovery,8,0.18,Naukri
-Bahwan CyberTek,7,0.16,Naukri
-Brex,7,0.16,Greenhouse
-EXL,7,0.16,Naukri
-EduRun Group,7,0.16,Naukri
-Gallagher,7,0.16,Naukri
-Hitachi Digital Services,7,0.16,Naukri
-Luxoft,7,0.16,Naukri
-Mount Talent Consulting,7,0.16,Naukri
-Nagarro,7,0.16,Naukri
-Persistent,7,0.16,Naukri
-Quantiphi Analytics Solutions,7,0.16,Naukri
-Toast,7,0.16,Greenhouse
-Trinet Group,7,0.16,Naukri
+Capco,10,0.21,Naukri
+Jero Technologies,10,0.21,Naukri
+Persistent,10,0.21,Naukri
+Twilio,10,0.21,"Greenhouse, Naukri"
+Virtusa,10,0.21,Naukri
+Apple,9,0.19,Naukri
+Epam Systems,9,0.19,Naukri
+Google,9,0.19,Naukri
+IDESLABS,9,0.19,Naukri
+Intel,9,0.19,Workday
+Mspring Infotech,9,0.19,Naukri
+Sisl Infotech,9,0.19,Naukri
+Ascendion Engineering,8,0.17,Naukri
+Coinbase,8,0.17,Greenhouse
+E4 Softwares,8,0.17,Naukri
+Financial Service,8,0.17,Naukri
+Grid Dynamics,8,0.17,Naukri
+Kiya.ai,8,0.17,Naukri
+Warner Bros. Discovery,8,0.17,Naukri
+Brex,7,0.15,Greenhouse
+Careernet,7,0.15,Naukri
+EXL,7,0.15,Naukri
+EduRun Group,7,0.15,Naukri
+Eurofins,7,0.15,Naukri
+Gallagher,7,0.15,Naukri
+Godigi Infotech,7,0.15,Naukri
+Happiest Minds Technologies,7,0.15,Naukri
+Hitachi Digital Services,7,0.15,Naukri
+Leading IT Service and Consulting Organization,7,0.15,Naukri
+Mount Talent Consulting,7,0.15,Naukri
+Nagarro,7,0.15,Naukri
+Toast,7,0.15,Greenhouse
+Trinet Group,7,0.15,Naukri
 4labs Technologies,6,0.13,Naukri
 Apex 2000 INC,6,0.13,Naukri
+Bahwan CyberTek,6,0.13,Naukri
 Bristol Myers Squibb,6,0.13,Naukri
-Careernet,6,0.13,Naukri
+CEEW,6,0.13,Naukri
+CapeStart,6,0.13,Naukri
 Crescendo Global,6,0.13,Naukri
-Eurofins,6,0.13,Naukri
 Expedia,6,0.13,Naukri
 Figma,6,0.13,Greenhouse
+Globallogic,6,0.13,Naukri
+Hitachi Energy,6,0.13,Naukri
 IBM,6,0.13,Naukri
 IBU Consulting,6,0.13,Naukri
 Indium Software,6,0.13,Naukri
 Innominds Software,6,0.13,Naukri
 Iqvia Biotech,6,0.13,Naukri
-JPMorgan Chase Bank,6,0.13,Naukri
-Leading IT Service and Consulting Organization,6,0.13,Naukri
+Luxoft,6,0.13,Naukri
 Mobile Programming,6,0.13,Naukri
-"NTT DATA, Inc.",6,0.13,Naukri
-S&P Global Market Intelligence,6,0.13,Naukri
+Quantiphi Analytics Solutions,6,0.13,Naukri
 Sonata Software,6,0.13,Naukri
+XTGlobal,6,0.13,Naukri
 Yash Technologies,6,0.13,Naukri
-360DigiTMG,5,0.11,Naukri
 Artex Risk Solutions,5,0.11,Naukri
-Autodesk,5,0.11,Workday
 Axis Max Life Insurance,5,0.11,Naukri
-Benovymed Healthcare,5,0.11,Naukri
+Black and white Business Solutions,5,0.11,Naukri
 Broadridge,5,0.11,Naukri
-CEEW,5,0.11,Naukri
-CapeStart,5,0.11,Naukri
 Cargill,5,0.11,Naukri
 Cloud Counselage,5,0.11,Naukri
 Cloudflare,5,0.11,Greenhouse
 Crescendo Global Leadership Hiring India,5,0.11,Naukri
 Discord,5,0.11,Greenhouse
-Dtcc,5,0.11,Naukri
-Globallogic,5,0.11,Naukri
 HCLTech,5,0.11,Naukri
-Hitachi Energy,5,0.11,Naukri
+IT Company,5,0.11,Naukri
 Iflow,5,0.11,Naukri
-Krazy Mantra It,5,0.11,Naukri
+JPMorgan Chase Bank,5,0.11,Naukri
 Lorven Technologies,5,0.11,Naukri
-MNC Group,5,0.11,Naukri
 Micro1,5,0.11,Naukri
-NiCE,5,0.11,Naukri
+Motivity Labs,5,0.11,Naukri
+"NTT DATA, Inc.",5,0.11,Naukri
 Okta,5,0.11,"Greenhouse, Naukri"
-Premium,5,0.11,Naukri
 Quest Global,5,0.11,Naukri
 Roku,5,0.11,Naukri
-Sightspectrum,5,0.11,Naukri
-Tanisha Systems,5,0.11,Naukri
+S&P Global Market Intelligence,5,0.11,Naukri
+Sanofi,5,0.11,Naukri
+TEKsystems,5,0.11,Naukri
 Tech Stalwart Solution,5,0.11,Naukri
 The It Mind Services,5,0.11,Naukri
-Thomson Reuters,5,0.11,Naukri
 WNS Holdings,5,0.11,Naukri
-XTGlobal,5,0.11,Naukri
-ABB Ltd,4,0.09,Naukri
+360DigiTMG,4,0.09,Naukri
+Altimetrik,4,0.09,Naukri
 Aparajita Consultancy Services,4,0.09,Naukri
 Armanino,4,0.09,Naukri
-Blend360 India,4,0.09,Naukri
-Bootcoding,4,0.09,Naukri
+Cleartrip,4,0.09,Naukri
 Codincity Digital Technologies,4,0.09,Naukri
 Data Economy,4,0.09,Naukri
-Datamatics,4,0.09,Naukri
 Deloitte US-India Offices,4,0.09,Naukri
 Dentsu Webchutney,4,0.09,Naukri
 Deutsche Bank,4,0.09,Naukri
 Dropbox,4,0.09,Greenhouse
+Dtcc,4,0.09,Naukri
 Edurun,4,0.09,Naukri
 Environmental Resources Management (ERM),4,0.09,Naukri
 Evernorth,4,0.09,Naukri
 GForce Consulting Solutions,4,0.09,Naukri
 Genpact,4,0.09,Naukri
+Globaldata,4,0.09,Naukri
 Gratitude India,4,0.09,Naukri
 IQVIA,4,0.09,Naukri
-IT Company,4,0.09,Naukri
 Iris Software,4,0.09,Naukri
 Iris Worldwide,4,0.09,Naukri
+Katbotz India,4,0.09,Naukri
+Krazy Mantra It,4,0.09,Naukri
 LTIMindtree,4,0.09,Naukri
 Lloyds Technology Centre India,4,0.09,Naukri
+MNC Group,4,0.09,Naukri
 MS Guide World,4,0.09,Naukri
 Microland,4,0.09,Naukri
-Motivity Labs,4,0.09,Naukri
 Naghavi Fintech,4,0.09,Naukri
+NiCE,4,0.09,Naukri
 Optum,4,0.09,Naukri
 PSRTEK,4,0.09,Naukri
 Perceptive Analytics,4,0.09,Naukri
+Premium,4,0.09,Naukri
 Programming.Com,4,0.09,Naukri
 RIGHT STEP CONSULTING PRIVATE LIMITED,4,0.09,Naukri
-Sanofi,4,0.09,Naukri
-Siro Clinpharm,4,0.09,Naukri
 Spigot Software,4,0.09,Naukri
 Straive,4,0.09,Naukri
 Swiss Re,4,0.09,Naukri
 TATA 1 MG,4,0.09,Naukri
 TE Connectivity,4,0.09,Naukri
-TEKsystems,4,0.09,Naukri
 TENARAI TECHNOLOGIES PRIVATE LIMITED,4,0.09,Naukri
+Tanisha Systems,4,0.09,Naukri
 The Networker,4,0.09,Naukri
+Thomson Reuters,4,0.09,Naukri
 UST,4,0.09,Naukri
 ZeMoSo Technologies,4,0.09,Naukri
 Zensar,4,0.09,Naukri
-3i Infotech,3,0.07,Naukri
-AMS,3,0.07,Naukri
-Abbyy,3,0.07,Naukri
-Acenet,3,0.07,Naukri
-Alstom,3,0.07,Naukri
-Altimetrik,3,0.07,Naukri
-Ample Softech System,3,0.07,Naukri
-Antier Solutions,3,0.07,Naukri
-Apex Group,3,0.07,Naukri
-Arbor Research India,3,0.07,Naukri
-Artify Talent Studio,3,0.07,Naukri
-Asoft Global Solutions,3,0.07,Naukri
-Axtria,3,0.07,Naukri
-Bajaj Finance,3,0.07,Naukri
-Baker Hughes,3,0.07,Naukri
-Black and white Business Solution,3,0.07,Naukri
-Black and white Business Solutions,3,0.07,Naukri
-Blitzenx,3,0.07,Naukri
-Bounteous x Accolite,3,0.07,Naukri
-CIEL HR,3,0.07,Naukri
-Caprus It,3,0.07,Naukri
-Cardinal Health,3,0.07,Naukri
-Cerebra,3,0.07,Naukri
-Ciklum,3,0.07,Naukri
-Cleartrip,3,0.07,Naukri
-Clover Infotech,3,0.07,Naukri
-Creative Hands HR,3,0.07,Naukri
-Cyient,3,0.07,Naukri
-Datatobiz,3,0.07,Naukri
-Dngk IT Consultancy Services Pvt. Ltd.,3,0.07,Naukri
-Doux Consultant,3,0.07,Naukri
-Dun & Bradstreet,3,0.07,Naukri
-Ecolab Global Services,3,0.07,Naukri
-Edureka,3,0.07,Naukri
-Epsilon Data Management,3,0.07,Naukri
-Everforth Apex Systems,3,0.07,Naukri
-Excelra,3,0.07,Naukri
-Exxon Mobil Corporation,3,0.07,Naukri
-Franklin templeton asset management (india)pvt,3,0.07,Naukri
-Freshworks,3,0.07,Naukri
-Global MNC,3,0.07,Naukri
-Globaldata,3,0.07,Naukri
-Gusto,3,0.07,Greenhouse
-HR Shweta - 9687676536,3,0.07,Naukri
-Hackajob,3,0.07,Naukri
-Hiringhood,3,0.07,Naukri
-IT SCIENT,3,0.07,Naukri
-Imurgence,3,0.07,Naukri
-Innova Solutions,3,0.07,Naukri
-Jewelex India,3,0.07,Naukri
-Katbotz India,3,0.07,Naukri
-Keylent,3,0.07,Naukri
-LLP S3bglobal Technologies,3,0.07,Naukri
-Louis Dreyfus Company,3,0.07,Naukri
-Mouser Electronics,3,0.07,Naukri
-Mphasis,3,0.07,Naukri
-Myfollo,3,0.07,Naukri
-Nam Info Pvt Ltd,3,0.07,Naukri
-Nexturn,3,0.07,Naukri
-Nice Software Solutions,3,0.07,Naukri
-Nisum,3,0.07,Naukri
-Numerator,3,0.07,Naukri
-Ocwen Financial Corporation,3,0.07,Naukri
-Origent Technologies,3,0.07,Naukri
-Overture Rede,3,0.07,Naukri
-PURVIEW,3,0.07,Naukri
-Panacorp Software Solutions,3,0.07,Naukri
-Prgeeq Global Solutions,3,0.07,Naukri
-Proclink,3,0.07,Naukri
-PwC India,3,0.07,Naukri
-Q3 technologies,3,0.07,Naukri
-Qloron Technology,3,0.07,Naukri
-Quess,3,0.07,Naukri
-Quess Corp,3,0.07,Naukri
-Randstad,3,0.07,Naukri
-Risesmarat Hr Services,3,0.07,Naukri
-STM Journals,3,0.07,Naukri
-SWS Smart Working Solutions,3,0.07,Naukri
-Shashwath Solution,3,0.07,Naukri
-SkillLabs,3,0.07,Naukri
-Soothsayer Analytics,3,0.07,Naukri
-Stack Digital,3,0.07,Naukri
-Sunware Technologies,3,0.07,Naukri
-TEOCO,3,0.07,Naukri
-Talenture Management Consulting,3,0.07,Naukri
-Talentzo Delhi,3,0.07,Naukri
-Tech SMCSquared GCC,3,0.07,Naukri
-TechBlocks,3,0.07,Naukri
-Tekskills,3,0.07,Naukri
-Tiger Analytics,3,0.07,Naukri
-Tredence,3,0.07,Naukri
-TrueTech Solutions,3,0.07,Naukri
-Varite,3,0.07,Naukri
-Viaprom Technologies,3,0.07,Naukri
-Virtualware Innovations,3,0.07,Naukri
-Wadhwani Ai,3,0.07,Naukri
-Walmart,3,0.07,Naukri
-Ztek Consulting,3,0.07,Naukri
-eClerx,3,0.07,Naukri
-eLabs Infotech,3,0.07,Naukri
+3i Infotech,3,0.06,Naukri
+ABB Ltd,3,0.06,Naukri
+AMS,3,0.06,Naukri
+Abbyy,3,0.06,Naukri
+Acenet,3,0.06,Naukri
+Adani Group,3,0.06,Naukri
+Alstom,3,0.06,Naukri
+Ample Softech System,3,0.06,Naukri
+Antier Solutions,3,0.06,Naukri
+Apex Group,3,0.06,Naukri
+Arbor Research India,3,0.06,Naukri
+Artify Talent Studio,3,0.06,Naukri
+Asoft Global Solutions,3,0.06,Naukri
+Axtria,3,0.06,Naukri
+Bajaj Finance,3,0.06,Naukri
+Baker Hughes,3,0.06,Naukri
+Black and white Business Solution,3,0.06,Naukri
+Blend360 India,3,0.06,Naukri
+Blitzenx,3,0.06,Naukri
+Bootcoding,3,0.06,Naukri
+CIEL HR,3,0.06,Naukri
+Cardinal Health,3,0.06,Naukri
+Cerebra,3,0.06,Naukri
+Ciklum,3,0.06,Naukri
+Clover Infotech,3,0.06,Naukri
+Creative Hands HR,3,0.06,Naukri
+Cyient,3,0.06,Naukri
+Datamatics,3,0.06,Naukri
+Datatobiz,3,0.06,Naukri
+Dngk IT Consultancy Services Pvt. Ltd.,3,0.06,Naukri
+Doux Consultant,3,0.06,Naukri
+Dun & Bradstreet,3,0.06,Naukri
+Ecolab Global Services,3,0.06,Naukri
+Edureka,3,0.06,Naukri
+Epsilon Data Management,3,0.06,Naukri
+Excelra,3,0.06,Naukri
+Expleo,3,0.06,Naukri
+Fidelity International,3,0.06,Naukri
+Franklin templeton asset management (india)pvt,3,0.06,Naukri
+Freshworks,3,0.06,Naukri
+Global MNC,3,0.06,Naukri
+Gusto,3,0.06,Greenhouse
+HR Shweta - 9687676536,3,0.06,Naukri
+Healthark Wellness Solutions,3,0.06,Naukri
+Hiringhood,3,0.06,Naukri
+IT SCIENT,3,0.06,Naukri
+Imurgence,3,0.06,Naukri
+Innova Solutions,3,0.06,Naukri
+Jewelex India,3,0.06,Naukri
+Kastech,3,0.06,Naukri
+LLP S3bglobal Technologies,3,0.06,Naukri
+Louis Dreyfus Company,3,0.06,Naukri
+Mastek,3,0.06,Naukri
+Merit Data And Technology,3,0.06,Naukri
+Mouser Electronics,3,0.06,Naukri
+Mphasis,3,0.06,Naukri
+Myfollo,3,0.06,Naukri
+Nexturn,3,0.06,Naukri
+Nice Software Solutions,3,0.06,Naukri
+Nisum,3,0.06,Naukri
+Numerator,3,0.06,Naukri
+Ocwen Financial Corporation,3,0.06,Naukri
+Origent Technologies,3,0.06,Naukri
+Overture Rede,3,0.06,Naukri
+PURVIEW,3,0.06,Naukri
+Panacorp Software Solutions,3,0.06,Naukri
+Pcgi Systems,3,0.06,Naukri
+Premium Aerotec,3,0.06,Naukri
+Prescience Decision Solutions,3,0.06,Naukri
+Prgeeq Global Solutions,3,0.06,Naukri
+Proclink,3,0.06,Naukri
+PwC India,3,0.06,Naukri
+Q3 technologies,3,0.06,Naukri
+Qloron Technology,3,0.06,Naukri
+Quess,3,0.06,Naukri
+Quess Corp,3,0.06,Naukri
+Randstad,3,0.06,Naukri
+Rentokil PCI,3,0.06,Naukri
+Risesmarat Hr Services,3,0.06,Naukri
+STM Journals,3,0.06,Naukri
+SWS Smart Working Solutions,3,0.06,Naukri
+Shashwath Solution,3,0.06,Naukri
+Sightspectrum,3,0.06,Naukri
+Siro Clinpharm,3,0.06,Naukri
+SkillLabs,3,0.06,Naukri
+Soothsayer Analytics,3,0.06,Naukri
+Stack Digital,3,0.06,Naukri
+Sunware Technologies,3,0.06,Naukri
+TEOCO,3,0.06,Naukri
+Talenture Management Consulting,3,0.06,Naukri
+Talentzo Delhi,3,0.06,Naukri
+Tekskill,3,0.06,Naukri
+Tekskills,3,0.06,Naukri
+Tiger Analytics,3,0.06,Naukri
+Tredence,3,0.06,Naukri
+TrueTech Solutions,3,0.06,Naukri
+UPS Supply Chain Solutions (UPS SCS),3,0.06,Naukri
+Varite,3,0.06,Naukri
+Viaprom Technologies,3,0.06,Naukri
+Virtualware Innovations,3,0.06,Naukri
+Wadhwani Ai,3,0.06,Naukri
+Walmart,3,0.06,Naukri
+Ztek Consulting,3,0.06,Naukri
+eClerx,3,0.06,Naukri
+eLabs Infotech,3,0.06,Naukri
 3M India,2,0.04,Naukri
 9nexus,2,0.04,Naukri
 A Premium Client of Tharare Global,2,0.04,Naukri
+A leading organisation,2,0.04,Naukri
 ABB India Ltd.,2,0.04,Naukri
 ADQ Services,2,0.04,Naukri
 AION-TECH Solutions Limited,2,0.04,Naukri
+AVENIRDIGITAL SOLUTIONS PRIVATE LIMITED,2,0.04,Naukri
 Acesoft Labs,2,0.04,Naukri
-Adani Group,2,0.04,Naukri
 Adhiran Infotech,2,0.04,Naukri
 Aditya Birla Insulators,2,0.04,Naukri
 Adwest Digital,2,0.04,Naukri
@@ -306,7 +312,6 @@ Algoleap Technologies,2,0.04,Naukri
 Altera Corporation,2,0.04,Naukri
 Altos Technologies,2,0.04,Naukri
 Amazon,2,0.04,Naukri
-Amrita Vishwa Vidyapeetham,2,0.04,Naukri
 Analytix Data Services,2,0.04,Naukri
 Apex Engineering Solutions,2,0.04,Naukri
 Apidel Technologies,2,0.04,Naukri
@@ -319,14 +324,16 @@ Aspiration,2,0.04,Naukri
 Axis Finance (AFL),2,0.04,Naukri
 Azimuth Grc,2,0.04,Naukri
 BDO India,2,0.04,Naukri
-BMW Techworks India,2,0.04,Naukri
 BNP Paribas,2,0.04,Naukri
 Baker Tilly Dhc,2,0.04,Naukri
+Beghou Consulting,2,0.04,Naukri
 Beinex,2,0.04,Naukri
 Biological E,2,0.04,Naukri
 Blackstraw Technologies,2,0.04,Naukri
 Bloom Engineering Company,2,0.04,Naukri
 Bombay Softwares,2,0.04,Naukri
+Bounteous x Accolite,2,0.04,Naukri
+Bristlecone,2,0.04,Naukri
 CAI Software,2,0.04,Naukri
 CARBYNETECH,2,0.04,Naukri
 CN Solutions,2,0.04,Naukri
@@ -341,17 +348,16 @@ Client of Markmakers,2,0.04,Naukri
 Coderound Ai,2,0.04,Naukri
 Colgate Palmolive,2,0.04,Naukri
 Competitive Crackers,2,0.04,Naukri
+Conduent,2,0.04,Naukri
+Conneqt,2,0.04,Naukri
 Coromandel International,2,0.04,Naukri
 Credence Resource Management,2,0.04,Naukri
 Credera,2,0.04,Naukri
 CrossAsyst,2,0.04,Naukri
-Curvefore Solutions,2,0.04,Naukri
 DAZN,2,0.04,Naukri
-DDI India,2,0.04,Naukri
 Dataterrain India,2,0.04,Naukri
 Dayforce,2,0.04,Naukri
 Deccan Ai,2,0.04,Naukri
-Decimal Point Analytics,2,0.04,Naukri
 Delhivery,2,0.04,Naukri
 Deloitte Shared Services India,2,0.04,Naukri
 Dev Solutions,2,0.04,Naukri
@@ -366,17 +372,15 @@ Epicor,2,0.04,Naukri
 Equiniti India,2,0.04,Naukri
 Eteam,2,0.04,Naukri
 Evanti Tech,2,0.04,Naukri
+Everforth Apex Systems,2,0.04,Naukri
 Evoke HR solutions private limited,2,0.04,Naukri
 Experian,2,0.04,Naukri
 Experis,2,0.04,Naukri
-Expleo,2,0.04,Naukri
-Exponentia.ai Private Limited,2,0.04,Naukri
-Exsilio Solutions,2,0.04,Naukri
+Exxon Mobil Corporation,2,0.04,Naukri
 Eyeota,2,0.04,Naukri
 FS Technosol Llp,2,0.04,Naukri
 Fatakpay Digital,2,0.04,Naukri
 FedEx,2,0.04,Naukri
-Fidelity International,2,0.04,Naukri
 Firstcall Hresource,2,0.04,Naukri
 Flexm,2,0.04,Naukri
 Flipkart,2,0.04,Naukri
@@ -388,12 +392,11 @@ GIG Consultants,2,0.04,Naukri
 GMR Power Urban Infra,2,0.04,Naukri
 Gainwell Technologies,2,0.04,Naukri
 Gigafactor Solutions,2,0.04,Naukri
-Global Business Ser 4u,2,0.04,Naukri
 Guidehouse,2,0.04,Naukri
 Guidewire Software,2,0.04,Naukri
+Hackajob,2,0.04,Naukri
 Harjai Computers,2,0.04,Naukri
 Haworth,2,0.04,Naukri
-Healthark Wellness Solutions,2,0.04,Naukri
 Hewlett Packard Enterprise,2,0.04,Naukri
 IBS Software Services,2,0.04,Naukri
 ICICI Lombard,2,0.04,Naukri
@@ -402,9 +405,9 @@ Idemia Group,2,0.04,Naukri
 Impact Analytics,2,0.04,Naukri
 Impetus Technologies,2,0.04,Naukri
 Impronics Technologies,2,0.04,Naukri
+In Solutions Global (ISG),2,0.04,Naukri
 Incedo,2,0.04,Naukri
 Indian School of Business & Finance (ISBF),2,0.04,Naukri
-Infinite,2,0.04,Naukri
 Info Edge,2,0.04,Naukri
 InfoCepts,2,0.04,Naukri
 Inginit,2,0.04,Naukri
@@ -423,11 +426,14 @@ Jade Global,2,0.04,Naukri
 Johnson & Johnson,2,0.04,Naukri
 Johnson Electric,2,0.04,Naukri
 Jones Lang LaSalle (JLL),2,0.04,Naukri
-Kastech,2,0.04,Naukri
+KPMG India,2,0.04,Naukri
+Keylent,2,0.04,Naukri
 Kimberly Clark Hygiene Products,2,0.04,Naukri
 Krazy Bee Services,2,0.04,Naukri
 Krazy Mantra Hr Solutions,2,0.04,Naukri
+Kroll,2,0.04,Naukri
 Kuick Research,2,0.04,Naukri
+Kyndryl,2,0.04,Naukri
 LOGESYS SOLUTIONS INDIA PRIVATE LIMITED,2,0.04,Naukri
 Larsen & Toubro (L&T),2,0.04,Naukri
 LatentView,2,0.04,Naukri
@@ -444,27 +450,27 @@ Maction Consulting,2,0.04,Naukri
 Makro Group,2,0.04,Naukri
 Market Expertise,2,0.04,Naukri
 Marsh McLennan,2,0.04,Naukri
-Mastek,2,0.04,Naukri
 Material+,2,0.04,Naukri
-Medpace Clinical Research India,2,0.04,Naukri
 Medtronic,2,0.04,Naukri
 Meesho,2,0.04,Naukri
 Meraki Konsulting,2,0.04,Naukri
-Merit Data And Technology,2,0.04,Naukri
+Merck Sharp & Dohme (MSD),2,0.04,Naukri
 Model N,2,0.04,Naukri
 Moder Solutions,2,0.04,Naukri
 Mondelez,2,0.04,Naukri
 Moodys Analytics,2,0.04,Naukri
 Morningstar,2,0.04,Naukri
-Mullers Solutions,2,0.04,Naukri
+NBFC,2,0.04,Naukri
 NS Global Corporation,2,0.04,Naukri
 Nam Info,2,0.04,Naukri
+Nam Info Pvt Ltd,2,0.04,Naukri
 Narayana Health (NH),2,0.04,Naukri
 Nasu Group,2,0.04,Naukri
 National Institute for Smart Government (NISG),2,0.04,Naukri
 Neoteric Research Consulting Services,2,0.04,Naukri
 Net2Source,2,0.04,Naukri
 News Technology Services,2,0.04,Naukri
+Newsx Nation,2,0.04,Naukri
 Nicco Ventures,2,0.04,Naukri
 Novo Nordisk,2,0.04,Naukri
 Nthinsight,2,0.04,Naukri
@@ -476,13 +482,10 @@ Omega Healthcare,2,0.04,Naukri
 Omnissa,2,0.04,Naukri
 Open Insights,2,0.04,Naukri
 Optimum Solutions,2,0.04,Naukri
-Orcapod Consulting Services,2,0.04,Naukri
 PIERIAN,2,0.04,Naukri
 Paisabazaar,2,0.04,Naukri
 Paramount HR,2,0.04,Naukri
-Parex Technologies,2,0.04,Naukri
 PayU,2,0.04,Naukri
-Pcgi Systems,2,0.04,Naukri
 People Prime Worldwide,2,0.04,Naukri
 Peoples Growth Hr Solutions,2,0.04,Naukri
 Peroptyx,2,0.04,Naukri
@@ -492,16 +495,13 @@ Pinkerton,2,0.04,Naukri
 Pinnacle Group Inc,2,0.04,Naukri
 Policybazaar,2,0.04,Naukri
 Ppfas Asset Management,2,0.04,Naukri
-Premium Aerotec,2,0.04,Naukri
-Prescience Decision Solutions,2,0.04,Naukri
 Proounce,2,0.04,Naukri
 Quarks Technosoft,2,0.04,Naukri
 RJ Softwares Apps Games AWS Experts,2,0.04,Naukri
+Rapid Acceleration Partners,2,0.04,Naukri
 Reed Business Information,2,0.04,Naukri
 Renew,2,0.04,Naukri
 Rentokil Initial,2,0.04,Naukri
-Rentokil PCI,2,0.04,Naukri
-Right Angle Solutions,2,0.04,Naukri
 Robinhood,2,0.04,Greenhouse
 SRM Technologies,2,0.04,Naukri
 SRS Infoway,2,0.04,Naukri
@@ -511,7 +511,6 @@ Satven,2,0.04,Naukri
 Savantys Solutions,2,0.04,Naukri
 Saven Technologies,2,0.04,Naukri
 Scry Analytics,2,0.04,Naukri
-Seven N Consulting,2,0.04,Naukri
 Shell Infotech,2,0.04,Naukri
 Shriram Life Insurance,2,0.04,Naukri
 Siemens,2,0.04,Naukri
@@ -536,29 +535,28 @@ TD Synnex,2,0.04,Naukri
 TELUS Digital,2,0.04,Naukri
 TPF Engineering,2,0.04,Naukri
 Talent Corner HR Services,2,0.04,Naukri
+Tata Consultancy Services(TCS),2,0.04,Naukri
 Team Computers,2,0.04,Naukri
+Tech SMCSquared GCC,2,0.04,Naukri
+TechBlocks,2,0.04,Naukri
 Techno Compass Consulting,2,0.04,Naukri
 Technothinksup,2,0.04,Naukri
 TekWissen,2,0.04,Naukri
-Tekskill,2,0.04,Naukri
-Teplar Solutions,2,0.04,Naukri
 Tesco,2,0.04,Naukri
 Texlon,2,0.04,Naukri
 Thales,2,0.04,Naukri
-Thermo Fisher Scientific,2,0.04,Naukri
 Tradeweb,2,0.04,Naukri
 Tresvista Financial Services,2,0.04,Naukri
 Trianz,2,0.04,Naukri
 Trinity Life Sciences,2,0.04,Naukri
-UPS Supply Chain Solutions (UPS SCS),2,0.04,Naukri
 VWR International,2,0.04,Naukri
 Vaisesika Consulting,2,0.04,Naukri
 ValueNotes,2,0.04,Naukri
 Vantiva,2,0.04,Naukri
 Vayaa Systems,2,0.04,Naukri
 Vconstruct,2,0.04,Naukri
+Vedamcloud Technologies,2,0.04,Naukri
 Velodata Global,2,0.04,Naukri
-Veniso Solutions,2,0.04,Naukri
 Vertiv Group Corp,2,0.04,Naukri
 Volvo Auto,2,0.04,Naukri
 Voya India,2,0.04,Naukri
@@ -571,6 +569,7 @@ WinWire,2,0.04,Naukri
 Wissen Infotech,2,0.04,Naukri
 Wissen Technology,2,0.04,Naukri
 Wits Innovation Lab,2,0.04,Naukri
+Worldpay,2,0.04,Naukri
 Xanthus Software Solutions,2,0.04,Naukri
 Xebia It Architects,2,0.04,Naukri
 YO It Consulting,2,0.04,Naukri
@@ -578,6 +577,8 @@ Ydts Global,2,0.04,Naukri
 Zuntra Digital,2,0.04,Naukri
 Zyphra Tech Solutions,2,0.04,Naukri
 ams OSRAM Group,2,0.04,Naukri
+anblicks,2,0.04,Naukri
+banking,2,0.04,Naukri
 enGen Global,2,0.04,Naukri
 .,1,0.02,Naukri
 ..,1,0.02,Naukri
@@ -589,8 +590,8 @@ enGen Global,2,0.04,Naukri
 A Client of TEAM RECRUITERS,1,0.02,Naukri
 A Top-Tier Global IT MNC,1,0.02,Naukri
 A client of Mastermind network,1,0.02,Naukri
-A leading organisation,1,0.02,Naukri
 "A specialized financial advisory firm providing fractional CFO services, financial planning, Starups",1,0.02,Naukri
+A1 Human Wealth Management,1,0.02,Naukri
 A2G Technologies,1,0.02,Naukri
 AArete,1,0.02,Naukri
 AB,1,0.02,Naukri
@@ -609,12 +610,13 @@ ARD Softech,1,0.02,Naukri
 ARP Investments,1,0.02,Naukri
 ARSIPL,1,0.02,Naukri
 ATA Freight,1,0.02,Naukri
-AVENIRDIGITAL SOLUTIONS PRIVATE LIMITED,1,0.02,Naukri
 AXIS DIRECT,1,0.02,Naukri
 Aaron Softech,1,0.02,Naukri
 Aays Analytics,1,0.02,Naukri
+Aayu App,1,0.02,Naukri
 Abbott,1,0.02,Naukri
 Abotts Inc,1,0.02,Naukri
+Acara Solutions,1,0.02,Naukri
 Accelon Consulting,1,0.02,Naukri
 Accion Labs,1,0.02,Naukri
 Account Mein,1,0.02,Naukri
@@ -653,12 +655,13 @@ Akey Hr Solutions,1,0.02,Naukri
 Alcircle,1,0.02,Naukri
 Alcor,1,0.02,Naukri
 Alegeus,1,0.02,Naukri
-Aliaxis,1,0.02,Naukri
+Aliengena Captive,1,0.02,Naukri
 Allianz,1,0.02,Naukri
 Allstate Solutions (ASPL),1,0.02,Naukri
 Alpha Alternatives,1,0.02,Naukri
 Alpha Analytics Services,1,0.02,Naukri
 Alpha Torana,1,0.02,Naukri
+Alpharithm Technologies,1,0.02,Naukri
 Alt-s Technology,1,0.02,Naukri
 Altek Institution,1,0.02,Naukri
 Alten,1,0.02,Naukri
@@ -666,8 +669,9 @@ Ameriprise Financial,1,0.02,Naukri
 Amla Commerce,1,0.02,Naukri
 Ampath Trust,1,0.02,Naukri
 Amplify-now,1,0.02,Naukri
-Analogyx Bi,1,0.02,Naukri
+Amrita Vishwa Vidyapeetham,1,0.02,Naukri
 Analytics Vidhya,1,0.02,Naukri
+Anantaa Gsk Innovations,1,0.02,Naukri
 Anarock Property Consultants,1,0.02,Naukri
 Anasol Consultancy Services,1,0.02,Naukri
 Anblicks Solutions,1,0.02,Naukri
@@ -683,18 +687,20 @@ Applause,1,0.02,Naukri
 Applied Data Finance,1,0.02,Naukri
 Applied Information Inc (India),1,0.02,Naukri
 Apporya Analytic Solutions,1,0.02,Naukri
+Appquarterz Technologies,1,0.02,Naukri
 Appscrip,1,0.02,Naukri
+Appsource Services,1,0.02,Naukri
 Appstek Information Services,1,0.02,Naukri
 Apptad,1,0.02,Naukri
 Aptagrim Consulting,1,0.02,Naukri
 Aptita,1,0.02,Naukri
 Arahas Technologies,1,0.02,Naukri
-Arctic Wolf Networks,1,0.02,Naukri
 Arcus Ai Limited,1,0.02,Naukri
 Ardorcomm Media,1,0.02,Naukri
 Arminus Software,1,0.02,Naukri
 Arohak Technologies,1,0.02,Naukri
 Arrow Point Market Research And Insights Solutions,1,0.02,Naukri
+Arshil Llc,1,0.02,Naukri
 Arsr Technologies,1,0.02,Naukri
 Artpark,1,0.02,Naukri
 Arvind,1,0.02,Naukri
@@ -707,7 +713,6 @@ Assertive Buisness Solutions,1,0.02,Naukri
 Assertive Business Solutions,1,0.02,Naukri
 Assurant Solutions,1,0.02,Naukri
 Aster DM Healthcare,1,0.02,Naukri
-Atyati Technologies,1,0.02,Naukri
 Atyeti,1,0.02,Naukri
 Audax Labs,1,0.02,Naukri
 Augie,1,0.02,Naukri
@@ -716,7 +721,6 @@ Austell Pharmaceuticals (pty) Ltd,1,0.02,Naukri
 Automobile Engineering,1,0.02,Naukri
 Avaloq,1,0.02,Naukri
 Aveva,1,0.02,Naukri
-Avig Business Solutions,1,0.02,Naukri
 Avinyatech Elevators Pvt. Ltd.,1,0.02,Naukri
 Avotima,1,0.02,Naukri
 Awesome Analytics,1,0.02,Naukri
@@ -730,9 +734,11 @@ B3intelligence,1,0.02,Naukri
 BCE Global Technology Centre,1,0.02,Naukri
 BDO Rise,1,0.02,Naukri
 BLACK & WHITE BUSINESS SOLUTIONS,1,0.02,Naukri
+BMW Techworks India,1,0.02,Naukri
 BRG Enterprise Solutions India,1,0.02,Naukri
 BTI Consultants,1,0.02,Naukri
 BUCHANAN TECHNOLOGIES INDIA,1,0.02,Naukri
+BVM Web Solutions,1,0.02,Naukri
 Balboa Tech,1,0.02,Naukri
 Banyan Solutions,1,0.02,Naukri
 Baseforge Technologies,1,0.02,Naukri
@@ -741,12 +747,10 @@ Bayer Zydus Pharma,1,0.02,Naukri
 Bayinfotech,1,0.02,Naukri
 Bee Management Consultancy Pvt. Ltd,1,0.02,Naukri
 Bees Software Solutions,1,0.02,Naukri
-Beghou Consulting,1,0.02,Naukri
 Beon Consult,1,0.02,Naukri
 Betanxt,1,0.02,Naukri
 Beyond Key,1,0.02,Naukri
 Big Service Based org,1,0.02,Naukri
-Bigeye Global Solutions,1,0.02,Naukri
 Billions United,1,0.02,Naukri
 "Biltrax Const, Data Research Insight",1,0.02,Naukri
 Biophore,1,0.02,Naukri
@@ -759,6 +763,7 @@ Biztransights Solutions,1,0.02,Naukri
 Blismos Solutions,1,0.02,Naukri
 Blossoms Solutions,1,0.02,Naukri
 Blueoptima,1,0.02,Naukri
+Bluesoft Software Solution,1,0.02,Naukri
 Bluestone Software India PVT Limited,1,0.02,Naukri
 Bluo Software,1,0.02,Naukri
 Bluslash Analytics,1,0.02,Naukri
@@ -772,26 +777,28 @@ Bridgenext,1,0.02,Naukri
 Bridgestone - Global Capability Center,1,0.02,Naukri
 Brillius,1,0.02,Naukri
 Bringle Academy,1,0.02,Naukri
-Bristlecone,1,0.02,Naukri
 Bromine Infotech,1,0.02,Naukri
 Bunge,1,0.02,Naukri
 Buro Happold,1,0.02,Naukri
 Business Analyst- In IT Logistic Company.,1,0.02,Naukri
 Buzzworks Business Services Private Limited,1,0.02,Naukri
 Bwise Solutions,1,0.02,Naukri
+Bytegrow,1,0.02,Naukri
 C5i,1,0.02,Naukri
 CBT Infotech Pvt ltd,1,0.02,Naukri
 CLIENT OF FIRM,1,0.02,Naukri
 CLIENT OF IT SCIENT,1,0.02,Naukri
 CMA CGM,1,0.02,Naukri
+CODERS BRAIN,1,0.02,Naukri
 CRE Matrix,1,0.02,Naukri
 CS Disco,1,0.02,Naukri
 CUMI,1,0.02,Naukri
+Caci Services,1,0.02,Naukri
 Caliber Organisation,1,0.02,Naukri
-Cami Ai,1,0.02,Naukri
 Camp Systems,1,0.02,Naukri
 Canam Group,1,0.02,Naukri
 Cantellat Software,1,0.02,Naukri
+Caprus It,1,0.02,Naukri
 Careator Technologies,1,0.02,Naukri
 CareerFit.ai,1,0.02,Naukri
 Castlight Health,1,0.02,Naukri
@@ -801,7 +808,6 @@ Chartered Speed,1,0.02,Naukri
 Chemical company,1,0.02,Naukri
 Chiacon Consulting,1,0.02,Naukri
 Chingari,1,0.02,Naukri
-Choice International,1,0.02,Naukri
 Chokhani Pharma Vet,1,0.02,Naukri
 Chola MS,1,0.02,Naukri
 Chryselys,1,0.02,Naukri
@@ -817,14 +823,17 @@ Clean Harbors,1,0.02,Naukri
 Cleartrip Private Limited,1,0.02,Naukri
 Client of Searchends Rx Chem Services,1,0.02,Naukri
 Client of Spring HR,1,0.02,Naukri
+Client of Sunrise Job Consultancy,1,0.02,Naukri
 Client of Talent Corner,1,0.02,Naukri
 Clinovo,1,0.02,Naukri
 Cloud Analogy,1,0.02,Naukri
 Cloudaeon,1,0.02,Naukri
+Cloudsara Technologies,1,0.02,Naukri
 Cloudsmartz,1,0.02,Naukri
 Cloudza Technologies,1,0.02,Naukri
 Clustor Computing,1,0.02,Naukri
 Clustrex Data,1,0.02,Naukri
+Cnel India,1,0.02,Naukri
 Coactive It Solutions,1,0.02,Naukri
 Code Microsystems,1,0.02,Naukri
 Codebees Technologies,1,0.02,Naukri
@@ -843,12 +852,11 @@ Coleda B2b,1,0.02,Naukri
 Collaborate Solutions,1,0.02,Naukri
 Comcast,1,0.02,Naukri
 Comfort Securities,1,0.02,Naukri
+"Commonwealth Bank of Australia, India",1,0.02,Naukri
 Compunnel,1,0.02,Naukri
 Concept Medical,1,0.02,Naukri
-Conduent,1,0.02,Naukri
 Connect iO,1,0.02,Naukri
 ConnectWise,1,0.02,Naukri
-Conneqt,1,0.02,Naukri
 Continental,1,0.02,Naukri
 Continuum Global Solutions,1,0.02,Naukri
 Convergeone India,1,0.02,Naukri
@@ -867,12 +875,13 @@ Crafsol Technology Solutions,1,0.02,Naukri
 Craft Idea Vapi,1,0.02,Naukri
 Creditspring,1,0.02,Naukri
 Crescero Capital Ifsc Llp,1,0.02,Naukri
-Crif Solutions,1,0.02,Naukri
 Crispidea,1,0.02,Naukri
 Crunchyroll,1,0.02,Naukri
+Cruxbytes Consultancy Sevices,1,0.02,Naukri
 Csquare consultant,1,0.02,Naukri
 Cummins,1,0.02,Naukri
 Currant Research Aesthetics,1,0.02,Naukri
+Curvefore Solutions,1,0.02,Naukri
 Cvviz Softwares,1,0.02,Naukri
 Cyncly,1,0.02,Naukri
 Cynosure Corporate Solutions,1,0.02,Naukri
@@ -887,12 +896,14 @@ Dark Bear Web Solutions Pvt. Ltd.,1,0.02,Naukri
 Data Bridge (DBMR),1,0.02,Naukri
 Data Marshall,1,0.02,Naukri
 Data Prowess,1,0.02,Naukri
+Datachamps,1,0.02,Naukri
 Datam Intelligence,1,0.02,Naukri
 Datamaze Solutions,1,0.02,Naukri
 Datametica,1,0.02,Naukri
 Datavail,1,0.02,Naukri
 Dbiz.ai,1,0.02,Naukri
 Dealermatix Technologies,1,0.02,Naukri
+Decimal Point Analytics,1,0.02,Naukri
 Decisions,1,0.02,Naukri
 Decisiontree Analytics & Services,1,0.02,Naukri
 Deepedge,1,0.02,Naukri
@@ -903,7 +914,8 @@ Demandbase,1,0.02,Naukri
 Demos Project,1,0.02,Naukri
 Devise Software,1,0.02,Naukri
 Devoint It Solutions,1,0.02,Naukri
-Dharampal Satyapal Group (DS Group),1,0.02,Naukri
+Dezven Software Solution,1,0.02,Naukri
+Dforth Technologies,1,0.02,Naukri
 Diageo,1,0.02,Naukri
 Diensten Tech,1,0.02,Naukri
 Digital Global Services,1,0.02,Naukri
@@ -977,7 +989,6 @@ Enigmatics Labs,1,0.02,Naukri
 Entire It Design,1,0.02,Naukri
 Eon Networks,1,0.02,Naukri
 Epiroc Mining India,1,0.02,Naukri
-Equentia Energy,1,0.02,Naukri
 Esds Software Solutions,1,0.02,Naukri
 Essex Lake Group,1,0.02,Naukri
 Estalvis Advisors,1,0.02,Naukri
@@ -994,11 +1005,12 @@ Exly,1,0.02,Naukri
 Expedite Software Service,1,0.02,Naukri
 Experity,1,0.02,Naukri
 Expian Technologies,1,0.02,Naukri
+Exponentia.ai Private Limited,1,0.02,Naukri
+Exsilio Solutions,1,0.02,Naukri
 ExxonMobil,1,0.02,Naukri
 Ezytm Technologies,1,0.02,Naukri
 F5,1,0.02,Naukri
 FCS Software Solutions,1,0.02,Naukri
-FIS,1,0.02,Naukri
 Factentry Data Solutions,1,0.02,Naukri
 Facts N Data,1,0.02,Naukri
 Factspan Analytics,1,0.02,Naukri
@@ -1011,6 +1023,7 @@ Fiddich Consulting,1,0.02,Naukri
 Filo Edtech,1,0.02,Naukri
 Financial Services,1,0.02,Naukri
 Finite HR Consulting Private Limited,1,0.02,Naukri
+Finprov Business Services,1,0.02,Naukri
 Fint Solutions,1,0.02,Naukri
 Fire Bee Techno Services,1,0.02,Naukri
 Fireblaze Ai School,1,0.02,Naukri
@@ -1030,6 +1043,7 @@ Fortrea Development India,1,0.02,Naukri
 Fortune 500 IT MNC,1,0.02,Naukri
 Fortune 500 supplychain Company,1,0.02,Naukri
 Fortune Wealth Management,1,0.02,Naukri
+Fotis Technologies,1,0.02,Naukri
 Foundation Ai,1,0.02,Naukri
 Foundation To Educate Girls Globally,1,0.02,Naukri
 Foxfire Services,1,0.02,Naukri
@@ -1044,7 +1058,6 @@ Fundvice,1,0.02,Naukri
 Fusemachines,1,0.02,Naukri
 Fusion Practices,1,0.02,Naukri
 Futran Tech Solutions,1,0.02,Naukri
-Futurense Technologies,1,0.02,Naukri
 G2mhub Global,1,0.02,Naukri
 GE Appliances,1,0.02,Naukri
 GEC Media Group,1,0.02,Naukri
@@ -1061,12 +1074,12 @@ Gegnat Yards,1,0.02,Naukri
 Geotechnosoft,1,0.02,Naukri
 Getinz Techno Services,1,0.02,Naukri
 Gigaops Global Solutions,1,0.02,Naukri
+Global Business Ser 4u,1,0.02,Naukri
 Global Foundries Inc,1,0.02,Naukri
 Global Information Systems Technology (GIST,1,0.02,Naukri
 Global Information Systems Technology (GIST),1,0.02,Naukri
 Global Talent Track,1,0.02,Naukri
 Global Technology Solutions Company @ Pune,1,0.02,Naukri
-Globalbees Brands,1,0.02,Naukri
 Globant,1,0.02,Naukri
 Goibibo,1,0.02,Naukri
 Goodwin Financial Holdings,1,0.02,Naukri
@@ -1077,8 +1090,8 @@ Grant Thornton India Pvt Ltd,1,0.02,Naukri
 Gravitix Tech Solutions,1,0.02,Naukri
 Greedygame Media,1,0.02,Naukri
 Green Hedge Capital,1,0.02,Naukri
-Green Leaf's Client,1,0.02,Naukri
 Greensoft Solution,1,0.02,Naukri
+Grey Chain,1,0.02,Naukri
 Grintex,1,0.02,Naukri
 Group Bayport,1,0.02,Naukri
 Guardanthealth,1,0.02,Naukri
@@ -1086,9 +1099,11 @@ Guenstiger.de,1,0.02,Naukri
 Gun Marine Services (GMS),1,0.02,Naukri
 Gurukrupa Exports,1,0.02,Naukri
 Gyantu,1,0.02,Naukri
+H1 Life Sciences,1,0.02,Naukri
 HIGS Software,1,0.02,Naukri
 HR Mind,1,0.02,Naukri
 HR Remedy India,1,0.02,Naukri
+HR SOLUTIONS,1,0.02,Naukri
 Haier Appliances,1,0.02,Naukri
 Harita Techserv,1,0.02,Naukri
 Harman International,1,0.02,Naukri
@@ -1104,35 +1119,36 @@ Healthworksai,1,0.02,Naukri
 Heera Software,1,0.02,Naukri
 Heerasoft Technologies,1,0.02,Naukri
 Heinz,1,0.02,Naukri
-Helical IT Solutions,1,0.02,Naukri
 Hidden,1,0.02,Naukri
 High Beam Global,1,0.02,Naukri
+High Rise Solutions,1,0.02,Naukri
 Highlevel Llc,1,0.02,Naukri
 Highradius,1,0.02,Naukri
 Hinduja Global Solutions (HGS),1,0.02,Naukri
 Hinduja Tech,1,0.02,Naukri
 Hir Infotech,1,0.02,Naukri
+Hirexa Solutions,1,0.02,Naukri
 Hiring Mavericks Mumbai,1,0.02,Naukri
-Hiring Squad,1,0.02,Naukri
 Hiring for - IT Consulting MNC,1,0.02,Naukri
 Hiring for - Leading IT Co.,1,0.02,Naukri
 Hiring for Leading MNC Company,1,0.02,Naukri
 Hiring for MNC,1,0.02,Naukri
+Hiring is with Digital Analytics & AI Company in Chennai,1,0.02,Naukri
 Hitachi Vantara,1,0.02,Naukri
 Hollister Medical India,1,0.02,Naukri
 Hoonar Tekwurks Consulting,1,0.02,Naukri
 Horizontal Integration,1,0.02,Naukri
-Hsbc,1,0.02,Naukri
 Hughes Systique,1,0.02,Naukri
 Human Bio-organics,1,0.02,Naukri
 Humanebits,1,0.02,Naukri
+Huntertech Ventures,1,0.02,Naukri
 Hvantage,1,0.02,Naukri
 Hyfun Foods,1,0.02,Naukri
 Hytech Professionals,1,0.02,Naukri
 I-tech Infonet,1,0.02,Naukri
-ICE Data Services,1,0.02,Naukri
 IKS HEALTH,1,0.02,Naukri
 ILA Agri Services,1,0.02,Naukri
+ISS Corporate Solutions,1,0.02,Naukri
 IT SCIENT CONSULTING PRIVATE LIMITED,1,0.02,Naukri
 Iauro Systems,1,0.02,Naukri
 Icare Academy Hyderabad,1,0.02,Naukri
@@ -1148,7 +1164,6 @@ Iisd,1,0.02,Naukri
 Ilensys Technologies,1,0.02,Naukri
 Impressico Business Solutions,1,0.02,Naukri
 Improx Data And Cloud Consulting,1,0.02,Naukri
-In Solutions Global (ISG),1,0.02,Naukri
 Inavan,1,0.02,Naukri
 Incanus Technologies,1,0.02,Naukri
 Incisive Research,1,0.02,Naukri
@@ -1163,29 +1178,26 @@ Indo Fuji Information Technologies,1,0.02,Naukri
 IndustryARC,1,0.02,Naukri
 Inferyx,1,0.02,Naukri
 Infineon,1,0.02,Naukri
+Infinite,1,0.02,Naukri
 Infinity Jobs Noida,1,0.02,Naukri
 Infledge Infotech,1,0.02,Naukri
 InfoStride,1,0.02,Naukri
 Infogence Marketing And Advisory Services,1,0.02,Naukri
 Infogrowth,1,0.02,Naukri
-Infologitech,1,0.02,Naukri
 Infomaze Technologies,1,0.02,Naukri
 Infotel Uk Consulting,1,0.02,Naukri
 Ingenium It,1,0.02,Naukri
-Ingrain Systems,1,0.02,Naukri
 Inito,1,0.02,Naukri
 Innodata India,1,0.02,Naukri
 Innover Digital,1,0.02,Naukri
 Innowise,1,0.02,Naukri
 Innsof,1,0.02,Naukri
-Insight Advisors,1,0.02,Naukri
 Insigno Quipment Technologies (India) Private Limited,1,0.02,Naukri
-Insphere Solutions,1,0.02,Naukri
 Institutional Shareholder Services,1,0.02,Naukri
-Insurextech,1,0.02,Naukri
 Insurity,1,0.02,Naukri
 Integreon,1,0.02,Naukri
 Intelizign Lifecycle Services,1,0.02,Naukri
+Intellect Software Solutions,1,0.02,Naukri
 Intellify Solutions,1,0.02,Naukri
 Intelliswift,1,0.02,Naukri
 Intent Market Research,1,0.02,Naukri
@@ -1200,6 +1212,7 @@ Intrics Solutions,1,0.02,Naukri
 Introspective Market Research,1,0.02,Naukri
 Invenia,1,0.02,Naukri
 Invesco,1,0.02,Naukri
+Ipartner Consulting Inc,1,0.02,Naukri
 Iris Consultants,1,0.02,Naukri
 Isource,1,0.02,Naukri
 It minds,1,0.02,Naukri
@@ -1213,6 +1226,7 @@ Jeeva Organic,1,0.02,Naukri
 Jefferies Financial Group,1,0.02,Naukri
 Jenoptik India,1,0.02,Naukri
 Jforce Solutions,1,0.02,Naukri
+Jigya Software Services,1,0.02,Naukri
 Jiva Ayurveda,1,0.02,Naukri
 Job Seeks 4U Consultancy Services,1,0.02,Naukri
 Jobaaj Com,1,0.02,Naukri
@@ -1229,7 +1243,6 @@ KMK Consulting,1,0.02,Naukri
 KONCPT AI,1,0.02,Naukri
 KP Group,1,0.02,Naukri
 KPI Partners,1,0.02,Naukri
-KPMG India,1,0.02,Naukri
 Kaar Technologies,1,0.02,Naukri
 Kaba Group,1,0.02,Naukri
 Kaleesuwari Refinery and Industry (KRIPL),1,0.02,Naukri
@@ -1260,25 +1273,21 @@ Kotak Life Insurance,1,0.02,Naukri
 Kothari Medical Centre,1,0.02,Naukri
 Kovai Soft Technologies,1,0.02,Naukri
 Krazymantra It Solutions,1,0.02,Naukri
-Kroll,1,0.02,Naukri
 Kryzen Biotech,1,0.02,Naukri
-Kumaran Systems,1,0.02,Naukri
-Kyndryl,1,0.02,Naukri
 L''OREAL INDIA PVT LTD,1,0.02,Naukri
 LK Capital Broking,1,0.02,Naukri
 LPL Financial Holdings,1,0.02,Naukri
 LSC Lifesciences,1,0.02,Naukri
 LTI Mindtree,1,0.02,Naukri
 Lab Informatics,1,0.02,Naukri
-Lagozon Technologies,1,0.02,Naukri
 Lam Research,1,0.02,Naukri
 Lancesoft,1,0.02,Naukri
 Lancet Software,1,0.02,Naukri
 LateShipment.com,1,0.02,Naukri
+Latent Bridge,1,0.02,Naukri
 Laxaura Business Services Llp,1,0.02,Naukri
 LeadWinner,1,0.02,Naukri
 Leading Digital Applications Company,1,0.02,Naukri
-Leading Global IT Service and Consulting Organisation,1,0.02,Naukri
 Leading Global technology Services,1,0.02,Naukri
 Leading IT MNC,1,0.02,Naukri
 Leading Technology Consulting MNC,1,0.02,Naukri
@@ -1297,6 +1306,7 @@ Locus IT Services Pvt Ltd,1,0.02,Naukri
 Log9 Materials,1,0.02,Naukri
 Logan Data,1,0.02,Naukri
 Lonza,1,0.02,Naukri
+Love In Store,1,0.02,Naukri
 Loyalty Juggernaut,1,0.02,Naukri
 Lumen Technologies,1,0.02,Naukri
 Lumenore,1,0.02,Naukri
@@ -1310,12 +1320,10 @@ MBA Journals,1,0.02,Naukri
 MD India Health Insurance TPA Pvt Ltd,1,0.02,Naukri
 MNCS,1,0.02,Naukri
 MNJ Software,1,0.02,Naukri
-MRCC,1,0.02,Naukri
 MSCI Services,1,0.02,Naukri
 MUFG Bank,1,0.02,Naukri
 MWH India,1,0.02,Naukri
 Machbizz Marketers,1,0.02,Naukri
-Macquarie,1,0.02,Naukri
 Madbee,1,0.02,Naukri
 Maddisoft Solutions,1,0.02,Naukri
 Maddisoft Solutions India Pvt Ltd,1,0.02,Naukri
@@ -1326,6 +1334,7 @@ Mancer Consulting Services,1,0.02,Naukri
 Manlitics B2b Ites,1,0.02,Naukri
 Manpowergroup Services India,1,0.02,Naukri
 Mansa Inc.,1,0.02,Naukri
+Mantle Solutions,1,0.02,Naukri
 Mantra It Systems,1,0.02,Naukri
 Mantras2Success Consultants,1,0.02,Naukri
 Manufacturing Company,1,0.02,Naukri
@@ -1339,18 +1348,18 @@ Marketlook Consulting,1,0.02,Naukri
 Markntel Advisors,1,0.02,Naukri
 Mascot E Services,1,0.02,Naukri
 Masscom Corporation,1,0.02,Naukri
+Matrimony com,1,0.02,Naukri
 Maven Marketing,1,0.02,Naukri
 Mavens I,1,0.02,Naukri
 Maxim Research,1,0.02,Naukri
-Maximus,1,0.02,Naukri
 Mckinsey & Company,1,0.02,Naukri
 Mclene Soft Solutions,1,0.02,Naukri
 Mebigo Labs,1,0.02,Naukri
 Medknow Publications,1,0.02,Naukri
+Medpace Clinical Research India,1,0.02,Naukri
 Medtech Life,1,0.02,Naukri
 Megdap Innovation Labs,1,0.02,Naukri
 Merative,1,0.02,Naukri
-Merck Sharp & Dohme (MSD),1,0.02,Naukri
 Metlife,1,0.02,Naukri
 Metropolis Technologies,1,0.02,Naukri
 Mfsg Technologies (india),1,0.02,Naukri
@@ -1372,27 +1381,27 @@ Mmsh Clinical Research,1,0.02,Naukri
 Mobilution It Systems,1,0.02,Naukri
 MockWin,1,0.02,Naukri
 ModMed Technologies India Private Limited,1,0.02,Naukri
-Modus Business Transformation Platform,1,0.02,Naukri
 Money Mantra Online,1,0.02,Naukri
 Moprens Solutions,1,0.02,Naukri
 Moral Financial Research,1,0.02,Naukri
 Morgan Stanley,1,0.02,Naukri
 Movate Technologies,1,0.02,Naukri
+Movate Technologies(Prescience),1,0.02,Naukri
 Mr Technical Veer Digital Services,1,0.02,Naukri
 Mudra Ooh,1,0.02,Naukri
 Mufg Pension & Market Services,1,0.02,Naukri
+Mullers Solutions,1,0.02,Naukri
 Multi-act Trade & Investments,1,0.02,Naukri
 Multinational Company,1,0.02,Naukri
 Multiverse Solutions,1,0.02,Naukri
-Mumbai Based MNC - Leading Player in FMCG,1,0.02,Naukri
 My Future Hub,1,0.02,Naukri
 MyCityBanglore,1,0.02,Naukri
 Mystifly Consulting,1,0.02,Naukri
 Myvirtualdesks,1,0.02,Naukri
-NBFC,1,0.02,Naukri
 NLB,1,0.02,Naukri
 NTT DATA BUSINESS SOLUTIONS,1,0.02,Naukri
 NXG World,1,0.02,Naukri
+Nationwide Insurance,1,0.02,Naukri
 Natobotics Technologies,1,0.02,Naukri
 Naukri E-hire,1,0.02,Naukri
 Nauticalinfo Solutions,1,0.02,Naukri
@@ -1402,7 +1411,6 @@ Nbits,1,0.02,Naukri
 Ncube Infosolutions,1,0.02,Naukri
 Nelsun Coir Products,1,0.02,Naukri
 Neoquant Solutions,1,0.02,Naukri
-Net Connect,1,0.02,Naukri
 Net Square,1,0.02,Naukri
 NetApp,1,0.02,Naukri
 Netcom Learning,1,0.02,Naukri
@@ -1411,11 +1419,10 @@ Netpace Inc,1,0.02,Naukri
 Netserv,1,0.02,Naukri
 Network Security Solutions,1,0.02,Naukri
 Neufvasi Digital Solutions,1,0.02,Naukri
-Neurealm,1,0.02,Naukri
 Neurostellar,1,0.02,Naukri
 New Era India,1,0.02,Naukri
+New Opportunity Consultancy,1,0.02,Naukri
 Newfangled Vision,1,0.02,Naukri
-Newsx Nation,1,0.02,Naukri
 Nexdigm (SKP),1,0.02,Naukri
 Nexgeniot,1,0.02,Naukri
 Nexgile Technologies,1,0.02,Naukri
@@ -1438,7 +1445,6 @@ Nityo Infotech,1,0.02,Naukri
 Noreste Inc,1,0.02,Naukri
 Northern Arc Capital,1,0.02,Naukri
 Nous Infosystems,1,0.02,Naukri
-Novalnet E Solutions,1,0.02,Naukri
 Ns-lead B2b Global,1,0.02,Naukri
 Nstarx India,1,0.02,Naukri
 Nuacem AI,1,0.02,Naukri
@@ -1463,6 +1469,7 @@ Optimizze IT Solutions,1,0.02,Naukri
 Oracle,1,0.02,Naukri
 Oramate Technology,1,0.02,Naukri
 Orange,1,0.02,Naukri
+Orcapod Consulting Services,1,0.02,Naukri
 Origin Hr,1,0.02,Naukri
 Ours Global,1,0.02,Naukri
 Overseas Cyber Technical Services (OCTS),1,0.02,Naukri
@@ -1471,9 +1478,11 @@ P&G,1,0.02,Naukri
 PAL It Tech,1,0.02,Naukri
 PROCONNECT CONSULTING,1,0.02,Naukri
 PRODAT,1,0.02,Naukri
+PRS Compressors,1,0.02,Naukri
 Panasa,1,0.02,Naukri
 Panasonic Life Solutions,1,0.02,Naukri
 Paramount Health Services,1,0.02,Naukri
+Parken Solution,1,0.02,Naukri
 Payroll is Randomtrees(product based company),1,0.02,Naukri
 Paytm,1,0.02,Naukri
 Peak Finder Consulting,1,0.02,Naukri
@@ -1526,9 +1535,7 @@ Promax Legal,1,0.02,Naukri
 Pronix It Solutions,1,0.02,Naukri
 Prospect Info Solution,1,0.02,Naukri
 Prospectmetrix,1,0.02,Naukri
-Protiviti India,1,0.02,Naukri
 Protocol Zone,1,0.02,Naukri
-Providence Global Center,1,0.02,Naukri
 Prowerse Tech,1,0.02,Naukri
 Prowess Publishing,1,0.02,Naukri
 Prowess Selling Skills,1,0.02,Naukri
@@ -1558,21 +1565,19 @@ Rahane One Private Limited,1,0.02,Naukri
 Rail Labs Private Limited,1,0.02,Naukri
 Rakibe Dynamics Nashik,1,0.02,Naukri
 Ralph Lauren,1,0.02,Naukri
-Rapid Acceleration Partners,1,0.02,Naukri
 Rapidflow,1,0.02,Naukri
 Rapsys Tech Solutions,1,0.02,Naukri
 Raptakos Brett And Company,1,0.02,Naukri
 Rashmi Chourasiya,1,0.02,Naukri
 Ratnabali Capital Markets Limited (RCML),1,0.02,Naukri
 Reax Technology Platforms,1,0.02,Naukri
-Recrui8,1,0.02,Naukri
 Recruitrix Technologies,1,0.02,Naukri
+Red Hat,1,0.02,Naukri
 Redberry,1,0.02,Naukri
 Redbus,1,0.02,Naukri
 Regalix,1,0.02,Naukri
 Regeneron,1,0.02,Naukri
 Relaxo,1,0.02,Naukri
-Relevantz Technology Services,1,0.02,Naukri
 Religare Broking (RBL),1,0.02,Naukri
 Relinns,1,0.02,Naukri
 Remote Programmer,1,0.02,Naukri
@@ -1591,17 +1596,20 @@ Rexus Group,1,0.02,Naukri
 Rfid4u It Solutions,1,0.02,Naukri
 Rhenix Lifesciences,1,0.02,Naukri
 Rhosigma Engineering & Automations,1,0.02,Naukri
+Right Angle Solutions,1,0.02,Naukri
 Right Step Consulting,1,0.02,Naukri
+Riktam Technology Consulting,1,0.02,Naukri
 Rishabh Gupta Corp,1,0.02,Naukri
 Risk Educators,1,0.02,Naukri
 Riverlog Software,1,0.02,Naukri
-Rockwell Automation,1,0.02,Naukri
 Rohan Builders & Developers,1,0.02,Naukri
 Rohnium India,1,0.02,Naukri
 Rolls-Royce,1,0.02,Naukri
 Rosmerta Technologies,1,0.02,Naukri
+Rotonn Right On Time,1,0.02,Naukri
 Rpa Infotech,1,0.02,Naukri
 Ruby Seven Studios,1,0.02,Naukri
+Rubyroman Tech,1,0.02,Naukri
 Rucha Group,1,0.02,Naukri
 Rxadvance Pbm,1,0.02,Naukri
 Rxlogix Corporation,1,0.02,Naukri
@@ -1621,7 +1629,6 @@ ST Courier,1,0.02,Naukri
 Saaki Argus And Averil Consulting,1,0.02,Naukri
 Safex International,1,0.02,Naukri
 Sagility India,1,0.02,Naukri
-Sagous,1,0.02,Naukri
 Saguna Consulting Services,1,0.02,Naukri
 Sai Info Solution,1,0.02,Naukri
 Sais It Services,1,0.02,Naukri
@@ -1630,6 +1637,7 @@ Sandhata Technologies,1,0.02,Naukri
 Sanmina,1,0.02,Naukri
 Santriya Technologies,1,0.02,Naukri
 Sapling Creations,1,0.02,Naukri
+Sapphire Infocom,1,0.02,Naukri
 Sattva Consulting,1,0.02,Naukri
 Savista,1,0.02,Naukri
 Saviynt,1,0.02,Naukri
@@ -1638,6 +1646,7 @@ Scaleupally,1,0.02,Naukri
 Schneider Electric,1,0.02,Naukri
 Schneider Electric India Pvt. Ltd.,1,0.02,Naukri
 Scienaptic Systems,1,0.02,Naukri
+Scientific Web Solutions,1,0.02,Naukri
 Screl,1,0.02,Naukri
 Seabit Technologies,1,0.02,Naukri
 Searchurcollege,1,0.02,Naukri
@@ -1650,6 +1659,7 @@ Send CV to jobs@adonisstaff.in / Automation & Robotics Products MNC & Client of 
 Sensabyte Technologies,1,0.02,Naukri
 Sentel Software,1,0.02,Naukri
 Service based Top B2B MNC in IT Services Domain,1,0.02,Naukri
+Seven N Consulting,1,0.02,Naukri
 Seyon Business Innovation,1,0.02,Naukri
 Share India Fincap Pvt Ltd.,1,0.02,Naukri
 Sharpwiz,1,0.02,Naukri
@@ -1668,15 +1678,18 @@ Simeio Solutions,1,0.02,Naukri
 Simplilearn,1,0.02,Naukri
 Simply Vyapar Apps,1,0.02,Naukri
 Simreka,1,0.02,Naukri
-Simson Softwares,1,0.02,Naukri
 Sinergia Media Labs,1,0.02,Naukri
 Sirionlabs,1,0.02,Naukri
 Sisco Jobs,1,0.02,Naukri
 Skill Hive Hub,1,0.02,Naukri
+Skillkrafter Academy,1,0.02,Naukri
+Skipper,1,0.02,Naukri
+Smart Analytica,1,0.02,Naukri
 Smart Soc Solutions,1,0.02,Naukri
 Smartit Frame Software Services,1,0.02,Naukri
 Smarxion,1,0.02,Naukri
 Smavis Technologies,1,0.02,Naukri
+Smcs-psi Data Analytics (opc),1,0.02,Naukri
 Smith & Nephew Gbs,1,0.02,Naukri
 Sndk Corp,1,0.02,Naukri
 Snware Research Services,1,0.02,Naukri
@@ -1686,7 +1699,6 @@ Socommerz,1,0.02,Naukri
 Sodexo,1,0.02,Naukri
 Softratech,1,0.02,Naukri
 Softtek,1,0.02,Naukri
-Software Pundits India,1,0.02,Naukri
 Solaron Sustainability,1,0.02,Naukri
 Sollys Consulting And Solutions,1,0.02,Naukri
 Solugenix,1,0.02,Naukri
@@ -1707,6 +1719,7 @@ Squarespace,1,0.02,Greenhouse
 Srijan- A Material+ Company,1,0.02,Naukri
 Staples India,1,0.02,Naukri
 Stark Industries,1,0.02,Naukri
+Startek,1,0.02,Naukri
 Stavtar Solutions,1,0.02,Naukri
 Stco Consulting,1,0.02,Naukri
 Stellar Market Research,1,0.02,Naukri
@@ -1719,6 +1732,7 @@ SunTec India,1,0.02,Naukri
 Sunray Informatics,1,0.02,Naukri
 Suta,1,0.02,Naukri
 Suzva Software Technologies,1,0.02,Naukri
+Swaas Systems,1,0.02,Naukri
 Swaayatt Robots,1,0.02,Naukri
 Swast Solutions,1,0.02,Naukri
 Symphony Fintech,1,0.02,Naukri
@@ -1727,11 +1741,11 @@ Synergos Tech Consulting Services,1,0.02,Naukri
 Syngenta,1,0.02,Naukri
 Synnex Business Media,1,0.02,Naukri
 Synoptek,1,0.02,Naukri
-Synoris Information System Pvt Ltd,1,0.02,Naukri
 Systango,1,0.02,Naukri
 Syum Technology,1,0.02,Naukri
 T-Systems ICT India Pvt Ltd,1,0.02,Naukri
 TAC Security,1,0.02,Naukri
+TBO.com,1,0.02,Naukri
 TESTQ Technologies,1,0.02,Naukri
 THE Scalers,1,0.02,Naukri
 TIC Fiber,1,0.02,Naukri
@@ -1745,13 +1759,10 @@ Tala,1,0.02,Naukri
 Talent Smart Soft Solutions,1,0.02,Naukri
 Talent21,1,0.02,Naukri
 Talentrouters,1,0.02,Naukri
-Talish Solutions,1,0.02,Naukri
-Talworx,1,0.02,Naukri
 Tanla Platforms,1,0.02,Naukri
 Tarento Technologies,1,0.02,Naukri
 Target,1,0.02,Naukri
 Taskus,1,0.02,Naukri
-Tata Consultancy Services(TCS),1,0.02,Naukri
 Tata Elxsi,1,0.02,Naukri
 Tata Technologies,1,0.02,Naukri
 Tatpata,1,0.02,Naukri
@@ -1764,7 +1775,10 @@ TechRAQ,1,0.02,Naukri
 TechSci Research,1,0.02,Naukri
 TechTrinite consulting,1,0.02,Naukri
 TechUnido,1,0.02,Naukri
+Techcronus,1,0.02,Naukri
 Techieshubhdeep,1,0.02,Naukri
+Techila Global Services,1,0.02,Naukri
+Technix India Solutions,1,0.02,Naukri
 Technogen India,1,0.02,Naukri
 Technource,1,0.02,Naukri
 Techouts,1,0.02,Naukri
@@ -1774,9 +1788,11 @@ TekPillar,1,0.02,Naukri
 Tekfriday Processing Solutions,1,0.02,Naukri
 Tekgence ind pvt ltd,1,0.02,Naukri
 Tekolutions Ai,1,0.02,Naukri
+Tekskills India,1,0.02,Naukri
 Tekskills india pvt ltd,1,0.02,Naukri
 TektreeInc,1,0.02,Naukri
 Telloquent,1,0.02,Naukri
+Teplar Solutions,1,0.02,Naukri
 Teqtis Solutions,1,0.02,Naukri
 Terralogic Software Solutions,1,0.02,Naukri
 The Art Of Living Human Resources,1,0.02,Naukri
@@ -1791,6 +1807,7 @@ The TJX Companies Inc,1,0.02,Naukri
 The Takshashila Institution,1,0.02,Naukri
 The Transformation Group,1,0.02,Naukri
 The White Teak Company Unit Of Obgenix Software,1,0.02,Naukri
+Thermo Fisher Scientific,1,0.02,Naukri
 Think 360,1,0.02,Naukri
 Think People Solutions,1,0.02,Naukri
 ThinkHumble,1,0.02,Naukri
@@ -1812,13 +1829,10 @@ Transcat People Solutions Pvt Ltd,1,0.02,Naukri
 Transunion,1,0.02,Naukri
 Tranzeal,1,0.02,Naukri
 Treezec E Solutions,1,0.02,Naukri
-Trigyn Technologies,1,0.02,Naukri
 Trinet Zenefits,1,0.02,Naukri
 Triveni Interchem,1,0.02,Naukri
 Tronixware Design & Research Lab,1,0.02,Naukri
-Trooinbound,1,0.02,Naukri
 Truhome Finance Ltd,1,0.02,Naukri
-Twixor,1,0.02,Naukri
 Two95 International,1,0.02,Naukri
 U.S. Bancorp India,1,0.02,Naukri
 UE Autotech (i),1,0.02,Naukri
@@ -1840,11 +1854,12 @@ V2soft,1,0.02,Naukri
 VCAN & Co,1,0.02,Naukri
 VDartDigital,1,0.02,Naukri
 VH Mobile Metrics,1,0.02,Naukri
+Valtitude / Demand Planning Net,1,0.02,Naukri
 Value Prospect,1,0.02,Naukri
+ValueAdd,1,0.02,Naukri
 Valuelabs,1,0.02,Naukri
 Vanguard Hr Associates,1,0.02,Naukri
 Varistor Engineering,1,0.02,Naukri
-Vedamcloud Technologies,1,0.02,Naukri
 Vedantu Innovations,1,0.02,Naukri
 Vee Healthtek,1,0.02,Naukri
 Velox Solutions,1,0.02,Naukri
@@ -1857,12 +1872,12 @@ Vichara Technologies,1,0.02,Naukri
 Vidushi Infotech,1,0.02,Naukri
 Vidya Online,1,0.02,Naukri
 Vigoursoft Global Solutions,1,0.02,Naukri
+Vigyanshaala International,1,0.02,Naukri
 Vilican Technologies Pvt. Ltd.,1,0.02,Naukri
 Vimerse Infotech,1,0.02,Naukri
 Vinove Software,1,0.02,Naukri
 Vipany Management Consulting,1,0.02,Naukri
 Viraj Ventures,1,0.02,Naukri
-Visa Consolidated Support Services India,1,0.02,Naukri
 Visapro Services,1,0.02,Naukri
 Vivid Edge Corp,1,0.02,Naukri
 Vkc Nuts,1,0.02,Naukri
@@ -1877,7 +1892,6 @@ Vue Data Technologies,1,0.02,Naukri
 Vyuhgenics India,1,0.02,Naukri
 Vyuhpharma,1,0.02,Naukri
 W3 Dream Solutions,1,0.02,Naukri
-WPP Production,1,0.02,Naukri
 Wappnet Systems,1,0.02,Naukri
 Way2Wealth,1,0.02,Naukri
 We Shine Academy,1,0.02,Naukri
@@ -1887,11 +1901,13 @@ Webtech Solutions,1,0.02,Naukri
 Westernacher Consulting,1,0.02,Naukri
 White Horse Technologies,1,0.02,Naukri
 Wilco Source,1,0.02,Naukri
+Wintech Services India Pvt Ltd,1,0.02,Naukri
 Winzo,1,0.02,Naukri
 Wonder Home Finance,1,0.02,Naukri
 Wonderla Holidays,1,0.02,Naukri
 Workforce 247,1,0.02,Naukri
 Worktual Innovations,1,0.02,Naukri
+Worldclass Tech Talent Pvt Ltd,1,0.02,Naukri
 Worldline,1,0.02,Naukri
 Worldwide Business Management outsourcing,1,0.02,Naukri
 WovVTech,1,0.02,Naukri
@@ -1913,6 +1929,7 @@ ZIFF DAVIS PERFORMANCE MARKETING,1,0.02,Naukri
 ZIGRAM,1,0.02,Naukri
 ZINFI,1,0.02,Naukri
 Zealous Services,1,0.02,Naukri
+Zecser Business Llp,1,0.02,Naukri
 Zee Entertainment Enterprises Limited(ZEEL),1,0.02,Naukri
 Zeefalls Tech Solutions,1,0.02,Naukri
 Zenith Industrial Rubber Products,1,0.02,Naukri
@@ -1924,8 +1941,6 @@ Zethic,1,0.02,Naukri
 Zipaworld Innovation,1,0.02,Naukri
 Zobi Web Solutions Pvt. Ltd.,1,0.02,Naukri
 Zscaler LATAM,1,0.02,Naukri
-anblicks,1,0.02,Naukri
-banking,1,0.02,Naukri
 capegameni,1,0.02,Naukri
 client of OCNET,1,0.02,Naukri
 dishtv,1,0.02,Naukri
