@@ -27,6 +27,13 @@ from resume_matcher.resume_scorer import (
     score_resume
 )
 
+from resume_matcher.resume_readiness import calculate_resume_readiness
+from resume_matcher.job_fit_engine import calculate_job_fit
+from resume_matcher.interview_readiness import calculate_interview_readiness
+from resume_matcher.resume_rewriter import generate_resume_rewrite
+from resume_matcher.interview_questions import generate_interview_questions
+from resume_matcher.recruiter_engine import recruiter_decision
+
 
 # =========================================================
 # PROJECT ROOT IMPORT PATH
