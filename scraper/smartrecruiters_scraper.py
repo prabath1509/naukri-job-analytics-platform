@@ -48,6 +48,8 @@ def scrape_smartrecruiters():
 
                 )
 
+                logging.info(f"{company} -> HTTP {response.status_code}")
+
                 if response.status_code != 200:
 
                     break
@@ -61,6 +63,8 @@ def scrape_smartrecruiters():
                     []
 
                 )
+
+                logging.info(f"{company} -> Jobs Found: {len(postings)}")
 
                 if len(postings) == 0:
 
@@ -157,5 +161,4 @@ def scrape_smartrecruiters():
         f"SmartRecruiters Jobs Found: {len(jobs)}"
 
     )
-
     return jobs

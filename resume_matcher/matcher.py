@@ -1,23 +1,12 @@
 import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-from PyPDF2 import PdfReader
+from resume_matcher.pdf_parser import extract_resume_text
 
 # -----------------------------------
 # EXTRACT TEXT FROM PDF
 # -----------------------------------
 
-def extract_resume_text(pdf_file):
-
-    text = ""
-
-    pdf_reader = PdfReader(pdf_file)
-
-    for page in pdf_reader.pages:
-
-        text += page.extract_text()
-
-    return text
 
 # -----------------------------------
 # MATCH RESUME WITH JOBS

@@ -35,3 +35,10 @@ main_before_phase45.py
 scraper/ats_source_registry_before_phase52.py
 scraper/ats_source_registry_before_phase54.py
 main_before_phase56.py
+dashboard/app_before_phase57.py
+dashboard/pages/1_ATS_Resume_Checker_before_phase57A.py
+dashboard/pages/1_ATS_Resume_Checker_before_phase57B.py
+dashboard/pages/1_ATS_Resume_Checker_before_rewrite.py
+dashboard/pages/1_ATS_Resume_Checker_before_rewrite.py
+dashboard/pages/1_ATS_Resume_Checker_before_rewrite.py
+dashboard/pages/1_ATS_Resume_Checker_before_rewrite.py
