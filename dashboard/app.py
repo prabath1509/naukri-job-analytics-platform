@@ -5,39 +5,6 @@
 
 import os
 import sys
-import sqlite3
-
-import pandas as pd
-import plotly.express as px
-import streamlit as st
-from resume_matcher.matcher import (
-    extract_resume_text,
-    match_jobs
-)
-
-from resume_matcher.ats_checker import (
-    calculate_ats_score
-)
-
-from resume_matcher.skill_gap import (
-    analyze_skill_gap
-)
-
-from resume_matcher.resume_scorer import (
-    score_resume
-)
-
-from resume_matcher.resume_readiness import calculate_resume_readiness
-from resume_matcher.job_fit_engine import calculate_job_fit
-from resume_matcher.interview_readiness import calculate_interview_readiness
-from resume_matcher.resume_rewriter import generate_resume_rewrite
-from resume_matcher.interview_questions import generate_interview_questions
-from resume_matcher.recruiter_engine import recruiter_decision
-
-
-# =========================================================
-# PROJECT ROOT IMPORT PATH
-# =========================================================
 
 PROJECT_ROOT = os.path.abspath(
     os.path.join(
@@ -48,6 +15,27 @@ PROJECT_ROOT = os.path.abspath(
 
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
+
+import sqlite3
+import pandas as pd
+import plotly.express as px
+import streamlit as st
+
+from resume_matcher.matcher import (
+    extract_resume_text,
+    match_jobs,
+)
+
+from resume_matcher.ats_checker import calculate_ats_score
+from resume_matcher.skill_gap import analyze_skill_gap
+from resume_matcher.resume_scorer import score_resume
+
+from resume_matcher.resume_readiness import calculate_resume_readiness
+from resume_matcher.job_fit_engine import calculate_job_fit
+from resume_matcher.interview_readiness import calculate_interview_readiness
+from resume_matcher.resume_rewriter import generate_resume_rewrite
+from resume_matcher.interview_questions import generate_interview_questions
+from resume_matcher.recruiter_engine import recruiter_decision
 
 
 from analytics.experience_frequency import classify_experience
