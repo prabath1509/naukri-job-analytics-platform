@@ -10,6 +10,22 @@ import sqlite3
 import pandas as pd
 import plotly.express as px
 import streamlit as st
+from resume_matcher.matcher import (
+    extract_resume_text,
+    match_jobs
+)
+
+from resume_matcher.ats_checker import (
+    calculate_ats_score
+)
+
+from resume_matcher.skill_gap import (
+    analyze_skill_gap
+)
+
+from resume_matcher.resume_scorer import (
+    score_resume
+)
 
 
 # =========================================================
@@ -89,6 +105,25 @@ df = load_jobs()
 if df.empty:
     st.error("Job database is empty or database/jobs.db was not found.")
     st.stop()
+
+df = load_jobs()
+
+if df.empty:
+    st.error("Job database is empty or database/jobs.db was not found.")
+    st.stop()
+
+
+# =========================================================
+# NAVIGATION
+# =========================================================
+
+page = st.sidebar.radio(
+    "Navigation",
+    [
+        "📊 Job Analytics",
+        "📄 ATS Resume Checker",
+    ]
+)
 
 
 # =========================================================
