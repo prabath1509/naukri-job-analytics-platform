@@ -1,4 +1,4 @@
-#  AI-Powered Job Analytics Platform
+# 🤖 AI-Powered Job Analytics Platform
 
 A production-style job market analytics platform that automatically collects, cleans, validates, analyzes, and visualizes job opportunities from multiple recruitment sources.
 
@@ -23,36 +23,49 @@ The system:
 - Scrapes jobs from multiple sources
 - Cleans and standardizes records
 - Removes duplicate listings
+- Parses and enriches job information
 - Generates analytical datasets
 - Stores data in SQLite
 - Produces interactive dashboards
 - Tracks field quality and source quality
+- Validates production datasets
 - Publishes only validated datasets
+- Automates recurring data collection using GitHub Actions
 
 ---
 
 # ✨ Key Features
 
-### Multi-Source Job Aggregation
+### 🌐 Multi-Source Job Aggregation
+
+The platform supports job collection from multiple recruitment and ATS sources:
 
 - Naukri
 - Greenhouse
 - Workday
+- Lever
+- SmartRecruiters
 
 ---
 
-### Automated ETL Pipeline
+### ⚙️ Automated ETL Pipeline
 
 - Job scraping
+- Data collection
 - Data cleaning
+- Data transformation
+- Data validation
 - Duplicate removal
-- Standardization
+- Field standardization
+- Experience parsing
+- Salary parsing
+- Skill processing
 - SQLite storage
 - Analytics generation
 
 ---
 
-### Interactive Analytics Dashboard
+### 📊 Interactive Analytics Dashboard
 
 Explore:
 
@@ -68,7 +81,22 @@ Explore:
 
 ---
 
-### Data Quality Intelligence
+### 🔎 Job Explorer
+
+Search and explore collected job opportunities using:
+
+- Job Title
+- Company
+- Location
+- Experience
+- Salary
+- Skills
+- Source
+- Direct Job Link
+
+---
+
+### 📈 Data Quality Intelligence
 
 Automatically measures:
 
@@ -77,10 +105,12 @@ Automatically measures:
 - Missing values
 - Coverage percentage
 - Dataset validation
+- Duplicate job links
+- Required-field availability
 
 ---
 
-### Publication Quality Gate
+### 🛡️ Publication Quality Gate
 
 The project prevents publishing poor-quality datasets.
 
@@ -89,64 +119,84 @@ Validation includes:
 - Minimum job count
 - Minimum source count
 - Required data sources
+- Required-field validation
 - Dataset integrity checks
+- Duplicate detection
+- Data-quality checks
+
+Only datasets that satisfy the configured quality requirements are published.
 
 ---
 
-### Snapshot Management
+### 📦 Snapshot Management
 
 - Automatic snapshot creation
 - Snapshot validation
 - Snapshot retention
 - Historical dataset preservation
+- Production dataset protection
+
+If a new scraping run fails quality checks, the previous validated production dataset can be preserved.
 
 ---
 
-### Resume Matcher
+### 🤖 Resume Matcher
 
-Includes an AI-assisted resume matching module to compare resumes with job descriptions.
+Includes an AI-assisted resume matching module to compare resumes with job descriptions and help identify relevant opportunities.
 
 ---
 
-### GitHub Automation
+### 🔄 GitHub Automation
 
 GitHub Actions automatically:
 
 - Run scraper
+- Execute scheduled data collection
 - Validate dataset
 - Update SQLite
-- Publish analytics
+- Generate analytics
+- Publish validated data
 - Preserve previous production dataset when quality checks fail
+- Automate recurring pipeline execution
 
 ---
 
-# 🏗 System Architecture
+# 🏗️ System Architecture
 
-```
-                Job Sources
-                     │
-                     ▼
-            Web Scrapers
-                     │
-                     ▼
-        Cleaning & Standardization
-                     │
-                     ▼
-          Duplicate Removal
-                     │
-                     ▼
-       Publication Quality Gate
-                     │
-                     ▼
-            SQLite Database
-                     │
-        ┌────────────┴────────────┐
-        ▼                         ▼
- Analytics CSV Files      Streamlit Dashboard
-```
-
----
-
+```text
+                    Job Sources
+                         │
+                         ▼
+                   Web Scrapers
+                         │
+                         ▼
+              Cleaning & Standardization
+                         │
+                         ▼
+                Data Enrichment
+                         │
+             ┌───────────┼───────────┐
+             ▼           ▼           ▼
+       Experience     Salary       Skills
+         Parsing      Parsing     Processing
+             │           │           │
+             └───────────┼───────────┘
+                         ▼
+                 Duplicate Removal
+                         │
+                         ▼
+              Publication Quality Gate
+                         │
+                         ▼
+                  SQLite Database
+                         │
+             ┌───────────┴───────────┐
+             ▼                       ▼
+      Analytics CSV Files     Data Quality Metrics
+             │                       │
+             └───────────┬───────────┘
+                         ▼
+                Streamlit Dashboard
 # ⚙ Tech Stack
 
 | Category | Technologies |
@@ -272,6 +322,8 @@ naukri-job-analytics-platform/
 │
 ├── analytics/
 │
+├── notebooks/
+│
 ├── .github/
 │   └── workflows/
 │
@@ -338,6 +390,12 @@ Collect Jobs
       │
       ▼
 Clean Records
+      │
+      ▼
+Standardize Fields
+      │
+      ▼
+Parse Experience / Salary / Skills
       │
       ▼
 Remove Duplicates
