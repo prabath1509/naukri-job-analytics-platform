@@ -83,7 +83,7 @@ jobs:
             exit 0
           fi
 
-          if grep -q "Publication blocked by dataset quality gate" scraper_run.log; then
+          if grep -Eq "PUBLICATION QUALITY GATE FAILED|Publication blocked by dataset quality gate:|Publication blocked:" scraper_run.log; then
             echo "============================================================"
             echo "PUBLICATION SKIPPED BY DATASET QUALITY GATE"
             echo "Existing published dataset will be preserved."
