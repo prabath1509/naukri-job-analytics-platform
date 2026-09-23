@@ -718,8 +718,13 @@ logging.info(f"Final Dataset Rows : {len(df)}")
 
 IS_CI = os.getenv("CI", "").lower() == "true"
 
-MIN_PUBLISH_JOBS = 2000
-MIN_PUBLISH_SOURCES = 3
+MIN_PUBLISH_JOBS = int(
+    os.getenv("MIN_PUBLISH_JOBS", "2000")
+)
+
+MIN_PUBLISH_SOURCES = int(
+    os.getenv("MIN_PUBLISH_SOURCES", "3")
+)
 
 required_sources = set()
 

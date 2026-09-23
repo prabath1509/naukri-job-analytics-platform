@@ -24,6 +24,22 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 MAX_RETRIES = 3
 
+def ensure_valid_page(driver):
+
+    title = (driver.title or "").strip().lower()
+    html = (driver.page_source or "").strip().lower()
+
+    if (
+        "access denied" in title
+        or "access denied" in html
+        or len(html) < 1000
+    ):
+        raise RuntimeError(
+            "Naukri returned a blocked or incomplete page "
+            f"(title={driver.title!r}, "
+            f"html_length={len(html)})"
+        )
+
 # =========================================================
 # CREATE CHROME DRIVER
 # =========================================================
@@ -152,17 +168,50 @@ def scrape_naukri_jobs(keyword, pages=10):
 
                     time.sleep(3)
 
+                    ensure_valid_page(driver)
+
+
                     scroll_page(driver)
 
+
                     if os.getenv("CI", "").lower() == "true":
-                        logging.info(f"CI PAGE URL: {driver.current_url}")
-                        logging.info(f"CI PAGE TITLE: {driver.title}")
-                        logging.info(f"CI HTML LENGTH: {len(driver.page_source)}")
-                        logging.info(f"CI srp-jobtuple-wrapper COUNT: {len(driver.find_elements(By.CSS_SELECTOR, chr(34)+"div.srp-jobtuple-wrapper"+chr(34)))}")
-                        logging.info(f"CI jobTuple COUNT: {len(driver.find_elements(By.CSS_SELECTOR, chr(34)+"div.jobTuple"+chr(34)))}")
-                        logging.info(f"CI article COUNT: {len(driver.find_elements(By.CSS_SELECTOR, chr(34)+"article"+chr(34)))}")
-                        logging.info(f"CI TITLE LINK COUNT: {len(driver.find_elements(By.CSS_SELECTOR, chr(34)+"a.title"+chr(34)))}")
-                        logging.info(f"CI BODY PREVIEW: {driver.find_element(By.TAG_NAME, chr(34)+"body"+chr(34)).text[:1000]!r}")
+
+                        logging.info(
+                        f"CI PAGE URL: {driver.current_url}"
+    )
+
+                        logging.info(
+                         f"CI PAGE TITLE: {driver.title}"
+    )
+
+                        logging.info(
+                        f"CI HTML LENGTH: {len(driver.page_source)}"
+    )
+
+                        logging.info(
+                        f"CI srp-jobtuple-wrapper COUNT: "
+                        f"{len(driver.find_elements(By.CSS_SELECTOR, 'div.srp-jobtuple-wrapper'))}"
+    )
+
+                        logging.info(
+                        f"CI jobTuple COUNT: "
+                        f"{len(driver.find_elements(By.CSS_SELECTOR, 'div.jobTuple'))}"
+    )
+
+                        logging.info(
+                        f"CI article COUNT: "
+                        f"{len(driver.find_elements(By.CSS_SELECTOR, 'article'))}"
+    )
+
+                        logging.info(
+                        f"CI TITLE LINK COUNT: "
+                        f"{len(driver.find_elements(By.CSS_SELECTOR, 'a.title'))}"
+    )
+
+                        logging.info(
+                        f"CI BODY PREVIEW: "
+                        f"{driver.find_element(By.TAG_NAME, 'body').text[:1000]!r}"
+    )
 
                     wait.until(
 
@@ -205,20 +254,33 @@ def scrape_naukri_jobs(keyword, pages=10):
 
                     break
 
+                except RuntimeError as e:
+
+                    logging.warning(
+                    f"Naukri page blocked: {e}"
+    )
+
+                    logging.warning(
+                    f"Skipping page {page} because Naukri "
+                    "returned an Access Denied/incomplete response."
+    )
+
+                    logging.warning(
+                        f"Skipping page {page} because Naukri "
+                        "returned an Access Denied/incomplete response."
+                    )
+                    break
+
                 except Exception as e:
 
                     logging.warning(
-
                         f"Retry {attempt+1}/{MAX_RETRIES}"
-
                     )
 
                     logging.warning(str(e))
 
                     time.sleep(
-
-                        random.uniform(2,5)
-
+                        random.uniform(5, 10)
                     )
 
             if not success:
