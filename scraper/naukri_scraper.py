@@ -155,10 +155,16 @@ def scrape_naukri_jobs(keyword, pages=10):
 
                 try:
 
-                    url = (
-                        f"https://www.naukri.com/"
-                        f"{keyword}-jobs-{page}"
-                    )
+                    if page == 1:
+                        url = (
+                            f"https://www.naukri.com/"
+                            f"{keyword}-jobs"
+                        )
+                    else:
+                        url = (
+                            f"https://www.naukri.com/"
+                            f"{keyword}-jobs-{page}"
+                        )
 
                     logging.info(
                         f"Opening Page {page}"
@@ -170,9 +176,7 @@ def scrape_naukri_jobs(keyword, pages=10):
 
                     ensure_valid_page(driver)
 
-
                     scroll_page(driver)
-
 
                     if os.getenv("CI", "").lower() == "true":
 
@@ -219,7 +223,7 @@ def scrape_naukri_jobs(keyword, pages=10):
 
                             (
                                 By.CSS_SELECTOR,
-                                "div.srp-jobtuple-wrapper"
+                                "div.srp-jobtuple-wrapper > div.cust-job-tuple"
                             )
 
                         )
@@ -227,11 +231,8 @@ def scrape_naukri_jobs(keyword, pages=10):
                     )
 
                     cards = driver.find_elements(
-
                         By.CSS_SELECTOR,
-
-                        "div.srp-jobtuple-wrapper"
-
+                        "div.srp-jobtuple-wrapper > div.cust-job-tuple"
                     )
 
                     if len(cards) == 0:
