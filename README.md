@@ -9,7 +9,7 @@ A production-style **end-to-end job-market analytics platform** that collects jo
 **📊 4,325 Validated Jobs**   •  
 **🏢 2,009 Companies**   •  
 **📍 570 Locations**   •  
-**🌐 4 Sources**
+**🌐 4 Contributing Sources**
 
 </p>
 
@@ -243,7 +243,10 @@ The platform is designed to answer questions such as:
 
 # 📥 Data Sources
 
-The platform supports multiple recruitment and ATS sources.
+The platform supports **5 recruitment and ATS source integrations**. The latest validated production snapshot contains records from **4 contributing sources**.
+
+> **Snapshot note:** "4 contributing sources" refers to the latest validated production dataset. The fifth integration remains part of the project's supported scraper architecture.
+
 
 | Source          | Collection Technology | Role                        |
 | --------------- | --------------------- | --------------------------- |
@@ -908,7 +911,7 @@ naukri-job-analytics-platform/
 ├── scheduler.py
 ├── main.py
 ├── requirements.txt
-└── README.mdtree
+└── README.md
 ```
 
 ---
