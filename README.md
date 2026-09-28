@@ -1,307 +1,640 @@
 # 🤖 AI-Powered Job Analytics Platform
 
-A production-style job market analytics platform that automatically collects, cleans, validates, analyzes, and visualizes job opportunities from multiple recruitment sources.
+### From Job Collection → Data Engineering → Data Quality → Analytics → Visualization
 
-The platform provides real-time insights into hiring trends, skills demand, company hiring activity, locations, work modes, salary availability, and role distributions through an interactive Streamlit dashboard.
+A production-style **end-to-end job-market analytics platform** that collects job listings from multiple recruitment and ATS sources, engineers and validates the dataset, protects production data through quality gates, and converts the resulting data into interactive hiring-market analytics.
 
----
+<p align="center">
 
-## 🌐 Live Dashboard
+**📊 4,325 Validated Jobs**   •  
+**🏢 2,009 Companies**   •  
+**📍 570 Locations**   •  
+**🌐 4 Sources**
 
-🔗 https://naukri-job-analytics-platform-fyyympr7t2vqc2sg4snwzf.streamlit.app/
+</p>
 
----
+<p align="center">
 
-# 📌 Project Overview
+<a href="https://naukri-job-analytics-platform-fyyympr7t2vqc2sg4snwzf.streamlit.app/">
+<img src="https://img.shields.io/badge/🚀%20LIVE%20DASHBOARD-Open%20Dashboard-00A8E8?style=for-the-badge" alt="Live Dashboard">
+</a>
 
-Finding quality job market insights requires collecting data from multiple recruitment platforms, cleaning inconsistent information, removing duplicates, validating data quality, and presenting meaningful analytics.
+<a href="https://github.com/prabath1509/naukri-job-analytics-platform">
+<img src="https://img.shields.io/badge/💻%20GITHUB-Repository-181717?style=for-the-badge&logo=github" alt="GitHub Repository">
+</a>
 
-This project automates the complete workflow through an end-to-end ETL pipeline.
-
-The system:
-
-- Scrapes jobs from multiple sources
-- Cleans and standardizes records
-- Removes duplicate listings
-- Parses and enriches job information
-- Generates analytical datasets
-- Stores data in SQLite
-- Produces interactive dashboards
-- Tracks field quality and source quality
-- Validates production datasets
-- Publishes only validated datasets
-- Automates recurring data collection using GitHub Actions
+</p>
 
 ---
 
-# ✨ Key Features
+# 📊 Dashboard Preview
 
-### 🌐 Multi-Source Job Aggregation
+The platform turns the collected job data into an interactive analytics dashboard covering hiring demand, skills, companies, locations, experience, work modes, salary availability, data quality, and individual job listings.
 
-The platform supports job collection from multiple recruitment and ATS sources:
+## 01 — Hiring Market Overview
 
-- Naukri
-- Greenhouse
-- Workday
-- Lever
-- SmartRecruiters
+![Naukri Job Analytics Dashboard Overview](docs/dashboard-page-1.png)
 
----
+The overview page provides:
 
-### ⚙️ Automated ETL Pipeline
-
-- Job scraping
-- Data collection
-- Data cleaning
-- Data transformation
-- Data validation
-- Duplicate removal
-- Field standardization
-- Experience parsing
-- Salary parsing
-- Skill processing
-- SQLite storage
-- Analytics generation
+* Total jobs
+* Companies hiring
+* Job locations
+* Data sources
+* Remote jobs
+* Jobs by source
+* Role demand
+* Most in-demand skills
+* Top hiring companies
+* Top job locations
 
 ---
 
-### 📊 Interactive Analytics Dashboard
+## 02 — Experience, Salary & Data Quality
 
-Explore:
+![Experience Salary and Data Quality Analytics](docs/dashboard-page-2.png)
 
-- Hiring companies
-- Job locations
-- Experience requirements
-- Skills demand
-- Salary availability
-- Work mode trends
-- Role distribution
-- Source comparison
-- Job listings
+The analytics layer covers:
 
----
+* Work-mode distribution
+* Experience demand
+* Salary availability
+* Salary buckets
+* Field completeness
+* Missing/invalid values
+* Data-quality coverage
 
-### 🔎 Job Explorer
-
-Search and explore collected job opportunities using:
-
-- Job Title
-- Company
-- Location
-- Experience
-- Salary
-- Skills
-- Source
-- Direct Job Link
+> **Salary note:** Salary analysis is based on the available parsed salary records rather than the complete dataset.
 
 ---
 
-### 📈 Data Quality Intelligence
+## 03 — Job Explorer
 
-Automatically measures:
+![Job Explorer](docs/dashboard-page-3.png)
 
-- Field completeness
-- Source quality
-- Missing values
-- Coverage percentage
-- Dataset validation
-- Duplicate job links
-- Required-field availability
+The Job Explorer provides searchable job-level information including:
 
----
-
-### 🛡️ Publication Quality Gate
-
-The project prevents publishing poor-quality datasets.
-
-Validation includes:
-
-- Minimum job count
-- Minimum source count
-- Required data sources
-- Required-field validation
-- Dataset integrity checks
-- Duplicate detection
-- Data-quality checks
-
-Only datasets that satisfy the configured quality requirements are published.
+* Job title
+* Company
+* Location
+* Experience
+* Work mode
+* Role category
+* Source
+* Posted date
+* Direct application link
 
 ---
 
-### 📦 Snapshot Management
+# 🧭 Project Overview
 
-- Automatic snapshot creation
-- Snapshot validation
-- Snapshot retention
-- Historical dataset preservation
-- Production dataset protection
+Finding meaningful job-market insights requires more than collecting job listings or building a dashboard.
 
-If a new scraping run fails quality checks, the previous validated production dataset can be preserved.
+Job data is distributed across different recruitment platforms and company ATS systems. Each source can expose different fields, formats, structures, and levels of completeness.
+
+This project builds a complete pipeline that transforms raw job listings into validated analytical data.
+
+```text
+🌐 DATA SOURCES
+       ↓
+🕷️ JOB COLLECTION
+       ↓
+🧹 CLEANING
+       ↓
+⚙️ TRANSFORMATION
+       ↓
+🔗 DEDUPLICATION
+       ↓
+🧪 VALIDATION
+       ↓
+🛡️ PUBLICATION QUALITY GATE
+       ↓
+🗄️ DATABASE
+       ↓
+📊 ANALYTICS
+       ↓
+🚀 STREAMLIT DASHBOARD
+```
+
+The project is designed as an **analytics engineering workflow**, not simply as a visualization project.
 
 ---
 
-### 🤖 Resume Matcher
+# 🎯 Problem Statement
 
-Includes an AI-assisted resume matching module to compare resumes with job descriptions and help identify relevant opportunities.
+Job-market information is fragmented across recruitment websites and Applicant Tracking Systems.
+
+Common problems include:
+
+* Inconsistent job-title formats
+* Missing salary information
+* Different experience formats
+* Inconsistent location values
+* Duplicate job listings
+* Different work-mode terminology
+* Source-specific data structures
+* Changing website layouts
+* Different levels of field completeness
+
+Without a proper data pipeline, these issues can produce unreliable analytics.
+
+This project addresses the problem by creating a repeatable workflow for:
+
+**Collection → Cleaning → Transformation → Validation → Storage → Analytics → Visualization**
 
 ---
 
-### 🔄 GitHub Automation
+# 💼 Business Questions
 
-GitHub Actions automatically:
+The platform is designed to answer questions such as:
 
-- Run scraper
-- Execute scheduled data collection
-- Validate dataset
-- Update SQLite
-- Generate analytics
-- Publish validated data
-- Preserve previous production dataset when quality checks fail
-- Automate recurring pipeline execution
+### Hiring Demand
+
+* Which companies are hiring the most?
+* Which locations have the highest job demand?
+* Which roles have the highest representation?
+
+### Skills
+
+* Which technical skills appear most frequently?
+* What skills are associated with analytics and technology roles?
+
+### Experience
+
+* What experience levels are most frequently requested?
+* How is demand distributed across experience categories?
+
+### Work Mode
+
+* What proportion of available jobs are on-site?
+* How much of the dataset represents hybrid or remote work?
+
+### Salary
+
+* How much salary information is available?
+* What salary ranges appear within the records where salary is disclosed?
+
+### Data Quality
+
+* How complete are the important analytical fields?
+* Which sources contribute the most records?
+* Are duplicate job links present?
+* Should a new dataset be allowed to replace the current production dataset?
 
 ---
 
 # 🏗️ System Architecture
 
 ```text
-                    Job Sources
+                         JOB SOURCES
+                              │
+        ┌─────────────────────┼─────────────────────┐
+        │          │          │          │           │
+      Naukri   Greenhouse  Workday    Lever   SmartRecruiters
+        │          │          │          │           │
+        └─────────────────────┼─────────────────────┘
+                              │
+                              ▼
+                    WEB SCRAPERS / COLLECTION
+                              │
+                              ▼
+                   CLEANING & STANDARDIZATION
+                              │
+                              ▼
+                         ENRICHMENT
+                              │
+             ┌────────────────┼────────────────┐
+             │                │                │
+             ▼                ▼                ▼
+        Experience         Salary           Skills
+         Parsing           Parsing         Processing
+             │                │                │
+             └────────────────┼────────────────┘
+                              │
+                              ▼
+                       DEDUPLICATION
+                              │
+                              ▼
+                        VALIDATION
+                              │
+                              ▼
+                  PUBLICATION QUALITY GATE
+                         │          │
+                       PASS        FAIL
+                         │          │
+                         ▼          ▼
+                   Production   Preserve Previous
+                    Dataset      Validated Dataset
                          │
                          ▼
-                   Web Scrapers
+                   SQLITE DATABASE
                          │
+              ┌──────────┴──────────┐
+              │                     │
+              ▼                     ▼
+       ANALYTICS OUTPUTS       QUALITY METRICS
+              │                     │
+              └──────────┬──────────┘
                          ▼
-              Cleaning & Standardization
-                         │
-                         ▼
-                Data Enrichment
-                         │
-             ┌───────────┼───────────┐
-             ▼           ▼           ▼
-       Experience     Salary       Skills
-         Parsing      Parsing     Processing
-             │           │           │
-             └───────────┼───────────┘
-                         ▼
-                 Duplicate Removal
-                         │
-                         ▼
-              Publication Quality Gate
-                         │
-                         ▼
-                  SQLite Database
-                         │
-             ┌───────────┴───────────┐
-             ▼                       ▼
-      Analytics CSV Files     Data Quality Metrics
-             │                       │
-             └───────────┬───────────┘
-                         ▼
-                Streamlit Dashboard
-# ⚙ Tech Stack
-
-| Category | Technologies |
-|-----------|--------------|
-| Language | Python |
-| Dashboard | Streamlit |
-| Database | SQLite |
-| Visualization | Plotly |
-| Data Analysis | Pandas, NumPy |
-| Web Scraping | Selenium, Requests, BeautifulSoup |
-| HTML Parsing | lxml |
-| Automation | GitHub Actions |
-| Version Control | Git |
-| Deployment | Streamlit Community Cloud |
+                 STREAMLIT DASHBOARD
+```
 
 ---
 
-# 📊 Current Dataset Statistics
+# 📥 Data Sources
 
-Latest Production Dataset
+The platform supports multiple recruitment and ATS sources.
 
-| Metric | Value |
-|--------|------:|
-| Total Jobs | 4,832 |
-| Companies | 1,969 |
-| Sources | 3 |
-| Duplicate Links | 0 |
-| Job Link Coverage | 100% |
-| Company Coverage | 100% |
-| Title Coverage | 100% |
-| Location Coverage | 99.63% |
-| Experience Coverage | 84.93% |
-| Skills Coverage | 84.91% |
-| Salary Coverage | 12.42% |
+| Source          | Collection Technology | Role                        |
+| --------------- | --------------------- | --------------------------- |
+| Naukri          | Selenium              | Recruitment-market listings |
+| Greenhouse      | ATS collection        | Company ATS listings        |
+| Workday         | ATS collection        | Enterprise hiring data      |
+| Lever           | ATS collection        | Company job listings        |
+| SmartRecruiters | ATS collection        | Company hiring data         |
+
+The availability and field coverage of each source can vary between runs because external systems can change.
 
 ---
 
-# 📈 Dashboard Features
+# ⚙️ ETL Pipeline
 
-The dashboard provides:
+## 1️⃣ Extract
 
-## Executive KPIs
+The collection layer gathers job records from supported sources.
 
-- Total Jobs
-- Companies Hiring
-- Locations
-- Data Sources
+Typical fields include:
 
----
+```text
+Job Title
+Company
+Location
+Experience
+Salary
+Skills
+Job URL
+Source
+Work Mode
+Role Category
+Posted Date
+```
 
-## Interactive Filters
+The main orchestration is handled by:
 
-- Job Title
-- Company
-- Source
-- Work Mode
-- Experience
-- Role Category
+```text
+main.py
+```
 
----
+Source-specific scrapers are maintained inside:
 
-## Visual Analytics
-
-- Hiring by Company
-- Hiring by Location
-- Work Mode Distribution
-- Experience Distribution
-- Role Categories
-- Salary Availability
-- Source Distribution
-- Skill Demand
-
----
-
-## Data Quality Dashboard
-
-Includes:
-
-- Field Quality
-- Source Quality
-- Coverage Analytics
-- Missing Value Analysis
+```text
+scraper/
+```
 
 ---
 
-## Job Explorer
+## 2️⃣ Transform
 
-Searchable table with:
+Raw records are transformed into a standardized structure.
 
-- Job Title
-- Company
-- Location
-- Experience
-- Salary
-- Skills
-- Source
-- Direct Job Link
+Transformation includes:
+
+* Text normalization
+* Job-title cleaning
+* Company normalization
+* Location cleaning
+* Experience parsing
+* Salary parsing
+* Skill processing
+* Work-mode normalization
+* Role/category classification
+* Source normalization
+
+---
+
+## 3️⃣ Load
+
+Validated records are stored in the project's database/data layer and transformed into analytical outputs consumed by the dashboard.
+
+---
+
+# 🧹 Cleaning & Transformation
+
+The pipeline handles common job-market data-quality problems.
+
+### Text Cleaning
+
+* Removes unnecessary whitespace
+* Standardizes text values
+* Normalizes inconsistent representations
+
+### Experience Parsing
+
+Different experience formats are converted into analytical categories.
+
+### Salary Parsing
+
+Available salary information is extracted and organized into usable salary buckets.
+
+### Skills Processing
+
+Skill information is transformed into an analytical structure suitable for demand analysis.
+
+### Work Mode
+
+Different representations are standardized into categories such as:
+
+* On-site
+* Hybrid
+* Remote
+
+### Role Classification
+
+Job titles are mapped into broader role categories for demand analysis.
+
+---
+
+# 🔗 Validation & Deduplication
+
+Data quality is treated as a **core part of the pipeline**.
+
+The project performs:
+
+* Required-field validation
+* Job-count validation
+* Source-count validation
+* Duplicate job-link detection
+* Dataset integrity checks
+* Field completeness analysis
+* Source quality analysis
+* Snapshot validation
+
+---
+
+# 🛡️ Publication Quality Gate
+
+One of the key engineering features of the project is the **Publication Quality Gate**.
+
+A scraper completing successfully does not automatically mean that the resulting dataset should be published.
+
+The current production defaults require:
+
+```text
+Minimum Jobs    = 2,000
+Minimum Sources = 3
+```
+
+The pipeline checks whether the new dataset meets the configured quality requirements.
+
+```text
+NEW SCRAPING RUN
+       │
+       ▼
+DATA VALIDATION
+       │
+       ▼
+QUALITY GATE
+       │
+   ┌───┴───┐
+   │       │
+ PASS     FAIL
+   │       │
+   ▼       ▼
+PUBLISH   PRESERVE
+   │      PREVIOUS
+   ▼      DATASET
+PRODUCTION
+```
+
+This protects the dashboard from being replaced by a degraded scraping run.
+
+### Why this matters
+
+The system distinguishes between:
+
+```text
+Scraper Execution Success
+```
+
+and:
+
+```text
+Production Data Publication Success
+```
+
+This is an important production-data engineering principle.
+
+---
+
+# 🗄️ Database
+
+SQLite is used as the project's lightweight analytical storage layer.
+
+The database supports:
+
+* Persistent validated job data
+* Structured querying
+* Production dataset management
+* Analytics generation
+* Snapshot handling
+* Dashboard data access
+
+Using a database layer allows the project to move beyond a standalone notebook workflow.
+
+---
+
+# 📊 Analytics Layer
+
+The validated dataset is transformed into business-facing metrics.
+
+The dashboard analyzes:
+
+### Hiring
+
+* Company demand
+* Location demand
+* Role demand
+* Source distribution
+
+### Skills
+
+* Most in-demand skills
+* Skill frequency
+
+### Experience
+
+* Experience-level demand
+* Experience distribution
+
+### Work Mode
+
+* On-site
+* Hybrid
+* Remote
+
+### Salary
+
+* Salary availability
+* Salary buckets
+
+### Data Quality
+
+* Field coverage
+* Missing values
+* Source quality
+* Validation metrics
+
+---
+
+# 📈 Key Results
+
+The latest validated production snapshot contains:
+
+| KPI               |    Result |
+| ----------------- | --------: |
+| 📊 Validated Jobs | **4,325** |
+| 🏢 Companies      | **2,009** |
+| 📍 Locations      |   **570** |
+| 🌐 Sources        |     **4** |
+| 🏠 Remote Jobs    |   **179** |
+
+---
+
+# 🧪 Data Quality Results
+
+The latest dashboard shows the following field coverage:
+
+| Field         |   Coverage |
+| ------------- | ---------: |
+| 🏢 Company    |   **100%** |
+| 🔗 Job Link   |   **100%** |
+| 📝 Title      |   **100%** |
+| 📍 Location   | **99.51%** |
+| 🧠 Skills     | **92.53%** |
+| 💼 Experience | **91.88%** |
+| 💰 Salary     | **14.98%** |
+
+The dashboard's Data Quality Intelligence section also exposes valid and missing/invalid record counts for these fields.
+
+---
+
+# 💰 Salary Data
+
+Salary information has substantially lower coverage than the core job fields.
+
+The dashboard indicates that salary analysis is based on **606 parsed salary records**, representing approximately **14.01% of the current dataset**.
+
+Therefore, salary charts should be interpreted as analysis of the available disclosed salary records rather than a complete representation of the overall job market.
+
+---
+
+# 🔎 Job Explorer
+
+The dashboard provides job-level exploration.
+
+Users can inspect:
+
+| Field         | Example               |
+| ------------- | --------------------- |
+| Title         | Data Scientist AI     |
+| Company       | Company name          |
+| Location      | Bengaluru             |
+| Experience    | 3–8 Yrs               |
+| Work Mode     | Hybrid                |
+| Role Category | Data Scientist        |
+| Source        | Naukri                |
+| Posted Date   | Relative posting date |
+| Apply         | Direct job link       |
+
+This connects the high-level analytics layer to individual job opportunities.
+
+---
+
+# 🔄 Automation
+
+GitHub Actions is used for recurring pipeline execution.
+
+The automated workflow can:
+
+```text
+Scheduled Run
+     ↓
+Scrape Sources
+     ↓
+Collect Data
+     ↓
+Clean & Transform
+     ↓
+Validate
+     ↓
+Quality Gate
+     ↓
+ ┌───┴────┐
+ PASS     FAIL
+ ↓         ↓
+Publish   Preserve
+ ↓        Previous
+Update    Dataset
+Analytics
+```
+
+This allows the project to maintain a validated production dataset while reducing the risk of publishing incomplete scraping results.
+
+---
+
+# ⚠️ Limitations
+
+## External Website Changes
+
+Web scraping depends on external page structures, which can change over time.
+
+## Anti-Bot / Access Controls
+
+Automated collection can encounter access restrictions or different behavior depending on the execution environment.
+
+## Different ATS Structures
+
+Recruitment and ATS platforms expose different fields and formats.
+
+## Salary Availability
+
+Salary information is not available for every job and therefore has substantially lower coverage.
+
+## Snapshot-Based Dataset
+
+The dataset represents collected snapshots and should not be interpreted as the complete job market.
+
+## Duplicate Listings
+
+The same vacancy can appear across multiple sources, requiring deduplication.
+
+## Execution Environment
+
+Local browser execution and GitHub-hosted automation can experience different access conditions.
+
+---
+
+# 🧰 Tech Stack
+
+| Category           | Technology                        |
+| ------------------ | --------------------------------- |
+| 🐍 Programming     | Python                            |
+| 📊 Data Analysis   | Pandas, NumPy                     |
+| 🕷️ Web Scraping   | Selenium, Requests, BeautifulSoup |
+| 🌐 HTML Parsing    | lxml                              |
+| 🗄️ Database       | SQLite                            |
+| 📈 Visualization   | Plotly                            |
+| 🖥️ Dashboard      | Streamlit                         |
+| ⚙️ Automation      | GitHub Actions                    |
+| 🔧 Version Control | Git                               |
+| ☁️ Deployment      | Streamlit Community Cloud         |
 
 ---
 
 # 📂 Repository Structure
 
-```
+```text
 naukri-job-analytics-platform/
-
 │
 ├── dashboard/
 │   └── app.py
@@ -318,11 +651,11 @@ naukri-job-analytics-platform/
 │
 ├── database/
 │
-├── resume_matcher/
-│
 ├── analytics/
 │
 ├── notebooks/
+│
+├── resume_matcher/
 │
 ├── .github/
 │   └── workflows/
@@ -330,14 +663,14 @@ naukri-job-analytics-platform/
 ├── scheduler.py
 ├── main.py
 ├── requirements.txt
-└── README.md
+└── README.mdtree
 ```
 
 ---
 
 # 🚀 Installation
 
-Clone the repository
+Clone the repository:
 
 ```bash
 git clone https://github.com/prabath1509/naukri-job-analytics-platform.git
@@ -345,21 +678,19 @@ git clone https://github.com/prabath1509/naukri-job-analytics-platform.git
 cd naukri-job-analytics-platform
 ```
 
-Create virtual environment
+Create a virtual environment:
 
 ```bash
 python -m venv venv
 ```
 
-Activate environment
-
-Windows
+Activate it on Windows:
 
 ```bash
 venv\Scripts\activate
 ```
 
-Install dependencies
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
@@ -367,15 +698,15 @@ pip install -r requirements.txt
 
 ---
 
-# ▶ Running the Project
+# ▶️ Running the Project
 
-Run the scraper
+Run the pipeline:
 
 ```bash
 python main.py
 ```
 
-Launch dashboard
+Launch the dashboard:
 
 ```bash
 streamlit run dashboard/app.py
@@ -383,127 +714,432 @@ streamlit run dashboard/app.py
 
 ---
 
-# 🔄 ETL Workflow
+# 🔬 End-to-End Data Flow
 
+```text
+                 RAW JOB DATA
+                      │
+                      ▼
+               DATA COLLECTION
+                      │
+                      ▼
+                  CLEANING
+                      │
+                      ▼
+               STANDARDIZATION
+                      │
+                      ▼
+                 ENRICHMENT
+                      │
+                      ▼
+               DEDUPLICATION
+                      │
+                      ▼
+                 VALIDATION
+                      │
+                      ▼
+              QUALITY GATE
+                      │
+                      ▼
+                  DATABASE
+                      │
+                      ▼
+                 ANALYTICS
+                      │
+                      ▼
+                DASHBOARD
 ```
-Collect Jobs
-      │
-      ▼
-Clean Records
-      │
-      ▼
-Standardize Fields
-      │
-      ▼
-Parse Experience / Salary / Skills
-      │
-      ▼
-Remove Duplicates
-      │
-      ▼
-Validate Dataset
-      │
-      ▼
-Update SQLite
-      │
-      ▼
-Generate Analytics
-      │
-      ▼
-Launch Dashboard
+
+---
+
+# 💡 Why This Project Is Different
+
+Many analytics portfolios begin with an already-clean CSV and finish with a dashboard.
+
+This project covers the stages before the dashboard.
+
+```text
+🌐 DATA COLLECTION
+        ↓
+🧹 DATA CLEANING
+        ↓
+⚙️ DATA ENGINEERING
+        ↓
+🔗 DEDUPLICATION
+        ↓
+🧪 DATA QUALITY
+        ↓
+🛡️ PRODUCTION VALIDATION
+        ↓
+🗄️ DATA STORAGE
+        ↓
+📊 ANALYTICS
+        ↓
+📈 VISUALIZATION
+        ↓
+⚙️ AUTOMATION
+```
+
+The project therefore demonstrates an end-to-end analytics workflow:
+
+### Data Collection
+
+Collecting job-market information from multiple external sources.
+
+### Data Engineering
+
+Cleaning, standardizing, enriching, and deduplicating raw records.
+
+### Data Quality
+
+Measuring field completeness and validating whether data is suitable for publication.
+
+### Production Protection
+
+Preventing a degraded scraping run from replacing the previous validated dataset.
+
+### Analytics
+
+Transforming validated job records into business-facing metrics.
+
+### Visualization
+
+Presenting hiring-market information through an interactive dashboard.
+
+### Automation
+
+Running recurring data collection and validation using GitHub Actions.
+
+---
+
+# 🎓 Portfolio Skills Demonstrated
+
+This project demonstrates practical experience with:
+
+```text
+Python
+Pandas
+NumPy
+SQL / SQLite
+Selenium
+Web Scraping
+ETL
+Data Cleaning
+Data Transformation
+Data Validation
+Data Quality
+Deduplication
+Data Analysis
+Plotly
+Streamlit
+Git
+GitHub
+GitHub Actions
+Automation
 ```
 
 ---
 
-# 📋 Data Quality Framework
+# 📌 Project Highlights
 
-Every production run includes:
-
-- Source Quality Analytics
-- Field Quality Analytics
-- Publication Quality Gate
-- Duplicate Detection
-- Snapshot Validation
-- Dataset Integrity Checks
-
-Only validated datasets are published.
-
----
-
-# 🤖 Automation
-
-GitHub Actions automatically:
-
-- Execute scheduled scraping
-- Validate dataset quality
-- Preserve production datasets
-- Update SQLite database
-- Publish analytics
-- Prevent bad deployments
+* ✅ Multi-source job collection
+* ✅ Automated ETL pipeline
+* ✅ Data cleaning and standardization
+* ✅ Experience parsing
+* ✅ Salary parsing
+* ✅ Skills processing
+* ✅ Duplicate detection
+* ✅ Data-quality measurement
+* ✅ Publication quality gate
+* ✅ Production dataset protection
+* ✅ SQLite storage
+* ✅ Interactive Streamlit dashboard
+* ✅ Job Explorer
+* ✅ Automated GitHub Actions workflow
+* ✅ Snapshot-based production protection
+* ✅ Multi-source analytics
 
 ---
 
-# 📌 Key Highlights
+# 🌐 Live Project
 
-✔ Production-style ETL pipeline
+### 🚀 Live Dashboard
 
-✔ Multi-source scraping
+https://naukri-job-analytics-platform-fyyympr7t2vqc2sg4snwzf.streamlit.app/
 
-✔ Automated quality validation
+### 💻 GitHub Repository
 
-✔ SQLite data warehouse
-
-✔ Interactive dashboard
-
-✔ Automated deployment workflow
-
-✔ Resume matching module
-
-✔ Snapshot retention
-
-✔ Zero duplicate job links
-
----
-
-# 🔮 Future Enhancements
-
-Planned improvements:
-
-- Additional ATS integrations
-- AI-powered skill recommendations
-- Resume semantic matching
-- Salary normalization
-- Historical trend analysis
-- Job recommendation engine
-- REST API
-- Power BI integration
-- Predictive hiring analytics
-
----
-
-# 📄 License
-
-This project is licensed under the MIT License.
+https://github.com/prabath1509/naukri-job-analytics-platform
 
 ---
 
 # 👨‍💻 Author
 
-**Krishna Prabath**
+## Krishna Prabath
 
-Aspiring Data Analyst | Python | SQL | Power BI | Data Visualization | Web Scraping
+**Aspiring Data Analyst | Python | SQL | Power BI | Data Visualization | Web Scraping**
 
-### Connect with me
+### GitHub
 
-GitHub:
 https://github.com/prabath1509
 
-LinkedIn:
+### LinkedIn
+
 https://www.linkedin.com/in/srinadhukrishnaprabath
 
-Portfolio:
+### Portfolio
+
 https://prabath1509.github.io/portfolio/
 
 ---
 
-⭐ If you found this project useful, consider giving it a star on GitHub.
+# ⭐ Project
+
+If you find this project useful, consider giving the repository a star.
+
+**Built to demonstrate an end-to-end journey from raw job-market data to validated analytics and interactive insights.**
+
+# 🕷️ Scraper Usage
+
+The scraper layer is responsible for collecting raw job listings from the supported recruitment and ATS sources before the records enter the ETL and validation pipeline.
+
+## 📁 Scraper Modules
+
+Source-specific scrapers are maintained inside the `scraper/` directory:
+
+```text
+scraper/
+├── naukri_scraper.py
+├── greenhouse_scraper.py
+├── workday_scraper.py
+├── lever_scraper.py
+├── smartrecruiters_scraper.py
+└── ats_source_registry.py
+```
+
+Each scraper is responsible for collecting job records using the structure appropriate to its source.
+
+---
+
+## 🚀 Run the Complete Scraping Pipeline
+
+The recommended way to run the complete project pipeline is:
+
+```bash
+python main.py
+```
+
+The main orchestration layer coordinates the configured job sources and sends the collected records through the downstream processing pipeline.
+
+```text
+main.py
+   │
+   ├── Naukri
+   ├── Greenhouse
+   ├── Workday
+   ├── Lever
+   └── SmartRecruiters
+          │
+          ▼
+     Raw Job Records
+          │
+          ▼
+      ETL Pipeline
+          │
+          ▼
+   Validation & Quality Gate
+          │
+          ▼
+     Production Dataset
+```
+
+---
+
+## 🔎 Naukri Scraper
+
+The Naukri scraper uses Selenium to load search-result pages and extract job listings.
+
+The scraper accepts a job-search keyword and number of pages.
+
+Example:
+
+```python
+from scraper.naukri_scraper import scrape_naukri_jobs
+
+jobs = scrape_naukri_jobs(
+    "data-analyst",
+    pages=1
+)
+
+print("TOTAL JOBS:", len(jobs))
+```
+
+A successful one-page local run currently returns the job records collected from the requested search page.
+
+For example:
+
+```text
+TOTAL JOBS: 20
+```
+
+The scraper uses the current Naukri search-result structure and validates the returned page before processing it.
+
+---
+
+## 🔁 Naukri Pagination
+
+The scraper generates the search URL according to the requested page.
+
+For the first page:
+
+```text
+https://www.naukri.com/data-analyst-jobs
+```
+
+For subsequent pages:
+
+```text
+https://www.naukri.com/data-analyst-jobs-2
+https://www.naukri.com/data-analyst-jobs-3
+...
+```
+
+This avoids treating the first search page as a numbered page.
+
+---
+
+## 🛡️ Scraper Reliability Checks
+
+The Naukri scraper includes checks to detect blocked or incomplete responses.
+
+Before processing a page, the scraper validates information such as:
+
+* Page title
+* Page HTML length
+* Current URL
+* Job-card elements
+* Job-title links
+* Page body content
+
+If the returned page appears to be blocked or incomplete, the scraper raises a controlled error rather than silently treating the page as a valid empty result.
+
+Example condition:
+
+```text
+Blocked / incomplete page
+        ↓
+Detect invalid response
+        ↓
+Log diagnostic information
+        ↓
+Skip affected page
+        ↓
+Continue controlled pipeline execution
+```
+
+This is particularly important for automated execution environments where external websites may respond differently from a normal local browser session.
+
+---
+
+## 🔄 Multi-Source Scraping
+
+The project does not depend on a single recruitment source.
+
+The configured pipeline can collect from:
+
+```text
+Naukri
+Greenhouse
+Workday
+Lever
+SmartRecruiters
+```
+
+Each source contributes records to the common job-data structure.
+
+The downstream pipeline then standardizes the records so that data from different sources can be analyzed together.
+
+---
+
+## 🧪 Testing a Scraper Locally
+
+Before running the complete pipeline, an individual scraper can be tested independently.
+
+Example:
+
+```bash
+py -c "from scraper.naukri_scraper import scrape_naukri_jobs; jobs=scrape_naukri_jobs('data-analyst', pages=1); print('TOTAL JOBS:', len(jobs))"
+```
+
+This is useful for verifying:
+
+* Selenium configuration
+* Website accessibility
+* Search URL generation
+* Page loading
+* Job-card selectors
+* Record extraction
+
+A scraper should be tested independently before troubleshooting the complete ETL pipeline.
+
+---
+
+## ⚠️ Scraping Limitations
+
+Web scraping depends on external websites and therefore has operational limitations.
+
+Possible issues include:
+
+* Website HTML changes
+* Missing job fields
+* Temporary access restrictions
+* Anti-bot mechanisms
+* Network failures
+* Different behavior between local and CI environments
+* Changes to job-card selectors
+* Source-specific data formats
+
+The project therefore combines scraper-level error handling with dataset-level validation.
+
+A scraping run producing fewer records does not automatically result in publication. The **Publication Quality Gate** determines whether the resulting dataset is suitable to replace the existing production dataset.
+
+---
+
+## 🧩 Scraper → ETL Integration
+
+The scraper is only the first stage of the project.
+
+```text
+             SCRAPER
+                │
+                ▼
+         Raw Job Records
+                │
+                ▼
+        CLEANING / ETL
+                │
+                ▼
+       STANDARDIZATION
+                │
+                ▼
+          ENRICHMENT
+                │
+                ▼
+        DEDUPLICATION
+                │
+                ▼
+          VALIDATION
+                │
+                ▼
+       QUALITY GATE
+                │
+          ┌─────┴─────┐
+          ▼           ▼
+       PUBLISH      REJECT
+          │           │
+          ▼           ▼
+     Production   Preserve Previous
+      Dataset       Dataset
+```
+
+This architecture ensures that **scraping and publishing are treated as separate stages** of the data pipeline.
