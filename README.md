@@ -317,6 +317,251 @@ Transformation includes:
 Validated records are stored in the project's database/data layer and transformed into analytical outputs consumed by the dashboard.
 
 ---
+# 🕷️ Scraper Usage
+
+The scraper layer is responsible for collecting raw job listings from the supported recruitment and ATS sources before the records enter the ETL and validation pipeline.
+
+## 📁 Scraper Modules
+
+Source-specific scrapers are maintained inside the `scraper/` directory:
+
+```text
+scraper/
+├── naukri_scraper.py
+├── greenhouse_scraper.py
+├── workday_scraper.py
+├── lever_scraper.py
+├── smartrecruiters_scraper.py
+└── ats_source_registry.py
+```
+
+Each scraper is responsible for collecting job records using the structure appropriate to its source.
+
+---
+
+## 🚀 Run the Complete Scraping Pipeline
+
+The recommended way to run the complete project pipeline is:
+
+```bash
+python main.py
+```
+
+The main orchestration layer coordinates the configured job sources and sends the collected records through the downstream processing pipeline.
+
+```text
+main.py
+   │
+   ├── Naukri
+   ├── Greenhouse
+   ├── Workday
+   ├── Lever
+   └── SmartRecruiters
+          │
+          ▼
+     Raw Job Records
+          │
+          ▼
+      ETL Pipeline
+          │
+          ▼
+   Validation & Quality Gate
+          │
+          ▼
+     Production Dataset
+```
+
+
+## 🔎 Naukri Scraper
+
+The Naukri scraper uses Selenium to load search-result pages and extract job listings.
+
+The scraper accepts a job-search keyword and number of pages.
+
+Example:
+
+```python
+from scraper.naukri_scraper import scrape_naukri_jobs
+
+jobs = scrape_naukri_jobs(
+    "data-analyst",
+    pages=1
+)
+
+print("TOTAL JOBS:", len(jobs))
+```
+
+A successful one-page local run currently returns the job records collected from the requested search page.
+
+For example:
+
+```text
+TOTAL JOBS: 20
+```
+
+The scraper uses the current Naukri search-result structure and validates the returned page before processing it.
+
+---
+
+## 🔁 Naukri Pagination
+
+The scraper generates the search URL according to the requested page.
+
+For the first page:
+
+```text
+https://www.naukri.com/data-analyst-jobs
+```
+
+For subsequent pages:
+
+```text
+https://www.naukri.com/data-analyst-jobs-2
+https://www.naukri.com/data-analyst-jobs-3
+...
+```
+
+This avoids treating the first search page as a numbered page.
+
+---
+
+## 🛡️ Scraper Reliability Checks
+
+The Naukri scraper includes checks to detect blocked or incomplete responses.
+
+Before processing a page, the scraper validates information such as:
+
+* Page title
+* Page HTML length
+* Current URL
+* Job-card elements
+* Job-title links
+* Page body content
+
+If the returned page appears to be blocked or incomplete, the scraper raises a controlled error rather than silently treating the page as a valid empty result.
+
+Example condition:
+
+```text
+Blocked / incomplete page
+        ↓
+Detect invalid response
+        ↓
+Log diagnostic information
+        ↓
+Skip affected page
+        ↓
+Continue controlled pipeline execution
+```
+
+This is particularly important for automated execution environments where external websites may respond differently from a normal local browser session.
+
+---
+
+## 🔄 Multi-Source Scraping
+
+The project does not depend on a single recruitment source.
+
+The configured pipeline can collect from:
+
+```text
+Naukri
+Greenhouse
+Workday
+Lever
+SmartRecruiters
+```
+
+Each source contributes records to the common job-data structure.
+
+The downstream pipeline then standardizes the records so that data from different sources can be analyzed together.
+
+---
+
+## 🧪 Testing a Scraper Locally
+
+Before running the complete pipeline, an individual scraper can be tested independently.
+
+Example:
+
+```bash
+py -c "from scraper.naukri_scraper import scrape_naukri_jobs; jobs=scrape_naukri_jobs('data-analyst', pages=1); print('TOTAL JOBS:', len(jobs))"
+```
+
+This is useful for verifying:
+
+* Selenium configuration
+* Website accessibility
+* Search URL generation
+* Page loading
+* Job-card selectors
+* Record extraction
+
+A scraper should be tested independently before troubleshooting the complete ETL pipeline.
+
+---
+
+## ⚠️ Scraping Limitations
+
+Web scraping depends on external websites and therefore has operational limitations.
+
+Possible issues include:
+
+* Website HTML changes
+* Missing job fields
+* Temporary access restrictions
+* Anti-bot mechanisms
+* Network failures
+* Different behavior between local and CI environments
+* Changes to job-card selectors
+* Source-specific data formats
+
+The project therefore combines scraper-level error handling with dataset-level validation.
+
+A scraping run producing fewer records does not automatically result in publication. The **Publication Quality Gate** determines whether the resulting dataset is suitable to replace the existing production dataset.
+
+---
+
+## 🧩 Scraper → ETL Integration
+
+The scraper is only the first stage of the project.
+
+```text
+             SCRAPER
+                │
+                ▼
+         Raw Job Records
+                │
+                ▼
+        CLEANING / ETL
+                │
+                ▼
+       STANDARDIZATION
+                │
+                ▼
+          ENRICHMENT
+                │
+                ▼
+        DEDUPLICATION
+                │
+                ▼
+          VALIDATION
+                │
+                ▼
+       QUALITY GATE
+                │
+          ┌─────┴─────┐
+          ▼           ▼
+       PUBLISH      REJECT
+          │           │
+          ▼           ▼
+     Production   Preserve Previous
+      Dataset       Dataset
+```
+
+This architecture ensures that **scraping and publishing are treated as separate stages** of the data pipeline.
+
+---
 
 # 🧹 Cleaning & Transformation
 
@@ -899,247 +1144,4 @@ If you find this project useful, consider giving the repository a star.
 
 **Built to demonstrate an end-to-end journey from raw job-market data to validated analytics and interactive insights.**
 
-# 🕷️ Scraper Usage
 
-The scraper layer is responsible for collecting raw job listings from the supported recruitment and ATS sources before the records enter the ETL and validation pipeline.
-
-## 📁 Scraper Modules
-
-Source-specific scrapers are maintained inside the `scraper/` directory:
-
-```text
-scraper/
-├── naukri_scraper.py
-├── greenhouse_scraper.py
-├── workday_scraper.py
-├── lever_scraper.py
-├── smartrecruiters_scraper.py
-└── ats_source_registry.py
-```
-
-Each scraper is responsible for collecting job records using the structure appropriate to its source.
-
----
-
-## 🚀 Run the Complete Scraping Pipeline
-
-The recommended way to run the complete project pipeline is:
-
-```bash
-python main.py
-```
-
-The main orchestration layer coordinates the configured job sources and sends the collected records through the downstream processing pipeline.
-
-```text
-main.py
-   │
-   ├── Naukri
-   ├── Greenhouse
-   ├── Workday
-   ├── Lever
-   └── SmartRecruiters
-          │
-          ▼
-     Raw Job Records
-          │
-          ▼
-      ETL Pipeline
-          │
-          ▼
-   Validation & Quality Gate
-          │
-          ▼
-     Production Dataset
-```
-
----
-
-## 🔎 Naukri Scraper
-
-The Naukri scraper uses Selenium to load search-result pages and extract job listings.
-
-The scraper accepts a job-search keyword and number of pages.
-
-Example:
-
-```python
-from scraper.naukri_scraper import scrape_naukri_jobs
-
-jobs = scrape_naukri_jobs(
-    "data-analyst",
-    pages=1
-)
-
-print("TOTAL JOBS:", len(jobs))
-```
-
-A successful one-page local run currently returns the job records collected from the requested search page.
-
-For example:
-
-```text
-TOTAL JOBS: 20
-```
-
-The scraper uses the current Naukri search-result structure and validates the returned page before processing it.
-
----
-
-## 🔁 Naukri Pagination
-
-The scraper generates the search URL according to the requested page.
-
-For the first page:
-
-```text
-https://www.naukri.com/data-analyst-jobs
-```
-
-For subsequent pages:
-
-```text
-https://www.naukri.com/data-analyst-jobs-2
-https://www.naukri.com/data-analyst-jobs-3
-...
-```
-
-This avoids treating the first search page as a numbered page.
-
----
-
-## 🛡️ Scraper Reliability Checks
-
-The Naukri scraper includes checks to detect blocked or incomplete responses.
-
-Before processing a page, the scraper validates information such as:
-
-* Page title
-* Page HTML length
-* Current URL
-* Job-card elements
-* Job-title links
-* Page body content
-
-If the returned page appears to be blocked or incomplete, the scraper raises a controlled error rather than silently treating the page as a valid empty result.
-
-Example condition:
-
-```text
-Blocked / incomplete page
-        ↓
-Detect invalid response
-        ↓
-Log diagnostic information
-        ↓
-Skip affected page
-        ↓
-Continue controlled pipeline execution
-```
-
-This is particularly important for automated execution environments where external websites may respond differently from a normal local browser session.
-
----
-
-## 🔄 Multi-Source Scraping
-
-The project does not depend on a single recruitment source.
-
-The configured pipeline can collect from:
-
-```text
-Naukri
-Greenhouse
-Workday
-Lever
-SmartRecruiters
-```
-
-Each source contributes records to the common job-data structure.
-
-The downstream pipeline then standardizes the records so that data from different sources can be analyzed together.
-
----
-
-## 🧪 Testing a Scraper Locally
-
-Before running the complete pipeline, an individual scraper can be tested independently.
-
-Example:
-
-```bash
-py -c "from scraper.naukri_scraper import scrape_naukri_jobs; jobs=scrape_naukri_jobs('data-analyst', pages=1); print('TOTAL JOBS:', len(jobs))"
-```
-
-This is useful for verifying:
-
-* Selenium configuration
-* Website accessibility
-* Search URL generation
-* Page loading
-* Job-card selectors
-* Record extraction
-
-A scraper should be tested independently before troubleshooting the complete ETL pipeline.
-
----
-
-## ⚠️ Scraping Limitations
-
-Web scraping depends on external websites and therefore has operational limitations.
-
-Possible issues include:
-
-* Website HTML changes
-* Missing job fields
-* Temporary access restrictions
-* Anti-bot mechanisms
-* Network failures
-* Different behavior between local and CI environments
-* Changes to job-card selectors
-* Source-specific data formats
-
-The project therefore combines scraper-level error handling with dataset-level validation.
-
-A scraping run producing fewer records does not automatically result in publication. The **Publication Quality Gate** determines whether the resulting dataset is suitable to replace the existing production dataset.
-
----
-
-## 🧩 Scraper → ETL Integration
-
-The scraper is only the first stage of the project.
-
-```text
-             SCRAPER
-                │
-                ▼
-         Raw Job Records
-                │
-                ▼
-        CLEANING / ETL
-                │
-                ▼
-       STANDARDIZATION
-                │
-                ▼
-          ENRICHMENT
-                │
-                ▼
-        DEDUPLICATION
-                │
-                ▼
-          VALIDATION
-                │
-                ▼
-       QUALITY GATE
-                │
-          ┌─────┴─────┐
-          ▼           ▼
-       PUBLISH      REJECT
-          │           │
-          ▼           ▼
-     Production   Preserve Previous
-      Dataset       Dataset
-```
-
-This architecture ensures that **scraping and publishing are treated as separate stages** of the data pipeline.
