@@ -732,6 +732,8 @@ The dashboard analyzes:
 * Source quality
 * Validation metrics
 
+  The analytics layer is designed around a **Business Question → KPI/Chart → Insight → Possible Decision** framework, connecting technical data processing with business-facing analysis.
+
 ---
 
 ## 📊 Dashboard Business Analysis
@@ -949,7 +951,7 @@ The dashboard's Data Quality Intelligence section also exposes valid and missing
 
 Salary information has substantially lower coverage than the core job fields.
 
-The dashboard indicates that salary analysis is based on **606 parsed salary records**, representing approximately **14.01% of the current dataset**.
+The dashboard reports **606 parsed salary records (approximately 14.01%)** for its salary analysis, while the field-level Data Quality table reports **14.98% salary coverage**. These figures represent different stages/definitions of salary availability in the dashboard.
 
 Therefore, salary charts should be interpreted as analysis of the available disclosed salary records rather than a complete representation of the overall job market.
 
@@ -1269,6 +1271,10 @@ Automation
 
 # 📌 Project Highlights
 
+* ✅ Business-question-driven dashboard analysis
+* ✅ KPI → Insight → Decision framework
+* ✅ 5 supported source integrations
+* ✅ 4 contributing sources in the latest validated snapshot
 * ✅ Multi-source job collection
 * ✅ Automated ETL pipeline
 * ✅ Data cleaning and standardization
