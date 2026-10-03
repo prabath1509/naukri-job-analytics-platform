@@ -915,6 +915,15 @@ Users can inspect individual listings using fields such as title, company, locat
 **Possible Decision:**  
 Users can move from market-level analysis to individual opportunities and inspect the underlying listings.
 
+📌 Key Results & Business Value
+Problem: Built an end-to-end platform to address fragmented job-market data across recruitment platforms and ATS sources, where inconsistent formats, missing fields, duplicate listings, and changing source structures make reliable analysis difficult.
+Dataset: The platform collected and standardized job listings from 5 supported recruitment/ATS integrations, with the latest validated production snapshot containing 4,325 jobs from 4 contributing sources, covering 2,009 companies and 570 locations.
+Validation: The pipeline applies cleaning, transformation, deduplication, required-field validation, source validation, field-completeness checks, and a Publication Quality Gate requiring a minimum of 2,000 jobs and 3 sources before a new dataset can replace the production snapshot.
+Dashboard: The Streamlit dashboard enables users to analyze role demand, skill demand, hiring companies, job locations, work mode, experience requirements, salary availability, data-quality metrics, and individual job listings.
+Results: The platform produces a validated, multi-source analytical dataset with interactive hiring-market analytics and a Job Explorer that connects aggregated metrics back to individual job opportunities.
+Business Value: Job seekers can explore roles, companies, locations, work modes, experience requirements, and available salary information, while recruiters and analysts can use the same dataset to examine hiring activity across sources and locations.
+End-to-End Analytics Engineering: The project demonstrates the complete journey from job collection → ETL → cleaning → transformation → deduplication → validation → quality-controlled publication → database → analytics → visualization, rather than starting with an already-clean dataset.
+
 # 📈 Key Results
 
 The latest validated production snapshot contains:
