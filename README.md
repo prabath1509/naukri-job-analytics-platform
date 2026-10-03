@@ -734,6 +734,185 @@ The dashboard analyzes:
 
 ---
 
+## 📊 Dashboard Business Analysis
+
+The dashboard converts the validated job dataset into business-oriented hiring insights rather than simply displaying charts.
+
+### 1. What the Dashboard Measures
+
+**Business Question:**  
+What does the collected job market data reveal about hiring demand, employers, locations, work modes, experience requirements and salary availability?
+
+**KPI / Chart:**
+- 4,325 validated jobs
+- 2,009 companies
+- 570 locations
+- 4 contributing sources
+- Role demand
+- Skill demand
+- Top hiring companies
+- Job locations
+- Work mode
+- Experience demand
+- Salary availability
+- Data-quality metrics
+- Individual job listings
+
+**Insight:**  
+The dashboard transforms multi-source job data into an interactive view of hiring demand and data quality.
+
+**Possible Decision:**  
+Users can identify where opportunities are concentrated and examine job characteristics relevant to their career or hiring analysis.
+
+---
+
+### 2. Role Demand
+
+**Business Question:**  
+Which job categories have the highest representation in the collected dataset?
+
+**KPI / Chart:**  
+Role-category distribution.
+
+**Insight:**  
+The dataset contains categories including Business Intelligence, Data Scientist, Data Engineering, Data Analyst, Machine Learning / AI, Business Analyst, Research Analyst, ETL / Data Integration, SQL / Database and Python Development.
+
+**Possible Decision:**  
+Users can compare demand across role categories when determining which career areas or hiring segments to investigate further.
+
+---
+
+### 3. Skill Demand
+
+**Business Question:**  
+Which skills are frequently requested across job opportunities?
+
+**KPI / Chart:**  
+Skill-demand analysis.
+
+**Insight:**  
+Skill information extracted from job listings allows demand to be examined beyond job titles.
+
+**Possible Decision:**  
+Candidates can compare commonly requested skills with their existing skill set and identify potential learning priorities.
+
+---
+
+### 4. Top Hiring Companies
+
+**Business Question:**  
+Which companies appear most frequently in the collected listings?
+
+**KPI / Chart:**  
+Top-company hiring distribution.
+
+**Insight:**  
+The dataset contains 2,009 unique companies. The dashboard allows companies with the largest number of collected listings to be identified.
+
+**Possible Decision:**  
+Users can investigate employers with multiple relevant opportunities and compare hiring activity across organizations.
+
+---
+
+### 5. Job Locations
+
+**Business Question:**  
+Where are the collected opportunities concentrated?
+
+**KPI / Chart:**  
+Location distribution.
+
+**Insight:**  
+The production snapshot contains 570 locations, with major concentrations including Bengaluru, Hyderabad, Pune, Mumbai, Chennai, Gurugram and Noida.
+
+**Possible Decision:**  
+Users can examine geographic hiring concentration when evaluating application or relocation strategies.
+
+---
+
+### 6. Work Mode
+
+**Business Question:**  
+How are opportunities distributed across on-site, hybrid and remote work?
+
+**KPI / Chart:**  
+Work-mode distribution.
+
+**Insight:**
+
+| Work Mode | Jobs | Share |
+|---|---:|---:|
+| On-site | 3,672 | 84.9% |
+| Hybrid | 474 | 11.0% |
+| Remote | 179 | 4.1% |
+
+**Possible Decision:**  
+Users can compare the availability of remote and hybrid opportunities against on-site positions.
+
+---
+
+### 7. Experience Demand
+
+**Business Question:**  
+What experience levels are requested across the collected vacancies?
+
+**KPI / Chart:**  
+Experience-range distribution.
+
+**Insight:**  
+The dataset contains a mixture of experience requirements, while 351 records do not provide an available experience value.
+
+**Possible Decision:**  
+Users can compare role requirements with their experience level and identify relevant segments for further analysis.
+
+---
+
+### 8. Salary Availability
+
+**Business Question:**  
+How frequently is usable salary information available?
+
+**KPI / Chart:**  
+Salary availability and salary-quality analysis.
+
+**Insight:**  
+The dashboard reports 606 parsed salary records, approximately 14.01% of the dataset, for salary analysis. The Data Quality table separately reports 14.98% salary field coverage.
+
+**Possible Decision:**  
+Salary-based conclusions should be treated cautiously because disclosed salary information is available for only a subset of listings.
+
+---
+
+### 9. Data Quality Metrics
+
+**Business Question:**  
+Is the collected dataset sufficiently reliable for downstream analysis?
+
+**KPI / Chart:**  
+Data-quality coverage and validation metrics.
+
+**Insight:**  
+The latest dataset contains 4,325 records with zero duplicate job links and zero duplicate rows. Core fields such as title, company and job link have very high coverage.
+
+**Possible Decision:**  
+The validation layer provides evidence that the published dataset is suitable for downstream analytics while highlighting fields that require additional caution.
+
+---
+
+### 10. Individual Job Listings
+
+**Business Question:**  
+Can aggregated insights be traced back to individual job opportunities?
+
+**KPI / Chart:**  
+Interactive Job Explorer.
+
+**Insight:**  
+Users can inspect individual listings using fields such as title, company, location, experience, work mode, role category, source, posted date and job link.
+
+**Possible Decision:**  
+Users can move from market-level analysis to individual opportunities and inspect the underlying listings.
+
 # 📈 Key Results
 
 The latest validated production snapshot contains:
