@@ -23,6 +23,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 # =========================================================
 
 MAX_RETRIES = 3
+MAX_CONSECUTIVE_BLOCKED_PAGES = 3
 
 def ensure_valid_page(driver):
 
