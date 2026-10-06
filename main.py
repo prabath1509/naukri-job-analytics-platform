@@ -77,7 +77,10 @@ logging.basicConfig(
 # CONFIGURATION
 # =========================================================
 
-NAUKRI_PAGES = 20
+NAUKRI_PAGES = int(
+    os.getenv("NAUKRI_PAGES", "20")
+)
+
 MAX_WORKERS = 1
 
 KEYWORDS = [

@@ -127,6 +127,7 @@ def scrape_naukri_jobs(keyword, pages=10):
     jobs = []
 
     seen_links = set()
+    consecutive_blocked_pages = 0
 
     driver = None
 
@@ -247,60 +248,66 @@ def scrape_naukri_jobs(keyword, pages=10):
                         break
 
                     logging.info(
-
                         f"Page {page} : {len(cards)} jobs"
-
                     )
 
-                    success = True
+                    # Reset blocked-page counter after a successful page
+                    consecutive_blocked_pages = 0
 
+                    success = True
                     break
 
                 except RuntimeError as e:
 
-                    logging.warning(
-                    f"Naukri page blocked: {e}"
-    )
+                    consecutive_blocked_pages += 1
 
                     logging.warning(
-                    f"Skipping page {page} because Naukri "
-                    "returned an Access Denied/incomplete response."
+                        f"Naukri page blocked: {e}"
     )
 
                     logging.warning(
                         f"Skipping page {page} because Naukri "
-                        "returned an Access Denied/incomplete response."
-                    )
-                    break
-
-                except Exception as e:
+                        f"returned an Access Denied/incomplete response."
+    )
 
                     logging.warning(
-                        f"Retry {attempt+1}/{MAX_RETRIES}"
-                    )
+                        f"Consecutive blocked pages: "
+                        f"{consecutive_blocked_pages}/"
+                        f"{MAX_CONSECUTIVE_BLOCKED_PAGES}"
+    )
 
-                    logging.warning(str(e))
+                    if consecutive_blocked_pages >= MAX_CONSECUTIVE_BLOCKED_PAGES:
 
-                    time.sleep(
-                        random.uniform(5, 10)
-                    )
+                        logging.warning(
+                            "Naukri repeatedly blocked requests. "
+                            "Stopping pagination for this keyword."
+        )
 
-            if not success:
+                        break
+                    if not success:
 
-                logging.warning(
+                        logging.warning(
+                            f"Skipping page {page}"
+    )
 
-                    f"Skipping page {page}"
+                        if consecutive_blocked_pages >= MAX_CONSECUTIVE_BLOCKED_PAGES:
 
-                )
+                            logging.warning(
+                                f"Stopping Naukri pagination for keyword "
+                                f"'{keyword}' after "
+                                f"{consecutive_blocked_pages} consecutive blocked pages."
+        )
 
-                continue
+                            break
+
+                        continue
 
             # =============================================
             # LOOP JOB CARDS
             # =============================================
 
             for card in cards:
-                                # ==========================================
+                # ==========================================
                 # TITLE
                 # ==========================================
 
@@ -436,7 +443,7 @@ def scrape_naukri_jobs(keyword, pages=10):
 
                     job_link = ""
 
-                                # ==========================================
+                # ==========================================
                 # REMOVE DUPLICATES
                 # ==========================================
 
