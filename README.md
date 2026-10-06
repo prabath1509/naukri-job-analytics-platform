@@ -619,6 +619,130 @@ The project performs:
 
 ---
 
+# 📊 Dashboard
+
+The Streamlit dashboard is the analytical layer of the platform. It transforms the validated job dataset into interactive hiring-market insights and allows users to move from high-level KPIs to individual job listings.
+
+## 📌 KPIs Displayed
+
+The dashboard displays five primary KPIs:
+
+- **Total Jobs**
+- **Companies Hiring**
+- **Locations**
+- **Sources**
+- **Remote Jobs**
+
+The KPI values update dynamically based on the filters selected by the user.
+
+## 🔎 Available Filters
+
+Users can interactively filter the dataset using:
+
+- **Job Title Search**
+- **Source**
+- **Work Mode**
+- **Role Category**
+- **Experience Level**
+- **Company**
+- **Location Search**
+
+The dashboard also provides a **Role Chart Depth** selector to control the number of role categories displayed in the role-demand chart.
+
+## 📈 Analytical Dimensions
+
+The dashboard allows the validated dataset to be analyzed across:
+
+### Hiring Demand
+- Role category
+- Hiring company
+- Job source
+- Job location
+
+### Skills
+- Most frequently occurring skills
+
+### Work Mode
+- On-site
+- Hybrid
+- Remote
+
+### Experience
+- Fresher
+- 0–2 Years
+- 2–5 Years
+- 5–10 Years
+- 10+ Years
+- Not Available
+
+### Salary
+- Salary availability
+- Salary buckets
+- Parsed salary records
+
+### Data Quality
+- Field coverage
+- Missing/invalid values
+- Source quality
+
+### Individual Jobs
+- Job title
+- Company
+- Location
+- Experience
+- Work mode
+- Role category
+- Source
+- Posted date
+- Direct job link
+
+## 💡 Questions the Dashboard Answers
+
+The dashboard is designed to answer questions such as:
+
+- Which job roles have the highest representation?
+- Which skills appear most frequently?
+- Which companies have the most collected opportunities?
+- Which locations have the highest job demand?
+- How are jobs distributed across on-site, hybrid and remote work?
+- What experience levels are requested?
+- How much salary information is available?
+- How complete and reliable are the important job-data fields?
+- Which individual job listings match the selected filters?
+
+## 🔄 From Overview to Detailed Insight
+
+The dashboard supports a progressive analysis workflow:
+
+```text
+                    OVERVIEW
+                       │
+                       ▼
+              KPI METRICS
+     Jobs • Companies • Locations
+        Sources • Remote Jobs
+                       │
+                       ▼
+             MARKET ANALYSIS
+    Roles • Skills • Companies
+       Locations • Work Mode
+                       │
+                       ▼
+            REQUIREMENT ANALYSIS
+       Experience • Salary
+                       │
+                       ▼
+             DATA QUALITY
+       Field Coverage • Sources
+                       │
+                       ▼
+              JOB EXPLORER
+        Individual Job Listings
+                       │
+                       ▼
+             DIRECT JOB LINK
+```
+
 # 🛡️ Publication Quality Gate
 
 One of the key engineering features of the project is the **Publication Quality Gate**.
