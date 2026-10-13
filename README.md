@@ -1080,6 +1080,39 @@ The dashboard's Data Quality Intelligence section also exposes valid and missing
 
 ---
 
+## 🔍 Detailed Data Quality Audit
+
+To evaluate the reliability of the collected job data, I developed a
+Python-based audit workflow that checks dataset completeness,
+application URL structure, duplicate candidates, posting-date
+classification, and potential data-quality issues.
+
+### Audit Highlights
+
+| Metric | Result |
+|---|---:|
+| Records audited | 4,325 |
+| Dataset columns | 17 |
+| Missing job titles | 0 |
+| Missing company names | 0 |
+| Missing application URLs | 0 |
+| Duplicate title-company-location candidates | 22 |
+| Potentially outdated postings | 107 |
+| Future-starting jobs | 46 |
+| Missing or unparseable posting dates | 0 |
+
+### Audit Deliverables
+
+- [Data Quality Audit Case Study](docs/case-study/03-data-quality-audit.md)
+- [Machine-Readable Audit Summary](docs/case-study/data_quality_summary.json)
+
+The audit preserves the original dataset and flags uncertain records
+for further review rather than automatically deleting them.
+
+**Important:** Duplicate candidates are not confirmed duplicates,
+and potentially outdated postings are not necessarily expired
+vacancies.
+
 # 💰 Salary Data
 
 Salary information has substantially lower coverage than the core job fields.
