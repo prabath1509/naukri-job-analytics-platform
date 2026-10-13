@@ -1,0 +1,18 @@
+{
+  "dataset": "data\\jobs_20260731_173423.csv",
+  "audit_date": "2026-10-13",
+  "records_checked": 4325,
+  "missing_or_placeholder_titles": 0,
+  "missing_or_placeholder_companies": 0,
+  "missing_application_urls": 0,
+  "invalid_application_urls": 0,
+  "duplicate_title_company_location": 22,
+  "duplicate_application_urls": 0,
+  "location_format_variant_groups": 0,
+  "location_variant_records_in_groups": 0,
+  "potentially_outdated_over_30_days": 107,
+  "future_starting_jobs": 46,
+  "missing_or_unparseable_posted_dates": 0,
+  "records_flagged_for_review": 128,
+  "source_dataset_modified": false
+}
